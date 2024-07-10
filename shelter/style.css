@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Georgia Regular";
+  src: url(assets/fonts/georgia/georgia-regular.ttf);
+}
+@font-face {
+  font-family: "Arial Regular";
+  src: url(assets/fonts/arial/arial-regular.ttf);
+}
+@font-face {
+  font-family: "Georgia Italic";
+  src: url(assets/fonts/georgia/georgia-bold-italic.ttf);
+}
+@font-face {
+  font-family: "Arial Italic";
+  src: url(assets/fonts/arial/arial-italic.ttf);
+}
+body {
+  font-family: "Georgia Regular", "Arial Regular", sans-serif;
+  max-width: 1280px;
+  height: 100vh;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header, .main, .footer {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 184px;
+  height: 60px;
+}
+.header .logo .top p {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  margin: 0px;
+}
+.header .logo .bottom p {
+  font-family: "Arial Regular";
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin: 0px;
+}
+.header .menu {
+  display: flex;
+  gap: 35px;
+}
+.header .menu .li {
+  list-style-type: none;
+}
+.header .menu a {
+  font-family: "Arial Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
+  text-decoration: none;
+}
+
+.main {
+  margin: -90px 0px 0px 0px;
+}
+.main .one {
+  display: flex;
+  min-height: 908px;
+  background: url(/assets/img/noise_transparent@2x.png), radial-gradient(237.5% 311.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 40%);
+}
+.main .one .left {
+  display: flex;
+}
+.main .one .left .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 460px;
+  max-height: 322px;
+  gap: 42px;
+}
+.main .one .left .wrap .title {
+  max-width: 310px;
+  max-height: 114px;
+}
+.main .one .left .wrap .title h1 {
+  font-family: "Georgia Regular";
+  font-weight: 200;
+  font-size: 44px;
+  line-height: 130%;
+  color: #fff;
+}
+.main .one .left .wrap .text {
+  max-width: 460px;
+  max-height: 72px;
+}
+.main .one .left .wrap .text p {
+  font-family: "Arial Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
+}
+.main .one .right {
+  display: flex;
+  align-items: end;
+}
+.main .one .right img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

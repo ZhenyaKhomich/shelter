@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Georgia Regular";
+  src: url(assets/fonts/georgia/georgia-regular.ttf);
+}
+@font-face {
+  font-family: "Arial Regular";
+  src: url(assets/fonts/arial/arial-regular.ttf);
+}
+@font-face {
+  font-family: "Georgia Italic";
+  src: url(assets/fonts/georgia/georgia-bold-italic.ttf);
+}
+@font-face {
+  font-family: "Arial Italic";
+  src: url(assets/fonts/arial/arial-italic.ttf);
+}
+
+	$color-light-xl: #fff;
+	$color-light-l: #f6f6f6;
+	$color-light-s: #fafafa;
+	$color-dark-s: #cdcdcd;
+	$color-dark-m: #b2b2b2;
+	$color-dark-l: #545454;
+	$color-dark-xl: #4c4c4c;
+	$color-dark-2xl: #444;
+	$color-dark-3xl: #292929;
+	$color-primary: #f1cdb3;
+	$color-primary-light: #fddcc4;
+	$start-screen-gradient-background: #211f20;
+	$footer-gradient-background: #211f20;
+
+
+
+body {
+  font-family: "Georgia Regular", "Arial Regular", sans-serif;
+  max-width: 1280px;
+  height: 100vh;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.header, .main, .footer {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 184px;
+    height: 60px;
+        
+    .top {
+      p {
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        color: $color-primary;
+        margin: 0px;
+      }
+    }
+
+    .bottom {
+      p {
+        font-family: "Arial Regular";
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        color: $color-light-xl;
+        margin: 0px;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: 35px;
+
+    .li {
+      list-style-type: none;
+    }
+
+    a{
+      font-family: "Arial Regular";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 160%;
+      color: $color-dark-s;
+      text-decoration: none;
+      
+    }
+  } 
+}
+
+.main {
+  margin:-90px 0px 0px 0px;
+  .one {
+    display: flex;
+    min-height: 908px;
+    background: url(/assets/img/noise_transparent@2x.png), radial-gradient(237.5% 311.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 40%);
+    
+      .left {
+        display: flex;
+      
+        .wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          max-width: 460px;
+          max-height: 322px;
+          gap: 42px;
+
+          .title {
+            max-width: 310px;
+            max-height: 114px;
+
+            h1 {
+              font-family: "Georgia Regular";
+              font-weight: 200;
+              font-size: 44px;
+              line-height: 130%;
+              color: $color-light-xl;
+            }
+          }
+          .text {
+            max-width: 460px;
+            max-height: 72px;
+
+            p {
+              font-family: "Arial Regular";
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 160%;
+              color: $color-dark-s;
+            }
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: end;
+      
+        
+          img {
+          width: 100%;
+          }
+         
+       
+      }
+
+  }
+}
