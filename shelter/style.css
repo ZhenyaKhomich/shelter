@@ -159,9 +159,7 @@ h2 {
 }
 
 .about-bloks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   height: 588px;
 }
 
@@ -171,6 +169,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 408px;
+  margin: 80px 0px 0px 0px;
 }
 .about .about-left img {
   width: 100%;
@@ -206,17 +205,20 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 60px;
+  height: 697px;
 }
-.our-blok div {
+.our-blok .our-h2 {
   max-width: 400px;
 }
-.our-blok div h2 {
+.our-blok .our-h2 h2 {
   margin: 0px;
 }
 .our-blok .carts {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 1200px;
+  gap: 90px;
 }
 .our-blok .carts .cart {
   display: flex;
@@ -224,20 +226,17 @@ h2 {
   align-items: center;
   justify-content: center;
   border-radius: 9px;
-  padding: 30px 35px;
-  max-width: 270px;
-  max-height: 435px;
+  padding: 0px 0px;
+  width: 270px;
+  height: 435px;
 }
 .our-blok .carts .cart .img-cart {
   max-width: 270px;
   max-height: 270px;
   border-radius: 9px 9px 0 0;
 }
-.our-blok .carts .cart .img-cart img {
-  width: 100%;
-}
 .our-blok .carts .cart .text-our .name-dog {
-  font-family: var(--font-family);
+  font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.06em;
@@ -257,4 +256,99 @@ h2 {
   width: 261px;
   height: 52px;
   background: #f1cdb3;
+}
+
+.help-blok {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0px 100px 0px;
+}
+.help-blok .help-h2 {
+  max-width: 308px;
+  margin: 0px 0px 60px 0px;
+}
+.help-blok .help-h2 h2 {
+  margin: 0px;
+}
+.help-blok .help-icon {
+  display: flex;
+  gap: 120px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1029px;
+}
+.help-blok .help-icon div {
+  text-align: center;
+}
+.help-blok .help-icon div p {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.contacts-blok {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.contacts-blok .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 380px;
+}
+.contacts-blok .right .text-h2 {
+  max-width: 300px;
+}
+.contacts-blok .right .text-h2 h2 {
+  margin: 0px;
+  text-align: start;
+}
+.contacts-blok .right .text2 p {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 0px;
+}
+.contacts-blok .right .num-cart {
+  display: flex;
+  flex-direction: row;
+  border-radius: 9px;
+  padding: 10px 15px;
+  width: 349px;
+  height: 43px;
+  background: #f1cdb3;
+}
+.contacts-blok .right .num-cart .num {
+  display: flex;
+  align-items: center;
+  width: 319px;
+  gap: 14px;
+}
+.contacts-blok .right .num-cart .num p {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.contacts-blok .right .text3 p {
+  font-family: "Georgia Regular";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #b2b2b2;
+  margin: 0px;
 }/*# sourceMappingURL=style.css.map */
