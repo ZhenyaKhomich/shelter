@@ -109,7 +109,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   max-width: 460px;
-  max-height: 322px;
+  min-height: 322px;
   gap: 42px;
   margin: 150px 0px 0px 40px;
 }
@@ -148,6 +148,7 @@ h2 {
   letter-spacing: 0.06em;
   color: #292929;
   margin: 0px;
+  border: black;
 }
 .background .one-section .right {
   display: flex;
@@ -161,13 +162,11 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1280px;
   height: 588px;
 }
 
 .about {
   display: flex;
-  flex-direction: row;
   gap: 120px;
   justify-content: center;
   align-items: center;
@@ -206,9 +205,56 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 60px;
+}
+.our-blok div {
+  max-width: 400px;
+}
+.our-blok div h2 {
+  margin: 0px;
 }
 .our-blok .carts {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.our-blok .carts .cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  padding: 30px 35px;
+  max-width: 270px;
+  max-height: 435px;
+}
+.our-blok .carts .cart .img-cart {
+  max-width: 270px;
+  max-height: 270px;
+  border-radius: 9px 9px 0 0;
+}
+.our-blok .carts .cart .img-cart img {
+  width: 100%;
+}
+.our-blok .carts .cart .text-our .name-dog {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.our-blok .carts .cart .text-our button {
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 187px;
+  height: 52px;
+}
+.our-blok .but-get button {
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 261px;
+  height: 52px;
+  background: #f1cdb3;
 }/*# sourceMappingURL=style.css.map */
