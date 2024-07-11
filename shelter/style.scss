@@ -51,9 +51,7 @@ body {
   max-width: 1200px;
   margin: 0px auto;
 }
-.section {
-  background: $color-light-xl;
-}
+
 h2 {
   @include font-h2();
 }
@@ -63,12 +61,14 @@ h2 {
   justify-content: space-between;
   position: relative;
   z-index: 10;
+  padding: 30px 0px 0px 0px;
 
   .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 184px;
+    gap: 11px;
+    width: 186px;
     height: 60px;
         
     .top {
@@ -97,20 +97,37 @@ h2 {
 
   .menu {
     display: flex;
-    gap: 35px;
+    gap: 36px;
+    
+    
 
     .li {
-      list-style-type: none;
-    }
-
-    a{
-      font-family: "Arial Regular";
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 160%;
-      color: $color-dark-s;
-      text-decoration: none;
+      list-style-type: none; 
       
+      a{
+        font-family: "Arial Regular";
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: $color-dark-s;
+        text-decoration: none;
+
+        &:hover {
+          cursor: pointer;
+          
+        }
+      }
+      a.dis {
+        pointer-events: none;
+        font-family: "Arial Regular";
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: $color-light-s;
+        border-bottom: solid 3px $color-primary;
+        padding: 6px 0px;
+        
+      }
     }
   } 
 }
@@ -138,7 +155,7 @@ h2 {
         max-width: 460px;
         min-height: 322px;
         gap: 42px;
-        margin: 150px 0px 0px 40px;
+        margin: 102px 0px 0px 40px;
 
         .title {
           max-width: 310px;
@@ -150,6 +167,7 @@ h2 {
             font-size: 44px;
             line-height: 130%;
             color: $color-light-xl;
+            margin: 0px;
           }
         }
         .text {
@@ -162,6 +180,7 @@ h2 {
             font-size: 15px;
             line-height: 160%;
             color: $color-dark-s;
+            margin: 0px;
           }
         }
         .button {
@@ -193,8 +212,7 @@ h2 {
 }
 }
 .about-bloks{
- text-align: center;
- 
+  text-align: center;
   height: 588px;
 }
 .about {
@@ -233,6 +251,7 @@ h2 {
       line-height: 160%;
       color: $color-dark-xl;
       max-width: 430px;
+      text-align: left;
 
       p {
         margin: 0px;
@@ -253,66 +272,105 @@ h2 {
     max-width: 400px;
 
     h2 {
-      margin: 0px;
+      margin: 5px 0px 0px 0px ;
     }
   }
   
   .carts {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 1200px;
-    gap:90px;
-
-    .cart {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 9px;
-      padding: 0px 0px;
-      width: 270px;
-      height: 435px;
+    margin: 0px 0px 0px 0px;
     
+    svg {
+      margin: 2px 0px 0px 0px;
+    }
 
-      .img-cart {
-        max-width: 270px;
-        max-height: 270px;
-        border-radius: 9px 9px 0 0;
-
-        img{
+    .svg2 {
+      order: 5;
+    }
+    
+    .cart-wrap {
+      display: flex;
+      gap: 90px;
+      .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 9px;
+        padding: 0px 0px 3px 0px;
+        width: 270px;
+        height: 435px;
+        gap: 30px;
+      
+  
+        .img-cart {
+          max-width: 270px;
+          max-height: 270px;
+          border-radius: 9px 9px 0 0;
+  
+          img{
+          }
+  
         }
-
+        .text-our {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+  
+          .name-dog {
+            font-family: "Georgia Regular";
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 0.06em;
+            text-align: center;
+            color: $color-dark-l;
+  
+            p{
+              margin: 0px;
+            }
+            
+  
+          }
+          button {
+            border: 2px solid $color-primary;
+            border-radius: 100px;
+            padding: 15px 43px;
+            width: 187px;
+            height: 52px;
+  
+            font-family: "Georgia Regular";
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+            color: $color-dark-3xl;
+          }
+        }
       }
-      .text-our {
-        .name-dog {
-          font-family: "Georgia Regular";
-          font-weight: 400;
-          font-size: 20px;
-          letter-spacing: 0.06em;
-          text-align: center;
-          color: $color-dark-l;
-
-        }
-        button {
-          border: 2px solid $color-primary;
-          border-radius: 100px;
-          padding: 15px 45px;
-          width: 187px;
-          height: 52px;
-        }
-      }
-    } 
+    }
   }
 
   .but-get {
 
     button {
       border-radius: 100px;
-      padding: 15px 45px;
+      padding: 10px 43px 15px 43px;
       width: 261px;
       height: 52px;
       background: $color-primary;
+
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $color-dark-3xl;
+
+      p{
+        margin: 0px;
+      }
     }
   }
 }
@@ -433,6 +491,91 @@ h2 {
       }
     }
   }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 160px;
+
+  .blok1, .blok2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 278px;
+
+    .title, .title2 {
+      display: flex;
+      
+      p{
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.059em;
+        color: $color-light-xl;
+        margin: 0px;
+      }
+    }
+
+    .email, .tel, .location {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 251px;
+
+      p {
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $color-primary;
+        margin: 0px;
+      }
+    }
+  }
+
+  .blok2 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 302px;
+
+    .title2 {
+      display: flex;
+      
+      p{
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.059em;
+        color: $color-light-xl;
+        margin: 0px;
+      }
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 302px;
+
+      p {
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $color-primary;
+        margin: 0px;
+      }
+    }
+  }
+  .img-fot {
+    max-height: 310px;
+}
 }
 
 
