@@ -38,15 +38,16 @@ $footer-gradient-background: #211f20;
   text-align: center;
   color: $color-dark-l;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Georgia Regular", "Arial Regular", sans-serif;
   height: 100vh;
-  scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0px auto;
-
 }
+
 .header, .bloks, .footer {
   max-width: 1200px;
   margin: 0px auto;
@@ -99,8 +100,6 @@ h2 {
     display: flex;
     gap: 36px;
     
-    
-
     .li {
       list-style-type: none; 
       
@@ -114,18 +113,21 @@ h2 {
 
         &:hover {
           cursor: pointer;
-          
+          color: $color-light-s;
+          transition: 0.7s;
         }
+
+        &:active {
+          border-bottom: solid 3px $color-primary;
+          padding: 6px 0px;
+          transition: 0.5s;
+        }
+
       }
       a.dis {
         pointer-events: none;
-        font-family: "Arial Regular";
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 160%;
-        color: $color-light-s;
         border-bottom: solid 3px $color-primary;
-        padding: 6px 0px;
+        padding: 5px 0px;
         
       }
     }
@@ -136,7 +138,7 @@ h2 {
   margin:-90px 0px 0px 0px;
 }
 .background {
-  background: url(/assets/img/noise_transparent@2x.png), radial-gradient(237.5% 311.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 40%);
+  background: url("assets/img/noise_transparent@2x.png"), radial-gradient(237.5% 311.8% at 0% 0%, rgb(94, 72, 58) 0%, rgb(38, 36, 37) 40%);
 
   .one-section {
     display: flex;
@@ -197,6 +199,12 @@ h2 {
           color: $color-dark-3xl;
           margin: 0px;
           border: black; 
+
+          &:hover {
+            cursor: pointer;
+            background: $color-primary-light;
+            transition: 0.7s;
+          }
         }
       }
     }
@@ -260,6 +268,11 @@ h2 {
   }
 }
 
+.our-pets {
+  display: flex;
+  justify-content: center;
+  background: $color-light-l;
+}
 .our-blok {
   display: flex;
   flex-direction: column;
@@ -267,12 +280,14 @@ h2 {
   align-items: center;
   gap: 60px;
   height: 697px;
+  margin: -2px 0px 100px 0px;
+  
 
   .our-h2{
     max-width: 400px;
 
     h2 {
-      margin: 5px 0px 0px 0px ;
+      margin: 5px 0px 0px 0px;
     }
   }
   
@@ -285,6 +300,13 @@ h2 {
     
     svg {
       margin: 2px 0px 0px 0px;
+
+      &:hover {
+        cursor:pointer;
+        border-radius: 100%;
+        background: $color-primary-light;
+        transition: 0.7s;
+      }
     }
 
     .svg2 {
@@ -294,6 +316,7 @@ h2 {
     .cart-wrap {
       display: flex;
       gap: 90px;
+
       .cart {
         display: flex;
         flex-direction: column;
@@ -303,6 +326,16 @@ h2 {
         width: 270px;
         height: 435px;
         gap: 30px;
+        background: $color-light-s;
+
+        &:hover  {
+          cursor: pointer;
+          .text-our button{
+            background: $color-primary-light;
+            transition: 0.7s;
+          }
+          
+        }
       
   
         .img-cart {
@@ -339,13 +372,18 @@ h2 {
             padding: 15px 43px;
             width: 187px;
             height: 52px;
-  
+            background: $color-light-s;
             font-family: "Georgia Regular";
             font-weight: 400;
             font-size: 17px;
             line-height: 130%;
             letter-spacing: 0.06em;
             color: $color-dark-3xl;
+
+            &:hover {
+              cursor: pointer;
+              background: $color-primary-light;
+            }
           }
         }
       }
@@ -353,156 +391,199 @@ h2 {
   }
 
   .but-get {
+    margin: -4px 0px 5px 0px;
 
     button {
       border-radius: 100px;
-      padding: 10px 43px 15px 43px;
+      border: solid 1px $color-primary;
+      padding: 15px 43px 15px 43px;
       width: 261px;
       height: 52px;
       background: $color-primary;
-
-      font-family: var(--font-family);
+      font-family: "Georgia Regular";
       font-weight: 400;
       font-size: 17px;
       line-height: 130%;
       letter-spacing: 0.06em;
       color: $color-dark-3xl;
 
+      &:hover {
+        cursor:pointer;
+        background: $color-primary-light;
+        transition: 0.7s;
+      }
+
       p{
         margin: 0px;
       }
     }
   }
 }
-
-.help-blok {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 80px 0px 100px 0px;
-
-  .help-h2 {
-    max-width: 308px;
-    margin:0px 0px 60px 0px;
-
-    h2 {
-      margin: 0px;
-    }
-  }
-
-  .help-icon {
-    display: flex;
-    gap: 120px;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1029px;
-
-    div {
-      text-align: center;
-
-      p {
-        font-family: "Georgia Regular";
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 115%;
-        letter-spacing: 0.06em;
-        text-align: center;
-        color: $color-dark-l;
-      }
-    }
-  }
-}
-
-.contacts-blok {
+.help {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
+  margin: 82px auto 8px auto;
 
-  .left {
-
-  }
-
-  .right {
+  .help-blok {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 380px;
+    justify-content: center;
+    align-items: center;
     
-    .text-h2 {
-      max-width: 300px;
-
+  
+    .help-h2 {
+      max-width: 308px;
+      margin:0px 0px 60px 0px;
+  
       h2 {
         margin: 0px;
-        text-align: start;
+        letter-spacing: 0.056em;
       }
     }
-
-    .text2 {
-
-      p{
-        font-family: "Georgia Regular";
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 110%;
-        letter-spacing: 0.06em;
-        color: $color-dark-l;
-        margin: 0px;
-       
-        }
-    }
-
-    .num-cart {
+  
+    .help-icon {
       display: flex;
-      flex-direction: row;
-      border-radius: 9px;
-      padding: 10px 15px;
-      width: 349px;
-      height: 43px;
-      background: $color-primary;
-
-      .num {
-        display: flex;
-        align-items: center;
-        width: 319px;
-        gap:14px;
-
+      gap: 120px;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 100%;
+      max-width: 1029px;
+      margin: -2px 0px 150px 0px;
+  
+      div {
+        text-align: center;
+        margin: 0px 0px -69px 0px;
+        &:hover {
+          cursor:pointer;
+          svg {
+            fill: rgb(226, 99, 99);
+            transition: 0.7s;
+          }
+        }
+        
+  
         p {
           font-family: "Georgia Regular";
           font-weight: 400;
           font-size: 20px;
           line-height: 115%;
           letter-spacing: 0.06em;
+          text-align: center;
           color: $color-dark-l;
+          margin: 28px 0px 2px 0px;
         }
-      }
-    }
-
-    .text3 {
-      p {
-        font-family: "Georgia Regular";
-        font-style: italic;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 150%;
-        color: $color-dark-m;
-        margin: 0px;
       }
     }
   }
 }
 
+.contacts1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 462px;
+  background: $color-light-l;
+  margin: 16px 0px 0px 0px;
+
+  .contacts-blok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: -16px 0px 0px 0px;
+    
+    .left {
+    }
+  
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 380px;
+      
+      .text-h2 {
+        max-width: 300px;
+  
+        h2 {
+          margin: 0px;
+          text-align: start;
+        }
+      }
+  
+      .text2 {
+  
+        p{
+          font-family: "Georgia Regular";
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 110%;
+          letter-spacing: 0.06em;
+          color: $color-dark-l;
+          margin: 0px;
+          }
+      }
+  
+      .num-cart {
+        display: flex;
+        flex-direction: row;
+        border-radius: 9px;
+        padding: 9px 15px 11px 15px;
+        width: 319px;
+        height: 23px;
+        background: $color-primary;
+        margin: 0px 0px 0px 0px;
+  
+        .num {
+          display: flex;
+          align-items: center;
+          width: 319px;
+          gap:14px;
+  
+          p {
+            font-family: "Georgia Regular";
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+            letter-spacing: 0.06em;
+            color: $color-dark-l;
+            margin: 0px;
+          }
+        }
+      }
+  
+      .text3 {
+        p {
+          font-family: "Arial Regular";
+          font-style: italic;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+          color: $color-dark-m;
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  background: url("assets/img/noise_transparent@2x.png"),  radial-gradient(279.89% 3373.65% at 0% 0%, rgb(81, 61, 47) 0%, rgb(20, 20, 28) 40%);
+
+}
 .footer {
   display: flex;
   align-items: center;
   gap: 160px;
+  margin: 39px 0px 0px 0px;
+  
 
   .blok1, .blok2 {
     display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 278px;
+    margin: 0px 0px 40px 0px;
 
     .title, .title2 {
       display: flex;
@@ -523,6 +604,18 @@ h2 {
       align-items: center;
       gap: 20px;
       max-width: 251px;
+      &:hover {
+        cursor: pointer;
+        p {
+          color: $color-light-s;
+          transition: 0.7s;
+        }
+        svg {
+          fill: $color-light-s;
+          transition: 0.7s;
+        }
+        
+      }
 
       p {
         font-family: "Georgia Regular";

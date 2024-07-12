@@ -14,10 +14,13 @@
   font-family: "Arial Italic";
   src: url(assets/fonts/arial/arial-italic.ttf);
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Georgia Regular", "Arial Regular", sans-serif;
   height: 100vh;
-  scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0px auto;
 }
@@ -86,16 +89,18 @@ h2 {
 }
 .header .menu .li a:hover {
   cursor: pointer;
+  color: #fafafa;
+  transition: 0.7s;
+}
+.header .menu .li a:active {
+  border-bottom: solid 3px #f1cdb3;
+  padding: 6px 0px;
+  transition: 0.5s;
 }
 .header .menu .li a.dis {
   pointer-events: none;
-  font-family: "Arial Regular";
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #fafafa;
   border-bottom: solid 3px #f1cdb3;
-  padding: 6px 0px;
+  padding: 5px 0px;
 }
 
 .main {
@@ -103,7 +108,7 @@ h2 {
 }
 
 .background {
-  background: url(/assets/img/noise_transparent@2x.png), radial-gradient(237.5% 311.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 40%);
+  background: url("assets/img/noise_transparent@2x.png"), radial-gradient(237.5% 311.8% at 0% 0%, rgb(94, 72, 58) 0%, rgb(38, 36, 37) 40%);
 }
 .background .one-section {
   display: flex;
@@ -163,6 +168,11 @@ h2 {
   margin: 0px;
   border: black;
 }
+.background .one-section .left .wrap .button:hover {
+  cursor: pointer;
+  background: #fddcc4;
+  transition: 0.7s;
+}
 .background .one-section .right {
   display: flex;
   align-items: end;
@@ -213,6 +223,12 @@ h2 {
   margin: 0px;
 }
 
+.our-pets {
+  display: flex;
+  justify-content: center;
+  background: #f6f6f6;
+}
+
 .our-blok {
   display: flex;
   flex-direction: column;
@@ -220,6 +236,7 @@ h2 {
   align-items: center;
   gap: 60px;
   height: 697px;
+  margin: -2px 0px 100px 0px;
 }
 .our-blok .our-h2 {
   max-width: 400px;
@@ -237,6 +254,12 @@ h2 {
 .our-blok .carts svg {
   margin: 2px 0px 0px 0px;
 }
+.our-blok .carts svg:hover {
+  cursor: pointer;
+  border-radius: 100%;
+  background: #fddcc4;
+  transition: 0.7s;
+}
 .our-blok .carts .svg2 {
   order: 5;
 }
@@ -253,6 +276,14 @@ h2 {
   width: 270px;
   height: 435px;
   gap: 30px;
+  background: #fafafa;
+}
+.our-blok .carts .cart-wrap .cart:hover {
+  cursor: pointer;
+}
+.our-blok .carts .cart-wrap .cart:hover .text-our button {
+  background: #fddcc4;
+  transition: 0.7s;
 }
 .our-blok .carts .cart-wrap .cart .img-cart {
   max-width: 270px;
@@ -281,6 +312,7 @@ h2 {
   padding: 15px 43px;
   width: 187px;
   height: 52px;
+  background: #fafafa;
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 17px;
@@ -288,48 +320,76 @@ h2 {
   letter-spacing: 0.06em;
   color: #292929;
 }
+.our-blok .carts .cart-wrap .cart .text-our button:hover {
+  cursor: pointer;
+  background: #fddcc4;
+}
+.our-blok .but-get {
+  margin: -4px 0px 5px 0px;
+}
 .our-blok .but-get button {
   border-radius: 100px;
-  padding: 10px 43px 15px 43px;
+  border: solid 1px #f1cdb3;
+  padding: 15px 43px 15px 43px;
   width: 261px;
   height: 52px;
   background: #f1cdb3;
-  font-family: var(--font-family);
+  font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
 }
+.our-blok .but-get button:hover {
+  cursor: pointer;
+  background: #fddcc4;
+  transition: 0.7s;
+}
 .our-blok .but-get button p {
   margin: 0px;
 }
 
-.help-blok {
+.help {
+  display: flex;
+  justify-content: center;
+  margin: 82px auto 8px auto;
+}
+.help .help-blok {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 80px 0px 100px 0px;
 }
-.help-blok .help-h2 {
+.help .help-blok .help-h2 {
   max-width: 308px;
   margin: 0px 0px 60px 0px;
 }
-.help-blok .help-h2 h2 {
+.help .help-blok .help-h2 h2 {
   margin: 0px;
+  letter-spacing: 0.056em;
 }
-.help-blok .help-icon {
+.help .help-blok .help-icon {
   display: flex;
   gap: 120px;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100%;
   max-width: 1029px;
+  margin: -2px 0px 150px 0px;
 }
-.help-blok .help-icon div {
+.help .help-blok .help-icon div {
   text-align: center;
+  margin: 0px 0px -69px 0px;
 }
-.help-blok .help-icon div p {
+.help .help-blok .help-icon div:hover {
+  cursor: pointer;
+}
+.help .help-blok .help-icon div:hover svg {
+  fill: rgb(226, 99, 99);
+  transition: 0.7s;
+}
+.help .help-blok .help-icon div p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
@@ -337,28 +397,38 @@ h2 {
   letter-spacing: 0.06em;
   text-align: center;
   color: #545454;
+  margin: 28px 0px 2px 0px;
 }
 
-.contacts-blok {
+.contacts1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 462px;
+  background: #f6f6f6;
+  margin: 16px 0px 0px 0px;
+}
+.contacts1 .contacts-blok {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
+  margin: -16px 0px 0px 0px;
 }
-.contacts-blok .right {
+.contacts1 .contacts-blok .right {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 380px;
 }
-.contacts-blok .right .text-h2 {
+.contacts1 .contacts-blok .right .text-h2 {
   max-width: 300px;
 }
-.contacts-blok .right .text-h2 h2 {
+.contacts1 .contacts-blok .right .text-h2 h2 {
   margin: 0px;
   text-align: start;
 }
-.contacts-blok .right .text2 p {
+.contacts1 .contacts-blok .right .text2 p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 15px;
@@ -367,31 +437,33 @@ h2 {
   color: #545454;
   margin: 0px;
 }
-.contacts-blok .right .num-cart {
+.contacts1 .contacts-blok .right .num-cart {
   display: flex;
   flex-direction: row;
   border-radius: 9px;
-  padding: 10px 15px;
-  width: 349px;
-  height: 43px;
+  padding: 9px 15px 11px 15px;
+  width: 319px;
+  height: 23px;
   background: #f1cdb3;
+  margin: 0px 0px 0px 0px;
 }
-.contacts-blok .right .num-cart .num {
+.contacts1 .contacts-blok .right .num-cart .num {
   display: flex;
   align-items: center;
   width: 319px;
   gap: 14px;
 }
-.contacts-blok .right .num-cart .num p {
+.contacts1 .contacts-blok .right .num-cart .num p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #545454;
+  margin: 0px;
 }
-.contacts-blok .right .text3 p {
-  font-family: "Georgia Regular";
+.contacts1 .contacts-blok .right .text3 p {
+  font-family: "Arial Regular";
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -400,16 +472,24 @@ h2 {
   margin: 0px;
 }
 
+.foot {
+  display: flex;
+  justify-content: center;
+  background: url("assets/img/noise_transparent@2x.png"), radial-gradient(279.89% 3373.65% at 0% 0%, rgb(81, 61, 47) 0%, rgb(20, 20, 28) 40%);
+}
+
 .footer {
   display: flex;
   align-items: center;
   gap: 160px;
+  margin: 39px 0px 0px 0px;
 }
 .footer .blok1, .footer .blok2 {
   display: flex;
   flex-direction: column;
   gap: 40px;
   max-width: 278px;
+  margin: 0px 0px 40px 0px;
 }
 .footer .blok1 .title, .footer .blok1 .title2, .footer .blok2 .title, .footer .blok2 .title2 {
   display: flex;
@@ -428,6 +508,17 @@ h2 {
   align-items: center;
   gap: 20px;
   max-width: 251px;
+}
+.footer .blok1 .email:hover, .footer .blok1 .tel:hover, .footer .blok1 .location:hover, .footer .blok2 .email:hover, .footer .blok2 .tel:hover, .footer .blok2 .location:hover {
+  cursor: pointer;
+}
+.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p, .footer .blok1 .location:hover p, .footer .blok2 .email:hover p, .footer .blok2 .tel:hover p, .footer .blok2 .location:hover p {
+  color: #fafafa;
+  transition: 0.7s;
+}
+.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg, .footer .blok1 .location:hover svg, .footer .blok2 .email:hover svg, .footer .blok2 .tel:hover svg, .footer .blok2 .location:hover svg {
+  fill: #fafafa;
+  transition: 0.7s;
 }
 .footer .blok1 .email p, .footer .blok1 .tel p, .footer .blok1 .location p, .footer .blok2 .email p, .footer .blok2 .tel p, .footer .blok2 .location p {
   font-family: "Georgia Regular";
