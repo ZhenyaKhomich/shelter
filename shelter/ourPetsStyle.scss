@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Georgia Regular";
+  src: url(assets/fonts/georgia/georgia-regular.ttf);
+}
+@font-face {
+  font-family: "Arial Regular";
+  src: url(assets/fonts/arial/arial-regular.ttf);
+}
+@font-face {
+  font-family: "Georgia Italic";
+  src: url(assets/fonts/georgia/georgia-bold-italic.ttf);
+}
+@font-face {
+  font-family: "Arial Italic";
+  src: url(assets/fonts/arial/arial-italic.ttf);
+}
+
+$color-light-xl: #fff;
+$color-light-l: #f6f6f6;
+$color-light-s: #fafafa;
+$color-dark-s: #cdcdcd;
+$color-dark-m: #b2b2b2;
+$color-dark-l: #545454;
+$color-dark-xl: #4c4c4c;
+$color-dark-2xl: #444;
+$color-dark-3xl: #292929;
+$color-primary: #f1cdb3;
+$color-primary-light: #fddcc4;
+$start-screen-gradient-background: #211f20;
+$footer-gradient-background: #211f20;
+
+@mixin font-h2() {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: $color-dark-l;
+}
+
+
+
+
+.foot {
+  display: flex;
+  justify-content: center;
+  background: url("assets/img/noise_transparent@2x.png"),  radial-gradient(279.89% 3373.65% at 0% 0%, rgb(81, 61, 47) 0%, rgb(20, 20, 28) 40%);
+
+}
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 160px;
+  margin: 39px 0px 0px 0px;
+  
+
+  .blok1, .blok2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 278px;
+    margin: 0px 0px 40px 0px;
+
+    .title, .title2 {
+      display: flex;
+      
+      p{
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.059em;
+        color: $color-light-xl;
+        margin: 0px;
+      }
+    }
+
+    .email, .tel, .location {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 251px;
+      &:hover {
+        cursor: pointer;
+        p {
+          color: $color-light-s;
+          transition: 0.7s;
+        }
+        svg {
+          fill: $color-light-s;
+          transition: 0.7s;
+        }
+        
+      }
+
+      p {
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $color-primary;
+        margin: 0px;
+      }
+    }
+  }
+
+  .blok2 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 302px;
+
+    .title2 {
+      display: flex;
+      
+      p{
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.059em;
+        color: $color-light-xl;
+        margin: 0px;
+      }
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 302px;
+
+      p {
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $color-primary;
+        margin: 0px;
+      }
+    }
+  }
+  .img-fot {
+    max-height: 310px;
+}
+}
