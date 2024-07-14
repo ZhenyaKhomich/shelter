@@ -128,7 +128,7 @@ h2 {
         pointer-events: none;
         border-bottom: solid 3px $color-primary;
         padding: 5px 0px;
-        
+        color: $color-light-s;
       }
     }
   } 
@@ -219,6 +219,7 @@ h2 {
     }
 }
 }
+
 .about-bloks{
   text-align: center;
   height: 588px;
@@ -419,6 +420,7 @@ h2 {
     }
   }
 }
+
 .help {
   display: flex;
   justify-content: center;

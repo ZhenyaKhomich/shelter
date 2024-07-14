@@ -14,6 +14,223 @@
   font-family: "Arial Italic";
   src: url(assets/fonts/arial/arial-italic.ttf);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Georgia Regular", "Arial Regular", sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+
+.header, .bloks, .footer {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+h2 {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  padding: 30px 0px 30px 0px;
+}
+.header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  width: 186px;
+  height: 60px;
+}
+.header .logo .top p {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 0px;
+}
+.header .logo .bottom p {
+  font-family: "Arial Regular";
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #292929;
+  margin: 0px;
+}
+.header .menu {
+  display: flex;
+  gap: 36px;
+}
+.header .menu .li {
+  list-style-type: none;
+}
+.header .menu .li a {
+  font-family: "Arial Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #545454;
+  text-decoration: none;
+}
+.header .menu .li a:hover {
+  cursor: pointer;
+  color: #292929;
+  transition: 0.7s;
+}
+.header .menu .li a:active {
+  border-bottom: solid 3px #f1cdb3;
+  padding: 6px 0px;
+  transition: 0.5s;
+}
+.header .menu .li a.dis {
+  pointer-events: none;
+  border-bottom: solid 3px #f1cdb3;
+  padding: 5px 0px;
+  color: #292929;
+}
+
+.our-pets {
+  display: flex;
+  justify-content: center;
+  background: #f6f6f6;
+}
+
+.our-blok {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 697px;
+  margin: -2px 0px 100px 0px;
+}
+.our-blok .our-h2 {
+  max-width: 400px;
+}
+.our-blok .our-h2 h2 {
+  margin: 5px 0px 0px 0px;
+}
+.our-blok .carts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin: 0px 0px 0px 0px;
+}
+.our-blok .carts svg {
+  margin: 2px 0px 0px 0px;
+}
+.our-blok .carts svg:hover {
+  cursor: pointer;
+  border-radius: 100%;
+  background: #fddcc4;
+  transition: 0.7s;
+}
+.our-blok .carts .svg2 {
+  order: 5;
+}
+.our-blok .carts .cart-wrap {
+  display: flex;
+  gap: 90px;
+}
+.our-blok .carts .cart-wrap .cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  padding: 0px 0px 3px 0px;
+  width: 270px;
+  height: 435px;
+  gap: 30px;
+  background: #fafafa;
+}
+.our-blok .carts .cart-wrap .cart:hover {
+  cursor: pointer;
+}
+.our-blok .carts .cart-wrap .cart:hover .text-our button {
+  background: #fddcc4;
+  transition: 0.7s;
+}
+.our-blok .carts .cart-wrap .cart .img-cart {
+  max-width: 270px;
+  max-height: 270px;
+  border-radius: 9px 9px 0 0;
+}
+.our-blok .carts .cart-wrap .cart .text-our {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.our-blok .carts .cart-wrap .cart .text-our .name-dog {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.our-blok .carts .cart-wrap .cart .text-our .name-dog p {
+  margin: 0px;
+}
+.our-blok .carts .cart-wrap .cart .text-our button {
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  padding: 15px 43px;
+  width: 187px;
+  height: 52px;
+  background: #fafafa;
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.our-blok .carts .cart-wrap .cart .text-our button:hover {
+  cursor: pointer;
+  background: #fddcc4;
+}
+.our-blok .but-get {
+  margin: -4px 0px 5px 0px;
+}
+.our-blok .but-get button {
+  border-radius: 100px;
+  border: solid 1px #f1cdb3;
+  padding: 15px 43px 15px 43px;
+  width: 261px;
+  height: 52px;
+  background: #f1cdb3;
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.our-blok .but-get button:hover {
+  cursor: pointer;
+  background: #fddcc4;
+  transition: 0.7s;
+}
+.our-blok .but-get button p {
+  margin: 0px;
+}
+
 .foot {
   display: flex;
   justify-content: center;

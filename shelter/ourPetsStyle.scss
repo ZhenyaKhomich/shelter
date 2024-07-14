@@ -39,7 +39,254 @@ $footer-gradient-background: #211f20;
   color: $color-dark-l;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Georgia Regular", "Arial Regular", sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
 
+.header, .bloks, .footer {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+h2 {
+  @include font-h2();
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  padding: 30px 0px 30px 0px;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    width: 186px;
+    height: 60px;
+        
+    .top {
+      p {
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        color: $color-dark-l;
+        margin: 0px;
+      }
+    }
+
+    .bottom {
+      p {
+        font-family: "Arial Regular";
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        color: $color-dark-3xl;
+        margin: 0px;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: 36px;
+    
+    .li {
+      list-style-type: none; 
+      
+      a{
+        font-family: "Arial Regular";
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: $color-dark-l;
+        text-decoration: none;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-dark-3xl;
+          transition: 0.7s;
+        }
+
+        &:active {
+          border-bottom: solid 3px $color-primary;
+          padding: 6px 0px;
+          transition: 0.5s;
+        }
+
+      }
+      a.dis {
+        pointer-events: none;
+        border-bottom: solid 3px $color-primary;
+        padding: 5px 0px;
+        color: $color-dark-3xl;
+        
+      }
+    }
+  } 
+}
+
+.our-pets {
+  display: flex;
+  justify-content: center;
+  background: $color-light-l;
+}
+.our-blok {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 697px;
+  margin: -2px 0px 100px 0px;
+  
+
+  .our-h2{
+    max-width: 400px;
+
+    h2 {
+      margin: 5px 0px 0px 0px;
+    }
+  }
+  
+  .carts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0px 0px 0px 0px;
+    
+    svg {
+      margin: 2px 0px 0px 0px;
+
+      &:hover {
+        cursor:pointer;
+        border-radius: 100%;
+        background: $color-primary-light;
+        transition: 0.7s;
+      }
+    }
+
+    .svg2 {
+      order: 5;
+    }
+    
+    .cart-wrap {
+      display: flex;
+      gap: 90px;
+
+      .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 9px;
+        padding: 0px 0px 3px 0px;
+        width: 270px;
+        height: 435px;
+        gap: 30px;
+        background: $color-light-s;
+
+        &:hover  {
+          cursor: pointer;
+          .text-our button{
+            background: $color-primary-light;
+            transition: 0.7s;
+          }
+          
+        }
+      
+  
+        .img-cart {
+          max-width: 270px;
+          max-height: 270px;
+          border-radius: 9px 9px 0 0;
+  
+          img{
+          }
+  
+        }
+        .text-our {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+  
+          .name-dog {
+            font-family: "Georgia Regular";
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 0.06em;
+            text-align: center;
+            color: $color-dark-l;
+  
+            p{
+              margin: 0px;
+            }
+            
+  
+          }
+          button {
+            border: 2px solid $color-primary;
+            border-radius: 100px;
+            padding: 15px 43px;
+            width: 187px;
+            height: 52px;
+            background: $color-light-s;
+            font-family: "Georgia Regular";
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+            color: $color-dark-3xl;
+
+            &:hover {
+              cursor: pointer;
+              background: $color-primary-light;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .but-get {
+    margin: -4px 0px 5px 0px;
+
+    button {
+      border-radius: 100px;
+      border: solid 1px $color-primary;
+      padding: 15px 43px 15px 43px;
+      width: 261px;
+      height: 52px;
+      background: $color-primary;
+      font-family: "Georgia Regular";
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $color-dark-3xl;
+
+      &:hover {
+        cursor:pointer;
+        background: $color-primary-light;
+        transition: 0.7s;
+      }
+
+      p{
+        margin: 0px;
+      }
+    }
+  }
+}
 
 
 .foot {
