@@ -130,7 +130,6 @@ h2 {
         border-bottom: solid 3px $color-primary;
         padding: 5px 0px;
         color: $color-dark-3xl;
-        
       }
     }
   } 
@@ -140,154 +139,150 @@ h2 {
   display: flex;
   justify-content: center;
   background: $color-light-l;
-}
-.our-blok {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  height: 697px;
-  margin: -2px 0px 100px 0px;
-  
 
-  .our-h2{
-    max-width: 400px;
-
-    h2 {
-      margin: 5px 0px 0px 0px;
-    }
-  }
-  
-  .carts {
+  .our-blok {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 1200px;
-    margin: 0px 0px 0px 0px;
+    gap: 60px;
+    margin: -2px 0px 100px 0px;
     
-    svg {
-      margin: 2px 0px 0px 0px;
-
-      &:hover {
-        cursor:pointer;
-        border-radius: 100%;
-        background: $color-primary-light;
-        transition: 0.7s;
+  
+    .our-h2{
+      max-width: 400px;
+  
+      h2 {
+        margin: 5px 0px 0px 0px;
       }
     }
-
-    .svg2 {
-      order: 5;
-    }
     
-    .cart-wrap {
+    .carts {
       display: flex;
-      gap: 90px;
-
-      .cart {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 9px;
-        padding: 0px 0px 3px 0px;
-        width: 270px;
-        height: 435px;
-        gap: 30px;
-        background: $color-light-s;
-
-        &:hover  {
-          cursor: pointer;
-          .text-our button{
-            background: $color-primary-light;
-            transition: 0.7s;
-          }
-          
-        }
+      justify-content: center;
+      align-items: center;
+      width: 1200px;
+      margin: 0px 0px 0px 0px;
       
+      .cart-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 40px;
+        column-gap: 30px;
+        
   
-        .img-cart {
-          max-width: 270px;
-          max-height: 270px;
-          border-radius: 9px 9px 0 0;
-  
-          img{
-          }
-  
-        }
-        .text-our {
+        .cart {
           display: flex;
           flex-direction: column;
+          align-items: center;
+          border-radius: 9px;
+          padding: 0px 0px 3px 0px;
+          width: 270px;
+          height: 435px;
           gap: 30px;
+          background: $color-light-s;
   
-          .name-dog {
-            font-family: "Georgia Regular";
-            font-weight: 400;
-            font-size: 20px;
-            letter-spacing: 0.06em;
-            text-align: center;
-            color: $color-dark-l;
-  
-            p{
-              margin: 0px;
+          &:hover  {
+            cursor: pointer;
+            .text-our button{
+              background: $color-primary-light;
+              transition: 0.7s;
             }
             
-  
           }
-          button {
-            border: 2px solid $color-primary;
-            border-radius: 100px;
-            padding: 15px 43px;
-            width: 187px;
-            height: 52px;
-            background: $color-light-s;
-            font-family: "Georgia Regular";
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 130%;
-            letter-spacing: 0.06em;
-            color: $color-dark-3xl;
-
-            &:hover {
-              cursor: pointer;
-              background: $color-primary-light;
+        
+          .img-cart {
+            max-width: 270px;
+            max-height: 270px;
+            border-radius: 9px 9px 0 0;
+    
+            img{
+            }
+    
+          }
+          .text-our {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+    
+            .name-dog {
+              font-family: "Georgia Regular";
+              font-weight: 400;
+              font-size: 20px;
+              letter-spacing: 0.06em;
+              text-align: center;
+              color: $color-dark-l;
+    
+              p{
+                margin: 0px;
+              }
+              
+            }
+            button {
+              border: 2px solid $color-primary;
+              border-radius: 100px;
+              padding: 15px 42px;
+              width: 187px;
+              height: 52px;
+              background: $color-light-s;
+              font-family: "Georgia Regular";
+              font-weight: 400;
+              font-size: 17px;
+              line-height: 130%;
+              letter-spacing: 0.06em;
+              color: $color-dark-3xl;
+  
+              &:hover {
+                cursor: pointer;
+                background: $color-primary-light;
+              }
             }
           }
         }
       }
     }
-  }
 
-  .but-get {
-    margin: -4px 0px 5px 0px;
+    .slider {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      max-width: 340px;
 
-    button {
-      border-radius: 100px;
-      border: solid 1px $color-primary;
-      padding: 15px 43px 15px 43px;
-      width: 261px;
-      height: 52px;
-      background: $color-primary;
-      font-family: "Georgia Regular";
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 130%;
-      letter-spacing: 0.06em;
-      color: $color-dark-3xl;
-
-      &:hover {
-        cursor:pointer;
-        background: $color-primary-light;
-        transition: 0.7s;
+      .svg3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        padding: 14px 21px;
+        width: 52px;
+        height: 52px;
+        background: $color-primary;
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: $color-dark-3xl;
+        padding: 0px;
       }
-
-      p{
-        margin: 0px;
+      
+      .but {
+        
+        &:hover {
+          cursor:pointer;
+          border-radius: 100%;
+          background: $color-primary-light;
+          transition: 0.7s;
+        }
+      }
+      .inactive {
+        pointer-events: none;
       }
     }
   }
 }
-
 
 .foot {
   display: flex;

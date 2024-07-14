@@ -109,46 +109,35 @@ h2 {
   justify-content: center;
   background: #f6f6f6;
 }
-
-.our-blok {
+.our-pets .our-blok {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 60px;
-  height: 697px;
   margin: -2px 0px 100px 0px;
 }
-.our-blok .our-h2 {
+.our-pets .our-blok .our-h2 {
   max-width: 400px;
 }
-.our-blok .our-h2 h2 {
+.our-pets .our-blok .our-h2 h2 {
   margin: 5px 0px 0px 0px;
 }
-.our-blok .carts {
+.our-pets .our-blok .carts {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 1200px;
   margin: 0px 0px 0px 0px;
 }
-.our-blok .carts svg {
-  margin: 2px 0px 0px 0px;
+.our-pets .our-blok .carts .cart-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
-.our-blok .carts svg:hover {
-  cursor: pointer;
-  border-radius: 100%;
-  background: #fddcc4;
-  transition: 0.7s;
-}
-.our-blok .carts .svg2 {
-  order: 5;
-}
-.our-blok .carts .cart-wrap {
-  display: flex;
-  gap: 90px;
-}
-.our-blok .carts .cart-wrap .cart {
+.our-pets .our-blok .carts .cart-wrap .cart {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,24 +148,24 @@ h2 {
   gap: 30px;
   background: #fafafa;
 }
-.our-blok .carts .cart-wrap .cart:hover {
+.our-pets .our-blok .carts .cart-wrap .cart:hover {
   cursor: pointer;
 }
-.our-blok .carts .cart-wrap .cart:hover .text-our button {
+.our-pets .our-blok .carts .cart-wrap .cart:hover .text-our button {
   background: #fddcc4;
   transition: 0.7s;
 }
-.our-blok .carts .cart-wrap .cart .img-cart {
+.our-pets .our-blok .carts .cart-wrap .cart .img-cart {
   max-width: 270px;
   max-height: 270px;
   border-radius: 9px 9px 0 0;
 }
-.our-blok .carts .cart-wrap .cart .text-our {
+.our-pets .our-blok .carts .cart-wrap .cart .text-our {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.our-blok .carts .cart-wrap .cart .text-our .name-dog {
+.our-pets .our-blok .carts .cart-wrap .cart .text-our .name-dog {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
@@ -184,13 +173,13 @@ h2 {
   text-align: center;
   color: #545454;
 }
-.our-blok .carts .cart-wrap .cart .text-our .name-dog p {
+.our-pets .our-blok .carts .cart-wrap .cart .text-our .name-dog p {
   margin: 0px;
 }
-.our-blok .carts .cart-wrap .cart .text-our button {
+.our-pets .our-blok .carts .cart-wrap .cart .text-our button {
   border: 2px solid #f1cdb3;
   border-radius: 100px;
-  padding: 15px 43px;
+  padding: 15px 42px;
   width: 187px;
   height: 52px;
   background: #fafafa;
@@ -201,34 +190,43 @@ h2 {
   letter-spacing: 0.06em;
   color: #292929;
 }
-.our-blok .carts .cart-wrap .cart .text-our button:hover {
+.our-pets .our-blok .carts .cart-wrap .cart .text-our button:hover {
   cursor: pointer;
   background: #fddcc4;
 }
-.our-blok .but-get {
-  margin: -4px 0px 5px 0px;
+.our-pets .our-blok .slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 340px;
 }
-.our-blok .but-get button {
+.our-pets .our-blok .slider .svg3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100px;
-  border: solid 1px #f1cdb3;
-  padding: 15px 43px 15px 43px;
-  width: 261px;
+  padding: 14px 21px;
+  width: 52px;
   height: 52px;
   background: #f1cdb3;
   font-family: "Georgia Regular";
   font-weight: 400;
-  font-size: 17px;
-  line-height: 130%;
+  font-size: 20px;
+  line-height: 115%;
   letter-spacing: 0.06em;
+  text-align: center;
   color: #292929;
+  padding: 0px;
 }
-.our-blok .but-get button:hover {
+.our-pets .our-blok .slider .but:hover {
   cursor: pointer;
+  border-radius: 100%;
   background: #fddcc4;
   transition: 0.7s;
 }
-.our-blok .but-get button p {
-  margin: 0px;
+.our-pets .our-blok .slider .inactive {
+  pointer-events: none;
 }
 
 .foot {
