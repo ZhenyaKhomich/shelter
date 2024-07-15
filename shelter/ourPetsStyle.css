@@ -52,7 +52,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  width: 186px;
+  width: 187px;
   height: 60px;
 }
 .header .logo .top p {
@@ -108,6 +108,7 @@ h2 {
   display: flex;
   justify-content: center;
   background: #f6f6f6;
+  margin: 78px -1px 100px 0px;
 }
 .our-pets .our-blok {
   display: flex;
@@ -115,27 +116,32 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  margin: -2px 0px 100px 0px;
+  margin: -2px 0px -2px 0px;
 }
 .our-pets .our-blok .our-h2 {
   max-width: 400px;
 }
 .our-pets .our-blok .our-h2 h2 {
-  margin: 5px 0px 0px 0px;
+  margin: 5px 0px -1px 0px;
 }
 .our-pets .our-blok .carts {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1200px;
+  padding: 0px;
   margin: 0px 0px 0px 0px;
 }
 .our-pets .our-blok .carts .cart-wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 40px;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  row-gap: 26px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.our-pets .our-blok .carts .cart-wrap .cart.katrin {
+  position: relative;
+  margin: -15px 0px 0px -11px;
 }
 .our-pets .our-blok .carts .cart-wrap .cart {
   display: flex;
@@ -200,6 +206,7 @@ h2 {
   align-items: center;
   gap: 20px;
   max-width: 340px;
+  margin: -3px 0px 0px 0px;
 }
 .our-pets .our-blok .slider .svg3 {
   display: flex;
@@ -218,6 +225,16 @@ h2 {
   text-align: center;
   color: #292929;
   padding: 0px;
+}
+.our-pets .our-blok .slider .but span {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #292929;
+  margin: -3px 0px 0px 0px;
 }
 .our-pets .our-blok .slider .but:hover {
   cursor: pointer;
@@ -241,17 +258,17 @@ h2 {
   gap: 160px;
   margin: 39px 0px 0px 0px;
 }
-.footer .blok1, .footer .blok2 {
+.footer .blok1 {
   display: flex;
   flex-direction: column;
   gap: 40px;
   max-width: 278px;
-  margin: 0px 0px 40px 0px;
+  margin: -1px 0px 40px 0px;
 }
-.footer .blok1 .title, .footer .blok1 .title2, .footer .blok2 .title, .footer .blok2 .title2 {
+.footer .blok1 .title {
   display: flex;
 }
-.footer .blok1 .title p, .footer .blok1 .title2 p, .footer .blok2 .title p, .footer .blok2 .title2 p {
+.footer .blok1 .title p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 35px;
@@ -260,24 +277,25 @@ h2 {
   color: #fff;
   margin: 0px;
 }
-.footer .blok1 .email, .footer .blok1 .tel, .footer .blok1 .location, .footer .blok2 .email, .footer .blok2 .tel, .footer .blok2 .location {
+.footer .blok1 .email, .footer .blok1 .tel {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 21px;
   max-width: 251px;
+  margin: 0px 0px 0px 0px;
 }
-.footer .blok1 .email:hover, .footer .blok1 .tel:hover, .footer .blok1 .location:hover, .footer .blok2 .email:hover, .footer .blok2 .tel:hover, .footer .blok2 .location:hover {
+.footer .blok1 .email:hover, .footer .blok1 .tel:hover {
   cursor: pointer;
 }
-.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p, .footer .blok1 .location:hover p, .footer .blok2 .email:hover p, .footer .blok2 .tel:hover p, .footer .blok2 .location:hover p {
+.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
   color: #fafafa;
   transition: 0.7s;
 }
-.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg, .footer .blok1 .location:hover svg, .footer .blok2 .email:hover svg, .footer .blok2 .tel:hover svg, .footer .blok2 .location:hover svg {
+.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
   fill: #fafafa;
   transition: 0.7s;
 }
-.footer .blok1 .email p, .footer .blok1 .tel p, .footer .blok1 .location p, .footer .blok2 .email p, .footer .blok2 .tel p, .footer .blok2 .location p {
+.footer .blok1 .email p, .footer .blok1 .tel p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
@@ -291,6 +309,7 @@ h2 {
   flex-direction: column;
   gap: 32px;
   max-width: 302px;
+  margin: -4px 0px 40px 2px;
 }
 .footer .blok2 .title2 {
   display: flex;
@@ -309,6 +328,7 @@ h2 {
   align-items: center;
   gap: 20px;
   max-width: 302px;
+  margin: 0px 0px 0px -3px;
 }
 .footer .blok2 .location p {
   font-family: "Georgia Regular";

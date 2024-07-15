@@ -70,7 +70,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 11px;
-    width: 186px;
+    width: 187px;
     height: 60px;
         
     .top {
@@ -139,6 +139,7 @@ h2 {
   display: flex;
   justify-content: center;
   background: $color-light-l;
+  margin: 78px -1px 100px 0px;
 
   .our-blok {
     display: flex;
@@ -146,14 +147,14 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 60px;
-    margin: -2px 0px 100px 0px;
+    margin: -2px 0px -2px 0px;
     
   
     .our-h2{
       max-width: 400px;
   
       h2 {
-        margin: 5px 0px 0px 0px;
+        margin: 5px 0px -1px 0px;
       }
     }
     
@@ -162,14 +163,19 @@ h2 {
       justify-content: center;
       align-items: center;
       width: 1200px;
+      padding: 0px;
       margin: 0px 0px 0px 0px;
       
       .cart-wrap {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        row-gap: 40px;
-        column-gap: 30px;
+        row-gap: 26px;
+        column-gap: 40px;
         
+        .cart.katrin {
+         position: relative;
+         margin: -15px 0px 0px -11px;
+        }
   
         .cart {
           display: flex;
@@ -248,6 +254,7 @@ h2 {
       align-items: center;
       gap: 20px;
       max-width: 340px;
+      margin: -3px 0px 0px 0px;
 
       .svg3 {
         display: flex;
@@ -269,6 +276,17 @@ h2 {
       }
       
       .but {
+
+        span {
+          font-family: "Georgia Regular";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          text-align: center;
+          color: $color-dark-3xl;
+          margin: -3px 0px 0px 0px;
+        }
         
         &:hover {
           cursor:pointer;
@@ -297,14 +315,14 @@ h2 {
   margin: 39px 0px 0px 0px;
   
 
-  .blok1, .blok2 {
+  .blok1 {
     display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 278px;
-    margin: 0px 0px 40px 0px;
+    margin: -1px 0px 40px 0px;
 
-    .title, .title2 {
+    .title {
       display: flex;
       
       p{
@@ -318,11 +336,12 @@ h2 {
       }
     }
 
-    .email, .tel, .location {
+    .email, .tel {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 21px;
       max-width: 251px;
+      margin: 0px 0px 0px 0px;
       &:hover {
         cursor: pointer;
         p {
@@ -353,6 +372,7 @@ h2 {
     flex-direction: column;
     gap: 32px;
     max-width: 302px;
+    margin: -4px 0px 40px 2px;
 
     .title2 {
       display: flex;
@@ -373,6 +393,7 @@ h2 {
       align-items: center;
       gap: 20px;
       max-width: 302px;
+      margin: 0px 0px 0px -3px;
 
       p {
         font-family: "Georgia Regular";
