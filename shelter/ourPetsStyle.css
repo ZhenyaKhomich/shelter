@@ -47,7 +47,16 @@ h2 {
   z-index: 10;
   padding: 30px 0px 30px 0px;
 }
-.header .logo {
+.header a {
+  text-decoration: none;
+}
+.header a:hover .logo .top p {
+  color: #292929;
+}
+.header a:hover .logo .bottom p {
+  color: #292929;
+}
+.header a .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +64,7 @@ h2 {
   width: 187px;
   height: 60px;
 }
-.header .logo .top p {
+.header a .logo .top .textop {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 32px;
@@ -64,7 +73,7 @@ h2 {
   color: #545454;
   margin: 0px;
 }
-.header .logo .bottom p {
+.header a .logo .bottom .textbot {
   font-family: "Arial Regular";
   font-weight: 400;
   font-size: 13px;
@@ -108,7 +117,7 @@ h2 {
   display: flex;
   justify-content: center;
   background: #f6f6f6;
-  margin: 78px -1px 100px 0px;
+  margin: 0px -1px 0px 0px;
 }
 .our-pets .our-blok {
   display: flex;
@@ -116,7 +125,7 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  margin: -2px 0px -2px 0px;
+  margin: 76px 0px 100px 0px;
 }
 .our-pets .our-blok .our-h2 {
   max-width: 400px;
@@ -155,6 +164,7 @@ h2 {
   background: #fafafa;
 }
 .our-pets .our-blok .carts .cart-wrap .cart:hover {
+  background: #fff;
   cursor: pointer;
 }
 .our-pets .our-blok .carts .cart-wrap .cart:hover .text-our button {
@@ -226,6 +236,10 @@ h2 {
   color: #292929;
   padding: 0px;
 }
+.our-pets .our-blok .slider .but {
+  display: flex;
+  align-items: center;
+}
 .our-pets .our-blok .slider .but span {
   font-family: "Georgia Regular";
   font-weight: 400;
@@ -256,19 +270,19 @@ h2 {
   display: flex;
   align-items: center;
   gap: 160px;
-  margin: 39px 0px 0px 0px;
+  margin: 39px 0px 0px 3px;
 }
 .footer .blok1 {
   display: flex;
   flex-direction: column;
   gap: 40px;
   max-width: 278px;
-  margin: -1px 0px 40px 0px;
+  margin: 0px 0px 40px -1px;
 }
-.footer .blok1 .title {
+.footer .blok1 .title, .footer .blok1 .title2 {
   display: flex;
 }
-.footer .blok1 .title p {
+.footer .blok1 .title p, .footer .blok1 .title2 p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 35px;
@@ -280,9 +294,24 @@ h2 {
 .footer .blok1 .email, .footer .blok1 .tel {
   display: flex;
   align-items: center;
-  gap: 21px;
+  gap: 20px;
   max-width: 251px;
-  margin: 0px 0px 0px 0px;
+}
+.footer .blok1 .email a, .footer .blok1 .tel a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 251px;
+  text-decoration: none;
+}
+.footer .blok1 .email a p, .footer .blok1 .tel a p {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  margin: 0px;
 }
 .footer .blok1 .email:hover, .footer .blok1 .tel:hover {
   cursor: pointer;
@@ -295,21 +324,12 @@ h2 {
   fill: #fafafa;
   transition: 0.7s;
 }
-.footer .blok1 .email p, .footer .blok1 .tel p {
-  font-family: "Georgia Regular";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-  letter-spacing: 0.06em;
-  color: #f1cdb3;
-  margin: 0px;
-}
 .footer .blok2 {
   display: flex;
   flex-direction: column;
   gap: 32px;
   max-width: 302px;
-  margin: -4px 0px 40px 2px;
+  margin: -2px 0px 40px 0px;
 }
 .footer .blok2 .title2 {
   display: flex;
@@ -328,9 +348,17 @@ h2 {
   align-items: center;
   gap: 20px;
   max-width: 302px;
-  margin: 0px 0px 0px -3px;
+  margin: 0px 0px 0px -1px;
 }
-.footer .blok2 .location p {
+.footer .blok2 .location a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 302px;
+  text-decoration: none;
+}
+.footer .blok2 .location a p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
