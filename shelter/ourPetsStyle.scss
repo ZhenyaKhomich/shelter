@@ -65,34 +65,56 @@ h2 {
   z-index: 10;
   padding: 30px 0px 30px 0px;
 
-  .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 11px;
-    width: 186px;
-    height: 60px;
-        
-    .top {
-      p {
-        font-family: "Georgia Regular";
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 110%;
-        letter-spacing: 0.06em;
-        color: $color-dark-l;
-        margin: 0px;
+  a {
+    text-decoration: none;
+
+    &:hover {
+      .logo {
+        .top {
+          p {
+            color: $color-dark-3xl;
+
+          }
+        }
+        .bottom {
+          p {
+            color: $color-dark-3xl;
+          }
+        }
       }
+      
     }
 
-    .bottom {
-      p {
-        font-family: "Arial Regular";
-        font-weight: 400;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        color: $color-dark-3xl;
-        margin: 0px;
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 11px;
+      width: 187px;
+      height: 60px;
+      
+        
+      .top {
+        .textop {
+          font-family: "Georgia Regular";
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 110%;
+          letter-spacing: 0.06em;
+          color: $color-dark-l;
+          margin: 0px;
+        }
+      }
+
+      .bottom {
+        .textbot {
+          font-family: "Arial Regular";
+          font-weight: 400;
+          font-size: 13px;
+          letter-spacing: 0.1em;
+          color: $color-dark-3xl;
+          margin: 0px;
+        }
       }
     }
   }
@@ -139,6 +161,7 @@ h2 {
   display: flex;
   justify-content: center;
   background: $color-light-l;
+  margin: 0px -1px 0px 0px;
 
   .our-blok {
     display: flex;
@@ -146,14 +169,14 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 60px;
-    margin: -2px 0px 100px 0px;
+    margin: 76px 0px 100px 0px;
     
   
     .our-h2{
       max-width: 400px;
   
       h2 {
-        margin: 5px 0px 0px 0px;
+        margin: 5px 0px -1px 0px;
       }
     }
     
@@ -162,14 +185,19 @@ h2 {
       justify-content: center;
       align-items: center;
       width: 1200px;
+      padding: 0px;
       margin: 0px 0px 0px 0px;
       
       .cart-wrap {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        row-gap: 40px;
-        column-gap: 30px;
+        row-gap: 26px;
+        column-gap: 40px;
         
+        .cart.katrin {
+          position: relative;
+          margin: -15px 0px 0px -11px;
+        }
   
         .cart {
           display: flex;
@@ -183,6 +211,7 @@ h2 {
           background: $color-light-s;
   
           &:hover  {
+            background: $color-light-xl;
             cursor: pointer;
             .text-our button{
               background: $color-primary-light;
@@ -248,6 +277,7 @@ h2 {
       align-items: center;
       gap: 20px;
       max-width: 340px;
+      margin: -3px 0px 0px 0px;
 
       .svg3 {
         display: flex;
@@ -269,6 +299,19 @@ h2 {
       }
       
       .but {
+        display: flex;
+        align-items: center;
+
+        span {
+          font-family: "Georgia Regular";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          text-align: center;
+          color: $color-dark-3xl;
+          margin: -3px 0px 0px 0px;
+        }
         
         &:hover {
           cursor:pointer;
@@ -294,15 +337,15 @@ h2 {
   display: flex;
   align-items: center;
   gap: 160px;
-  margin: 39px 0px 0px 0px;
+  margin: 39px 0px 0px 3px;
   
 
-  .blok1, .blok2 {
+  .blok1{
     display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 278px;
-    margin: 0px 0px 40px 0px;
+    margin: 0px 0px 40px -1px;
 
     .title, .title2 {
       display: flex;
@@ -318,11 +361,30 @@ h2 {
       }
     }
 
-    .email, .tel, .location {
+    .email, .tel {
       display: flex;
       align-items: center;
       gap: 20px;
       max-width: 251px;
+
+      a{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        max-width: 251px;
+        text-decoration: none;
+
+        p {
+          font-family: "Georgia Regular";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: $color-primary;
+          margin: 0px;
+        }
+
+      }
       &:hover {
         cursor: pointer;
         p {
@@ -333,17 +395,6 @@ h2 {
           fill: $color-light-s;
           transition: 0.7s;
         }
-        
-      }
-
-      p {
-        font-family: "Georgia Regular";
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 115%;
-        letter-spacing: 0.06em;
-        color: $color-primary;
-        margin: 0px;
       }
     }
   }
@@ -353,6 +404,7 @@ h2 {
     flex-direction: column;
     gap: 32px;
     max-width: 302px;
+    margin: -2px 0px 40px 0px;
 
     .title2 {
       display: flex;
@@ -373,15 +425,25 @@ h2 {
       align-items: center;
       gap: 20px;
       max-width: 302px;
+      margin: 0px 0px 0px -1px;
 
-      p {
-        font-family: "Georgia Regular";
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 115%;
-        letter-spacing: 0.06em;
-        color: $color-primary;
-        margin: 0px;
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        max-width: 302px;
+        text-decoration: none;
+        
+        p {
+          font-family: "Georgia Regular";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: $color-primary;
+          margin: 0px;
+        }
       }
     }
   }

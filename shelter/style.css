@@ -47,7 +47,16 @@ h2 {
   z-index: 10;
   padding: 30px 0px 0px 0px;
 }
-.header .logo {
+.header a {
+  text-decoration: none;
+}
+.header a:hover .logo .top p {
+  color: #fddcc4;
+}
+.header a:hover .logo .bottom p {
+  color: #fafafa;
+}
+.header a .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +64,7 @@ h2 {
   width: 186px;
   height: 60px;
 }
-.header .logo .top p {
+.header a .logo .top .textop {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 32px;
@@ -64,7 +73,7 @@ h2 {
   color: #f1cdb3;
   margin: 0px;
 }
-.header .logo .bottom p {
+.header a .logo .bottom .textbot {
   font-family: "Arial Regular";
   font-weight: 400;
   font-size: 13px;
@@ -155,8 +164,11 @@ h2 {
   margin: 0px;
 }
 .background .one-section .left .wrap .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 100px;
-  padding: 15px 40px;
+  padding: 0px 0px;
   width: 207px;
   height: 52px;
   background: #f1cdb3;
@@ -168,6 +180,7 @@ h2 {
   color: #292929;
   margin: 0px;
   border: black;
+  text-decoration: none;
 }
 .background .one-section .left .wrap .button:hover {
   cursor: pointer;
@@ -228,6 +241,7 @@ h2 {
   display: flex;
   justify-content: center;
   background: #f6f6f6;
+  margin: -76px 0px 0px 4px;
 }
 
 .our-blok {
@@ -237,7 +251,7 @@ h2 {
   align-items: center;
   gap: 60px;
   height: 697px;
-  margin: -2px 0px 100px 0px;
+  margin: 77px 0px 100px 0px;
 }
 .our-blok .our-h2 {
   max-width: 400px;
@@ -250,7 +264,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   width: 1200px;
-  margin: 0px 0px 0px 0px;
+  margin: -3px 0px 0px 0px;
 }
 .our-blok .carts svg {
   margin: 2px 0px 0px 0px;
@@ -280,6 +294,7 @@ h2 {
   background: #fafafa;
 }
 .our-blok .carts .cart-wrap .cart:hover {
+  background: #fff;
   cursor: pointer;
 }
 .our-blok .carts .cart-wrap .cart:hover .text-our button {
@@ -326,12 +341,17 @@ h2 {
   background: #fddcc4;
 }
 .our-blok .but-get {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: -4px 0px 5px 0px;
 }
-.our-blok .but-get button {
+.our-blok .but-get .but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100px;
   border: solid 1px #f1cdb3;
-  padding: 15px 43px 15px 43px;
   width: 261px;
   height: 52px;
   background: #f1cdb3;
@@ -341,26 +361,28 @@ h2 {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+  text-decoration: none;
 }
-.our-blok .but-get button:hover {
+.our-blok .but-get .but:hover {
   cursor: pointer;
   background: #fddcc4;
   transition: 0.7s;
 }
-.our-blok .but-get button p {
+.our-blok .but-get .but p {
   margin: 0px;
 }
 
 .help {
   display: flex;
   justify-content: center;
-  margin: 82px auto 8px auto;
+  margin: 78px auto 8px auto;
 }
 .help .help-blok {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0px 0px 0px 4px;
 }
 .help .help-blok .help-h2 {
   max-width: 308px;
@@ -407,7 +429,7 @@ h2 {
   align-items: center;
   height: 462px;
   background: #f6f6f6;
-  margin: 16px 0px 0px 0px;
+  margin: 17px 0px 0px 2px;
 }
 .contacts1 .contacts-blok {
   display: flex;
@@ -448,13 +470,18 @@ h2 {
   background: #f1cdb3;
   margin: 0px 0px 0px 0px;
 }
+.contacts1 .contacts-blok .right .num-cart:hover {
+  cursor: pointer;
+  background: #fddcc4;
+  transition: 0.7s;
+}
 .contacts1 .contacts-blok .right .num-cart .num {
   display: flex;
   align-items: center;
   width: 319px;
   gap: 14px;
 }
-.contacts1 .contacts-blok .right .num-cart .num p {
+.contacts1 .contacts-blok .right .num-cart .num a {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
@@ -462,6 +489,7 @@ h2 {
   letter-spacing: 0.06em;
   color: #545454;
   margin: 0px;
+  text-decoration: none;
 }
 .contacts1 .contacts-blok .right .text3 p {
   font-family: "Arial Regular";
@@ -483,7 +511,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 160px;
-  margin: 39px 0px 0px 0px;
+  margin: 40px 0px 0px 3px;
 }
 .footer .blok1, .footer .blok2 {
   display: flex;
@@ -504,24 +532,20 @@ h2 {
   color: #fff;
   margin: 0px;
 }
-.footer .blok1 .email, .footer .blok1 .tel, .footer .blok1 .location, .footer .blok2 .email, .footer .blok2 .tel, .footer .blok2 .location {
+.footer .blok1 .email, .footer .blok1 .tel, .footer .blok2 .email, .footer .blok2 .tel {
   display: flex;
   align-items: center;
   gap: 20px;
   max-width: 251px;
 }
-.footer .blok1 .email:hover, .footer .blok1 .tel:hover, .footer .blok1 .location:hover, .footer .blok2 .email:hover, .footer .blok2 .tel:hover, .footer .blok2 .location:hover {
-  cursor: pointer;
+.footer .blok1 .email a, .footer .blok1 .tel a, .footer .blok2 .email a, .footer .blok2 .tel a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 251px;
+  text-decoration: none;
 }
-.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p, .footer .blok1 .location:hover p, .footer .blok2 .email:hover p, .footer .blok2 .tel:hover p, .footer .blok2 .location:hover p {
-  color: #fafafa;
-  transition: 0.7s;
-}
-.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg, .footer .blok1 .location:hover svg, .footer .blok2 .email:hover svg, .footer .blok2 .tel:hover svg, .footer .blok2 .location:hover svg {
-  fill: #fafafa;
-  transition: 0.7s;
-}
-.footer .blok1 .email p, .footer .blok1 .tel p, .footer .blok1 .location p, .footer .blok2 .email p, .footer .blok2 .tel p, .footer .blok2 .location p {
+.footer .blok1 .email a p, .footer .blok1 .tel a p, .footer .blok2 .email a p, .footer .blok2 .tel a p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
@@ -529,6 +553,17 @@ h2 {
   letter-spacing: 0.06em;
   color: #f1cdb3;
   margin: 0px;
+}
+.footer .blok1 .email:hover, .footer .blok1 .tel:hover, .footer .blok2 .email:hover, .footer .blok2 .tel:hover {
+  cursor: pointer;
+}
+.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p, .footer .blok2 .email:hover p, .footer .blok2 .tel:hover p {
+  color: #fafafa;
+  transition: 0.7s;
+}
+.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg, .footer .blok2 .email:hover svg, .footer .blok2 .tel:hover svg {
+  fill: #fafafa;
+  transition: 0.7s;
 }
 .footer .blok2 {
   display: flex;
@@ -554,7 +589,15 @@ h2 {
   gap: 20px;
   max-width: 302px;
 }
-.footer .blok2 .location p {
+.footer .blok2 .location a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 302px;
+  text-decoration: none;
+}
+.footer .blok2 .location a p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
