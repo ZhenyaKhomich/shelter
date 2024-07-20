@@ -326,7 +326,7 @@ h2 {
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   padding: 15px 43px;
-  width: 187px;
+  width: 188px;
   height: 52px;
   background: #fafafa;
   font-family: "Georgia Regular";
@@ -344,7 +344,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -4px 0px 5px 0px;
+  margin: -2px 0px 3px 0px;
 }
 .our-blok .but-get .but {
   display: flex;
@@ -375,7 +375,7 @@ h2 {
 .help {
   display: flex;
   justify-content: center;
-  margin: 78px auto 8px auto;
+  margin: 79px auto 7px auto;
 }
 .help .help-blok {
   display: flex;
@@ -429,7 +429,7 @@ h2 {
   align-items: center;
   height: 462px;
   background: #f6f6f6;
-  margin: 17px 0px 0px 2px;
+  margin: 17px 0px 2px 2px;
 }
 .contacts1 .contacts-blok {
   display: flex;
@@ -511,19 +511,20 @@ h2 {
   display: flex;
   align-items: center;
   gap: 160px;
-  margin: 40px 0px 0px 3px;
+  padding: 0px 0px 0px 0px;
+  margin: 39px 0px 0px 3px;
 }
-.footer .blok1, .footer .blok2 {
+.footer .blok1 {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  max-width: 278px;
-  margin: 0px 0px 40px 0px;
+  max-width: 279px;
+  margin: -1px 0px 42px 0px;
 }
-.footer .blok1 .title, .footer .blok1 .title2, .footer .blok2 .title, .footer .blok2 .title2 {
+.footer .blok1 .title, .footer .blok1 .title2 {
   display: flex;
 }
-.footer .blok1 .title p, .footer .blok1 .title2 p, .footer .blok2 .title p, .footer .blok2 .title2 p {
+.footer .blok1 .title p, .footer .blok1 .title2 p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 35px;
@@ -532,20 +533,20 @@ h2 {
   color: #fff;
   margin: 0px;
 }
-.footer .blok1 .email, .footer .blok1 .tel, .footer .blok2 .email, .footer .blok2 .tel {
+.footer .blok1 .email, .footer .blok1 .tel {
   display: flex;
   align-items: center;
   gap: 20px;
   max-width: 251px;
 }
-.footer .blok1 .email a, .footer .blok1 .tel a, .footer .blok2 .email a, .footer .blok2 .tel a {
+.footer .blok1 .email a, .footer .blok1 .tel a {
   display: flex;
   align-items: center;
   gap: 20px;
   max-width: 251px;
   text-decoration: none;
 }
-.footer .blok1 .email a p, .footer .blok1 .tel a p, .footer .blok2 .email a p, .footer .blok2 .tel a p {
+.footer .blok1 .email a p, .footer .blok1 .tel a p {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 20px;
@@ -554,14 +555,14 @@ h2 {
   color: #f1cdb3;
   margin: 0px;
 }
-.footer .blok1 .email:hover, .footer .blok1 .tel:hover, .footer .blok2 .email:hover, .footer .blok2 .tel:hover {
+.footer .blok1 .email:hover, .footer .blok1 .tel:hover {
   cursor: pointer;
 }
-.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p, .footer .blok2 .email:hover p, .footer .blok2 .tel:hover p {
+.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
   color: #fafafa;
   transition: 0.7s;
 }
-.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg, .footer .blok2 .email:hover svg, .footer .blok2 .tel:hover svg {
+.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
   fill: #fafafa;
   transition: 0.7s;
 }
@@ -570,6 +571,7 @@ h2 {
   flex-direction: column;
   gap: 32px;
   max-width: 302px;
+  margin: 0px 0px 43px -2px;
 }
 .footer .blok2 .title2 {
   display: flex;
