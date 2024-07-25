@@ -30,7 +30,7 @@ body {
   margin: 0px auto;
 }
 
-h2 {
+h1 {
   font-family: "Georgia Regular";
   font-weight: 400;
   font-size: 35px;
@@ -130,7 +130,7 @@ h2 {
 .our-pets .our-blok .our-h2 {
   max-width: 400px;
 }
-.our-pets .our-blok .our-h2 h2 {
+.our-pets .our-blok .our-h2 h1 {
   margin: 5px 0px -1px 0px;
 }
 .our-pets .our-blok .carts {
@@ -164,6 +164,7 @@ h2 {
   background: #fafafa;
 }
 .our-pets .our-blok .carts .cart-wrap .cart:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
   background: #fff;
   cursor: pointer;
 }
@@ -235,6 +236,9 @@ h2 {
   text-align: center;
   color: #292929;
   padding: 0px;
+}
+.our-pets .our-blok .slider .svg3 {
+  pointer-events: none;
 }
 .our-pets .our-blok .slider .but {
   display: flex;

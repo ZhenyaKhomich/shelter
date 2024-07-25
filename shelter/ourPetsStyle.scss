@@ -54,7 +54,7 @@ body {
   margin: 0px auto;
 }
 
-h2 {
+h1 {
   @include font-h2();
 }
 
@@ -175,7 +175,7 @@ h2 {
     .our-h2{
       max-width: 400px;
   
-      h2 {
+      h1 {
         margin: 5px 0px -1px 0px;
       }
     }
@@ -211,6 +211,7 @@ h2 {
           background: $color-light-s;
   
           &:hover  {
+            box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
             background: $color-light-xl;
             cursor: pointer;
             .text-our button{
@@ -298,10 +299,14 @@ h2 {
         padding: 0px;
       }
       
+      .svg3 {
+        pointer-events: none;
+      }
+
       .but {
         display: flex;
         align-items: center;
-
+      
         span {
           font-family: "Georgia Regular";
           font-weight: 400;
