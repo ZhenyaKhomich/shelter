@@ -296,6 +296,7 @@ h2 {
 .our-blok .carts .cart-wrap .cart:hover {
   background: #fff;
   cursor: pointer;
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .our-blok .carts .cart-wrap .cart:hover .text-our button {
   background: #fddcc4;

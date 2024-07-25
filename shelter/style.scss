@@ -368,7 +368,8 @@ h2 {
         &:hover  {
           background: $color-light-xl;
           cursor: pointer;
-          .text-our button{
+          box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+          .text-our button {
             background: $color-primary-light;
             transition: 0.7s;
           }
