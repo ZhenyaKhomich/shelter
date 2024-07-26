@@ -296,6 +296,7 @@ h2 {
 }
 .our-blok .carts .cart-wrap .cart:hover .text-our button {
   background: #fddcc4;
+  border-color: #fddcc4;
   transition: 0.7s;
 }
 .our-blok .carts .cart-wrap .cart .img-cart {
