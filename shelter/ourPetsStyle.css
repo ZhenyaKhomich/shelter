@@ -45,7 +45,7 @@ h1 {
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  padding: 31px 0px 30px 0px;
+  padding: 30px 0px 30px 0px;
 }
 .header a {
   text-decoration: none;
@@ -79,7 +79,7 @@ h1 {
   font-size: 13px;
   letter-spacing: 0.1em;
   color: #292929;
-  margin: 0px;
+  margin: -1px 0px 0px 0px;
 }
 .header .menu {
   display: flex;
@@ -100,11 +100,6 @@ h1 {
   cursor: pointer;
   color: #292929;
   transition: 0.7s;
-}
-.header .menu .li a:active {
-  border-bottom: solid 3px #f1cdb3;
-  padding: 6px 0px;
-  transition: 0.5s;
 }
 .header .menu .li a.dis {
   pointer-events: none;
@@ -147,10 +142,6 @@ h1 {
   row-gap: 26px;
   -moz-column-gap: 40px;
        column-gap: 40px;
-}
-.our-pets .our-blok .carts .cart-wrap .cart.katrin {
-  position: relative;
-  margin: -15px 0px 0px -11px;
 }
 .our-pets .our-blok .carts .cart-wrap .cart {
   display: flex;
@@ -258,7 +249,11 @@ h1 {
   cursor: pointer;
   border-radius: 100%;
   background: #fddcc4;
+  stroke: #fddcc4;
   transition: 0.7s;
+}
+.our-pets .our-blok .slider .but:hover svg {
+  stroke: #fddcc4;
 }
 .our-pets .our-blok .slider .inactive {
   pointer-events: none;

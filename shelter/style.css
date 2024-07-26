@@ -101,11 +101,6 @@ h2 {
   color: #fafafa;
   transition: 0.7s;
 }
-.header .menu .li a:active {
-  border-bottom: solid 3px #f1cdb3;
-  padding: 6px 0px;
-  transition: 0.5s;
-}
 .header .menu .li a.dis {
   pointer-events: none;
   border-bottom: solid 3px #f1cdb3;
@@ -273,6 +268,7 @@ h2 {
   cursor: pointer;
   border-radius: 100%;
   background: #fddcc4;
+  stroke: #fddcc4;
   transition: 0.7s;
 }
 .our-blok .carts .svg2 {

@@ -63,7 +63,7 @@ h1 {
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  padding: 31px 0px 30px 0px;
+  padding: 30px 0px 30px 0px;
 
   a {
     text-decoration: none;
@@ -113,7 +113,7 @@ h1 {
           font-size: 13px;
           letter-spacing: 0.1em;
           color: $color-dark-3xl;
-          margin: 0px;
+          margin: -1px 0px 0px 0px;
         }
       }
     }
@@ -140,11 +140,11 @@ h1 {
           transition: 0.7s;
         }
 
-        &:active {
-          border-bottom: solid 3px $color-primary;
-          padding: 6px 0px;
-          transition: 0.5s;
-        }
+        // &:active {
+        //   border-bottom: solid 3px $color-primary;
+        //   padding: 6px 0px;
+        //   transition: 0.5s;
+        // }
 
       }
       a.dis {
@@ -194,10 +194,7 @@ h1 {
         row-gap: 26px;
         column-gap: 40px;
         
-        .cart.katrin {
-          position: relative;
-          margin: -15px 0px 0px -11px;
-        }
+       
   
         .cart {
           display: flex;
@@ -306,6 +303,7 @@ h1 {
       .but {
         display: flex;
         align-items: center;
+        
       
         span {
           font-family: "Georgia Regular";
@@ -322,7 +320,12 @@ h1 {
           cursor:pointer;
           border-radius: 100%;
           background: $color-primary-light;
+          stroke: $color-primary-light;
           transition: 0.7s;
+
+          svg{
+            stroke: $color-primary-light;
+          }
         }
       }
       .inactive {
