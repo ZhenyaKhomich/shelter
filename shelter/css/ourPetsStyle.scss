@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Georgia Regular";
-  src: url(assets/fonts/georgia/georgia-regular.ttf);
+  src: url(../assets/fonts/georgia/georgia-regular.ttf);
 }
 @font-face {
   font-family: "Arial Regular";
-  src: url(assets/fonts/arial/arial-regular.ttf);
+  src: url(../assets/fonts/arial/arial-regular.ttf);
 }
 @font-face {
   font-family: "Georgia Italic";
-  src: url(assets/fonts/georgia/georgia-bold-italic.ttf);
+  src: url(../assets/fonts/georgia/georgia-bold-italic.ttf);
 }
 @font-face {
   font-family: "Arial Italic";
-  src: url(assets/fonts/arial/arial-italic.ttf);
+  src: url(../assets/fonts/arial/arial-italic.ttf);
 }
 
 $color-light-xl: #fff;
@@ -339,7 +339,7 @@ h1 {
 .foot {
   display: flex;
   justify-content: center;
-  background: url("assets/img/noise_transparent@2x.png"),  radial-gradient(279.89% 3373.65% at 0% 0%, rgb(81, 61, 47) 0%, rgb(20, 20, 28) 40%);
+  background: url("../assets/img/noise_transparent@2x.png"),  radial-gradient(279.89% 3373.65% at 0% 0%, rgb(81, 61, 47) 0%, rgb(20, 20, 28) 40%);
 
 }
 .footer {
