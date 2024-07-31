@@ -92,7 +92,6 @@ h2 {
       width: 186px;
       height: 60px;
       
-        
       .top {
         .textop {
           font-family: "Georgia Regular";
@@ -629,7 +628,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 160px;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 30px 0px 30px;
   margin: 39px 0px 0px 3px;
   
 
@@ -744,34 +743,487 @@ h2 {
 }
 }
 
-
-
-
-
-
-
-
-
 @media (max-width: 1270px) {
- 
+
   .header, .bloks, .footer {
     max-width: 100%;
     margin: 0px 30px;
   }
   
-
   .background {
     .one-section {
-      display: flex;
-      
       padding-top: 1%; 
+  
+      .right {
+        height: 71vw;
+      }
+    }
+  }
+  
+  .our-blok {
+    height: 100%;
+    gap:4vw;
+    padding-top: 70px;
+    padding-bottom: 90px;
+    
+    .carts {
+      max-width: 100%;
+      gap: 4vw;
+      margin: 0px 0px 0px 0px;
+      
+      .cart-wrap {
+        gap: 8vw;
+        width: calc(100%);
+        
+        .cart {
+          width: 100%;
+          height: 100%;
+          padding-bottom:3%;
+          
+          .img-cart {
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .help {
+    margin: 79px 30px 7px 30px;
+  }
+  
+  .contacts1 {
+    .contacts-blok {
+      .left {
+        img{
+          width: 100%;
+        }
+      }
+    
+      .right {
+        flex-shrink: 15;
+      }
+    }
+  }
+  
+  .footer {
+    gap: calc(12vw - 60px);
+    margin: 39px 00px 0px 0px;
+    
+    .blok1 {
+      flex-shrink: 50;
+    }
+  
+    .blok2 {
+      flex-shrink: 7;
+    }
+    .img-fot {
+      display: flex;
+      align-self: flex-end;
+      flex-shrink: 2;
+      img{
+        width: 100%;
+        
+        
+      }
+    }
+  }
+}
+
+
+@media (max-width: 950px) {
+
+ 
+  .background {
+    .one-section {
+      .left {
+        .wrap {
+          .title {
+            max-height: 171px;
+          }
+          .text {
+            max-height: 96px;
+          }
+        }
+      }
+  
+      .right {
+        height: 71vw;
+      }
+    }
+  }
+  
+  .our-blok {
+    .carts {
+      max-width: 708px;
+      gap: 12px;
+  
+      .cart-wrap {
+        overflow: hidden;
+        gap: 40px;
+        width: 708px;
+        
+        .cart {
+          .img-cart {
+            img{
+              width: 270px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .contacts1 {
+    .contacts-blok {
+      margin: 0px 30px 0px 30px;
+      .left {
+        img{
+          width: 100%;
+        }
+      }
+    
+      .right {
+        flex-shrink: 15;
+      }
+    }
+  }
+  
+  .footer {
+    gap: calc(12vw - 60px);
+    margin: 39px 00px 0px 0px;
+    
+    .blok1 {
+      flex-shrink: 50;
+    }
+  
+    .blok2 {
+      flex-shrink: 7;
+    }
+    .img-fot {
+      display: flex;
+      align-self: flex-end;
+      flex-shrink: 2;
+      img{
+        width: 100%;
+        
+        
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@media(max-width: 50px) {
+  .our-pets {
+    display: flex;
+    justify-content: center;
+    background: $color-light-l;
+    margin: -76px 0px 0px 4px;
+  }
+  
+  .our-blok {
+    width: 708px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 697px;
+    margin: 77px 0px 100px 0px;
+    
+  
+    .our-h2{
+      max-width: 400px;
+  
+      h2 {
+        margin: 5px 0px 0px 0px;
+      }
+    }
+    
+    .carts {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 54px;
+      margin: -3px 0px 0px 0px;
+      
+      svg {
+        margin: 2px 0px 0px 0px;
+         transition: 0.7s;
+  
+        &:hover {
+          cursor:pointer;
+          border-radius: 100%;
+          background: $color-primary-light;
+          stroke: $color-primary-light;
+        }
+      }
+  
+      .svg2 {
+        margin: 2px 4px 0px 0px;
+        order: 5;
+      }
+      
+      .cart-wrap {
+        display: flex;
+        overflow: hidden;
+        width: 630px;
+        gap: 90px;
+  
+        .cart {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 9px;
+          padding: 0px 0px 3px 0px;
+          width: 270px;
+          height: 435px;
+          gap: 30px;
+          background: $color-light-s;
+  
+          &:hover  {
+            background: $color-light-xl;
+            transition: 0.7s;
+            cursor: pointer;
+            box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+            .text-our button {
+              background: $color-primary-light;
+              border-color: $color-primary-light;
+              transition: 0.7s;
+            }
+            
+          }
+        
+          .img-cart {
+            max-width: 270px;
+            max-height: 270px;
+            border-radius: 9px 9px 0 0;
+    
+            img{
+              width: 100%;
+            }
+          }
+          .text-our {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+    
+            .name-dog {
+              font-family: "Georgia Regular";
+              font-weight: 400;
+              font-size: 20px;
+              letter-spacing: 0.06em;
+              text-align: center;
+              color: $color-dark-l;
+    
+              p{
+                margin: 0px;
+              }
+            }
+            button {
+              border: 2px solid $color-primary;
+              border-radius: 100px;
+              padding: 15px 43px;
+              width: 188px;
+              height: 52px;
+              background: $color-light-s;
+              font-family: "Georgia Regular";
+              font-weight: 400;
+              font-size: 17px;
+              line-height: 130%;
+              letter-spacing: 0.06em;
+              color: $color-dark-3xl;
+  
+              &:hover {
+                cursor: pointer;
+                background: $color-primary-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .but-get {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -2px 0px 3px 0px;
+  
+      .but {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        border: solid 1px $color-primary;
+        width: 261px;
+        height: 52px;
+        background: $color-primary;
+        font-family: "Georgia Regular";
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: $color-dark-3xl;
+        text-decoration: none;
+  
+        &:hover {
+          cursor:pointer;
+          background: $color-primary-light;
+          transition: 0.7s;
+        }
+  
+        p{
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 50px) {
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    padding: 30px 0px 0px 0px;
+  
+    a {
+      text-decoration: none;
+  
+      &:hover {
+        .logo {
+          .top {
+            p {
+              color: $color-primary-light;
+  
+            }
+          }
+          .bottom {
+            p {
+              color: $color-light-s;
+            }
+          }
+        }
+        
+      }
+  
+      .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 11px;
+        width: 186px;
+        height: 60px;
+        
+        .top {
+          .textop {
+            font-family: "Georgia Regular";
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+            color: $color-primary;
+            margin: 0px;
+          }
+        }
+  
+        .bottom {
+          .textbot {
+            font-family: "Arial Regular";
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            color: $color-light-xl;
+            margin: 0px;
+          }
+        }
+      }
+    }
+  
+    .menu {
+      display: flex;
+      gap: 36px;
+      
+      .li {
+        list-style-type: none; 
+        
+        a{
+          font-family: "Arial Regular";
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 160%;
+          color: $color-dark-s;
+          text-decoration: none;
+  
+          &:hover {
+            cursor: pointer;
+            color: $color-light-s;
+            transition: 0.7s;
+          }
+  
+          // &:active {
+          //   border-bottom: solid 3px $color-primary;
+          //   padding: 6px 0px;
+          //   transition: 0.5s;
+          // }
+  
+        }
+        a.dis {
+          pointer-events: none;
+          border-bottom: solid 3px $color-primary;
+          padding: 5px 0px;
+          color: $color-light-s;
+        }
+      }
+    } 
+  }
+  
+  .main {
+    margin:-90px 0px 0px 0px;
+  }
+  .background {
+    background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(237.5% 311.8% at 0% 0%, rgb(94, 72, 58) 0%, rgb(38, 36, 37) 40%);
+  
+    .one-section {
+      display: flex;
+      max-height: 908px; 
       gap: 42px;
-      margin: 0px auto;
+      margin:0px auto;
       max-width: 1280px;
     
       .left {
         display: flex;
-        
       
         .wrap {
           display: flex;
@@ -808,7 +1260,7 @@ h2 {
               margin: 0px;
             }
           }
-          
+         
           .button {
             display: flex;
             align-items: center;
@@ -832,6 +1284,7 @@ h2 {
               
             }
             
+  
             &:hover {
               cursor: pointer;
               background: $color-primary-light;
@@ -844,7 +1297,7 @@ h2 {
       .right {
         display: flex;
         align-items: end;
-        height: 71vw;
+        height: 908px;
   
           img {
           width: 100%;
@@ -932,13 +1385,12 @@ h2 {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 100%;
-      gap: 4vw;
-      margin: -3px 30px 0px 30px;
+      gap: 54px;
+      margin: -3px 0px 0px 0px;
       
       svg {
         margin: 2px 0px 0px 0px;
-        transition: 0.7s;
+         transition: 0.7s;
   
         &:hover {
           cursor:pointer;
@@ -949,15 +1401,13 @@ h2 {
       }
   
       .svg2 {
+        margin: 2px 4px 0px 0px;
         order: 5;
       }
       
       .cart-wrap {
         display: flex;
-        justify-content: space-between;
-        gap: 7vw;
-        width: calc(100% - 146px);
-        
+        gap: 90px;
   
         .cart {
           display: flex;
@@ -965,15 +1415,11 @@ h2 {
           align-items: center;
           border-radius: 9px;
           padding: 0px 0px 3px 0px;
-          width: 100%;
-          height: 100%;
-          padding-bottom:3% ;
+          width: 270px;
+          height: 435px;
           gap: 30px;
           background: $color-light-s;
-        
-         
-          
-          
+  
           &:hover  {
             background: $color-light-xl;
             transition: 0.7s;
@@ -984,21 +1430,21 @@ h2 {
               border-color: $color-primary-light;
               transition: 0.7s;
             }
+            
           }
         
           .img-cart {
-            
+            max-width: 270px;
+            max-height: 270px;
             border-radius: 9px 9px 0 0;
     
             img{
-              max-width: 100%;
             }
           }
           .text-our {
             display: flex;
             flex-direction: column;
-            
-            
+            gap: 30px;
     
             .name-dog {
               font-family: "Georgia Regular";
@@ -1025,8 +1471,6 @@ h2 {
               line-height: 130%;
               letter-spacing: 0.06em;
               color: $color-dark-3xl;
-              
-              
   
               &:hover {
                 cursor: pointer;
@@ -1237,8 +1681,8 @@ h2 {
   .footer {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 0px 0px 0px 0px;
+    gap: 160px;
+    padding: 0px 30px 0px 30px;
     margin: 39px 0px 0px 3px;
     
   
@@ -1352,4 +1796,5 @@ h2 {
       max-height: 310px;
   }
   }
+
 }
