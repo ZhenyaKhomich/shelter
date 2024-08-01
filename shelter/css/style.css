@@ -132,7 +132,7 @@ h2 {
   max-width: 460px;
   min-height: 322px;
   gap: 42px;
-  margin: 102px 0px 0px 40px;
+  margin: 102px 0px 0px 31px;
 }
 .background .one-section .left .wrap .title {
   max-width: 310px;
@@ -685,6 +685,9 @@ h2 {
   .background .one-section .right {
     height: 71vw;
   }
+  .our-blok {
+    gap: 60px;
+  }
   .our-blok .carts {
     max-width: 708px;
     gap: 12px;
@@ -696,6 +699,22 @@ h2 {
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
     width: 270px;
+  }
+  .help {
+    margin: 80px 0px 7px 0px;
+  }
+  .help .help-blok {
+    margin: 0px 30px 0px 30px;
+  }
+  .help .help-blok .help-h2 {
+    margin: 0px 0px 60px 1.5px;
+  }
+  .help .help-blok .help-icon {
+    gap: 60px;
+  }
+  .help .help-blok .help-icon div {
+    width: 170px;
+    margin: 0px 0px -8px 0px;
   }
   .contacts1 .contacts-blok {
     margin: 0px 30px 0px 30px;
@@ -725,150 +744,161 @@ h2 {
     width: 100%;
   }
 }
-@media (max-width: 50px) {
-  .our-pets {
+@media (max-width: 855px) {
+  .background .one-section {
+    flex-direction: column;
+    max-height: 1135px;
+    max-height: 1158px;
+    margin: 0px 30px;
+  }
+  .background .one-section .left {
+    justify-content: center;
+    margin: 41.2px 0px 0px 0px;
+  }
+  .background .one-section .left .wrap {
+    justify-content: center;
+  }
+  .background .one-section .left .wrap .make-but {
     display: flex;
     justify-content: center;
-    background: #f6f6f6;
-    margin: -76px 0px 0px 4px;
+  }
+  .background .one-section .left .wrap .make-but .button {
+    margin: -1px 0px 0px 0px;
+  }
+  .background .one-section .right {
+    display: flex;
+    justify-content: end;
+    height: 908px;
+  }
+  .background .one-section .right img {
+    max-width: 569px;
+  }
+  .about-bloks {
+    height: 1048px;
+  }
+  .about {
+    flex-direction: column;
+    gap: 80px;
+    height: 868px;
+  }
+  .about .about-left {
+    order: 2;
+  }
+  .help {
+    margin: 80px 0px 7px 0px;
+  }
+  .help .help-blok {
+    margin: 0px 0px 0px 0px;
+  }
+  .help .help-blok .help-h2 {
+    margin: 0px 0px 60px 1.5px;
+  }
+  .help .help-blok .help-icon {
+    gap: 60px;
+  }
+  .help .help-blok .help-icon div {
+    width: 170px;
+    margin: 0px 0px -8px 0px;
+  }
+  .contacts1 {
+    height: 783px;
+  }
+  .contacts1 .contacts-blok {
+    flex-direction: column;
+  }
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13vw;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    width: 708px;
+  }
+  .header .menu {
+    gap: 36.1px;
+  }
+  .background .one-section {
+    max-height: 1158px;
+    margin: 0px 30px;
+  }
+  .background .one-section .left {
+    margin: 41.2px 0px 0px 0px;
+  }
+  .background .one-section .left .wrap {
+    margin: 102px 0px 0px 0px;
+  }
+  .background .one-section .left .wrap .make-but {
+    display: flex;
+    justify-content: center;
+  }
+  .background .one-section .left .wrap .make-but .button {
+    margin: -1px 0px 0px 0px;
+  }
+  .background .one-section .right {
+    justify-content: end;
+  }
+  .about-bloks {
+    height: 1048px;
+  }
+  .about {
+    gap: 80px;
+    height: 1048px;
+    margin: -9px 0px 0px 0px;
+  }
+  .our-pets {
+    margin: 10px 0px 0px 0px;
   }
   .our-blok {
-    width: 708px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 60px;
     height: 697px;
-    margin: 77px 0px 100px 0px;
+    margin: 8px 0px 10px 0px;
   }
   .our-blok .our-h2 {
-    max-width: 400px;
-  }
-  .our-blok .our-h2 h2 {
-    margin: 5px 0px 0px 0px;
-  }
-  .our-blok .carts {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 54px;
-    margin: -3px 0px 0px 0px;
-  }
-  .our-blok .carts svg {
-    margin: 2px 0px 0px 0px;
-    transition: 0.7s;
-  }
-  .our-blok .carts svg:hover {
-    cursor: pointer;
-    border-radius: 100%;
-    background: #fddcc4;
-    stroke: #fddcc4;
+    margin: 0px 0px 0px 0px;
   }
   .our-blok .carts .svg2 {
-    margin: 2px 4px 0px 0px;
-    order: 5;
-  }
-  .our-blok .carts .cart-wrap {
-    display: flex;
-    overflow: hidden;
-    width: 630px;
-    gap: 90px;
+    margin: 2px 1px 0px 0px;
   }
   .our-blok .carts .cart-wrap .cart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 9px;
-    padding: 0px 0px 3px 0px;
-    width: 270px;
+    padding: 0px 0px 2px 0px;
     height: 435px;
-    gap: 30px;
-    background: #fafafa;
   }
-  .our-blok .carts .cart-wrap .cart:hover {
-    background: #fff;
-    transition: 0.7s;
-    cursor: pointer;
-    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  .help {
+    margin: 80px 0px 7px 0px;
   }
-  .our-blok .carts .cart-wrap .cart:hover .text-our button {
-    background: #fddcc4;
-    border-color: #fddcc4;
-    transition: 0.7s;
+  .help .help-blok {
+    margin: 0px 0px 0px 0px;
   }
-  .our-blok .carts .cart-wrap .cart .img-cart {
-    max-width: 270px;
-    max-height: 270px;
-    border-radius: 9px 9px 0 0;
+  .help .help-blok .help-h2 {
+    margin: 1px 0px 59px 1.4px;
   }
-  .our-blok .carts .cart-wrap .cart .img-cart img {
-    width: 100%;
+  .help .help-blok .help-icon {
+    gap: 60px;
+    margin: -2px 0px 98px 0px;
   }
-  .our-blok .carts .cart-wrap .cart .text-our {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  .help .help-blok .help-icon div {
+    width: 170px;
+    margin: 0px 0px -8px 0px;
   }
-  .our-blok .carts .cart-wrap .cart .text-our .name-dog {
-    font-family: "Georgia Regular";
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: #545454;
+  .contacts1 {
+    height: 783px;
+    margin: 0px 0px 1px 2px;
   }
-  .our-blok .carts .cart-wrap .cart .text-our .name-dog p {
-    margin: 0px;
+  .contacts1 .contacts-blok {
+    gap: 60px;
+    margin: -16px 2px 0px 0px;
   }
-  .our-blok .carts .cart-wrap .cart .text-our button {
-    border: 2px solid #f1cdb3;
-    border-radius: 100px;
-    padding: 15px 43px;
-    width: 188px;
-    height: 52px;
-    background: #fafafa;
-    font-family: "Georgia Regular";
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: #292929;
+  .contacts1 .contacts-blok .left {
+    order: 2;
   }
-  .our-blok .carts .cart-wrap .cart .text-our button:hover {
-    cursor: pointer;
-    background: #fddcc4;
+  .footer {
+    gap: 61px;
+    margin: 30.5px 0px 0px 0px;
   }
-  .our-blok .but-get {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: -2px 0px 3px 0px;
-  }
-  .our-blok .but-get .but {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    border: solid 1px #f1cdb3;
-    width: 261px;
-    height: 52px;
-    background: #f1cdb3;
-    font-family: "Georgia Regular";
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: #292929;
-    text-decoration: none;
-  }
-  .our-blok .but-get .but:hover {
-    cursor: pointer;
-    background: #fddcc4;
-    transition: 0.7s;
-  }
-  .our-blok .but-get .but p {
-    margin: 0px;
+  .footer .img-fot {
+    margin: -38px 0px 0px 0px;
   }
 }
 @media (max-width: 50px) {

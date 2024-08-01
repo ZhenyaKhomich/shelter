@@ -178,7 +178,7 @@ h2 {
         max-width: 460px;
         min-height: 322px;
         gap: 42px;
-        margin: 102px 0px 0px 40px;
+        margin: 102px 0px 0px 31px;
 
         .title {
           max-width: 310px;
@@ -618,6 +618,7 @@ h2 {
     }
   }
 }
+
 .foot {
   display: flex;
   justify-content: center;
@@ -832,7 +833,6 @@ h2 {
   }
 }
 
-
 @media (max-width: 950px) {
 
  
@@ -856,6 +856,8 @@ h2 {
   }
   
   .our-blok {
+    gap:60px;
+
     .carts {
       max-width: 708px;
       gap: 12px;
@@ -871,6 +873,27 @@ h2 {
               width: 270px;
             }
           }
+        }
+      }
+    }
+  }
+
+  .help {
+    margin: 80px 0px 7px 0px;
+  
+    .help-blok {
+      margin: 0px 30px 0px 30px;
+      
+      .help-h2 {
+        margin:0px 0px 60px 1.5px;
+      }
+    
+      .help-icon {
+        gap:60px;
+        
+        div {
+          width: 170px;
+          margin: 0px 0px -8px 0px;
         }
       }
     }
@@ -908,8 +931,6 @@ h2 {
       flex-shrink: 2;
       img{
         width: 100%;
-        
-        
       }
     }
   }
@@ -922,175 +943,216 @@ h2 {
 
 
 
-@media(max-width: 50px) {
-  .our-pets {
-    display: flex;
+@media(max-width: 855px) {
+
+  .background {
+    .one-section {
+      flex-direction: column;
+      max-height: 1135px; 
+      max-height: 1158px;
+      margin:0px 30px;
+
+      .left {
+        justify-content: center;
+        margin: 41.2px 0px 0px 0px;
+        
+        .wrap {
+          justify-content: center;
+
+          .make-but {
+            display: flex;
+            justify-content: center;
+
+            .button {
+              margin: -1px 0px 0px 0px;
+            }
+          }
+        }
+      }
+  
+      .right {
+        display: flex;
+        justify-content: end;
+        height: 908px;
+  
+          img {
+          max-width: 569px;
+          }
+      }
+    }
+  }
+  
+  .about-bloks{
+    height: 1048px;
+    
+  }
+  .about {
+    flex-direction: column;
+    gap: 80px;
+    height: 868px;
+  
+    .about-left {
+      order:2;
+    }
+  }
+
+  .help {
+    margin: 80px 0px 7px 0px;
+  
+    .help-blok {
+      margin: 0px 0px 0px 0px;
+      
+      .help-h2 {
+        margin:0px 0px 60px 1.5px;
+      }
+    
+      .help-icon {
+        gap:60px;
+        
+        div {
+          width: 170px;
+          margin: 0px 0px -8px 0px;
+        }
+      }
+    }
+  }
+
+  .contacts1 {
+    height: 783px;
+  
+    .contacts-blok {
+      flex-direction: column;
+    }
+  }
+  
+  .footer {
+    flex-wrap: wrap;
     justify-content: center;
-    background: $color-light-l;
-    margin: -76px 0px 0px 4px;
+    gap: 13vw;
+  }
+}
+
+@media (max-width:768px) {
+
+  .header {
+    width: 708px;
+  
+    .menu {
+      gap: 36.1px;
+    } 
+  }
+  
+  .background {
+    .one-section {
+      max-height: 1158px;
+      margin:0px 30px;
+      
+      .left {
+        margin: 41.2px 0px 0px 0px;
+      
+        .wrap {
+          margin: 102px 0px 0px 0px;
+          
+          .make-but {
+            display: flex;
+            justify-content: center;
+
+            .button {
+              margin: -1px 0px 0px 0px;
+            }
+          }
+        }
+      }
+  
+      .right {
+        justify-content: end;
+      }
+    }
+  }
+  
+  .about-bloks{
+    height: 1048px;
+    
+  }
+  .about {
+    gap: 80px;
+    height: 1048px;
+    margin: -9px 00px 0px 0px;
+  }
+  
+  .our-pets {
+    margin: 10px 0px 0px 0px;
   }
   
   .our-blok {
-    width: 708px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 60px;
     height: 697px;
-    margin: 77px 0px 100px 0px;
+    margin: 8px 0px 10px 0px;
     
-  
     .our-h2{
-      max-width: 400px;
-  
-      h2 {
-        margin: 5px 0px 0px 0px;
-      }
+      margin: 0px 0px 0px 0px;
     }
     
     .carts {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 54px;
-      margin: -3px 0px 0px 0px;
-      
-      svg {
-        margin: 2px 0px 0px 0px;
-         transition: 0.7s;
-  
-        &:hover {
-          cursor:pointer;
-          border-radius: 100%;
-          background: $color-primary-light;
-          stroke: $color-primary-light;
-        }
-      }
-  
       .svg2 {
-        margin: 2px 4px 0px 0px;
-        order: 5;
+        margin: 2px 1px 0px 0px;
       }
       
       .cart-wrap {
-        display: flex;
-        overflow: hidden;
-        width: 630px;
-        gap: 90px;
-  
         .cart {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          border-radius: 9px;
-          padding: 0px 0px 3px 0px;
-          width: 270px;
+          padding: 0px 0px 2px 0px;
           height: 435px;
-          gap: 30px;
-          background: $color-light-s;
-  
-          &:hover  {
-            background: $color-light-xl;
-            transition: 0.7s;
-            cursor: pointer;
-            box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-            .text-our button {
-              background: $color-primary-light;
-              border-color: $color-primary-light;
-              transition: 0.7s;
-            }
-            
-          }
-        
-          .img-cart {
-            max-width: 270px;
-            max-height: 270px;
-            border-radius: 9px 9px 0 0;
-    
-            img{
-              width: 100%;
-            }
-          }
-          .text-our {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-    
-            .name-dog {
-              font-family: "Georgia Regular";
-              font-weight: 400;
-              font-size: 20px;
-              letter-spacing: 0.06em;
-              text-align: center;
-              color: $color-dark-l;
-    
-              p{
-                margin: 0px;
-              }
-            }
-            button {
-              border: 2px solid $color-primary;
-              border-radius: 100px;
-              padding: 15px 43px;
-              width: 188px;
-              height: 52px;
-              background: $color-light-s;
-              font-family: "Georgia Regular";
-              font-weight: 400;
-              font-size: 17px;
-              line-height: 130%;
-              letter-spacing: 0.06em;
-              color: $color-dark-3xl;
-  
-              &:hover {
-                cursor: pointer;
-                background: $color-primary-light;
-              }
-            }
-          }
-        }
-      }
-    }
-  
-    .but-get {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: -2px 0px 3px 0px;
-  
-      .but {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100px;
-        border: solid 1px $color-primary;
-        width: 261px;
-        height: 52px;
-        background: $color-primary;
-        font-family: "Georgia Regular";
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 130%;
-        letter-spacing: 0.06em;
-        color: $color-dark-3xl;
-        text-decoration: none;
-  
-        &:hover {
-          cursor:pointer;
-          background: $color-primary-light;
-          transition: 0.7s;
-        }
-  
-        p{
-          margin: 0px;
         }
       }
     }
   }
+  
+  .help {
+    margin: 80px 0px 7px 0px;
+  
+    .help-blok {
+      margin: 0px 0px 0px 0px;
+      
+      .help-h2 {
+        margin:1px 0px 59px 1.4px;
+      }
+    
+      .help-icon {
+        gap:60px;
+        margin: -2px 0px 98px 0px;
+        
+        div {
+          width: 170px;
+          margin: 0px 0px -8px 0px;
+        }
+      }
+    }
+  }
+  
+  .contacts1 {
+    height: 783px;
+    margin: 0px 0px 1px 2px;
+  
+    .contacts-blok {
+      gap: 60px;
+      margin: -16px 2px 0px 0px;
+      
+      .left {
+        order: 2;
+      }
+    }
+  }
+  
+  .footer {
+    gap: 61px;
+    margin: 30.5px 0px 0px 0px;
+    
+  
+    .img-fot {
+      margin: -38px 0px 0px 0px;
+  }
+  }
 }
-
-
 
 
 
