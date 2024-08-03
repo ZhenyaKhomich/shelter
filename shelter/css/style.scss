@@ -127,10 +127,10 @@ h2 {
       flex-direction: column;
       width: 30px;
       height: 22px;
-      gap:6px;
+      gap:8.5px;
       
       span {
-        border: 2px solid $color-primary;
+        border: 1.5px solid $color-primary;
         width: 28px;
         height: 0px;
       }
@@ -435,7 +435,6 @@ h2 {
     display: flex;
     position: absolute;
     top: 49%;
-    width: 1200x;
     gap:1098px;
     
     svg {
@@ -906,6 +905,7 @@ h2 {
   }
 
   .help {
+    height: 100%;
     margin: 80px 0px 7px 0px;
   
     .help-blok {
@@ -917,6 +917,7 @@ h2 {
     
       .help-icon {
         gap:60px;
+        margin: -2px 0px 10vw 0px;
         
         div {
           width: 170px;
@@ -1131,7 +1132,6 @@ h2 {
   
   .about-bloks{
     height: 1048px;
-    
   }
   .about {
     gap: 80px;
@@ -1308,7 +1308,7 @@ h2 {
   }
   
   .contacts1 {
-    height: 700px;
+    height: 100%;
     
     .contacts-blok {
       margin: 42px 20px 42px 20px;
@@ -1321,8 +1321,6 @@ h2 {
   }
 }
 
-
-
 @media ( max-width: 650px) {
 
   .our-blok {
@@ -1330,176 +1328,528 @@ h2 {
       max-width: calc(100vw - 200px);
       
       .cart-wrap {
-        gap: 1500vw;
+        gap: 40px;
         max-width: 270px;
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 3px 0px;
         justify-content: space-around;
 
-        .one {
-          position: absolute;
-          align-items: center;
-          text-align: center;
-          justify-content: center;
-          margin: 0px auto 0px auto;
-        }
+        // .one {
+        //   position: absolute;
+        //   align-items: center;
+        //   text-align: center;
+        //   justify-content: center;
+        //   margin: 0px auto 0px auto;
+        // }
   
         .cart {
-          padding: 0px 0px 3px 0px;
-          margin: 0px 0px 0px 0px;
-          width: 270px;
           height: 435px;
-          gap: 30px;
           
-  
-        
-        
           .img-cart {
             width: 270px;
             max-height: 270px;
             border-radius: 9px 9px 0 0;
-    
-            img{
-            }
           }
       
         }
       }
     }
   }
-}
-
-
-@media (max-width: 450px) {
-  
-  .background {
-    .one-section {
-      .left {
-        justify-content: center;
-        margin: 41.2px 30px 0px 30px;
-        
-        .wrap {
-          justify-content: center;
-
-          .make-but {
-            display: flex;
-            justify-content: center;
-
-            .button {
-              margin: -1px 0px 0px 0px;
-            }
-          }
-        }
-      }
-  
-      .right {
-        display: flex;
-        justify-content: end;
-        height: 100%;
-  
-          img {
-          max-width: 569px;
-          }
-      }
-    }
-  }
-  
-  .about {
-    margin: 0px 0px 0px 0px;
-  }
-  
-  .our-blok {
-    height: 100%;
-    gap:42px;
-    padding-top: 42px;
-    padding-bottom: 42px;
-
-    .carts {
-      max-width: calc(100vw - 40px);
-      gap: 1.6vw;
-     
-      justify-content: center;
-
-      svg {
-        
-       
-      }
-  
-      .cart-wrap {
-        overflow: hidden;
-        width: 270px;
-        margin: 0px auto 0px auto;
-        gap: 6vw;
-        
-        .cart {
-          width: 270px;
-          height: 100%;
-          padding-bottom: 4%;
-
-          .img-cart {
-            max-width: 270px;
-            img{
-              max-width: 270px;
-            }
-          }
-        }
-      }
-    }
-  }
-  
   .help {
     margin: 42px auto 7px auto;
   
     .help-blok {
       .help-icon {
-        gap: 80px;
+        gap: 9.2vw;
         margin: -2px 0px 42px 0px;
+
+        div {
+          width: 130px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+
+  .our-blok {
+    
+    .slid {
+      top: 74%;
+      gap:80px;
+    }
+  
+    .but-get {
+      margin: 63px 0px 3px 2px;
+    }
+  }
+}
+
+
+@media(max-width:400px) {
+  @mixin font-h2() {
+    font-size: calc(12.5vw - 15px);
+  }
+  
+  .header, .bloks, .footer {
+    max-width: 400px;
+  }
+  
+  h2 {
+    @include font-h2();
+  }
+  
+  .background {
+    .one-section {
+      gap: 90px;
+
+      .right {
+        margin: 0px 0px 0px 17px;
+      }
+    
+      .left {
+        .wrap {
+          align-items: center;
+          margin: 92px 0px 0px 0px;
+          gap:40px;
+          .title {
+            max-width: 272px;
+            align-items: center;
+  
+            h1 {
+              font-size: calc(17.5vw - 29px);
+              text-align: center;
+              letter-spacing: 0.06em;
+            }
+          }
+          .text {
+            width: 300px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  
+  .about-bloks{
+    height: 974px;
+  }
+
+  .about {
+    display: flex;
+    gap: 15vw;
+    height: 974px;
+    margin: 0px 0px 0px 0px;
+
+    .about-left {
+      img{
+        width: 76vw;
+      }
+    }
+  
+    .about-right{
+      margin: -6px 0px 0px 0px;
+      gap: 25px;
+      
+  
+      .about-h2 {
+        height: 100%;
+        
+        h2 {
+          text-align: center;
+        }
+      }
+  
+      .one-text, .two-text {
+        text-align: center;
+      }
+    }
+  }
+  
+  .our-pets {
+    height: 791px;
+    margin: -2px 0px 0px 0px;
+  }
+  
+  .our-blok {
+    gap: 42px;
+    height: 707px;
+    padding-top: 43px;
+    padding-bottom: 0px;
+    
+    .our-h2{
+      width: 300px;
+  
+      h2 {
+        margin: 8px 0px 0px 0px;
+      }
+    }
+    
+    .carts {
+      gap: 54px;
+      margin: 0px 0px 0px 0px;
+      max-width: calc(100vw - 40px);
+      
+      
+      .cart-wrap {
+        
+        .cart {
+          padding: 0px 0px 3px 0px;
+        }
+      }
+    }
+  
+    .slid {
+      top: 80.5%;
+    }
+  
+    .but-get {
+      margin: 66px 0px 3px 0px;
+    }
+  }
+  
+  .help {
+    margin: 44px auto 7px auto;
+  
+    .help-blok {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 0px 0px 0px;
+      
+    
+      .help-h2 {
+        max-width: 220px;
+        margin:0px 0px -20px 0px;
+      }
+    
+      .help-icon {
+        gap: 6vw;
+        height: 100%;
+        margin: -2px 0px 100px 0px;
+    
+        div {
+          margin: 60px 0px -69px 0px;
+          svg {
+            width: 50px;
+            height: 50px;
+          }
+          p {
+            font-size: calc(5vw);
+          }
+        }
       }
     }
   }
   
   .contacts1 {
-    height: 640px;
-    
     .contacts-blok {
-      margin: 42px 0px 42px 0px;
+      gap: 60px;
+      height: 542px;
+      margin: 0px 10px 0px 10px;
+      
+      .left {
+        margin: 0px 20px 0px 20px;
+      }
+    
+      .right {
+        gap: 20px;
+        max-width: 380px;
+        align-items: center;
+        
+        .text-h2 {
+          max-width: 300px;
+          margin: 15px 0px 0px 0px;
+          h2 {
+            margin: 0px;
+            text-align: center;
+          }
+        }
+    
+        .text2 {
+          margin: 0px 0px 4px 0px;
+    
+          p{
+            font-size: 14px;
+            }
+        }
+    
+        .num-cart {
+          width: 79vw;
+          .num {
+            a {
+              font-size: 4.7vw;
+            }
+          }
+        }
+      }
     }
   }
   
   .footer {
-    gap: 5vw;
-    margin: 42px 0px 0px 0px;
+    gap: 40px;
+    padding: 0px 30px 0px 30px;
+    margin: 24px 0px 0px 3px;
+    text-align: center;
+    
+    .blok1 {
+      margin: -1px 0px 0px 0px;
+  
+      .title {
+        p{
+          font-size: calc(12.5vw - 15px);
+        }
+      }
+
+      .tel {
+        width: 241px;
+      }
+
+      .email, .tel {
+        max-width: 251px;
+        margin: 0px auto 0px auto;
+      }
+    }
+  
+    .blok2 {
+      gap: 40px;
+      max-width: 302px;
+      margin: 0px 0px 0px -2px;
+  
+      .title2 {
+        margin: 0px auto 0px auto;
+        p{
+          font-size: calc(12.5vw - 15px);
+          width: 270px;
+        }
+      }
+  
+      .location {
+        a{
+          justify-content: start;
+          width: 300px;
+  
+          p {
+            text-align: start;
+          }
+        }
+      }
+    }
+    .img-fot {
+      margin: 0px 10px 0px 10px;
+  }
   }
 }
 
-
-
-  // .our-blok {
-  //   height: 100%;
-  //   gap:4vw;
-  //   padding-top: 70px;
-  //   padding-bottom: 90px;
+@media(max-width: 320px) {
+  @mixin font-h2() {
+    font-size: 25px;
+  }
+  h2 {
+    @include font-h2();
+  }
+  
+  .background {
+    .one-section {
+      .right {
+        margin: 0px -10px 0px 26px;
+      }
     
-  //   .carts {
-  //     max-width: 100%;
-  //     gap: 4vw;
-  //     margin: 0px 0px 0px 0px;
+      .left {
+        .wrap {
+          gap:0px;
+          .title {
+            width: 230px;
       
-  //     .cart-wrap {
-  //       gap: 8vw;
-  //       width: calc(100%);
+            h1 {
+              font-size: 25px;
+              letter-spacing: 0.06em;
+            }
+          }
+          .text {
+            margin: 41px 0px 43px 0px
+          }
+        }
+      }
+    }
+  }
+  
+  .about {
+    gap: 45px;
+    margin: 0px 0px 0px 0px;
+
+    .about-left {
+      img{
+        margin: 0px 0px 0px 0px;
+        width: 260px;
+      }
+    }
+  
+    .about-right{
+      margin: -6px 0px 0px 0px;
+      gap: 23px;
+      height: 494px;
+      
+  
+      .about-h2 {
+        height: 100%;
+        margin: 5px 0px -6px 0px;
         
-  //       .cart {
-  //         width: 100%;
-  //         height: 100%;
-  //         padding-bottom:3%;
-          
-  //         .img-cart {
-  //           img{
-  //             width: 100%;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+        h2 {
+          text-align: center;
+        }
+      }
+  
+      .one-text, .two-text {
+        width: 270px;
+        text-align: justify;
+        padding: 0px 10px 0px 10px;
+      }
+      .one-text {
+        margin: 7px 0px 0px 0px;
+      }
+
+    }
+  }
+  
+ 
+  
+  .our-blok {
+    gap: 43px;
+    padding-top: 42px;
+
+    .carts {
+      .cart-wrap {
+        .cart {
+          gap:28px
+        }
+      }
+    }
+  
+    .but-get {
+      margin: 63px 0px 3px 0px;
+    }
+  }
+  
+  .help {
+    .help-blok {
+      .help-icon {
+        width: 290px;
+        height: 555px;
+        justify-content: start;
+        gap: 30px;
+    
+        div {
+          p {
+            font-size: 15px;
+            margin: 20px 0px 5px 0px;
+          }
+        }
+      }
+    }
+  }
+  
+  .contacts1 {
+    .contacts-blok {
+      gap: 42px;
+      height: 539px;
+      
+      .right {
+        .text-h2 {
+          max-width: 220px;
+          margin: -1px 0px 4px 0px;
+        }
+    
+        .text2 {
+          margin: 0px 0px 2px 0px;
+          width: 273px;
+    
+          p{
+            font-size: 13.2px;
+            }
+        }
+    
+        .num-cart {
+          width: 251px;
+          margin: 3px 0px 0px 0px;
+          .num {
+            a {
+              font-size: 15px;
+            }
+          }
+        }
+        .text3 {
+          width: 280px;
+          margin: 0px 0px 0px -2px;
+          p {
+            text-align: justify;
+            font-size: 12px;
+            
+          }
+        }
+      }
+    }
+  }
+  
+  .footer {
+    height: 809px;
+    gap: 0px;
+    padding: 0px 32px 0px 28px;
+    margin: 0px 0px 0px 3px;
+    text-align: center;
+    
+    .blok1 {
+      margin: 17px 0px 0px 0px;
+  
+      .title {
+        p{
+          font-size: 25px;
+        }
+      }
+
+      .tel {
+        width: 241px;
+      }
+      
+      .email, .tel {
+        max-width: 251px;
+        margin: 0px auto 0px auto;
+      }
+    }
+  
+    .blok2 {
+      gap: 40px;
+      max-width: 302px;
+      margin: -5px 0px 0px -2px;
+  
+      .title2 {
+        margin: 17px 29px -2px 32px;
+        p{
+          font-size: 25px;
+          width: 270px;
+        }
+      }
+  
+      .location {
+        a{
+          justify-content: start;
+          width: 300px;
+          margin: 0px 0px 0px 2px;
+  
+          p {
+            text-align: start;
+          }
+        }
+      }
+    }
+    .img-fot {
+      height: 269px;
+      margin: 0px 10px 0px 10px;
+      img{
+        margin: 0px 0px 0px 0px;
+      }
+  }
+  }
+}

@@ -91,10 +91,10 @@ h2 {
   flex-direction: column;
   width: 30px;
   height: 22px;
-  gap: 6px;
+  gap: 8.5px;
 }
 .header nav .burg span {
-  border: 2px solid #f1cdb3;
+  border: 1.5px solid #f1cdb3;
   width: 28px;
   height: 0px;
 }
@@ -349,7 +349,6 @@ h2 {
   display: flex;
   position: absolute;
   top: 49%;
-  width: 1200x;
   gap: 1098px;
 }
 .our-blok .slid svg {
@@ -725,6 +724,7 @@ h2 {
     gap: calc(100vw - 196px);
   }
   .help {
+    height: 100%;
     margin: 80px 0px 7px 0px;
   }
   .help .help-blok {
@@ -735,6 +735,7 @@ h2 {
   }
   .help .help-blok .help-icon {
     gap: 60px;
+    margin: -2px 0px 10vw 0px;
   }
   .help .help-blok .help-icon div {
     width: 170px;
@@ -1023,7 +1024,7 @@ h2 {
     margin: 0px 0px -8px 0px;
   }
   .contacts1 {
-    height: 700px;
+    height: 100%;
   }
   .contacts1 .contacts-blok {
     margin: 42px 20px 42px 20px;
@@ -1038,101 +1039,373 @@ h2 {
     max-width: calc(100vw - 200px);
   }
   .our-blok .carts .cart-wrap {
-    gap: 1500vw;
+    gap: 40px;
     max-width: 270px;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 3px 0px;
     justify-content: space-around;
   }
-  .our-blok .carts .cart-wrap .one {
-    position: absolute;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 0px auto 0px auto;
-  }
   .our-blok .carts .cart-wrap .cart {
-    padding: 0px 0px 3px 0px;
-    margin: 0px 0px 0px 0px;
-    width: 270px;
     height: 435px;
-    gap: 30px;
   }
   .our-blok .carts .cart-wrap .cart .img-cart {
     width: 270px;
     max-height: 270px;
     border-radius: 9px 9px 0 0;
   }
-}
-@media (max-width: 450px) {
-  .background .one-section .left {
-    justify-content: center;
-    margin: 41.2px 30px 0px 30px;
-  }
-  .background .one-section .left .wrap {
-    justify-content: center;
-  }
-  .background .one-section .left .wrap .make-but {
-    display: flex;
-    justify-content: center;
-  }
-  .background .one-section .left .wrap .make-but .button {
-    margin: -1px 0px 0px 0px;
-  }
-  .background .one-section .right {
-    display: flex;
-    justify-content: end;
-    height: 100%;
-  }
-  .background .one-section .right img {
-    max-width: 569px;
-  }
-  .about {
-    margin: 0px 0px 0px 0px;
-  }
-  .our-blok {
-    height: 100%;
-    gap: 42px;
-    padding-top: 42px;
-    padding-bottom: 42px;
-  }
-  .our-blok .carts {
-    max-width: calc(100vw - 40px);
-    gap: 1.6vw;
-    justify-content: center;
-  }
-  .our-blok .carts .cart-wrap {
-    overflow: hidden;
-    width: 270px;
-    margin: 0px auto 0px auto;
-    gap: 6vw;
-  }
-  .our-blok .carts .cart-wrap .cart {
-    width: 270px;
-    height: 100%;
-    padding-bottom: 4%;
-  }
-  .our-blok .carts .cart-wrap .cart .img-cart {
-    max-width: 270px;
-  }
-  .our-blok .carts .cart-wrap .cart .img-cart img {
-    max-width: 270px;
-  }
   .help {
     margin: 42px auto 7px auto;
   }
   .help .help-blok .help-icon {
-    gap: 80px;
+    gap: 9.2vw;
     margin: -2px 0px 42px 0px;
   }
-  .contacts1 {
-    height: 640px;
+  .help .help-blok .help-icon div {
+    width: 130px;
+  }
+}
+@media (max-width: 450px) {
+  .our-blok .slid {
+    top: 74%;
+    gap: 80px;
+  }
+  .our-blok .but-get {
+    margin: 63px 0px 3px 2px;
+  }
+}
+@media (max-width: 400px) {
+  .header, .bloks, .footer {
+    max-width: 400px;
+  }
+  h2 {
+    font-size: calc(12.5vw - 15px);
+  }
+  .background .one-section {
+    gap: 90px;
+  }
+  .background .one-section .right {
+    margin: 0px 0px 0px 17px;
+  }
+  .background .one-section .left .wrap {
+    align-items: center;
+    margin: 92px 0px 0px 0px;
+    gap: 40px;
+  }
+  .background .one-section .left .wrap .title {
+    max-width: 272px;
+    align-items: center;
+  }
+  .background .one-section .left .wrap .title h1 {
+    font-size: calc(17.5vw - 29px);
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .background .one-section .left .wrap .text {
+    width: 300px;
+    text-align: center;
+  }
+  .about-bloks {
+    height: 974px;
+  }
+  .about {
+    display: flex;
+    gap: 15vw;
+    height: 974px;
+    margin: 0px 0px 0px 0px;
+  }
+  .about .about-left img {
+    width: 76vw;
+  }
+  .about .about-right {
+    margin: -6px 0px 0px 0px;
+    gap: 25px;
+  }
+  .about .about-right .about-h2 {
+    height: 100%;
+  }
+  .about .about-right .about-h2 h2 {
+    text-align: center;
+  }
+  .about .about-right .one-text, .about .about-right .two-text {
+    text-align: center;
+  }
+  .our-pets {
+    height: 791px;
+    margin: -2px 0px 0px 0px;
+  }
+  .our-blok {
+    gap: 42px;
+    height: 707px;
+    padding-top: 43px;
+    padding-bottom: 0px;
+  }
+  .our-blok .our-h2 {
+    width: 300px;
+  }
+  .our-blok .our-h2 h2 {
+    margin: 8px 0px 0px 0px;
+  }
+  .our-blok .carts {
+    gap: 54px;
+    margin: 0px 0px 0px 0px;
+    max-width: calc(100vw - 40px);
+  }
+  .our-blok .carts .cart-wrap .cart {
+    padding: 0px 0px 3px 0px;
+  }
+  .our-blok .slid {
+    top: 80.5%;
+  }
+  .our-blok .but-get {
+    margin: 66px 0px 3px 0px;
+  }
+  .help {
+    margin: 44px auto 7px auto;
+  }
+  .help .help-blok {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+  }
+  .help .help-blok .help-h2 {
+    max-width: 220px;
+    margin: 0px 0px -20px 0px;
+  }
+  .help .help-blok .help-icon {
+    gap: 6vw;
+    height: 100%;
+    margin: -2px 0px 100px 0px;
+  }
+  .help .help-blok .help-icon div {
+    margin: 60px 0px -69px 0px;
+  }
+  .help .help-blok .help-icon div svg {
+    width: 50px;
+    height: 50px;
+  }
+  .help .help-blok .help-icon div p {
+    font-size: 5vw;
   }
   .contacts1 .contacts-blok {
-    margin: 42px 0px 42px 0px;
+    gap: 60px;
+    height: 542px;
+    margin: 0px 10px 0px 10px;
+  }
+  .contacts1 .contacts-blok .left {
+    margin: 0px 20px 0px 20px;
+  }
+  .contacts1 .contacts-blok .right {
+    gap: 20px;
+    max-width: 380px;
+    align-items: center;
+  }
+  .contacts1 .contacts-blok .right .text-h2 {
+    max-width: 300px;
+    margin: 15px 0px 0px 0px;
+  }
+  .contacts1 .contacts-blok .right .text-h2 h2 {
+    margin: 0px;
+    text-align: center;
+  }
+  .contacts1 .contacts-blok .right .text2 {
+    margin: 0px 0px 4px 0px;
+  }
+  .contacts1 .contacts-blok .right .text2 p {
+    font-size: 14px;
+  }
+  .contacts1 .contacts-blok .right .num-cart {
+    width: 79vw;
+  }
+  .contacts1 .contacts-blok .right .num-cart .num a {
+    font-size: 4.7vw;
   }
   .footer {
-    gap: 5vw;
-    margin: 42px 0px 0px 0px;
+    gap: 40px;
+    padding: 0px 30px 0px 30px;
+    margin: 24px 0px 0px 3px;
+    text-align: center;
+  }
+  .footer .blok1 {
+    margin: -1px 0px 0px 0px;
+  }
+  .footer .blok1 .title p {
+    font-size: calc(12.5vw - 15px);
+  }
+  .footer .blok1 .tel {
+    width: 241px;
+  }
+  .footer .blok1 .email, .footer .blok1 .tel {
+    max-width: 251px;
+    margin: 0px auto 0px auto;
+  }
+  .footer .blok2 {
+    gap: 40px;
+    max-width: 302px;
+    margin: 0px 0px 0px -2px;
+  }
+  .footer .blok2 .title2 {
+    margin: 0px auto 0px auto;
+  }
+  .footer .blok2 .title2 p {
+    font-size: calc(12.5vw - 15px);
+    width: 270px;
+  }
+  .footer .blok2 .location a {
+    justify-content: start;
+    width: 300px;
+  }
+  .footer .blok2 .location a p {
+    text-align: start;
+  }
+  .footer .img-fot {
+    margin: 0px 10px 0px 10px;
+  }
+}
+@media (max-width: 320px) {
+  h2 {
+    font-size: 25px;
+  }
+  .background .one-section .right {
+    margin: 0px -10px 0px 26px;
+  }
+  .background .one-section .left .wrap {
+    gap: 0px;
+  }
+  .background .one-section .left .wrap .title {
+    width: 230px;
+  }
+  .background .one-section .left .wrap .title h1 {
+    font-size: 25px;
+    letter-spacing: 0.06em;
+  }
+  .background .one-section .left .wrap .text {
+    margin: 41px 0px 43px 0px;
+  }
+  .about {
+    gap: 45px;
+    margin: 0px 0px 0px 0px;
+  }
+  .about .about-left img {
+    margin: 0px 0px 0px 0px;
+    width: 260px;
+  }
+  .about .about-right {
+    margin: -6px 0px 0px 0px;
+    gap: 23px;
+    height: 494px;
+  }
+  .about .about-right .about-h2 {
+    height: 100%;
+    margin: 5px 0px -6px 0px;
+  }
+  .about .about-right .about-h2 h2 {
+    text-align: center;
+  }
+  .about .about-right .one-text, .about .about-right .two-text {
+    width: 270px;
+    text-align: justify;
+    padding: 0px 10px 0px 10px;
+  }
+  .about .about-right .one-text {
+    margin: 7px 0px 0px 0px;
+  }
+  .our-blok {
+    gap: 43px;
+    padding-top: 42px;
+  }
+  .our-blok .carts .cart-wrap .cart {
+    gap: 28px;
+  }
+  .our-blok .but-get {
+    margin: 63px 0px 3px 0px;
+  }
+  .help .help-blok .help-icon {
+    width: 290px;
+    height: 555px;
+    justify-content: start;
+    gap: 30px;
+  }
+  .help .help-blok .help-icon div p {
+    font-size: 15px;
+    margin: 20px 0px 5px 0px;
+  }
+  .contacts1 .contacts-blok {
+    gap: 42px;
+    height: 539px;
+  }
+  .contacts1 .contacts-blok .right .text-h2 {
+    max-width: 220px;
+    margin: -1px 0px 4px 0px;
+  }
+  .contacts1 .contacts-blok .right .text2 {
+    margin: 0px 0px 2px 0px;
+    width: 273px;
+  }
+  .contacts1 .contacts-blok .right .text2 p {
+    font-size: 13.2px;
+  }
+  .contacts1 .contacts-blok .right .num-cart {
+    width: 251px;
+    margin: 3px 0px 0px 0px;
+  }
+  .contacts1 .contacts-blok .right .num-cart .num a {
+    font-size: 15px;
+  }
+  .contacts1 .contacts-blok .right .text3 {
+    width: 280px;
+    margin: 0px 0px 0px -2px;
+  }
+  .contacts1 .contacts-blok .right .text3 p {
+    text-align: justify;
+    font-size: 12px;
+  }
+  .footer {
+    height: 809px;
+    gap: 0px;
+    padding: 0px 32px 0px 28px;
+    margin: 0px 0px 0px 3px;
+    text-align: center;
+  }
+  .footer .blok1 {
+    margin: 17px 0px 0px 0px;
+  }
+  .footer .blok1 .title p {
+    font-size: 25px;
+  }
+  .footer .blok1 .tel {
+    width: 241px;
+  }
+  .footer .blok1 .email, .footer .blok1 .tel {
+    max-width: 251px;
+    margin: 0px auto 0px auto;
+  }
+  .footer .blok2 {
+    gap: 40px;
+    max-width: 302px;
+    margin: -5px 0px 0px -2px;
+  }
+  .footer .blok2 .title2 {
+    margin: 17px 29px -2px 32px;
+  }
+  .footer .blok2 .title2 p {
+    font-size: 25px;
+    width: 270px;
+  }
+  .footer .blok2 .location a {
+    justify-content: start;
+    width: 300px;
+    margin: 0px 0px 0px 2px;
+  }
+  .footer .blok2 .location a p {
+    text-align: start;
+  }
+  .footer .img-fot {
+    height: 269px;
+    margin: 0px 10px 0px 10px;
+  }
+  .footer .img-fot img {
+    margin: 0px 0px 0px 0px;
   }
 }/*# sourceMappingURL=style.css.map */
