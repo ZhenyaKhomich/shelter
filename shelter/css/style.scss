@@ -249,7 +249,6 @@ h2 {
           a {
           }
           
-
           &:hover {
             cursor: pointer;
             background: $color-primary-light;
@@ -268,7 +267,7 @@ h2 {
         width: 100%;
         }
     }
-}
+  }
 }
 
 .about-bloks{
@@ -447,7 +446,6 @@ h2 {
         stroke: $color-primary-light;
       }
     }
-    
   }
 
   .but-get {
@@ -611,8 +609,6 @@ h2 {
           width: 319px;
           gap:14px;
 
-          
-  
           a {
             font-family: "Georgia Regular";
             font-weight: 400;
@@ -654,7 +650,6 @@ h2 {
   padding: 0px 30px 0px 30px;
   margin: 39px 0px 0px 3px;
   
-
   .blok1 {
     display: flex;
     flex-direction: column;
@@ -763,7 +758,7 @@ h2 {
   }
   .img-fot {
     max-height: 310px;
-}
+  }
 }
 
 @media (max-width: 1279px) {
@@ -851,8 +846,6 @@ h2 {
       flex-shrink: 2;
       img{
         width: 100%;
-        
-        
       }
     }
   }
@@ -860,7 +853,6 @@ h2 {
 
 @media (max-width: 950px) {
 
- 
   .background {
     .one-section {
       .left {
@@ -963,13 +955,6 @@ h2 {
     }
   }
 }
-
-
-
-
-
-
-
 
 @media(max-width: 855px) {
 
