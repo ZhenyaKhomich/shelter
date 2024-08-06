@@ -131,7 +131,7 @@ h1 {
       gap:8.5px;
       
       span {
-        border: 1.5px solid $color-primary;
+        border: 1.5px solid #000;
         width: 28px;
         height: 0px;
       }
@@ -545,21 +545,10 @@ h1 {
 @media (max-width: 950px) {
 
   .our-pets {
-    margin: 0px -1px 0px 0px;
-    height: 1603px;
-  
     .our-blok {
       gap: 3wv;
-      margin: 76px 0px 100px 0px;
-      
-      .our-h2{
-        max-width: 400px;
-    
-        h1 {
-          margin: 5px 0px -1px 0px;
-        }
-      }
-      
+      margin: 7vw 0px 6vw 0px;
+
       .carts {
         width: 100vw;
         padding: 0px;
@@ -577,8 +566,7 @@ h1 {
             border-radius: 9px;
             padding: 0px 0px 3px 0px;
             width: 28vw;
-            height: 435px;
-            gap: 30px;
+            padding-bottom: 4%;
     
             .img-cart {
               max-width: 270px;
@@ -588,37 +576,12 @@ h1 {
               img{
                 width: 28vw;
               }
-      
             }
-            .text-our {
-              gap: 30px;
-            }
-          }
-        }
-      }
-  
-      .slider {
-        gap: 20px;
-        max-width: 340px;
-        margin: -3px 0px 0px 0px;
-  
-        .svg3 {
-          border-radius: 100px;
-          padding: 14px 21px;
-          width: 52px;
-          height: 52px;
-          padding: 0px;
-        }
-        
-        .but {
-          span {
-            margin: -3px 0px 0px 0px;
           }
         }
       }
     }
   }
-
   
   .footer {
     gap: calc(12vw - 60px);
@@ -645,64 +608,21 @@ h1 {
 @media(max-width: 855px) {
 
   .our-pets {
-   
-  
     .our-blok {
-      
-      
-    
-     
-      
       .carts {
         width: 100vw;
-        padding: 0px;
-        margin: 0px 0px 0px 0px;
         
         .cart-wrap {
-          display: flex;
           width: 100vw;
-          height: 1365px;
-          flex-wrap: wrap;
-          justify-content: center;
           row-gap: 26px;
           column-gap: 2.5vw;
           
           .cart {
-            
-    
             .img-cart {
-              max-width: 270px;
-              max-height: 270px;
-              border-radius: 9px 9px 0 0;
-      
               img{
                 width: 28vw;
               }
-      
             }
-            .text-our {
-              gap: 30px;
-            }
-          }
-        }
-      }
-  
-      .slider {
-        gap: 20px;
-        max-width: 340px;
-        margin: -3px 0px 0px 0px;
-  
-        .svg3 {
-          border-radius: 100px;
-          padding: 14px 21px;
-          width: 52px;
-          height: 52px;
-          padding: 0px;
-        }
-        
-        .but {
-          span {
-            margin: -3px 0px 0px 0px;
           }
         }
       }
@@ -727,83 +647,40 @@ h1 {
     } 
   }
   
-  
-  
-  
- 
-  
   .our-pets {
     margin: 0px -1px 0px 0px;
-    height: 1603px;
+    height: 1733px;
     
-  
     .our-blok {
-      gap: 3wv;
-      margin: 76px 0px 100px 0px;
-      
-    
-      .our-h2{
-        max-width: 400px;
-    
-        h1 {
-          margin: 5px 0px -1px 0px;
-        }
-      }
+      gap: 30px;
+      margin: 85px 0px 84px 0px;
       
       .carts {
-        width: 100vw;
-        padding: 0px;
-        margin: 0px 0px 0px 0px;
-        
         .cart-wrap {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          row-gap: 26px;
+          row-gap: 27px;
           column-gap: 40px;
           width: 580px;
+          height: 1350px;
+          overflow: hidden;
           
           .cart {
-            border-radius: 9px;
             padding: 0px 0px 3px 0px;
             width: 270px;
             height: 435px;
-            gap: 30px;
     
             .img-cart {
-              max-width: 270px;
-              max-height: 270px;
-              border-radius: 9px 9px 0 0;
-      
               img{
                 width: 270px;
               }
-      
-            }
-            .text-our {
-              gap: 30px;
             }
           }
         }
       }
   
       .slider {
-        gap: 20px;
-        max-width: 340px;
-        margin: -3px 0px 0px 0px;
-  
-        .svg3 {
-          border-radius: 100px;
-          padding: 14px 21px;
-          width: 52px;
-          height: 52px;
-          padding: 0px;
-        }
-        
-        .but {
-          span {
-            margin: -3px 0px 0px 0px;
-          }
-        }
+        margin: 26px 0px 0px 0px;
       }
     }
   }
@@ -838,81 +715,49 @@ h1 {
     }
   }
 
-  .background {
-    .one-section {
-      margin: 0px 20px 0px 20px;
+  .our-pets {
+    height: 230vw;
+    
+    .our-blok {
+      margin: 8vw 0px 5vw 0px;
       
-      .right {
-        height: 100%;
-      }
-    }
-  }
-  
-  .about {
-    margin: 0px 0px 0px 0px;
+      .carts {
+        width: 100vw;
+        .cart-wrap {
+          row-gap: 8.3vw;
+          column-gap: 1vw;
+          width: calc(100vw - 60px);
+          height: 192vw;
+          overflow: hidden;
+          justify-items: center;
+          
+          
+          .cart {
+            height: 55vw;
+            width: 36vw;
+            padding-bottom: 6.4%;
+            gap: 3.8vw;
+            .text-our {
+              gap: 3.8vw;
+            }
 
-    .about-right{
-      .about-h2 {
-        h2 {
-          text-align: center;
-        }
-      }
-    }
-  }
-
-  .our-blok {
-    gap:60px;
-
-    .carts {
-      max-width: calc(100vw - 200px);
-      gap: 4vw;
-      
-      .cart-wrap {
-        overflow: hidden;
-        gap: 7vw;
-        max-width: 470px;
-        margin: 0px 0px 0px 3vw;
-        .cart {
-          .img-cart {
-            width: 27vw;
-            img{
-              width: 100%;
+            .img-cart {
+              img{
+                width: 100%
+              }
             }
           }
         }
       }
-    }
-    .slid {
-      gap: calc(100vw - 176px);
-    }
-  }
   
-  .help {
-    margin: 42px auto 7px auto;
-  
-    .help-blok {
-      .help-icon {
-        gap: 7.8vw;
-        margin: -2px 0px 42px 0px;
-
-        div {
-          width: 22.2vw;
-          margin: 0px 0px -8px 0px;
-        }
+      .slider {
+        margin: -5px 0px 0px 0px;
       }
     }
   }
-  
-  .contacts1 {
-    height: 100%;
-    
-    .contacts-blok {
-      margin: 42px 20px 42px 20px;
-    }
-  }
-  
+
   .footer {
-    gap: 5vw;
+    gap: 4vw;
     margin: 42px 0px 0px 0px;
   }
 }
@@ -930,14 +775,6 @@ h1 {
         padding: 0px 0px 3px 0px;
         justify-content: space-around;
 
-        // .one {
-        //   position: absolute;
-        //   align-items: center;
-        //   text-align: center;
-        //   justify-content: center;
-        //   margin: 0px auto 0px auto;
-        // }
-  
         .cart {
           height: 435px;
           
@@ -946,7 +783,6 @@ h1 {
             max-height: 270px;
             border-radius: 9px 9px 0 0;
           }
-      
         }
       }
     }
