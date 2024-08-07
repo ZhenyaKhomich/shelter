@@ -1223,7 +1223,7 @@ h2 {
   }
   .footer {
     gap: 40px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 10px 0px 10px;
     margin: 24px 0px 0px 3px;
     text-align: center;
   }
@@ -1364,12 +1364,12 @@ h2 {
   .footer {
     height: 809px;
     gap: 0px;
-    padding: 0px 32px 0px 28px;
+    padding: 0px 12px 0px 8px;
     margin: 0px 0px 0px 3px;
     text-align: center;
   }
   .footer .blok1 {
-    margin: 17px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
   }
   .footer .blok1 .title p {
     font-size: 25px;
