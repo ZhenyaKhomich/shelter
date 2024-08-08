@@ -1453,7 +1453,7 @@ h2 {
   }
   
   .our-pets {
-    height: 791px;
+    height: 851px;
     margin: -2px 0px 0px 0px;
   }
   
@@ -1476,7 +1476,6 @@ h2 {
       margin: 0px 0px 0px 0px;
       max-width: calc(100vw - 40px);
       
-      
       .cart-wrap {
         
         .cart {
@@ -1486,7 +1485,8 @@ h2 {
     }
   
     .slid {
-      top: 80.5%;
+      top: 85%;
+      
     }
   
     .but-get {
@@ -1628,6 +1628,24 @@ h2 {
   }
 }
 
+@media(max-width: 330px) {
+  
+  .our-pets {
+    height: 821px;
+    
+  }
+  .our-blok {
+    
+    .slid {
+      top: 81%;
+    }
+  
+    .but-get {
+      margin: 66px 0px 3px 0px;
+    }
+  }
+}
+
 @media(max-width: 320px) {
   @mixin font-h2() {
     font-size: 25px;
@@ -1698,7 +1716,11 @@ h2 {
 
     }
   }
-  
+
+  .our-pets {
+    height: 791px;
+    margin: -2px 0px 0px 0px;
+  }
   .our-blok {
     gap: 43px;
     padding-top: 42px;
@@ -1709,6 +1731,9 @@ h2 {
           gap:28px
         }
       }
+    }
+    .slid {
+      top: 80.7%;
     }
   
     .but-get {
