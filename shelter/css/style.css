@@ -1130,7 +1130,7 @@ h2 {
     text-align: center;
   }
   .our-pets {
-    height: 791px;
+    height: 851px;
     margin: -2px 0px 0px 0px;
   }
   .our-blok {
@@ -1154,7 +1154,7 @@ h2 {
     padding: 0px 0px 3px 0px;
   }
   .our-blok .slid {
-    top: 80.5%;
+    top: 85%;
   }
   .our-blok .but-get {
     margin: 66px 0px 3px 0px;
@@ -1263,6 +1263,17 @@ h2 {
     margin: 0px 10px 0px 10px;
   }
 }
+@media (max-width: 330px) {
+  .our-pets {
+    height: 821px;
+  }
+  .our-blok .slid {
+    top: 81%;
+  }
+  .our-blok .but-get {
+    margin: 66px 0px 3px 0px;
+  }
+}
 @media (max-width: 320px) {
   h2 {
     font-size: 25px;
@@ -1311,12 +1322,19 @@ h2 {
   .about .about-right .one-text {
     margin: 7px 0px 0px 0px;
   }
+  .our-pets {
+    height: 791px;
+    margin: -2px 0px 0px 0px;
+  }
   .our-blok {
     gap: 43px;
     padding-top: 42px;
   }
   .our-blok .carts .cart-wrap .cart {
     gap: 28px;
+  }
+  .our-blok .slid {
+    top: 80.7%;
   }
   .our-blok .but-get {
     margin: 63px 0px 3px 0px;
