@@ -49,6 +49,12 @@ body {
   margin: 0px auto;
 }
 
+.wraper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 .header, .bloks, .footer {
   max-width: 1200px;
   margin: 0px auto;
@@ -134,6 +140,7 @@ h1 {
         border: 1.5px solid #000;
         width: 28px;
         height: 0px;
+        transition: all 2s;
       }
     }
   
@@ -242,9 +249,6 @@ h1 {
             max-width: 270px;
             max-height: 270px;
             border-radius: 9px 9px 0 0;
-    
-            img{
-            }
     
           }
           .text-our {
@@ -709,10 +713,61 @@ h1 {
     nav {
       .burg{
         display: flex;
+        z-index: 10;
+        transition: all 0.7s;
+
+        
+        
       }
-  
+      .openBurg {
+        transform: rotate(90deg) translate(0px, 1px);
+        transition: all 0.7s;
+        span {
+          border: 1.5px solid $color-primary;
+          transition: all 2s;
+        }
+      }
+
       .menu {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap:40px;
+        top: 0px;
+        right: -2000px;
+        height: 823px;
+        width: 320px;
+        background: $color-dark-3xl;
+        justify-content: center;
+        align-items: center;
+        transition: all 2s;
+        .li {
+          a {
+            font-family: "Arial Regular";
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 160%;
+            color: $color-dark-l;
+          }
+          a.dis {
+            color: $color-light-s;
+          }
+        }
+      }
+
+      .openMenu {
+        padding: 0px;
+        transform: translate(-1980px, 4px);
+        transition: all 1.5s;
+        .li {
+          a {
+            font-family: "Arial Regular";
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 160%;
+            color: $color-light-s;
+          }
+        }
       }
     }
   }

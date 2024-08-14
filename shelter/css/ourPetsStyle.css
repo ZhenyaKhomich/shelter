@@ -25,6 +25,12 @@ body {
   margin: 0px auto;
 }
 
+.wraper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 .header, .bloks, .footer {
   max-width: 1200px;
   margin: 0px auto;
@@ -97,6 +103,7 @@ h1 {
   border: 1.5px solid #000;
   width: 28px;
   height: 0px;
+  transition: all 2s;
 }
 .header nav .menu {
   display: flex;
@@ -564,9 +571,52 @@ h1 {
   }
   .header nav .burg {
     display: flex;
+    z-index: 10;
+    transition: all 0.7s;
+  }
+  .header nav .openBurg {
+    transform: rotate(90deg) translate(0px, 1px);
+    transition: all 0.7s;
+  }
+  .header nav .openBurg span {
+    border: 1.5px solid #f1cdb3;
+    transition: all 2s;
   }
   .header nav .menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 40px;
+    top: 0px;
+    right: -2000px;
+    height: 823px;
+    width: 320px;
+    background: #292929;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s;
+  }
+  .header nav .menu .li a {
+    font-family: "Arial Regular";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: #545454;
+  }
+  .header nav .menu .li a.dis {
+    color: #fafafa;
+  }
+  .header nav .openMenu {
+    padding: 0px;
+    transform: translate(-1980px, 4px);
+    transition: all 1.5s;
+  }
+  .header nav .openMenu .li a {
+    font-family: "Arial Regular";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: #fafafa;
   }
   .our-pets {
     height: 230vw;

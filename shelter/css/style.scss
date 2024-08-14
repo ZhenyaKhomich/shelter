@@ -40,12 +40,18 @@ $footer-gradient-background: #211f20;
 }
 html {
   scroll-behavior: smooth;
+ 
 }
 body {
   font-family: "Georgia Regular", "Arial Regular", sans-serif;
   height: 100vh;
   box-sizing: border-box;
   margin: 0px auto;
+}
+.wraper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .header, .bloks, .footer {
@@ -245,9 +251,6 @@ h2 {
           margin: 0px;
           border: black; 
           text-decoration: none;
-
-          a {
-          }
           
           &:hover {
             cursor: pointer;
@@ -386,8 +389,6 @@ h2 {
           max-height: 270px;
           border-radius: 9px 9px 0 0;
   
-          img{
-          }
         }
         .text-our {
           display: flex;
@@ -556,9 +557,6 @@ h2 {
     align-items: center;
     gap: 30px;
     margin: -16px 0px 0px 2px;
-    
-    .left {
-    }
   
     .right {
       display: flex;
@@ -1219,10 +1217,52 @@ h2 {
     nav {
       .burg{
         display: flex;
+        z-index: 10;
+        transition: all 0.7s;
+        
       }
-  
+      .openBurg {
+        transform: rotate(90deg) translate(0px, 1px);
+        transition: all 0.7s;
+      }
+
       .menu {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap:40px;
+        top: 0px;
+        right: -2000px;
+        height: 823px;
+        width: 320px;
+        background: $color-dark-3xl;
+        justify-content: center;
+        align-items: center;
+        transition: all 2s;
+        .li {
+          a {
+            font-family: "Arial Regular";
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 160%;
+            color: $color-light-s;
+          }
+        }
+      }
+
+      .openMenu {
+        padding: 0px;
+        transform: translate(-1980px, 4px);
+        transition: all 1.5s;
+        .li {
+          a {
+            font-family: "Arial Regular";
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 160%;
+            color: $color-light-s;
+          }
+        }
       }
     }
   }
