@@ -51,7 +51,6 @@ h1 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 10;
   padding: 30px 0px 30px 0px;
 }
 .header a {
@@ -68,7 +67,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  width: 187px;
   height: 60px;
 }
 .header a .logo .top .textop {
@@ -562,6 +560,14 @@ h1 {
   }
 }
 @media (max-width: 767.5px) {
+  .dark {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+    position: absolute;
+    z-index: 15;
+    transition: all 3s;
+  }
   .header, .bloks, .footer {
     width: calc(100vw - 40px);
     margin: 0px 20px;
@@ -571,7 +577,7 @@ h1 {
   }
   .header nav .burg {
     display: flex;
-    z-index: 10;
+    z-index: 25;
     transition: all 0.7s;
   }
   .header nav .openBurg {
@@ -595,6 +601,7 @@ h1 {
     justify-content: center;
     align-items: center;
     transition: all 2s;
+    z-index: 20;
   }
   .header nav .menu .li a {
     font-family: "Arial Regular";

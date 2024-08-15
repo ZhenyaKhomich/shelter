@@ -51,10 +51,10 @@ h2 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 10;
   padding: 30px 0px 0px 0px;
 }
 .header a {
+  z-index: 10;
   text-decoration: none;
 }
 .header a:hover .logo .top p {
@@ -68,7 +68,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  width: 186px;
   height: 60px;
 }
 .header a .logo .top .textop {
@@ -91,6 +90,7 @@ h2 {
 .header nav {
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 .header nav .burg {
   display: none;
@@ -273,9 +273,6 @@ h2 {
   margin: 77px 0px 100px 0px;
   position: relative;
 }
-.our-blok .our-h2 {
-  max-width: 400px;
-}
 .our-blok .our-h2 h2 {
   margin: 5px 0px 0px 0px;
 }
@@ -289,6 +286,8 @@ h2 {
 .our-blok .carts .cart-wrap {
   display: flex;
   gap: 90px;
+  width: 990px;
+  overflow: hidden;
 }
 .our-blok .carts .cart-wrap .cart {
   display: flex;
@@ -490,8 +489,8 @@ h2 {
   display: flex;
   flex-direction: row;
   border-radius: 9px;
-  padding: 9px 15px 11px 15px;
-  width: 319px;
+  padding: 9px 12px 11px 15px;
+  width: 321px;
   height: 23px;
   background: #f1cdb3;
   margin: 0px 0px 0px 0px;
@@ -504,7 +503,7 @@ h2 {
 .contacts1 .contacts-blok .right .num-cart .num {
   display: flex;
   align-items: center;
-  width: 319px;
+  width: 325px;
   gap: 14px;
 }
 .contacts1 .contacts-blok .right .num-cart .num a {
@@ -662,15 +661,16 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     gap: 6vw;
-    width: calc(100vw - 270px);
+    width: calc(100vw - 242px);
+    margin: 0px 0px 0px 4vw;
   }
   .our-blok .carts .cart-wrap .cart {
-    width: 100%;
+    width: 21vw;
     height: 100%;
     padding-bottom: 3%;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
-    width: 100%;
+    width: 21vw;
   }
   .our-blok .slid {
     gap: calc(100vw - 178px);
@@ -703,6 +703,11 @@ h2 {
     width: 100%;
   }
 }
+@media (max-width: 1090px) {
+  .our-blok .carts .cart-wrap {
+    margin: 0px 0px 0px 2vw;
+  }
+}
 @media (max-width: 950px) {
   .background .one-section .left .wrap .title {
     max-height: 171px;
@@ -719,9 +724,12 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     overflow: hidden;
-    gap: 40px;
-    max-width: 708px;
-    margin: 0px 0px 0px 10px;
+    gap: 7vw;
+    width: 610px;
+    margin: 0px 0px 0px 0px;
+  }
+  .our-blok .carts .cart-wrap .cart {
+    width: 270px;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
     width: 270px;
@@ -813,18 +821,21 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     overflow: hidden;
-    gap: 3.1vw;
-    max-width: 708px;
-    margin: 0px 0px 0px 3vw;
+    gap: 5 vw;
+    width: 610px;
+    margin: 0px 0px 0px 0px;
+  }
+  .our-blok .carts .cart-wrap .cart {
+    flex: 0 0 45%;
   }
   .our-blok .carts .cart-wrap .cart .img-cart {
-    width: 31vw;
+    width: 100%;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
     width: 100%;
   }
   .our-blok .slid {
-    gap: calc(100vw - 196px);
+    gap: calc(100vw - 150px);
   }
   .about-bloks {
     height: 1048px;
@@ -971,6 +982,14 @@ h2 {
   }
 }
 @media (max-width: 767.5px) {
+  .dark {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+    position: absolute;
+    z-index: 15;
+    transition: all 4s;
+  }
   .header, .bloks, .footer {
     width: calc(100vw - 40px);
     margin: 0px 20px;
@@ -980,7 +999,7 @@ h2 {
   }
   .header nav .burg {
     display: flex;
-    z-index: 10;
+    z-index: 25;
     transition: all 0.7s;
   }
   .header nav .openBurg {
@@ -1000,6 +1019,7 @@ h2 {
     justify-content: center;
     align-items: center;
     transition: all 2s;
+    z-index: 20;
   }
   .header nav .menu .li a {
     font-family: "Arial Regular";
@@ -1041,12 +1061,15 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     overflow: hidden;
-    gap: 7vw;
+    gap: 6vw;
     max-width: 470px;
-    margin: 0px 0px 0px 3vw;
+    margin: 0px 0px 0px 0px;
   }
   .our-blok .carts .cart-wrap .cart .img-cart {
-    width: 27vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
     width: 100%;
@@ -1078,7 +1101,7 @@ h2 {
 }
 @media (max-width: 650px) {
   .our-blok .carts {
-    max-width: calc(100vw - 200px);
+    max-width: calc(100vw - 120px);
   }
   .our-blok .carts .cart-wrap {
     gap: 40px;
@@ -1182,7 +1205,7 @@ h2 {
     padding-bottom: 0px;
   }
   .our-blok .our-h2 {
-    width: 300px;
+    width: 305px;
   }
   .our-blok .our-h2 h2 {
     margin: 8px 0px 0px 0px;
