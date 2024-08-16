@@ -131,68 +131,94 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 
+// инициализация карточки
+
+function carts(arr) {
+    let cartWrap = document.querySelector('.cart-wrap');
+
+    arr.forEach(el => {
+        let cart = document.createElement('div');
+        cart.classList.add('cart');
+
+        let imgCart = document.createElement('div');
+        imgCart.classList.add('img-cart');
+
+        let img = document.createElement('img');
+        img.src = el.img;
+        img.alt = `dog ${el.name}`;
+
+        imgCart.append(img);
+        cart.append(imgCart);
+
+        let textOur = document.createElement('div');
+        textOur.classList.add('text-our');
+
+        let nameDog = document.createElement('div');
+        nameDog.classList.add('name-dog');
+
+        let p = document.createElement('p');
+        p.textContent = el.name;
+
+        nameDog.append(p);
+        textOur.append(nameDog);
+
+        let button = document.createElement('button');
+        button.textContent = 'Learn more';
+
+        textOur.append(button);
+
+        cart.append(textOur);
+
+        cartWrap.append(cart);
+    })
+}
+
+carts(pets);
 
 
-// случайные карточки
+
+
+
+
+// резервная наработка 16.08
 
 let currentSlide = [];
-let lastSlide = [];  
+let lastSlide = [];  //пока не использовал
 
 function a(pets) {
-
-  lastSlide = [];
-
-  for(let i = 0; i < currentSlide.length; i++) {
+  for(let i = 0; i< currentSlide.length; i++) {
     lastSlide.push(currentSlide[i]);
   }
-let pets2 = pets.filter(pet => !lastSlide.includes(pet));
 
-currentSlide = [];
-
+  currentSlide = [];
   for(let i = 0; i < 3; i++) {
     let k = Math.floor(Math.random() * pets.length);
-    console.log(k);
+
     for(let j = 0; j < 3; j++) {
-      if(currentSlide.length == 3) {
-        break;
-      } else if(lastSlide.length == 0) {
-        if(currentSlide.length == 0) {
-          currentSlide.push(pets[k]);
-          break;
-        } else if(currentSlide[j]['name'] === pets[k]['name']) {
-          --i;
-          break;
-        } else if (currentSlide[currentSlide.length - 1]['name'] !== pets[k]['name']) {
+      if(currentSlide.length == 0) {
         currentSlide.push(pets[k]);
-      break;
-        } else if (currentSlide[j]['name'] !== pets[k]['name']) {
-          continue;
-        }
-      } else {
-
-        let p = Math.floor(Math.random() * pets2.length);
-        for(let k = 0; k < 3; k++) {
-
-        if(currentSlide.length == 0) {
-          currentSlide.push(pets2[p]);
-          break;
-        } else if(currentSlide[k]['name'] === pets2[p]['name']) {
-          --i;
-          break;
-        } else if (currentSlide[currentSlide.length - 1]['name'] !== pets2[p]['name']) {
-        currentSlide.push(pets2[p]);
-      break;
-        } else if (currentSlide[k]['name'] !== pets2[p]['name']) {
-          continue;
-        }
-      }
+        break;
+      } else if(currentSlide[j]['name'] === pets[k]['name']) {
+        --i;
+         break;
+      } else if (currentSlide[currentSlide.length - 1]['name'] !== pets[k]['name']) {
+      currentSlide.push(pets[k]);
+    break;
+      } else if (currentSlide[j]['name'] !== pets[k]['name']) {
+        continue;
       }
     }
   }
+  console.log(lastSlide);
   return carts(currentSlide);
 }
 
 a(pets);
+
+
+
+
+
 
 
 // инициализация карточки
@@ -238,6 +264,9 @@ function carts(arr) {
 }
 
 let cartW = document.body.querySelector('.cart-wrap');
+
+
+
 let prev = document.body.querySelector('.svg1');
 let next = document.body.querySelector('.svg2');
 
@@ -245,23 +274,7 @@ next.addEventListener('click', function() {
   let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   a(pets);
+ 
 })
 
-prev.addEventListener('click', function() {
-  
-  if(lastSlide.length == 0) {
-    let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
-  a(pets);
-  } else {
-    let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
-  console.log(currentSlide);
-  currentSlide =[];
-  for(let i = 0; i < lastSlide.length; i++) {
-   currentSlide.push(lastSlide[i]);
-  }
-  console.log(currentSlide);
-    carts(currentSlide);
-  }
-})
+console.log(cartW);
