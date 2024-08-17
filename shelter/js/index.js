@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let currentSlide = [];
 let lastSlide = [];  
+let count = 0;
 
 function a(pets) {
 
@@ -151,24 +152,25 @@ currentSlide = [];
 
   for(let i = 0; i < 3; i++) {
     let k = Math.floor(Math.random() * pets.length);
-    console.log(k);
     for(let j = 0; j < 3; j++) {
       if(currentSlide.length == 3) {
         break;
-      } else if(lastSlide.length == 0) {
-        if(currentSlide.length == 0) {
-          currentSlide.push(pets[k]);
-          break;
-        } else if(currentSlide[j]['name'] === pets[k]['name']) {
-          --i;
-          break;
-        } else if (currentSlide[currentSlide.length - 1]['name'] !== pets[k]['name']) {
-        currentSlide.push(pets[k]);
-      break;
-        } else if (currentSlide[j]['name'] !== pets[k]['name']) {
-          continue;
-        }
-      } else {
+      } 
+      // else if(lastSlide.length == 0) {
+      //   if(currentSlide.length == 0) {
+      //     currentSlide.push(pets[k]);
+      //     break;
+      //   } else if(currentSlide[j]['name'] === pets[k]['name']) {
+      //     --i;
+      //     break;
+      //   } else if (currentSlide[currentSlide.length - 1]['name'] !== pets[k]['name']) {
+      //   currentSlide.push(pets[k]);
+      // break;
+      //   } else if (currentSlide[j]['name'] !== pets[k]['name']) {
+      //     continue;
+      //   }
+      // } 
+      else {
 
         let p = Math.floor(Math.random() * pets2.length);
         for(let k = 0; k < 3; k++) {
@@ -189,6 +191,8 @@ currentSlide = [];
       }
     }
   }
+  // console.log(currentSlide);
+  // console.log(lastSlide);
   return carts(currentSlide);
 }
 
@@ -242,18 +246,26 @@ let prev = document.body.querySelector('.svg1');
 let next = document.body.querySelector('.svg2');
 
 next.addEventListener('click', function() {
-  let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
-  a(pets);
-})
-
-prev.addEventListener('click', function() {
-  
-  if(lastSlide.length == 0) {
+  if(lastSlide.length == 0) { //Выполняется при первом нажатии после загрузки страницы OK
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   a(pets);
-  } else {
+  console.log('next1');
+  count++;
+  } else if (currentSlide.length != 0) { //блок выполняется при втором и последующих нажатиях OK
+    let cartWrap = document.querySelectorAll('.cart');
+  cartWrap.forEach(el => el.remove());
+  a(pets);
+  console.log('next2');
+  count++;
+   //СТОЙ!!!!
+  } else if(currentSlide.length == 0) { //блок выполняется после того как нажимали вперед, потом нажали назад и сново жмут вперед.
+    let cartWrap = document.querySelectorAll('.cart');
+  cartWrap.forEach(el => el.remove());
+  a(pets);
+  console.log('next3');
+  count++;
+  } else { //блок выполняется когда нажимали вперед, а потом нажали назад, предыдущий слайд
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   console.log(currentSlide);
@@ -261,7 +273,44 @@ prev.addEventListener('click', function() {
   for(let i = 0; i < lastSlide.length; i++) {
    currentSlide.push(lastSlide[i]);
   }
-  console.log(currentSlide);
     carts(currentSlide);
+    lastSlide=[];
+    currentSlide = [];
+    console.log('next4');
   }
+})
+
+prev.addEventListener('click', function() {
+  if(lastSlide.length == 0) { // работает при первом нажатии
+    let cartWrap = document.querySelectorAll('.cart');
+    cartWrap.forEach(el => el.remove());
+    a(pets);
+    console.log('prev1');
+  } else if (count > 0) { //работает при возвращении предыдущего слайда ОК
+    let cartWrap = document.querySelectorAll('.cart');
+  cartWrap.forEach(el => el.remove());
+  currentSlide =[];
+  for(let i = 0; i < lastSlide.length; i++) {
+   currentSlide.push(lastSlide[i]);
+  }
+    carts(currentSlide);
+    // currentSlide=[];
+    console.log('prev4');
+    console.log(currentSlide);
+  console.log(lastSlide);
+  count = 0;
+  }
+
+  else if (lastSlide.length != 0) { //блок выполняется при втором и последующих нажатиях OK
+    let cartWrap = document.querySelectorAll('.cart');
+  cartWrap.forEach(el => el.remove());
+  a(pets);
+  console.log('prev2');
+  }
+  else if(currentSlide.length == 0) {
+    let cartWrap = document.querySelectorAll('.cart');
+  cartWrap.forEach(el => el.remove());
+  a(pets);
+  console.log('prev3');
+  } 
 })

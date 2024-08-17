@@ -215,6 +215,67 @@ function a(pets) {
 
 a(pets);
 
+// резервная разработка 17.08
+
+let currentSlide = [];
+let lastSlide = [];  
+
+function a(pets) {
+
+  lastSlide = [];
+
+  for(let i = 0; i < currentSlide.length; i++) {
+    lastSlide.push(currentSlide[i]);
+  }
+let pets2 = pets.filter(pet => !lastSlide.includes(pet));
+
+currentSlide = [];
+
+  for(let i = 0; i < 3; i++) {
+    let k = Math.floor(Math.random() * pets.length);
+    console.log(k);
+    for(let j = 0; j < 3; j++) {
+      if(currentSlide.length == 3) {
+        break;
+      } else if(lastSlide.length == 0) {
+        if(currentSlide.length == 0) {
+          currentSlide.push(pets[k]);
+          break;
+        } else if(currentSlide[j]['name'] === pets[k]['name']) {
+          --i;
+          break;
+        } else if (currentSlide[currentSlide.length - 1]['name'] !== pets[k]['name']) {
+        currentSlide.push(pets[k]);
+      break;
+        } else if (currentSlide[j]['name'] !== pets[k]['name']) {
+          continue;
+        }
+      } else {
+
+        let p = Math.floor(Math.random() * pets2.length);
+        for(let k = 0; k < 3; k++) {
+
+        if(currentSlide.length == 0) {
+          currentSlide.push(pets2[p]);
+          break;
+        } else if(currentSlide[k]['name'] === pets2[p]['name']) {
+          --i;
+          break;
+        } else if (currentSlide[currentSlide.length - 1]['name'] !== pets2[p]['name']) {
+        currentSlide.push(pets2[p]);
+      break;
+        } else if (currentSlide[k]['name'] !== pets2[p]['name']) {
+          continue;
+        }
+      }
+      }
+    }
+  }
+  return carts(currentSlide);
+}
+
+a(pets);
+
 
 
 
