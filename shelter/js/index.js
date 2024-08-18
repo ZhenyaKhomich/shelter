@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dar.classList.toggle('dark');
 
         if(burg.className == 'burg openBurg') {
-           document.body.style.overflow = 'hidden'; 
+          document.body.style.overflow = 'hidden'; 
         } else {
             document.body.style.overflow = 'visible';
         }
@@ -131,9 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 
-
-
-// случайные карточки
+// случайные карточки, при загрузке и нажатии на кнопки
 
 let currentSlide = [];
 let lastSlide = [];  
@@ -146,6 +144,7 @@ function a(pets) {
   for(let i = 0; i < currentSlide.length; i++) {
     lastSlide.push(currentSlide[i]);
   }
+
 let pets2 = pets.filter(pet => !lastSlide.includes(pet));
 
 currentSlide = [];
@@ -155,26 +154,9 @@ currentSlide = [];
     for(let j = 0; j < 3; j++) {
       if(currentSlide.length == 3) {
         break;
-      } 
-      // else if(lastSlide.length == 0) {
-      //   if(currentSlide.length == 0) {
-      //     currentSlide.push(pets[k]);
-      //     break;
-      //   } else if(currentSlide[j]['name'] === pets[k]['name']) {
-      //     --i;
-      //     break;
-      //   } else if (currentSlide[currentSlide.length - 1]['name'] !== pets[k]['name']) {
-      //   currentSlide.push(pets[k]);
-      // break;
-      //   } else if (currentSlide[j]['name'] !== pets[k]['name']) {
-      //     continue;
-      //   }
-      // } 
-      else {
-
+      }  else {
         let p = Math.floor(Math.random() * pets2.length);
         for(let k = 0; k < 3; k++) {
-
         if(currentSlide.length == 0) {
           currentSlide.push(pets2[p]);
           break;
@@ -191,13 +173,10 @@ currentSlide = [];
       }
     }
   }
-  // console.log(currentSlide);
-  // console.log(lastSlide);
   return carts(currentSlide);
 }
 
 a(pets);
-
 
 // инициализация карточки
 
@@ -246,71 +225,55 @@ let prev = document.body.querySelector('.svg1');
 let next = document.body.querySelector('.svg2');
 
 next.addEventListener('click', function() {
-  if(lastSlide.length == 0) { //Выполняется при первом нажатии после загрузки страницы OK
+  if(lastSlide.length == 0) { 
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   a(pets);
-  console.log('next1');
   count++;
-  } else if (currentSlide.length != 0) { //блок выполняется при втором и последующих нажатиях OK
+  } else if (currentSlide.length != 0) {
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   a(pets);
-  console.log('next2');
   count++;
-   //СТОЙ!!!!
-  } else if(currentSlide.length == 0) { //блок выполняется после того как нажимали вперед, потом нажали назад и сново жмут вперед.
+  } else if(currentSlide.length == 0) {
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   a(pets);
-  console.log('next3');
   count++;
-  } else { //блок выполняется когда нажимали вперед, а потом нажали назад, предыдущий слайд
+  } else { 
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
-  console.log(currentSlide);
   currentSlide =[];
   for(let i = 0; i < lastSlide.length; i++) {
-   currentSlide.push(lastSlide[i]);
+  currentSlide.push(lastSlide[i]);
   }
     carts(currentSlide);
     lastSlide=[];
-    currentSlide = [];
-    console.log('next4');
+    currentSlide = [];;
   }
 })
 
 prev.addEventListener('click', function() {
-  if(lastSlide.length == 0) { // работает при первом нажатии
+  if(lastSlide.length == 0) {
     let cartWrap = document.querySelectorAll('.cart');
     cartWrap.forEach(el => el.remove());
     a(pets);
-    console.log('prev1');
-  } else if (count > 0) { //работает при возвращении предыдущего слайда ОК
+  } else if (count > 0) {
     let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
-  currentSlide =[];
+    cartWrap.forEach(el => el.remove());
+    currentSlide =[];
   for(let i = 0; i < lastSlide.length; i++) {
-   currentSlide.push(lastSlide[i]);
+    currentSlide.push(lastSlide[i]);
   }
     carts(currentSlide);
-    // currentSlide=[];
-    console.log('prev4');
-    console.log(currentSlide);
-  console.log(lastSlide);
   count = 0;
-  }
-
-  else if (lastSlide.length != 0) { //блок выполняется при втором и последующих нажатиях OK
+  } else if (lastSlide.length != 0) {
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   a(pets);
-  console.log('prev2');
-  }
-  else if(currentSlide.length == 0) {
+  } else if(currentSlide.length == 0) {
     let cartWrap = document.querySelectorAll('.cart');
   cartWrap.forEach(el => el.remove());
   a(pets);
-  console.log('prev3');
   } 
 })

@@ -708,7 +708,7 @@ h2 {
     margin: 0px 0px 0px 2vw;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 951px) {
   .background .one-section .left .wrap .title {
     max-height: 171px;
   }
@@ -1099,7 +1099,7 @@ h2 {
     margin: 42px 0px 0px 0px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 651px) {
   .our-blok .carts {
     max-width: calc(100vw - 120px);
   }
