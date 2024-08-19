@@ -173,7 +173,79 @@ function carts(arr) {
     })
 }
 
-carts(pets);
+// carts(pets);
+
+
+let currentSlide = [];
+let lastSlide = [];
+let lastNext = [];
+let lastPrev = [];
+let allCarts = [];
+let onePageCarts = [];
+let num = 0;
+
+function initCarts (pets) {
+  for(let j = 0; j < 6; j++) {
+    onePageCarts=[];
+    for(let i = 0; i < 8; i++) {
+      let random = Math.floor(Math.random() * pets.length);
+    
+      if(!onePageCarts.includes(pets[random])) {
+        onePageCarts.push(pets[random]);
+        // console.log( onePageCarts);
+      } else {
+        i--;
+        continue;
+      }
+    }
+    allCarts.push(onePageCarts);
+  }
+return allCarts;
+}
+console.log(initCarts (pets));
+
+
+carts(allCarts[0])
+
+let slider = document.body.querySelector('.slider');
+let prevLast = document.body.querySelector('.svg1');
+let last = document.body.querySelector('.svg2');
+let figure = document.body.querySelector('.svg3');
+let next = document.body.querySelector('.svg4');
+let nextLast = document.body.querySelector('.svg5');
+let but = document.body.querySelectorAll('.in');
+
+
+next.addEventListener('click', function() {
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  ++num;
+  carts(allCarts[num]);
+  figure.textContent = num + 1;
+  if (num > 0) {
+    but.forEach(el=>el.classList.remove('inactive'));
+  } 
+})
+
+last.addEventListener('click', function() {
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  --num;
+  carts(allCarts[num]);
+  figure.textContent = num + 1;
+  if (num <= 0) {
+    but.forEach(el=>el.classList.add('inactive'));
+  }
+})
+
+
+window.addEventListener('resize', () => {
+ let A = window.innerWidth;
+  // console.log(A);
+
+  // тут потом надо прописать if и в конце вызывать функцию initCarts(новый массив);
+})
+
 
 
 

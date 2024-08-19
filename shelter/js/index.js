@@ -145,9 +145,9 @@ function a(pets) {
     lastSlide.push(currentSlide[i]);
   }
 
-let pets2 = pets.filter(pet => !lastSlide.includes(pet));
+  let pets2 = pets.filter(pet => !lastSlide.includes(pet));
 
-currentSlide = [];
+  currentSlide = [];
 
   for(let i = 0; i < 3; i++) {
     let k = Math.floor(Math.random() * pets.length);

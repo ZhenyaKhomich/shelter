@@ -281,6 +281,12 @@ h1 {
 .our-pets .our-blok .slider .inactive {
   pointer-events: none;
 }
+.our-pets .our-blok .slider .inactive .round {
+  stroke: #CDCDCD;
+}
+.our-pets .our-blok .slider .inactive .activ {
+  fill: #CDCDCD;
+}
 
 .foot {
   display: flex;
