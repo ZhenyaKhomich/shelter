@@ -289,6 +289,16 @@ h2 {
   width: 990px;
   overflow: hidden;
 }
+.our-blok .carts .cart-wrap .tran {
+  transform: translateX(10px);
+  transition: all 1s, opacity 0.5s ease-in-out;
+  opacity: 0.5;
+}
+.our-blok .carts .cart-wrap .ent {
+  transform: translateX(-10px);
+  transition: all 1s, opacity 0.5s ease-in-out;
+  opacity: 0.5;
+}
 .our-blok .carts .cart-wrap .cart {
   display: flex;
   flex-direction: column;

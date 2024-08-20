@@ -361,6 +361,18 @@ h2 {
       width:990px;
       overflow: hidden;
 
+      .tran {
+        transform: translateX(10px);
+        transition: all 1s, opacity 0.5s ease-in-out;
+        opacity: 0.5;
+      }
+
+      .ent {
+        transform: translateX(-10px);
+        transition: all 1s, opacity 0.5s ease-in-out;
+       opacity: 0.5;
+      }
+
       .cart {
         display: flex;
         flex-direction: column;
@@ -371,18 +383,19 @@ h2 {
         height: 435px;
         gap: 30px;
         background: $color-light-s;
-
+        
         &:hover  {
           background: $color-light-xl;
           transition: 0.7s;
           cursor: pointer;
           box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+
           .text-our button {
             background: $color-primary-light;
             border-color: $color-primary-light;
             transition: 0.7s;
           }
-          
         }
       
         .img-cart {

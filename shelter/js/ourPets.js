@@ -174,8 +174,8 @@ function carts(arr) {
 }
 
 // carts(pets);
-
-
+let figure = document.body.querySelector('.svg3');
+let size = window.innerWidth;
 let currentSlide = [];
 let lastSlide = [];
 let lastNext = [];
@@ -183,11 +183,25 @@ let lastPrev = [];
 let allCarts = [];
 let onePageCarts = [];
 let num = 0;
+let cart = 8;
+let cal = 6;
+
+if(size > 768) {
+  cart = 8;
+  cal = 6; 
+}
+if(size <= 768 && size > 600){
+  cart = 6;
+  cal = 8;
+ } else if (size < 600) {
+  cart = 3;
+  cal = 16;
+ }
 
 function initCarts (pets) {
-  for(let j = 0; j < 6; j++) {
+  for(let j = 0; j < cal; j++) {
     onePageCarts=[];
-    for(let i = 0; i < 8; i++) {
+    for(let i = 0; i < cart; i++) {
       let random = Math.floor(Math.random() * pets.length);
     
       if(!onePageCarts.includes(pets[random])) {
@@ -204,17 +218,24 @@ return allCarts;
 }
 console.log(initCarts (pets));
 
-
 carts(allCarts[0])
 
-let slider = document.body.querySelector('.slider');
 let prevLast = document.body.querySelector('.svg1');
 let last = document.body.querySelector('.svg2');
-let figure = document.body.querySelector('.svg3');
 let next = document.body.querySelector('.svg4');
 let nextLast = document.body.querySelector('.svg5');
-let but = document.body.querySelectorAll('.in');
+let butsLast = document.body.querySelectorAll('.in');
+let butsNext = document.body.querySelectorAll('.out');
 
+nextLast.addEventListener('click', function() {
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  num = 5;
+  carts(allCarts[num]);
+  figure.textContent = cal;
+  butsNext.forEach(el=>el.classList.add('inactive'));
+  butsLast.forEach(el=>el.classList.remove('inactive'));
+})
 
 next.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
@@ -222,9 +243,21 @@ next.addEventListener('click', function() {
   ++num;
   carts(allCarts[num]);
   figure.textContent = num + 1;
-  if (num > 0) {
-    but.forEach(el=>el.classList.remove('inactive'));
+  if(num >= cal-1 ) {
+    butsNext.forEach(el=>el.classList.add('inactive'));
+  } else if (num > 0) {
+    butsLast.forEach(el=>el.classList.remove('inactive'));
   } 
+})
+
+prevLast.addEventListener('click', function() {
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  num = 0;
+  carts(allCarts[num]);
+  figure.textContent = num + 1;
+  butsNext.forEach(el=>el.classList.remove('inactive'));
+  butsLast.forEach(el=>el.classList.add('inactive'));
 })
 
 last.addEventListener('click', function() {
@@ -233,17 +266,59 @@ last.addEventListener('click', function() {
   --num;
   carts(allCarts[num]);
   figure.textContent = num + 1;
+  if(num < cal-1 ) {
+    butsNext.forEach(el=>el.classList.remove('inactive'));
+  }
   if (num <= 0) {
-    but.forEach(el=>el.classList.add('inactive'));
+    butsLast.forEach(el=>el.classList.add('inactive'));
   }
 })
 
 
-window.addEventListener('resize', () => {
- let A = window.innerWidth;
-  // console.log(A);
 
-  // тут потом надо прописать if и в конце вызывать функцию initCarts(новый массив);
+
+
+
+window.addEventListener('resize', () => {
+ size = window.innerWidth;
+ console.log(size);
+ if(size > 768 && size <= 800) {
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  cart = 8;
+  cal = 6;
+  allCarts = [];
+  initCarts (pets);
+  carts(allCarts[0]);
+  num = 0;
+  figure.textContent = num + 1;
+  butsNext.forEach(el=>el.classList.remove('inactive'));
+  butsLast.forEach(el=>el.classList.add('inactive'));
+ } else if (size <= 600 && size >=560) {
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  cart = 3;
+  cal = 16;
+  allCarts = [];
+  initCarts (pets);
+  carts(allCarts[0]);
+  num = 0;
+  figure.textContent = num + 1;
+  butsNext.forEach(el=>el.classList.remove('inactive'));
+  butsLast.forEach(el=>el.classList.add('inactive'));
+ } else if(size <= 768 && size >= 748){
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  cart = 6;
+  cal = 8;
+  allCarts = [];
+  initCarts (pets);
+  carts(allCarts[0]);
+  num = 0;
+  figure.textContent = num + 1;
+  butsNext.forEach(el=>el.classList.remove('inactive'));
+  butsLast.forEach(el=>el.classList.add('inactive'));
+ } 
 })
 
 

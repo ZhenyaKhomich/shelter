@@ -227,23 +227,36 @@ let next = document.body.querySelector('.svg2');
 next.addEventListener('click', function() {
   if(lastSlide.length == 0) { 
     let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
+    cartWrap.forEach(el=>el.classList.add('tran'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
   a(pets);
   count++;
-  } else if (currentSlide.length != 0) {
+    },400)
+  }  else if (currentSlide.length != 0) {
     let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
+    cartWrap.forEach(el=>el.classList.add('tran'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
   a(pets);
   count++;
+    },400)
   } else if(currentSlide.length == 0) {
     let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
+    cartWrap.forEach(el=>el.classList.add('tran'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
   a(pets);
   count++;
+    },400)
   } else { 
     let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
+    cartWrap.forEach(el=>el.classList.add('tran'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
+  a(pets);
   currentSlide =[];
+    },400)
   for(let i = 0; i < lastSlide.length; i++) {
   currentSlide.push(lastSlide[i]);
   }
@@ -256,11 +269,18 @@ next.addEventListener('click', function() {
 prev.addEventListener('click', function() {
   if(lastSlide.length == 0) {
     let cartWrap = document.querySelectorAll('.cart');
-    cartWrap.forEach(el => el.remove());
-    a(pets);
+    cartWrap.forEach(el=>el.classList.add('ent'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
+  a(pets);
+    },400)
   } else if (count > 0) {
     let cartWrap = document.querySelectorAll('.cart');
-    cartWrap.forEach(el => el.remove());
+    cartWrap.forEach(el=>el.classList.add('ent'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
+  a(pets);
+    },400)
     currentSlide =[];
   for(let i = 0; i < lastSlide.length; i++) {
     currentSlide.push(lastSlide[i]);
@@ -269,11 +289,17 @@ prev.addEventListener('click', function() {
   count = 0;
   } else if (lastSlide.length != 0) {
     let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
+    cartWrap.forEach(el=>el.classList.add('ent'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
   a(pets);
+    },400)
   } else if(currentSlide.length == 0) {
     let cartWrap = document.querySelectorAll('.cart');
-  cartWrap.forEach(el => el.remove());
+    cartWrap.forEach(el=>el.classList.add('ent'));
+    setTimeout(()=> {
+cartWrap.forEach(el => el.remove());
   a(pets);
+    },400)
   } 
 })
