@@ -89,6 +89,8 @@ const pets = [
     },
   ];
 
+
+
 //  бургер меню
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -303,3 +305,51 @@ cartWrap.forEach(el => el.remove());
     },400)
   } 
 })
+
+
+
+
+// Резерв 
+
+function initCarts (pets) {
+  for(let j = 0; j < cal; j++) {
+    onePageCarts=[];
+    for(let i = 0; i < cart; i++) {
+      let random = Math.floor(Math.random() * pets.length);
+    
+      if(allCarts.length == 0) {
+        
+      }
+
+
+
+      if(!onePageCarts.includes(pets[random])) {
+        onePageCarts.push(pets[random]);
+        // console.log( onePageCarts);
+      } else {
+        i--;
+        continue;
+      }
+    }
+    allCarts.push(onePageCarts);
+  }
+return allCarts;
+}
+console.log(initCarts (pets));
+
+carts(allCarts[0])
+
+
+
+
+
+
+while(allCarts[i].length < car) { 
+  // let lat = allCarts[car];
+  
+    allCarts[car - i].push(allCarts[car].pop());
+} 
+let index = array.indexOf(allCarts[car]);
+if (index !== -1) {
+    array.splice(index, 1);
+}

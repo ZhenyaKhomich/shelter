@@ -89,6 +89,11 @@ const pets = [
     },
   ];
 
+
+
+
+
+
 //  бургер меню
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -183,42 +188,120 @@ let lastPrev = [];
 let allCarts = [];
 let onePageCarts = [];
 let num = 0;
-let cart = 8;
+let car = 8;
 let cal = 6;
 
+let c = [[{name: 'sdsd'}],[{name:'fff'}],[],[],[]]
+
+function aaa(arr) {
+  return arr.filter(el => el.length > 0 );
+}
+
+console.log(aaa(c));
+
 if(size > 768) {
-  cart = 8;
+  car = 8;
   cal = 6; 
+  console.log(initCarts (pets));
+  carts(allCarts[0]);
+  colCarts(car, cal);
+  
 }
 if(size <= 768 && size > 600){
-  cart = 6;
+  car = 6;
   cal = 8;
+  console.log(initCarts (pets));
+  
+  carts(allCarts[0]);
+  colCarts(8, 6);
+  colCarts(car, cal);
  } else if (size < 600) {
-  cart = 3;
+  car = 3;
   cal = 16;
+  console.log(initCarts (pets));
+  allCarts = aaa(allCarts);
+  carts(allCarts[0]);
+  colCarts(6, 8);
+  colCarts(car, cal);
  }
 
+console.log(size);
+console.log(car);
+console.log(cal);
+console.log(size);
+
+
+
+
+
+
+
+ //не доделал ее!!!!!!
+
 function initCarts (pets) {
-  for(let j = 0; j < cal; j++) {
+  for(let j = 0; j < 6; j++) {
     onePageCarts=[];
-    for(let i = 0; i < cart; i++) {
-      let random = Math.floor(Math.random() * pets.length);
+
+    if(allCarts.length == 1 || allCarts.length == 4) {
     
-      if(!onePageCarts.includes(pets[random])) {
-        onePageCarts.push(pets[random]);
-        // console.log( onePageCarts);
+      let last = allCarts[j-1][allCarts[j-1].length-1];
+      let last2 = allCarts[j-1][allCarts[j-1].length-2];
+
+       onePageCarts.push(last2);
+       onePageCarts.push(last);
+    } else if (allCarts.length == 2 || allCarts.length == 5) {
+      let last = allCarts[j-1][allCarts[j-1].length-1];
+      let last2 = allCarts[j-1][allCarts[j-1].length-2];
+      let last3 = allCarts[j-2][allCarts[j-2].length-1];
+      let last4 = allCarts[j-2][allCarts[j-2].length-2];
+
+      onePageCarts.push(last);
+      onePageCarts.push(last4);
+      onePageCarts.push(last2);
+      onePageCarts.push(last3);
+    }
+
+    for(let i = 0; i < 8; i++) {
+      let random = Math.floor(Math.random() * pets.length);
+      if(allCarts.length == 0 || allCarts.length == 3) {
+        if(!onePageCarts.includes(pets[random])) {
+          onePageCarts.push(pets[random]);
+        } else if(onePageCarts.length == 8) {
+          allCarts.push(onePageCarts);
+          console.log(allCarts[0]);
+          break;
+        } 
+        else {
+          i--;
+          continue;
+        } 
+      } else if(allCarts.length < 9) {
+
+        if (onePageCarts.length < 8 && onePageCarts.length > 1) {
+          if(!onePageCarts.includes(pets[random])) {
+            onePageCarts.push(pets[random]);
+          } 
+          else if(onePageCarts.length == 8) {
+            allCarts.push(onePageCarts);
+            console.log(allCarts[0]);
+            break;
+          }  else {
+            i--;
+            continue;
+          } 
+        }
       } else {
-        i--;
-        continue;
+        i = 8;
       }
     }
     allCarts.push(onePageCarts);
   }
 return allCarts;
 }
-console.log(initCarts (pets));
+// console.log(initCarts (pets));
 
-carts(allCarts[0])
+// carts(allCarts[0])
+
 
 let prevLast = document.body.querySelector('.svg1');
 let last = document.body.querySelector('.svg2');
@@ -241,6 +324,7 @@ next.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
   ++num;
+  console.log(allCarts);
   carts(allCarts[num]);
   figure.textContent = num + 1;
   if(num >= cal-1 ) {
@@ -277,48 +361,187 @@ last.addEventListener('click', function() {
 
 
 
+function oneElem(arr) {
+  let k = arr.filter(el => arr.indexOf(el) == 1);
+  arr.splice(1, 1);
+return k[0];
+}
+
+
+function colCarts(car, cal) {
+
+  let a = [];
+  // let b = [];
+  for(let i = 0; i < cal; i++) {
+
+    if(allCarts[i].length > car) {
+    
+// debugger
+    if(allCarts[i].length == car) {
+      continue;
+    } else {
+      while(allCarts[i].length > car) {
+        let last = allCarts[i][allCarts[i].length-1];
+        console.log(last['name']);
+        if(a.length == 0) {
+          a.push(allCarts[i].pop());
+        } else if(!a.includes(last)) {
+        a.push(allCarts[i].pop());
+        console.log(allCarts)
+      } else {
+        colCarts(car, cal);
+      }
+     
+        
+        if(a.length == car) {
+          allCarts.push(a);
+          a = [];
+          console.log(allCarts)
+        
+        } 
+     
+      }
+
+    }
+
+      
+
+
+
+    } else if(allCarts[i].length < car) {
+    // debugger;
+    console.log(allCarts[i].length)
+      while(allCarts[i].length < car) { 
+
+        if(car == 8) {
+          let k = 0;
+          let y = 1;
+          if(i > 2) {
+            k = 1;
+          }
+          while(allCarts[cal+k].length !== 0){
+            // debugger
+            if(allCarts[i].length < car) {
+              // allCarts[i].push(allCarts[cal+k].shift());
+              allCarts[i].push(oneElem(allCarts[cal+k]));
+              console.log(allCarts[cal+k][0])
+              allCarts[i].push(allCarts[cal+k].shift());
+            } else if (allCarts[i + y].length < car) {
+              allCarts[i + y].push(oneElem(allCarts[cal+k]));
+              allCarts[i + y].push(allCarts[cal+k].shift());
+            } else if(allCarts[cal+k].length == 0) {
+              k = 1;
+            }
+            else {
+               y++;
+               continue;
+            }
+          }
+
+
+
+        } 
+        
+      else if(allCarts[cal+i].length !== 0) {
+          let y = 1;
+          while(allCarts[cal+i].length !== 0){
+            if(allCarts[i].length < car) {
+              allCarts[i].push(allCarts[cal+i].pop());
+            } else if (allCarts[i + y].length < car) {
+              allCarts[i + y].push(allCarts[cal+i].shift());
+            } else {
+               y++;
+            }
+             
+            // при загрузке 320 загружается 15 или 14 обьектов, где то
+            
+          }
+          
+          //  if (i == cal) {
+          //   allCarts.splice(cal, 1);
+          //   console.log(allCarts);
+          // }
+
+        } else {
+          allCarts[i].push(allCarts[cal+i].shift());
+        }
+
+      } 
+      
+      // if (allCarts[cal].length == 0) {
+      //   allCarts.splice(cal, 1);
+      //   console.log(allCarts.splice(cal+1, 1))
+      // }
+    } else if (i == cal) {
+      allCarts.splice(cal, 1);
+      console.log(allCarts);
+    } else {
+      continue;
+    }
+  }
+  console.log(aaa(allCarts))
+
+ allCarts = aaa(allCarts);
+ console.log(allCarts);
+  let cart = document.body.querySelectorAll('.cart');
+  cart.forEach(el=>el.remove());
+  carts(allCarts[0]);
+  num = 0;
+  figure.textContent = num + 1;
+  console.log(allCarts)
+  
+}
+
 
 
 window.addEventListener('resize', () => {
  size = window.innerWidth;
  console.log(size);
- if(size > 768 && size <= 800) {
-  let cart = document.body.querySelectorAll('.cart');
-  cart.forEach(el=>el.remove());
-  cart = 8;
+ if( size > 768 ) {
+  // let cart = document.body.querySelectorAll('.cart');
+  // cart.forEach(el=>el.remove());
+  car = 8;
   cal = 6;
-  allCarts = [];
-  initCarts (pets);
-  carts(allCarts[0]);
-  num = 0;
-  figure.textContent = num + 1;
+  colCarts(car, cal);
+  // allCarts = [];
+  // initCarts (pets);
+  // carts(allCarts[0]);
+  // num = 0;
+  // figure.textContent = num + 1;
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
- } else if (size <= 600 && size >=560) {
-  let cart = document.body.querySelectorAll('.cart');
-  cart.forEach(el=>el.remove());
-  cart = 3;
-  cal = 16;
-  allCarts = [];
-  initCarts (pets);
-  carts(allCarts[0]);
-  num = 0;
-  figure.textContent = num + 1;
-  butsNext.forEach(el=>el.classList.remove('inactive'));
-  butsLast.forEach(el=>el.classList.add('inactive'));
- } else if(size <= 768 && size >= 748){
-  let cart = document.body.querySelectorAll('.cart');
-  cart.forEach(el=>el.remove());
-  cart = 6;
+ } else if(size <= 768 && size >= 600){
+
+  // let cart = document.body.querySelectorAll('.cart');
+  // cart.forEach(el=>el.remove());
+  car = 6;
   cal = 8;
-  allCarts = [];
-  initCarts (pets);
-  carts(allCarts[0]);
-  num = 0;
-  figure.textContent = num + 1;
+
+  colCarts(car, cal);
+  // console.log(allCarts);
+  // allCarts = [];
+  // initCarts (pets);
+  // carts(allCarts[0]);
+  // num = 0;
+  // figure.textContent = num + 1;
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
- } 
+ }
+ 
+ else if (size <= 600 && size >=320) {
+  // let cart = document.body.querySelectorAll('.cart');
+  // cart.forEach(el=>el.remove());
+  car = 3;
+  cal = 16;
+  colCarts(car, cal);
+  // allCarts = [];
+  // initCarts (pets);
+  // carts(allCarts[0]);
+  // num = 0;
+  // figure.textContent = num + 1;
+  butsNext.forEach(el=>el.classList.remove('inactive'));
+  butsLast.forEach(el=>el.classList.add('inactive'));
+ }  
 })
 
 
