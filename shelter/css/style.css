@@ -31,6 +31,119 @@ body {
   width: 100%;
 }
 
+.wrapModal {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 10000px;
+  background: rgba(41, 41, 41, 0.6);
+  top: 0px;
+}
+.wrapModal .modal {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  padding: 0px 10px 0px 0px;
+  margin: 1650px auto 0px auto;
+}
+.wrapModal .modal .exit {
+  display: flex;
+  width: 944px;
+  justify-content: end;
+}
+.wrapModal .modal .exit .ex {
+  transition: all 0.8s;
+  fill: rgba(0, 0, 0, 0);
+}
+.wrapModal .modal .exit .ex:hover {
+  cursor: pointer;
+  fill: #fddcc4;
+}
+.wrapModal .modal .exit .ex:hover .rect {
+  stroke: #fddcc4;
+}
+.wrapModal .modal .modalCart {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background: #fafafa;
+  border-radius: 10px;
+}
+.wrapModal .modal .modalCart .picture {
+  display: flex;
+  align-items: start;
+  border-radius: 9px 0 0 9px;
+}
+.wrapModal .modal .modalCart .picture img {
+  width: 500px;
+  border-radius: 10px;
+}
+.wrapModal .modal .modalCart .information {
+  display: flex;
+  flex-direction: column;
+  width: 351px;
+  height: 362px;
+  top: 50px;
+  margin: 50px 0px 0px 32px;
+  gap: 40px;
+}
+.wrapModal .modal .modalCart .information .nameType {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wrapModal .modal .modalCart .information .nameType .name h2 {
+  text-align: start;
+  margin: 0px;
+  color: #000;
+}
+.wrapModal .modal .modalCart .information .nameType .type p {
+  margin: 0px;
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.wrapModal .modal .modalCart .description p {
+  margin: 0px;
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 113%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.wrapModal .modal .modalCart .dopInfo {
+  display: flex;
+}
+.wrapModal .modal .modalCart .dopInfo ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0px 0px 0px 15px;
+  padding: 0px;
+}
+.wrapModal .modal .modalCart .dopInfo ul li {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.wrapModal .modal .modalCart .dopInfo ul li span {
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.09em;
+}
+.wrapModal .modal .modalCart .dopInfo ul li::marker {
+  color: #f1cdb3;
+}
+
 .header, .bloks, .footer {
   max-width: 1200px;
   margin: 0px auto;
@@ -648,6 +761,9 @@ h2 {
 }
 
 @media (max-width: 1279px) {
+  .wrapModal .modal {
+    margin: 130vw auto 0px auto;
+  }
   .header, .bloks, .footer {
     max-width: 100%;
     margin: 0px 30px;
@@ -714,11 +830,45 @@ h2 {
   }
 }
 @media (max-width: 1090px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+  }
+  .wrapModal .modal .exit {
+    width: 86vw;
+  }
+  .wrapModal .modal .modalCart {
+    width: 82vw;
+    height: 46vw;
+  }
+  .wrapModal .modal .modalCart .picture img {
+    width: 45vw;
+  }
+  .wrapModal .modal .modalCart .information {
+    width: 351px;
+    height: 362px;
+    top: 50px;
+    margin: 3vw 5px 0px 2vw;
+    gap: 2.7vw;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    gap: 7px;
+  }
+  .wrapModal .modal .modalCart .description p {
+    font-size: 14px;
+    line-height: 108%;
+    letter-spacing: 0.06em;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul {
+    gap: 7px;
+  }
   .our-blok .carts .cart-wrap {
     margin: 0px 0px 0px 2vw;
   }
 }
 @media (max-width: 951px) {
+  .wrapModal .modal {
+    margin: 140vw auto 0px auto;
+  }
   .background .one-section .left .wrap .title {
     max-height: 171px;
   }
@@ -794,6 +944,9 @@ h2 {
   }
 }
 @media (max-width: 855px) {
+  .wrapModal .modal {
+    margin: 290vw auto 0px auto;
+  }
   .background .one-section {
     flex-direction: column;
     max-height: 1135px;
@@ -890,6 +1043,36 @@ h2 {
   }
 }
 @media (max-width: 768px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 2423px 0px 0px 68px;
+  }
+  .wrapModal .modal .exit {
+    width: 87.8vw;
+  }
+  .wrapModal .modal .modalCart {
+    width: 82vw;
+    height: 45.8vw;
+  }
+  .wrapModal .modal .modalCart .picture img {
+    width: 45.6vw;
+  }
+  .wrapModal .modal .modalCart .information {
+    width: 351px;
+    height: 362px;
+    top: 50px;
+    margin: 1.4vw 5px 0px 1.5vw;
+    gap: 2.8vw;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    gap: 7px;
+  }
+  .wrapModal .modal .modalCart .description p {
+    font-size: 13px;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul {
+    gap: 5.3px;
+  }
   .header {
     width: 708px;
   }
@@ -999,6 +1182,12 @@ h2 {
     position: absolute;
     z-index: 15;
     transition: all 4s;
+  }
+  .wrapModal .modal .modalCart .picture img {
+    width: 40.6vw;
+  }
+  .wrapModal .modal .modalCart .information {
+    gap: 2vw;
   }
   .header, .bloks, .footer {
     width: calc(100vw - 40px);
@@ -1110,6 +1299,52 @@ h2 {
   }
 }
 @media (max-width: 651px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 2300px auto 0px auto;
+  }
+  .wrapModal .modal .exit {
+    width: 85vw;
+  }
+  .wrapModal .modal .modalCart {
+    width: 75.1vw;
+    height: calc(20vw + 276px);
+  }
+  .wrapModal .modal .modalCart .picture {
+    display: none;
+  }
+  .wrapModal .modal .modalCart .information {
+    width: 90vw;
+    height: 100%;
+    margin: 2.8vw 5px 0px 3vw;
+    gap: 7vw;
+    align-items: center;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    gap: 8px;
+    align-items: center;
+    margin: 1px 0px -1px 3px;
+  }
+  .wrapModal .modal .modalCart .information .nameType .name h2 {
+    font-size: 35px;
+  }
+  .wrapModal .modal .modalCart .information .nameType .type p {
+    margin: 0px 7px 0px 0px;
+  }
+  .wrapModal .modal .modalCart .description p {
+    width: 220px;
+    font-size: 13px;
+    text-align: justify;
+    letter-spacing: 0.057em;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul {
+    gap: 6px;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul li span {
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    font-size: 16.6px;
+  }
   .our-blok .carts {
     max-width: calc(100vw - 120px);
   }
@@ -1149,6 +1384,10 @@ h2 {
   }
 }
 @media (max-width: 400px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 2000px auto 0px auto;
+  }
   .header, .bloks, .footer {
     max-width: 400px;
   }
@@ -1339,6 +1578,16 @@ h2 {
   }
 }
 @media (max-width: 330px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 1900px auto 0px auto;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    margin: 1px 0px -1px 3px;
+  }
+  .wrapModal .modal .modalCart .dopInfo {
+    margin: 0.5px 0px 0px -49px;
+  }
   .our-pets {
     height: 821px;
   }
@@ -1350,6 +1599,10 @@ h2 {
   }
 }
 @media (max-width: 320px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 1901px 0px 0px 22px;
+  }
   h2 {
     font-size: 25px;
   }

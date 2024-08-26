@@ -55,6 +55,143 @@ body {
   width: 100%;
 }
 
+.wrapModal{
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 10000px;
+  background: rgba(41, 41, 41, 0.6);
+  top: 0px;
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    padding: 0px 10px 0px 0px;
+    margin: 1650px auto 0px auto;
+    
+
+    .exit {
+      display: flex;
+      width: 944px;
+      justify-content: end;
+
+      .ex {
+        transition: all 0.8s;
+        fill: rgba(0, 0, 0, 0);
+
+        &:hover {
+          cursor: pointer;
+          fill: $color-primary-light;
+        
+          .rect {
+            stroke: $color-primary-light; ;
+          }
+        }
+      }
+    }
+
+    .modalCart {
+      display: flex;
+      width: 900px;
+      height: 500px;
+      box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+      background: $color-light-s;
+      border-radius: 10px;
+
+      .picture {
+        display: flex;
+        align-items: start;
+        border-radius: 9px 0 0 9px;
+        
+
+        img{
+          width: 500px;
+          border-radius: 10px;
+        }
+      }
+
+      .information {
+        display: flex;
+        flex-direction: column;
+        width: 351px;
+        height: 362px;
+        top: 50px;
+        margin: 50px 0px 0px 32px;
+        gap:40px;
+
+        .nameType {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .name {
+            h2 {
+              text-align: start;
+              margin: 0px;
+              color: #000;
+            }
+          }
+
+          .type {
+            p {
+              margin: 0px;
+              font-family: "Georgia Regular";
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 115%;
+              letter-spacing: 0.06em;
+              color: #000;
+            }
+          }
+        }
+      }
+      
+      .description {
+        p {
+          margin: 0px;
+          font-family: "Georgia Regular";
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 113%;
+          letter-spacing: 0.06em;
+          color: #000;
+        }
+      }
+
+      .dopInfo {
+        display: flex;
+        
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 11px;
+          margin: 0px 0px 0px 15px;
+          padding: 0px;
+
+          li {
+            font-family: "Georgia Regular";
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+            color: #000;
+            span {
+              font-weight: 900;
+              font-size: 16px;
+              letter-spacing: 0.09em;
+            }
+          }
+          li::marker {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
 .header, .bloks, .footer {
   max-width: 1200px;
   margin: 0px auto;
@@ -773,7 +910,14 @@ h2 {
   }
 }
 
+
 @media (max-width: 1279px) {
+
+  .wrapModal{
+    .modal {
+      margin: 130vw auto 0px auto;
+    }
+  }
 
   .header, .bloks, .footer {
     max-width: 100%;
@@ -864,6 +1008,54 @@ h2 {
   }
 }
 @media(max-width:1090px) {
+
+  .wrapModal{
+    .modal {
+      width: 83.5vw;
+      .exit {
+        width: 86vw
+      }
+  
+      .modalCart {
+        width: 82vw;
+        height: 46vw;
+    
+        .picture {
+          img{
+            width: 45vw;
+          }
+        }
+  
+        .information {
+          width: 351px;
+          height: 362px;
+          top: 50px;
+          margin: 3vw 5px 0px 2vw;
+          gap:2.7vw;
+  
+          .nameType {
+            gap: 7px;
+          }
+        }
+        
+        .description {
+          p {
+            font-size: 14px;
+            line-height: 108%;
+            letter-spacing: 0.06em;
+          }
+        }
+  
+        .dopInfo {
+          ul {
+            gap: 7px; 
+          }
+        }
+      }
+    }
+  }
+
+
   .our-blok {
     .carts {
       .cart-wrap {
@@ -875,6 +1067,12 @@ h2 {
 }
 
 @media (max-width: 951px) {
+
+  .wrapModal{
+    .modal {
+      margin: 140vw auto 0px auto;
+    }
+  }
 
   .background {
     .one-section {
@@ -982,7 +1180,12 @@ h2 {
 }
 
 @media(max-width: 855px) {
-
+  
+  .wrapModal{
+    .modal {
+      margin: 290vw auto 0px auto;
+    }
+  }
   .background {
     .one-section {
       flex-direction: column;
@@ -1103,6 +1306,51 @@ h2 {
 }
 
 @media (max-width:768px) {
+
+  .wrapModal{
+    .modal {
+      width: 83.5vw;
+      margin: 2423px 0px 0px 68px;
+      .exit {
+        width: 87.8vw
+      }
+  
+      .modalCart {
+        width: 82vw;
+        height: 45.8vw;
+    
+        .picture {
+          img{
+            width: 45.6vw;
+          }
+        }
+  
+        .information {
+          width: 351px;
+          height: 362px;
+          top: 50px;
+          margin: 1.4vw 5px 0px 1.5vw;
+          gap:2.8vw;
+  
+          .nameType {
+            gap: 7px;
+          }
+        }
+        
+        .description {
+          p {
+            font-size: 13px;
+          }
+        }
+  
+        .dopInfo { 
+          ul {
+            gap: 5.3px; 
+          }
+        }
+      }
+    }
+  }
 
   .header {
     width: 708px;
@@ -1242,6 +1490,22 @@ h2 {
   position: absolute;
   z-index: 15;
   transition: all 4s;
+  }
+
+  .wrapModal{
+    .modal {
+      .modalCart {
+        .picture {
+          img{
+            width: 40.6vw;
+          }
+        }
+  
+        .information {
+          gap:2vw;
+        }
+      }
+    }
   }
 
   .header, .bloks, .footer {
@@ -1390,6 +1654,74 @@ h2 {
 
 @media ( max-width: 651px) {
 
+  .wrapModal{
+    .modal {
+      width: 83.5vw;
+      margin: 2300px auto 0px auto;
+      .exit {
+        width: 85vw
+      }
+  
+      .modalCart {
+        width: 75.1vw;
+        height: calc(20vw + 276px);
+    
+        .picture {
+          display: none;
+        }
+  
+        .information {
+          width: 90vw;
+          height: 100%;
+          margin: 2.8vw 5px 0px 3vw;
+          gap:7vw;
+          align-items: center;
+  
+          .nameType {
+            gap: 8px;
+            align-items: center;
+            margin: 1px 0px -1px 3px;
+            
+            .name {
+              h2 {
+                font-size: 35px;
+              }
+            }
+            
+            .type {
+              p {
+                margin: 0px 7px 0px 0px;
+              }
+            }
+          }
+        }
+        
+        .description {
+          p {
+            width: 220px;
+            font-size: 13px;
+            text-align: justify;
+            letter-spacing: 0.057em;
+          }
+        }
+  
+        .dopInfo { 
+          ul {
+            gap: 6px; 
+
+            li {
+              span {
+                font-weight: 900;
+                letter-spacing: 0.09em;
+                font-size: 16.6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .our-blok {
     .carts {
       max-width: calc(100vw - 120px);
@@ -1455,6 +1787,14 @@ h2 {
 
 
 @media(max-width:400px) {
+
+  .wrapModal{
+    .modal {
+      width: 83.5vw;
+      margin: 2000px auto 0px auto;
+    }
+  }
+
   @mixin font-h2() {
     font-size: calc(12.5vw - 15px);
   }
@@ -1711,6 +2051,25 @@ h2 {
 }
 
 @media(max-width: 330px) {
+
+  .wrapModal{
+    .modal {
+      width: 83.5vw;
+      margin: 1900px auto 0px auto;
+
+      .modalCart {
+        .information {
+          .nameType {
+            margin: 1px 0px -1px 3px;
+          }
+        }
+  
+        .dopInfo {
+          margin: 0.5px 0px 0px -49px; 
+        }
+      }
+    }
+  }
   
   .our-pets {
     height: 821px;
@@ -1729,6 +2088,13 @@ h2 {
 }
 
 @media(max-width: 320px) {
+  .wrapModal{
+    .modal {
+      width: 83.5vw;
+      margin: 1901px 0px 0px 22px;
+    }
+  }
+
   @mixin font-h2() {
     font-size: 25px;
   }
