@@ -66,14 +66,13 @@ body {
 .wrapModal .modal .modalCart {
   display: flex;
   width: 900px;
-  height: 500px;
   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
   background: #fafafa;
   border-radius: 10px;
 }
 .wrapModal .modal .modalCart .picture {
   display: flex;
-  align-items: start;
+  align-items: center;
   border-radius: 9px 0 0 9px;
 }
 .wrapModal .modal .modalCart .picture img {
@@ -82,11 +81,11 @@ body {
 }
 .wrapModal .modal .modalCart .information {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   width: 351px;
-  height: 362px;
   top: 50px;
-  margin: 50px 0px 0px 32px;
+  margin: 50px 14px 0px 32px;
   gap: 40px;
 }
 .wrapModal .modal .modalCart .information .nameType {
@@ -838,7 +837,6 @@ h2 {
   }
   .wrapModal .modal .modalCart {
     width: 82vw;
-    height: 46vw;
   }
   .wrapModal .modal .modalCart .picture img {
     width: 45vw;
@@ -1052,26 +1050,28 @@ h2 {
   }
   .wrapModal .modal .modalCart {
     width: 82vw;
-    height: 45.8vw;
+  }
+  .wrapModal .modal .modalCart .picture {
+    align-items: start;
   }
   .wrapModal .modal .modalCart .picture img {
     width: 45.6vw;
   }
   .wrapModal .modal .modalCart .information {
     width: 351px;
-    height: 362px;
     top: 50px;
+    height: 100%;
     margin: 1.4vw 5px 0px 1.5vw;
-    gap: 2.8vw;
+    gap: 2.7vw;
   }
   .wrapModal .modal .modalCart .information .nameType {
-    gap: 7px;
+    gap: 9px;
   }
   .wrapModal .modal .modalCart .description p {
     font-size: 13px;
   }
   .wrapModal .modal .modalCart .dopInfo ul {
-    gap: 5.3px;
+    gap: 5.4px;
   }
   .header {
     width: 708px;
@@ -1183,11 +1183,15 @@ h2 {
     z-index: 15;
     transition: all 4s;
   }
+  .wrapModal .modal .modalCart .picture {
+    align-items: center;
+  }
   .wrapModal .modal .modalCart .picture img {
     width: 40.6vw;
   }
   .wrapModal .modal .modalCart .information {
     gap: 2vw;
+    padding: 0px 0px 3.6% 0px;
   }
   .header, .bloks, .footer {
     width: calc(100vw - 40px);
@@ -1308,7 +1312,6 @@ h2 {
   }
   .wrapModal .modal .modalCart {
     width: 75.1vw;
-    height: calc(20vw + 276px);
   }
   .wrapModal .modal .modalCart .picture {
     display: none;
@@ -1329,10 +1332,10 @@ h2 {
     font-size: 35px;
   }
   .wrapModal .modal .modalCart .information .nameType .type p {
-    margin: 0px 7px 0px 0px;
+    text-align: center;
   }
   .wrapModal .modal .modalCart .description p {
-    width: 220px;
+    max-width: 220px;
     font-size: 13px;
     text-align: justify;
     letter-spacing: 0.057em;
@@ -1342,7 +1345,7 @@ h2 {
   }
   .wrapModal .modal .modalCart .dopInfo ul li span {
     font-weight: 900;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.08em;
     font-size: 16.6px;
   }
   .our-blok .carts {
@@ -1586,7 +1589,11 @@ h2 {
     margin: 1px 0px -1px 3px;
   }
   .wrapModal .modal .modalCart .dopInfo {
-    margin: 0.5px 0px 0px -49px;
+    align-self: flex-start;
+    margin: 0.5px 0px 0px 3px;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul li {
+    letter-spacing: 0.04em;
   }
   .our-pets {
     height: 821px;

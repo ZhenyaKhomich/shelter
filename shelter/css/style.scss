@@ -95,14 +95,13 @@ body {
     .modalCart {
       display: flex;
       width: 900px;
-      height: 500px;
       box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
       background: $color-light-s;
       border-radius: 10px;
 
       .picture {
         display: flex;
-        align-items: start;
+        align-items: center;
         border-radius: 9px 0 0 9px;
         
 
@@ -114,11 +113,12 @@ body {
 
       .information {
         display: flex;
+        flex-grow: 1;
         flex-direction: column;
         width: 351px;
-        height: 362px;
+      
         top: 50px;
-        margin: 50px 0px 0px 32px;
+        margin: 50px 14px 0px 32px;
         gap:40px;
 
         .nameType {
@@ -1018,7 +1018,7 @@ h2 {
   
       .modalCart {
         width: 82vw;
-        height: 46vw;
+        // height: 46vw;
     
         .picture {
           img{
@@ -1317,9 +1317,10 @@ h2 {
   
       .modalCart {
         width: 82vw;
-        height: 45.8vw;
+        // height: 45.7vw;
     
         .picture {
+          align-items: start;
           img{
             width: 45.6vw;
           }
@@ -1327,13 +1328,13 @@ h2 {
   
         .information {
           width: 351px;
-          height: 362px;
           top: 50px;
+          height: 100%;
           margin: 1.4vw 5px 0px 1.5vw;
-          gap:2.8vw;
+          gap:2.7vw;
   
           .nameType {
-            gap: 7px;
+            gap: 9px;
           }
         }
         
@@ -1345,7 +1346,7 @@ h2 {
   
         .dopInfo { 
           ul {
-            gap: 5.3px; 
+            gap: 5.4px; 
           }
         }
       }
@@ -1496,6 +1497,7 @@ h2 {
     .modal {
       .modalCart {
         .picture {
+          align-items: center;
           img{
             width: 40.6vw;
           }
@@ -1503,6 +1505,7 @@ h2 {
   
         .information {
           gap:2vw;
+          padding: 0px 0px 3.6% 0px;
         }
       }
     }
@@ -1664,7 +1667,7 @@ h2 {
   
       .modalCart {
         width: 75.1vw;
-        height: calc(20vw + 276px);
+        // height: calc(20vw + 276px);
     
         .picture {
           display: none;
@@ -1690,7 +1693,8 @@ h2 {
             
             .type {
               p {
-                margin: 0px 7px 0px 0px;
+                // margin: 0px 7px 0px 0px;
+                text-align: center;
               }
             }
           }
@@ -1698,7 +1702,7 @@ h2 {
         
         .description {
           p {
-            width: 220px;
+            max-width: 220px;
             font-size: 13px;
             text-align: justify;
             letter-spacing: 0.057em;
@@ -1712,7 +1716,7 @@ h2 {
             li {
               span {
                 font-weight: 900;
-                letter-spacing: 0.09em;
+                letter-spacing: 0.08em;
                 font-size: 16.6px;
               }
             }
@@ -2065,7 +2069,13 @@ h2 {
         }
   
         .dopInfo {
-          margin: 0.5px 0px 0px -49px; 
+          align-self: flex-start;
+          margin: 0.5px 0px 0px 3px; 
+          ul {
+            li {
+              letter-spacing: 0.04em;
+            }
+          }
         }
       }
     }

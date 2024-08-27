@@ -309,6 +309,155 @@ cartWrap.forEach(el => el.remove());
 
 
 
+
+function modalWindow(arr) {
+  let wrapModal = document.body.querySelector('.wrapModal')
+  
+  // let wrapModal = document.createElement('div');
+  // wrapModal.classList.add('wrapModal');
+
+  let modal = document.createElement('div');
+  modal.classList.add('modal');
+
+  let exit = document.createElement('div');
+  exit.classList.add('exit');
+  exit.insertAdjacentHTML("afterbegin", `<svg class ='ex' width="52" height="52" viewBox="0 0 52 52"   xmlns="http://www.w3.org/2000/svg">
+  <rect class="rect" x="1" y="1" width="50" height="50" rx="25" stroke="#F1CDB3" stroke-width="2"/>
+  <path class="path" fill-rule="evenodd" clip-rule="evenodd" d="M27.4262 26L31.7046 21.7216C32.0985 21.3277 32.0985 20.6892 31.7046 20.2954C31.3108 19.9016 30.6723 19.9016 30.2785 20.2954L26 24.5739L21.7215 20.2954C21.3276 19.9015 20.6892 19.9015 20.2953 20.2954C19.9016 20.6892 19.9016 21.3277 20.2953 21.7215L24.5738 26L20.2953 30.2785C19.9016 30.6723 19.9016 31.3108 20.2953 31.7046C20.6892 32.0985 21.3276 32.0985 21.7215 31.7046L26 27.4261L30.2785 31.7046C30.6723 32.0985 31.3108 32.0985 31.7046 31.7046C32.0985 31.3108 32.0985 30.6723 31.7046 30.2785L27.4262 26Z" fill="#292929"/>
+  </svg>`);
+
+  modal.append(exit);
+
+  let modalCart = document.createElement('div');
+  modalCart.classList.add('modalCart');
+
+  let picture = document.createElement('div');
+  picture.classList.add('picture');
+
+  let img = document.createElement('img');
+  img.src = arr.img;
+  img.alt = `dog ${arr.name}`;
+
+  picture.append(img);
+
+  modalCart.append(picture);
+
+  let information = document.createElement('div');
+  information.classList.add('information');
+
+  let nameType = document.createElement('div');
+  nameType.classList.add('nameType');
+
+  let name = document.createElement('div');
+  name.classList.add('name');
+
+  let h2 = document.createElement('h2');
+  h2.textContent = arr.name;
+
+  name.append(h2);
+  nameType.append(name);
+
+  let type = document.createElement('div');
+  type.classList.add('type');
+
+  let typeP = document.createElement('p');
+  typeP.textContent = `${arr.type} - ${arr.breed}`;
+
+  type.append(typeP);
+  nameType.append(type);
+
+  information.append(nameType);
+
+  let description = document.createElement('div');
+  description.classList.add('description');
+
+  let desP = document.createElement('p');
+  desP.textContent = `${arr.description}`;
+
+  description.append(desP);
+  information.append(description);
+
+  let dopInfo = document.createElement('div');
+  dopInfo.classList.add('dopInfo');
+
+  let ul = document.createElement('ul');
+
+  let li1 = document.createElement('li');
+  li1.textContent = `${arr.age}`
+  let span1 = document.createElement('span');
+  span1.textContent = 'Age: ';
+
+  let li2 = document.createElement('li');
+  li2.textContent = `${arr.inoculations}`
+  let span2 = document.createElement('span');
+  span2.textContent = 'Inoculations: ';
+
+  let li3 = document.createElement('li');
+  li3.textContent = `${arr.diseases}`
+  let span3 = document.createElement('span');
+  span3.textContent = 'Diseases: ';
+
+  let li4 = document.createElement('li');
+  li4.textContent = `${arr.parasites}`
+  let span4 = document.createElement('span');
+  span4.textContent = 'Parasites: ' ;
+
+  li1.prepend(span1);
+  li2.prepend(span2);
+  li3.prepend(span3);
+  li4.prepend(span4);
+
+  ul.append(li1);
+  ul.append(li2);
+  ul.append(li3);
+  ul.append(li4);
+
+  dopInfo.append(ul);
+
+  information.append(dopInfo);
+
+  modalCart.append(information);
+
+  modal.append(modalCart);
+
+  wrapModal.append(modal);
+}
+// console.log(modalWindow(currentSlide[0]));
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  let wrapModal = document.body.querySelector('.wrapModal');
+  let carts = document.querySelectorAll('.cart');
+
+  wrapModal.style.display = 'none';
+
+  carts.forEach((cart, index) => { 
+  cart.addEventListener('click', function (event) {
+    if(event.target.closest('.cart')) {
+      modalWindow(currentSlide[index]);
+      wrapModal.style.display = '';
+    }
+let modalCart = document.body.querySelector('.modalCart');
+let modal = document.body.querySelector('.modal');
+let exit = document.querySelector('.exit');
+
+    modalCart.addEventListener('click', function () {
+      modal.remove();
+      wrapModal.style.display = 'none';
+    })
+
+    exit.addEventListener('click', function () {
+      modal.remove();
+      wrapModal.style.display = 'none';
+    })
+  })
+})
+})
+
+
+
+
+
 // Резерв 
 
 // function initCarts (pets) {
@@ -353,3 +502,4 @@ cartWrap.forEach(el => el.remove());
 // if (index !== -1) {
 //     array.splice(index, 1);
 // }
+
