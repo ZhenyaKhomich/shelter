@@ -437,13 +437,16 @@ document.addEventListener('DOMContentLoaded', function () {
       modalWindow(currentSlide[index]);
       wrapModal.style.display = '';
     }
-let modalCart = document.body.querySelector('.modalCart');
-let modal = document.body.querySelector('.modal');
-let exit = document.querySelector('.exit');
 
-    modalCart.addEventListener('click', function () {
-      modal.remove();
-      wrapModal.style.display = 'none';
+    let wrapMod = document.body.querySelector('.wrapModal');
+    let modal = document.body.querySelector('.modal');
+    let exit = document.querySelector('.exit');
+
+    wrapMod.addEventListener('click', function (event) {
+      if(!event.target.closest('.modalCart')) {
+        modal.remove();
+        wrapModal.style.display = 'none';
+      } 
     })
 
     exit.addEventListener('click', function () {
