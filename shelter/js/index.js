@@ -459,50 +459,158 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// резерв
+
+// function colCarts(car, cal) {
+
+//   let a = [];
+ 
+//   for(let i = 0; i < cal; i++) {
+
+//     if(allCarts[i].length > car) {
+    
+//       if(allCarts[i].length == car) {
+//         continue;
+//       } else {
+//         while(allCarts[i].length > car) {
+//           let last = allCarts[i][allCarts[i].length-1];
+//           console.log(last['name']);
+//           if(a.length == 0) {
+//             a.push(allCarts[i].pop());
+//           } else if(!a.includes(last)) {
+//           a.push(allCarts[i].pop());
+//           console.log(allCarts)
+//         } else {
+//           colCarts(car, cal);
+//         }
+      
+//           if(a.length == car) {
+//             allCarts.push(a);
+//             a = [];
+//             console.log(allCarts)
+//           } 
+//         }
+//       }
+//     } else if(allCarts[i].length < car) {
+//         console.log(allCarts[i].length)
+//         while(allCarts[i].length < car) { 
+//           if(car == 8) {
+//             let k = 0;
+//             let y = 1;
+//             if(i > 2) {
+//               k = 1;
+//             }
+//             while(allCarts[cal+k].length !== 0){
+//               if(allCarts[i].length < car) {
+//                 allCarts[i].push(oneElem(allCarts[cal+k]));
+//                 console.log(allCarts[cal+k][0])
+//                 allCarts[i].push(allCarts[cal+k].shift());
+//               } else if (allCarts[i + y].length < car) {
+//                 allCarts[i + y].push(oneElem(allCarts[cal+k]));
+//                 allCarts[i + y].push(allCarts[cal+k].shift());
+//               } else if(allCarts[cal+k].length == 0) {
+//                 k = 1;
+//               }
+//               else {
+//                 y++;
+//                 continue;
+//               }
+//             }
+//           }  else if(allCarts[cal+i].length !== 0) {
+//               let y = 1;
+//               while(allCarts[cal+i].length !== 0){
+//                 if(allCarts[i].length < car) {
+//                   allCarts[i].push(allCarts[cal+i].pop());
+//                 } else if (allCarts[i + y].length < car) {
+//                   allCarts[i + y].push(allCarts[cal+i].shift());
+//                 } else {
+//                   y++;
+//                 }
+//               }
+//           } else {
+//             allCarts[i].push(allCarts[cal+i].shift());
+//           }
+//         } 
+//     } else if (i == cal) {
+//       allCarts.splice(cal, 1);
+//       console.log(allCarts);
+//     } else {
+//       continue;
+//     }
+//   }
+//   console.log(aaa(allCarts))
+
+//   allCarts = aaa(allCarts);
+//   console.log(allCarts);
+//   let cart = document.body.querySelectorAll('.cart');
+//   cart.forEach(el=>el.remove());
+//   carts(allCarts[0]);
+//   num = 0;
+//   figure.textContent = num + 1;
+// }
 
 
-// Резерв 
+
+
+
 
 // function initCarts (pets) {
-//   for(let j = 0; j < cal; j++) {
+//   for(let j = 0; j < 6; j++) {
 //     onePageCarts=[];
-//     for(let i = 0; i < cart; i++) {
-//       let random = Math.floor(Math.random() * pets.length);
+
+//     if(allCarts.length == 1 || allCarts.length == 4) {
     
-//       if(allCarts.length == 0) {
-        
-//       }
+//       let last = allCarts[j-1][allCarts[j-1].length-1];
+//       let last2 = allCarts[j-1][allCarts[j-1].length-2];
 
+//        onePageCarts.push(last2);
+//        onePageCarts.push(last);
+//     } else if (allCarts.length == 2 || allCarts.length == 5) {
+//       let last = allCarts[j-1][allCarts[j-1].length-1];
+//       let last2 = allCarts[j-1][allCarts[j-1].length-2];
+//       let last3 = allCarts[j-2][allCarts[j-2].length-1];
+//       let last4 = allCarts[j-2][allCarts[j-2].length-2];
 
+//       onePageCarts.push(last2);
+//       onePageCarts.push(last);
+//       onePageCarts.push(last4);
+//       onePageCarts.push(last3);
+//     }
 
-//       if(!onePageCarts.includes(pets[random])) {
-//         onePageCarts.push(pets[random]);
-//         // console.log( onePageCarts);
+//     for(let i = 0; i < 8; i++) {
+//       let random = Math.floor(Math.random() * pets.length);
+//       if(allCarts.length == 0 || allCarts.length == 3) {
+//         if(!onePageCarts.includes(pets[random])) {
+//           onePageCarts.push(pets[random]);
+//         } else if(onePageCarts.length == 8) {
+//           allCarts.push(onePageCarts);
+//           console.log(allCarts[0]);
+//           break;
+//         } 
+//         else {
+//           i--;
+//           continue;
+//         } 
+//       } else if(allCarts.length < 9) {
+
+//         if (onePageCarts.length < 8 && onePageCarts.length > 1) {
+//           if(!onePageCarts.includes(pets[random])) {
+//             onePageCarts.push(pets[random]);
+//           } 
+//           else if(onePageCarts.length == 8) {
+//             allCarts.push(onePageCarts);
+//             console.log(allCarts[0]);
+//             break;
+//           }  else {
+//             i--;
+//             continue;
+//           } 
+//         }
 //       } else {
-//         i--;
-//         continue;
+//         i = 8;
 //       }
 //     }
 //     allCarts.push(onePageCarts);
 //   }
 // return allCarts;
 // }
-// console.log(initCarts (pets));
-
-// carts(allCarts[0])
-
-
-
-
-
-
-// while(allCarts[i].length < car) { 
-//   // let lat = allCarts[car];
-  
-//     allCarts[car - i].push(allCarts[car].pop());
-// } 
-// let index = array.indexOf(allCarts[car]);
-// if (index !== -1) {
-//     array.splice(index, 1);
-// }
-
