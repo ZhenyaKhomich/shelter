@@ -153,6 +153,11 @@ body {
   gap: 10px;
 }
 .wrapModal .modal .modalCart .information .nameType .name h2 {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   text-align: start;
   margin: 0px;
   color: #000;

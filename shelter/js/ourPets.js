@@ -91,6 +91,7 @@ const pets = [
 
 
 //  бургер меню
+
 document.addEventListener('DOMContentLoaded', function() {
 
     let burg = document.body.querySelector('.burg');
@@ -193,27 +194,24 @@ function aaa(arr) {
   return arr.filter(el => el.length > 0 );
 }
 
+//  первоначальное колличество карточек взависимости от размера окна
 
 if(size > 768) {
   car = 8;
   cal = 6; 
-  console.log(initCarts (pets));
+  initCarts (pets);
   carts(allCarts[0]);
-  // colCarts(car, cal);
-  
-}
-if(size <= 768 && size > 600){
+} else if(size <= 768 && size > 600){
   car = 6;
   cal = 8;
-  console.log(initCarts (pets));
-  
+  initCarts (pets);
   carts(allCarts[0]);
   colCarts(8, 6);
   colCarts(car, cal);
  } else if (size < 600) {
   car = 3;
   cal = 16;
-  console.log(initCarts (pets));
+  initCarts (pets);
   allCarts = aaa(allCarts);
   carts(allCarts[0]);
   colCarts(8, 6);
@@ -221,6 +219,7 @@ if(size <= 768 && size > 600){
   colCarts(car, cal);
  }
 
+// инициализация карточек что бы последние две не повторялись
 
 function initCarts (pets) {
   for(let j = 0; j < 6; j++) {
@@ -261,7 +260,6 @@ function initCarts (pets) {
       onePageCarts.push(last5);
     } 
 
-
     for(let i = 0; i < 8; i++) {
       let random = Math.floor(Math.random() * pets.length);
       if(allCarts.length == 0 ) {
@@ -271,14 +269,11 @@ function initCarts (pets) {
           allCarts.push(onePageCarts);
           console.log(allCarts[0]);
           break;
-        } 
-        else {
+        } else {
           i--;
           continue;
         } 
-      }
-
-       else if(allCarts.length < 9) {
+      } else if(allCarts.length < 9) {
         if (onePageCarts.length < 8 && onePageCarts.length > 1) {
           if(!onePageCarts.includes(pets[random])) {
             onePageCarts.unshift(pets[random]);
@@ -292,89 +287,14 @@ function initCarts (pets) {
             continue;
           } 
         }
-      } 
-      else {
+      } else {
         i = 8;
       }
     }
     allCarts.push(onePageCarts);
   }
 return allCarts;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   for(let j = 0; j < 6; j++) {
-//     onePageCarts=[];
-
-//     if(allCarts.length == 1 || allCarts.length == 4) {
-    
-//       let last = allCarts[j-1][allCarts[j-1].length-1];
-//       let last2 = allCarts[j-1][allCarts[j-1].length-2];
-
-//        onePageCarts.push(last2);
-//        onePageCarts.push(last);
-//     } else if (allCarts.length == 2 || allCarts.length == 5) {
-//       let last = allCarts[j-1][allCarts[j-1].length-1];
-//       let last2 = allCarts[j-1][allCarts[j-1].length-2];
-//       let last3 = allCarts[j-2][allCarts[j-2].length-1];
-//       let last4 = allCarts[j-2][allCarts[j-2].length-2];
-
-//       onePageCarts.push(last2);
-//       onePageCarts.push(last);
-//       onePageCarts.push(last4);
-//       onePageCarts.push(last3);
-//     }
-
-//     for(let i = 0; i < 8; i++) {
-//       let random = Math.floor(Math.random() * pets.length);
-//       if(allCarts.length == 0 || allCarts.length == 3) {
-//         if(!onePageCarts.includes(pets[random])) {
-//           onePageCarts.push(pets[random]);
-//         } else if(onePageCarts.length == 8) {
-//           allCarts.push(onePageCarts);
-//           console.log(allCarts[0]);
-//           break;
-//         } 
-//         else {
-//           i--;
-//           continue;
-//         } 
-//       } else if(allCarts.length < 9) {
-
-//         if (onePageCarts.length < 8 && onePageCarts.length > 1) {
-//           if(!onePageCarts.includes(pets[random])) {
-//             onePageCarts.push(pets[random]);
-//           } 
-//           else if(onePageCarts.length == 8) {
-//             allCarts.push(onePageCarts);
-//             console.log(allCarts[0]);
-//             break;
-//           }  else {
-//             i--;
-//             continue;
-//           } 
-//         }
-//       } else {
-//         i = 8;
-//       }
-//     }
-//     allCarts.push(onePageCarts);
-//   }
-// return allCarts;
 }
-
 
 let prevLast = document.body.querySelector('.svg1');
 let last = document.body.querySelector('.svg2');
@@ -383,6 +303,7 @@ let nextLast = document.body.querySelector('.svg5');
 let butsLast = document.body.querySelectorAll('.in');
 let butsNext = document.body.querySelectorAll('.out');
 
+//  кнопки пагинации
 
 nextLast.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
@@ -394,7 +315,6 @@ nextLast.addEventListener('click', function() {
   butsNext.forEach(el=>el.classList.add('inactive'));
   butsLast.forEach(el=>el.classList.remove('inactive'));
 })
-
 
 next.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
@@ -410,7 +330,6 @@ next.addEventListener('click', function() {
   } 
 })
 
-
 prevLast.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
@@ -420,7 +339,6 @@ prevLast.addEventListener('click', function() {
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
 })
-
 
 last.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
@@ -437,19 +355,13 @@ last.addEventListener('click', function() {
   }
 })
 
+//  уменьшение и увеличение подмассивов при изменении размера страницы
 
 function oneElem(arr) {
   let k = arr.filter(el => arr.indexOf(el) == 1);
   arr.splice(1, 1);
 return k[0];
 }
-
-
-
-
-
-
-
 
 function colCarts(car, cal) {
   for(let i = 0; i < cal; i++) {
@@ -484,92 +396,8 @@ function colCarts(car, cal) {
       }
     }
   }
-  
-  
-
-
-
-
-
-  // let a = [];
- 
-  // for(let i = 0; i < cal; i++) {
-
-  //   if(allCarts[i].length > car) {
-    
-  //     if(allCarts[i].length == car) {
-  //       continue;
-  //     } else {
-  //       while(allCarts[i].length > car) {
-  //         let last = allCarts[i][allCarts[i].length-1];
-  //         console.log(last['name']);
-  //         if(a.length == 0) {
-  //           a.push(allCarts[i].pop());
-  //         } else if(!a.includes(last)) {
-  //         a.push(allCarts[i].pop());
-  //         console.log(allCarts)
-  //       } else {
-  //         colCarts(car, cal);
-  //       }
-      
-  //         if(a.length == car) {
-  //           allCarts.push(a);
-  //           a = [];
-  //           console.log(allCarts)
-  //         } 
-  //       }
-  //     }
-  //   } else if(allCarts[i].length < car) {
-  //       console.log(allCarts[i].length)
-  //       while(allCarts[i].length < car) { 
-  //         if(car == 8) {
-  //           let k = 0;
-  //           let y = 1;
-  //           if(i > 2) {
-  //             k = 1;
-  //           }
-  //           while(allCarts[cal+k].length !== 0){
-  //             if(allCarts[i].length < car) {
-  //               allCarts[i].push(oneElem(allCarts[cal+k]));
-  //               console.log(allCarts[cal+k][0])
-  //               allCarts[i].push(allCarts[cal+k].shift());
-  //             } else if (allCarts[i + y].length < car) {
-  //               allCarts[i + y].push(oneElem(allCarts[cal+k]));
-  //               allCarts[i + y].push(allCarts[cal+k].shift());
-  //             } else if(allCarts[cal+k].length == 0) {
-  //               k = 1;
-  //             }
-  //             else {
-  //               y++;
-  //               continue;
-  //             }
-  //           }
-  //         }  else if(allCarts[cal+i].length !== 0) {
-  //             let y = 1;
-  //             while(allCarts[cal+i].length !== 0){
-  //               if(allCarts[i].length < car) {
-  //                 allCarts[i].push(allCarts[cal+i].pop());
-  //               } else if (allCarts[i + y].length < car) {
-  //                 allCarts[i + y].push(allCarts[cal+i].shift());
-  //               } else {
-  //                 y++;
-  //               }
-  //             }
-  //         } else {
-  //           allCarts[i].push(allCarts[cal+i].shift());
-  //         }
-  //       } 
-  //   } else if (i == cal) {
-  //     allCarts.splice(cal, 1);
-  //     console.log(allCarts);
-  //   } else {
-  //     continue;
-  //   }
-  // }
-  console.log(aaa(allCarts))
-
+  aaa(allCarts);
   allCarts = aaa(allCarts);
-  console.log(allCarts);
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
   carts(allCarts[0]);
@@ -577,63 +405,33 @@ function colCarts(car, cal) {
   figure.textContent = num + 1;
 }
 
-
+//  размер страницы в реальном времени
 
 window.addEventListener('resize', () => {
  size = window.innerWidth;
  console.log(size);
  if( size > 768 ) {
-  // let cart = document.body.querySelectorAll('.cart');
-  // cart.forEach(el=>el.remove());
   car = 8;
   cal = 6;
   colCarts(car, cal);
-  // allCarts = [];
-  // initCarts (pets);
-  // carts(allCarts[0]);
-  // num = 0;
-  // figure.textContent = num + 1;
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
  } else if(size <= 768 && size >= 600){
-
-  // let cart = document.body.querySelectorAll('.cart');
-  // cart.forEach(el=>el.remove());
   car = 6;
   cal = 8;
-
   colCarts(car, cal);
-  // console.log(allCarts);
-  // allCarts = [];
-  // initCarts (pets);
-  // carts(allCarts[0]);
-  // num = 0;
-  // figure.textContent = num + 1;
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
- }
- 
- else if (size <= 600 && size >=320) {
-  // let cart = document.body.querySelectorAll('.cart');
-  // cart.forEach(el=>el.remove());
+ } else if (size <= 600 && size >=320) {
   car = 3;
   cal = 16;
   colCarts(car, cal);
-  // allCarts = [];
-  // initCarts (pets);
-  // carts(allCarts[0]);
-  // num = 0;
-  // figure.textContent = num + 1;
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
  }  
 })
 
-
-
-
-
-
+//  модальное окно
 
 function modalWindow(arr) {
   let wrapModal = document.body.querySelector('.wrapModal')
@@ -744,8 +542,8 @@ function modalWindow(arr) {
 
   wrapModal.append(modal);
 }
-// console.log(modalWindow(currentSlide[0]));
 
+//  запуск и закрытие модального окна
 
 document.addEventListener('DOMContentLoaded', function () {
   let wrapModal = document.body.querySelector('.wrapModal');
@@ -759,8 +557,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if(event.target.closest('.cart')) {
       modalWindow(allCarts[num][index]);
       wrapModal.style.display = '';
+      document.body.style.overflow = 'hidden'; 
     }
-
 
     window.addEventListener('resize', function () {
       let carts = document.querySelectorAll('.cart');
@@ -769,6 +567,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if(event.target.closest('.cart')) {
             modalWindow(allCarts[num][index]);
             wrapModal.style.display = '';
+            document.body.style.overflow = 'hidden'; 
           }
           let wrapMod = document.body.querySelector('.wrapModal');
           let modal = document.body.querySelector('.modal');
@@ -778,12 +577,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if(!event.target.closest('.modalCart')) {
               modal.remove();
               wrapModal.style.display = 'none';
+              document.body.style.overflow = ''; 
             } 
           })
 
           exit.addEventListener('click', function () {
             modal.remove();
             wrapModal.style.display = 'none';
+            document.body.style.overflow = ''; 
           })
         })
       })
@@ -796,6 +597,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if(event.target.closest('.cart')) {
                 modalWindow(allCarts[num][index]);
                 wrapModal.style.display = '';
+                document.body.style.overflow = 'hidden'; 
           }
           let wrapMod = document.body.querySelector('.wrapModal');
           let modal = document.body.querySelector('.modal');
@@ -805,20 +607,19 @@ document.addEventListener('DOMContentLoaded', function () {
             if(!event.target.closest('.modalCart')) {
               modal.remove();
               wrapModal.style.display = 'none';
+              document.body.style.overflow = ''; 
             } 
           })
 
           exit.addEventListener('click', function () {
             modal.remove();
             wrapModal.style.display = 'none';
+            document.body.style.overflow = ''; 
           })
 
         })
     })
     })
-
-
-
 
     let wrapMod = document.body.querySelector('.wrapModal');
     let modal = document.body.querySelector('.modal');
@@ -828,134 +629,15 @@ document.addEventListener('DOMContentLoaded', function () {
       if(!event.target.closest('.modalCart')) {
         modal.remove();
         wrapModal.style.display = 'none';
+        document.body.style.overflow = ''; 
       } 
     })
 
     exit.addEventListener('click', function () {
       modal.remove();
       wrapModal.style.display = 'none';
+      document.body.style.overflow = ''; 
     })
   })
 })
 })
-
-
-// let size = window.innerWidth;
-
-// let allCart = [[1, 2, 3, 4, 5, 6, 7, 8], [9, 10, 11, 12, 13, 14, 15, 16], [17, 18, 19, 20, 21, 22, 23, 24], [25, 26, 27, 28, 29, 30, 31, 32], [33, 34, 35, 36, 37, 38, 39, 40], [41, 42, 43, 44, 45, 46 ,47, 48]]
-
-// if(size > 768) {
-//     car = 8;
-//     cal = 6; 
-//     console.log(co(8, 6));
-//   }
-//   if(size <= 768 && size > 600){
-//     car = 6;
-//     cal = 8;
-//     console.log(co(8, 6));
-//     console.log(co(car, cal));
-//    } else if (size < 600) {
-//     car = 3;
-//     cal = 16;
-//     // console.log(co(8, 6));
-//     // console.log(co(6, 8));
-//     console.log(co(car, cal));
-//    }
-  
-
-
-
-// window.addEventListener('resize', () => {
-//   size = window.innerWidth;
-//   console.log(size);
-//   if( size > 768 ) {
-//    car = 8;
-//    cal = 6;
-//    console.log(co(car, cal));
-//   } else if(size <= 768 && size >= 600){
-//    car = 6;
-//    cal = 8;
-//    console.log(co(car, cal));
-//   }
-  
-//   else if (size <= 600 && size >=320) {
-//    car = 3;
-//    cal = 16;
-//    console.log(co(car, cal));
-//   }  
-//  })
- 
-
-
-
-
-// function co(car, cal) {
-
-//   for(let i = 0; i < cal; i++) {
-//     if(allCart[i].length > car) { 
-
-//       if(allCart[i].length == car) {
-//         continue;
-//       } else {
-//         while(allCart[i].length > car) {
-//           if(allCart.length - 1 === i) {
-//             allCart.push([]);
-//           }
-//           let last = allCart[i][allCart[i].length-1];
-//           allCart[i+1].unshift(allCart[i].pop());
-//         }
-//       }
-//     } else if (allCart[i].length < car) {
-//       if(allCart[i].length == car) {
-//         continue;
-//       } else {
-//         while(allCart[i].length < car) {
-//           if(allCart[i].length === 0) {
-//             allCart = allCart.filter(el => el.length > 0);
-//           } 
-          
-//           allCart[i].push(allCart[i+1].shift());
-//         }
-
-//         if(allCart[allCart.length - 1].length === 0 ) {
-//           allCart = allCart.filter(el => el.length > 0);
-//         }
-//       }
-//     }
-//   }
-//   return allCart;
-// }
-
-// // console.log(co(6, 8))
-
-
-
-
-
-
-
-
-
-
-function group(array, keySelector, valueSelector) {
-
-}
-
-console.log(group([
-        { country: 'Belarus', city: 'Brest' },
-        { country: 'Russia', city: 'Omsk' },
-        { country: 'Russia', city: 'Samara' },
-        { country: 'Belarus', city: 'Grodno' },
-        { country: 'Belarus', city: 'Minsk' },
-        { country: 'Poland', city: 'Lodz' }
-       ],
-       item => item.country,
-        item => item.city))
-
-
-
-
-      
-
-
-      

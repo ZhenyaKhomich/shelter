@@ -227,11 +227,10 @@ $footer-gradient-background: #211f20;
   }
 }
 
-
 html {
   scroll-behavior: smooth;
-
 }
+
 body {
   font-family: "Georgia Regular", "Arial Regular", sans-serif;
   height: 100vh;
@@ -269,15 +268,6 @@ body {
       .ex {
         transition: all 0.8s;
         fill: rgba(0, 0, 0, 0);
-
-        // &:hover {
-        //   cursor: pointer;
-        //   fill: $color-primary-light;
-        
-        //   .rect {
-        //     stroke: $color-primary-light; ;
-        //   }
-        // }
       }
     }
 
@@ -305,7 +295,6 @@ body {
         flex-grow: 1;
         flex-direction: column;
         width: 351px;
-      
         top: 50px;
         margin: 50px 14px 0px 32px;
         gap:40px;
@@ -401,21 +390,6 @@ h2 {
     z-index: 10;
     text-decoration: none;
 
-    // &:hover {
-    //   .logo {
-    //     .top {
-    //       p {
-    //         color: $color-primary-light;
-    //       }
-    //     }
-    //     .bottom {
-    //       p {
-    //         color: $color-light-s;
-    //       }
-    //     }
-    //   }
-    // }
-
     .logo {
       display: flex;
       flex-direction: column;
@@ -481,13 +455,8 @@ h2 {
           line-height: 160%;
           color: $color-dark-s;
           text-decoration: none;
-  
-          // &:hover {
-          //   cursor: pointer;
-          //   color: $color-light-s;
-          //   transition: 0.7s;
-          // }
         }
+
         a.dis {
           pointer-events: none;
           border-bottom: solid 3px $color-primary;
@@ -569,12 +538,6 @@ h2 {
           margin: 0px;
           border: black; 
           text-decoration: none;
-          
-          // &:hover {
-          //   cursor: pointer;
-          //   background: $color-primary-light;
-          //   transition: 0.7s;
-          // }
         }
       }
     }
@@ -701,20 +664,6 @@ h2 {
         gap: 30px;
         background: $color-light-s;
         
-        // &:hover  {
-        //   background: $color-light-xl;
-        //   transition: 0.7s;
-        //   cursor: pointer;
-        //   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-
-
-        //   .text-our button {
-        //     background: $color-primary-light;
-        //     border-color: $color-primary-light;
-        //     transition: 0.7s;
-        //   }
-        // }
-      
         .img-cart {
           max-width: 270px;
           max-height: 270px;
@@ -751,11 +700,6 @@ h2 {
             line-height: 130%;
             letter-spacing: 0.06em;
             color: $color-dark-3xl;
-
-            // &:hover {
-            //   cursor: pointer;
-            //   background: $color-primary-light;
-            // }
           }
         }
       }
@@ -770,13 +714,6 @@ h2 {
     
     svg {
       transition: 0.7s;
-
-      // &:hover {
-      //   cursor:pointer;
-      //   border-radius: 100%;
-      //   background: $color-primary-light;
-      //   stroke: $color-primary-light;
-      // }
     }
   }
 
@@ -802,12 +739,6 @@ h2 {
       letter-spacing: 0.06em;
       color: $color-dark-3xl;
       text-decoration: none;
-
-      // &:hover {
-      //   cursor:pointer;
-      //   background: $color-primary-light;
-      //   transition: 0.7s;
-      // }
 
       p{
         margin: 0px;
@@ -851,13 +782,6 @@ h2 {
       div {
         text-align: center;
         margin: 0px 0px -69px 0px;
-        // &:hover {
-        //   cursor:pointer;
-        //   svg {
-        //     fill: rgb(226, 99, 99);
-        //     transition: 0.7s;
-        //   }
-        // }
         
         p {
           font-family: "Georgia Regular";
@@ -926,12 +850,7 @@ h2 {
         height: 23px;
         background: $color-primary;
         margin: 0px 0px 0px 0px;
-        // &:hover {
-        //     cursor:pointer;
-        //     background: $color-primary-light;
-        //     transition: 0.7s;
-        //   }
-  
+      
         .num {
           display: flex;
           align-items: center;
@@ -1024,17 +943,6 @@ h2 {
         }
 
       }
-      // &:hover {
-      //   cursor: pointer;
-      //   p {
-      //     color: $color-light-s;
-      //     transition: 0.7s;
-      //   }
-      //   svg {
-      //     fill: $color-light-s;
-      //     transition: 0.7s;
-      //   }
-      // }
     }
   }
 
@@ -1497,7 +1405,6 @@ h2 {
   
       .modalCart {
         width: 82vw;
-        // height: 45.7vw;
     
         .picture {
           align-items: start;
@@ -1847,7 +1754,6 @@ h2 {
   
       .modalCart {
         width: 75.1vw;
-        // height: calc(20vw + 276px);
     
         .picture {
           display: none;
@@ -1873,7 +1779,6 @@ h2 {
             
             .type {
               p {
-                // margin: 0px 7px 0px 0px;
                 text-align: center;
               }
             }
@@ -1916,14 +1821,6 @@ h2 {
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 3px 0px;
         justify-content: space-around;
-
-        // .one {
-        //   position: absolute;
-        //   align-items: center;
-        //   text-align: center;
-        //   justify-content: center;
-        //   margin: 0px auto 0px auto;
-        // }
   
         .cart {
           height: 435px;

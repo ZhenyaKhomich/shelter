@@ -89,8 +89,6 @@ const pets = [
     },
   ];
 
-
-
 //  бургер меню
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -114,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 
-    document.body.addEventListener('click', function() {
+    document.body.addEventListener('click', function(event) {
         
         if(!event.target.closest('nav')) {
         burg.classList.remove('openBurg');
@@ -123,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }  
     })
 
-    document.body.addEventListener('click', function() {
+    document.body.addEventListener('click', function(event) {
         
         if(event.target.classList == 'li') {
         burg.classList.remove('openBurg');
@@ -140,7 +138,6 @@ let lastSlide = [];
 let count = 0;
 
 function a(pets) {
-
   lastSlide = [];
 
   for(let i = 0; i < currentSlide.length; i++) {
@@ -175,6 +172,7 @@ function a(pets) {
       }
     }
   }
+
   return carts(currentSlide);
 }
 
@@ -183,7 +181,9 @@ a(pets);
 // инициализация карточки
 
 function carts(arr) {
+  
     let cartWrap = document.querySelector('.cart-wrap');
+
 
     arr.forEach(el => {
         let cart = document.createElement('div');
@@ -220,7 +220,45 @@ function carts(arr) {
 
         cartWrap.append(cart);
     })
+
+    //  вызов модального окна
+
+    let carts = document.querySelectorAll('.cart');
+    console.log(carts);
+    let wrapModal = document.body.querySelector('.wrapModal');
+    
+    wrapModal.style.display = 'none';
+  
+    carts.forEach((cart, index) => { 
+    cart.addEventListener('click', function (event) {
+      if(event.target.closest('.cart')) {
+        modalWindow(currentSlide[index]);
+        wrapModal.style.display = '';
+        document.body.style.overflow = 'hidden'; 
+      }
+  
+      let wrapMod = document.body.querySelector('.wrapModal');
+      let modal = document.body.querySelector('.modal');
+      let exit = document.querySelector('.exit');
+  
+      wrapMod.addEventListener('click', function (event) {
+        if(!event.target.closest('.modalCart')) {
+          modal.remove();
+          wrapModal.style.display = 'none';
+          document.body.style.overflow = ''; 
+        } 
+      })
+  
+      exit.addEventListener('click', function () {
+        modal.remove();
+        wrapModal.style.display = 'none';
+        document.body.style.overflow = ''; 
+      })
+    })
+  })
 }
+
+//  кнопки слайдера
 
 let cartW = document.body.querySelector('.cart-wrap');
 let prev = document.body.querySelector('.svg1');
@@ -280,15 +318,15 @@ cartWrap.forEach(el => el.remove());
     let cartWrap = document.querySelectorAll('.cart');
     cartWrap.forEach(el=>el.classList.add('ent'));
     setTimeout(()=> {
-cartWrap.forEach(el => el.remove());
-  a(pets);
-    },400)
+      document.querySelectorAll('.cart').forEach(el => el.remove());
+  console.log(2);
+    
     currentSlide =[];
   for(let i = 0; i < lastSlide.length; i++) {
     currentSlide.push(lastSlide[i]);
   }
     carts(currentSlide);
-  count = 0;
+  count = 0;},400)
   } else if (lastSlide.length != 0) {
     let cartWrap = document.querySelectorAll('.cart');
     cartWrap.forEach(el=>el.classList.add('ent'));
@@ -306,16 +344,11 @@ cartWrap.forEach(el => el.remove());
   } 
 })
 
-
-
-
+//  модальное окно
 
 function modalWindow(arr) {
   let wrapModal = document.body.querySelector('.wrapModal')
   
-  // let wrapModal = document.createElement('div');
-  // wrapModal.classList.add('wrapModal');
-
   let modal = document.createElement('div');
   modal.classList.add('modal');
 
@@ -422,195 +455,5 @@ function modalWindow(arr) {
 
   wrapModal.append(modal);
 }
-// console.log(modalWindow(currentSlide[0]));
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  let wrapModal = document.body.querySelector('.wrapModal');
-  let carts = document.querySelectorAll('.cart');
-
-  wrapModal.style.display = 'none';
-
-  carts.forEach((cart, index) => { 
-  cart.addEventListener('click', function (event) {
-    if(event.target.closest('.cart')) {
-      modalWindow(currentSlide[index]);
-      wrapModal.style.display = '';
-    }
-
-    let wrapMod = document.body.querySelector('.wrapModal');
-    let modal = document.body.querySelector('.modal');
-    let exit = document.querySelector('.exit');
-
-    wrapMod.addEventListener('click', function (event) {
-      if(!event.target.closest('.modalCart')) {
-        modal.remove();
-        wrapModal.style.display = 'none';
-      } 
-    })
-
-    exit.addEventListener('click', function () {
-      modal.remove();
-      wrapModal.style.display = 'none';
-    })
-  })
-})
-})
-
-
-
-// резерв
-
-// function colCarts(car, cal) {
-
-//   let a = [];
- 
-//   for(let i = 0; i < cal; i++) {
-
-//     if(allCarts[i].length > car) {
-    
-//       if(allCarts[i].length == car) {
-//         continue;
-//       } else {
-//         while(allCarts[i].length > car) {
-//           let last = allCarts[i][allCarts[i].length-1];
-//           console.log(last['name']);
-//           if(a.length == 0) {
-//             a.push(allCarts[i].pop());
-//           } else if(!a.includes(last)) {
-//           a.push(allCarts[i].pop());
-//           console.log(allCarts)
-//         } else {
-//           colCarts(car, cal);
-//         }
-      
-//           if(a.length == car) {
-//             allCarts.push(a);
-//             a = [];
-//             console.log(allCarts)
-//           } 
-//         }
-//       }
-//     } else if(allCarts[i].length < car) {
-//         console.log(allCarts[i].length)
-//         while(allCarts[i].length < car) { 
-//           if(car == 8) {
-//             let k = 0;
-//             let y = 1;
-//             if(i > 2) {
-//               k = 1;
-//             }
-//             while(allCarts[cal+k].length !== 0){
-//               if(allCarts[i].length < car) {
-//                 allCarts[i].push(oneElem(allCarts[cal+k]));
-//                 console.log(allCarts[cal+k][0])
-//                 allCarts[i].push(allCarts[cal+k].shift());
-//               } else if (allCarts[i + y].length < car) {
-//                 allCarts[i + y].push(oneElem(allCarts[cal+k]));
-//                 allCarts[i + y].push(allCarts[cal+k].shift());
-//               } else if(allCarts[cal+k].length == 0) {
-//                 k = 1;
-//               }
-//               else {
-//                 y++;
-//                 continue;
-//               }
-//             }
-//           }  else if(allCarts[cal+i].length !== 0) {
-//               let y = 1;
-//               while(allCarts[cal+i].length !== 0){
-//                 if(allCarts[i].length < car) {
-//                   allCarts[i].push(allCarts[cal+i].pop());
-//                 } else if (allCarts[i + y].length < car) {
-//                   allCarts[i + y].push(allCarts[cal+i].shift());
-//                 } else {
-//                   y++;
-//                 }
-//               }
-//           } else {
-//             allCarts[i].push(allCarts[cal+i].shift());
-//           }
-//         } 
-//     } else if (i == cal) {
-//       allCarts.splice(cal, 1);
-//       console.log(allCarts);
-//     } else {
-//       continue;
-//     }
-//   }
-//   console.log(aaa(allCarts))
-
-//   allCarts = aaa(allCarts);
-//   console.log(allCarts);
-//   let cart = document.body.querySelectorAll('.cart');
-//   cart.forEach(el=>el.remove());
-//   carts(allCarts[0]);
-//   num = 0;
-//   figure.textContent = num + 1;
-// }
-
-
-
-
-
-
-// function initCarts (pets) {
-//   for(let j = 0; j < 6; j++) {
-//     onePageCarts=[];
-
-//     if(allCarts.length == 1 || allCarts.length == 4) {
-    
-//       let last = allCarts[j-1][allCarts[j-1].length-1];
-//       let last2 = allCarts[j-1][allCarts[j-1].length-2];
-
-//        onePageCarts.push(last2);
-//        onePageCarts.push(last);
-//     } else if (allCarts.length == 2 || allCarts.length == 5) {
-//       let last = allCarts[j-1][allCarts[j-1].length-1];
-//       let last2 = allCarts[j-1][allCarts[j-1].length-2];
-//       let last3 = allCarts[j-2][allCarts[j-2].length-1];
-//       let last4 = allCarts[j-2][allCarts[j-2].length-2];
-
-//       onePageCarts.push(last2);
-//       onePageCarts.push(last);
-//       onePageCarts.push(last4);
-//       onePageCarts.push(last3);
-//     }
-
-//     for(let i = 0; i < 8; i++) {
-//       let random = Math.floor(Math.random() * pets.length);
-//       if(allCarts.length == 0 || allCarts.length == 3) {
-//         if(!onePageCarts.includes(pets[random])) {
-//           onePageCarts.push(pets[random]);
-//         } else if(onePageCarts.length == 8) {
-//           allCarts.push(onePageCarts);
-//           console.log(allCarts[0]);
-//           break;
-//         } 
-//         else {
-//           i--;
-//           continue;
-//         } 
-//       } else if(allCarts.length < 9) {
-
-//         if (onePageCarts.length < 8 && onePageCarts.length > 1) {
-//           if(!onePageCarts.includes(pets[random])) {
-//             onePageCarts.push(pets[random]);
-//           } 
-//           else if(onePageCarts.length == 8) {
-//             allCarts.push(onePageCarts);
-//             console.log(allCarts[0]);
-//             break;
-//           }  else {
-//             i--;
-//             continue;
-//           } 
-//         }
-//       } else {
-//         i = 8;
-//       }
-//     }
-//     allCarts.push(onePageCarts);
-//   }
-// return allCarts;
-// }
