@@ -14,6 +14,97 @@
   font-family: "Arial Italic";
   src: url(../assets/fonts/arial/arial-italic.ttf);
 }
+@media (any-hover: hover) and (pointer: fine) {
+  .wrapModal .modal .exit .ex {
+    transition: all 0.8s;
+  }
+  .wrapModal .modal .exit .ex:hover {
+    cursor: pointer;
+    fill: #fddcc4;
+  }
+  .wrapModal .modal .exit .ex:hover .rect {
+    stroke: #fddcc4;
+  }
+  .header a:hover .logo .top p {
+    color: #fddcc4;
+  }
+  .header a:hover .logo .bottom p {
+    color: #fafafa;
+  }
+  .header nav .menu .li a:hover {
+    cursor: pointer;
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .background .one-section .left .wrap .button:hover {
+    cursor: pointer;
+    background: #fddcc4;
+    transition: 0.7s;
+  }
+  .our-blok .carts .cart-wrap .cart:hover {
+    background: #fff;
+    transition: 0.7s;
+    cursor: pointer;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+  .our-blok .carts .cart-wrap .cart:hover .text-our button {
+    background: #fddcc4;
+    border-color: #fddcc4;
+    transition: 0.7s;
+  }
+  .our-blok .carts .cart-wrap .cart .text-our button:hover {
+    cursor: pointer;
+    background: #fddcc4;
+  }
+  .our-blok .slid svg {
+    transition: 0.7s;
+  }
+  .our-blok .slid svg:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    background: #fddcc4;
+    stroke: #fddcc4;
+  }
+  .our-blok .but-get .but:hover {
+    cursor: pointer;
+    background: #fddcc4;
+    transition: 0.7s;
+  }
+  .help .help-blok .help-icon div:hover {
+    cursor: pointer;
+  }
+  .help .help-blok .help-icon div:hover svg {
+    fill: rgb(226, 99, 99);
+    transition: 0.7s;
+  }
+  .contacts1 .contacts-blok .right .num-cart:hover {
+    cursor: pointer;
+    background: #fddcc4;
+    transition: 0.7s;
+  }
+  .footer .blok1 .email:hover, .footer .blok1 .tel:hover {
+    cursor: pointer;
+  }
+  .footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
+    fill: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok2 .location:hover {
+    cursor: pointer;
+  }
+  .footer .blok2 .location:hover p {
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok2 .location:hover svg {
+    fill: #fafafa;
+    transition: 0.7s;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -55,13 +146,6 @@ body {
 .wrapModal .modal .exit .ex {
   transition: all 0.8s;
   fill: rgba(0, 0, 0, 0);
-}
-.wrapModal .modal .exit .ex:hover {
-  cursor: pointer;
-  fill: #fddcc4;
-}
-.wrapModal .modal .exit .ex:hover .rect {
-  stroke: #fddcc4;
 }
 .wrapModal .modal .modalCart {
   display: flex;
@@ -169,12 +253,6 @@ h2 {
   z-index: 10;
   text-decoration: none;
 }
-.header a:hover .logo .top p {
-  color: #fddcc4;
-}
-.header a:hover .logo .bottom p {
-  color: #fafafa;
-}
 .header a .logo {
   display: flex;
   flex-direction: column;
@@ -230,11 +308,6 @@ h2 {
   line-height: 160%;
   color: #cdcdcd;
   text-decoration: none;
-}
-.header nav .menu .li a:hover {
-  cursor: pointer;
-  color: #fafafa;
-  transition: 0.7s;
 }
 .header nav .menu .li a.dis {
   pointer-events: none;
@@ -311,11 +384,6 @@ h2 {
   margin: 0px;
   border: black;
   text-decoration: none;
-}
-.background .one-section .left .wrap .button:hover {
-  cursor: pointer;
-  background: #fddcc4;
-  transition: 0.7s;
 }
 .background .one-section .right {
   display: flex;
@@ -422,17 +490,6 @@ h2 {
   gap: 30px;
   background: #fafafa;
 }
-.our-blok .carts .cart-wrap .cart:hover {
-  background: #fff;
-  transition: 0.7s;
-  cursor: pointer;
-  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-}
-.our-blok .carts .cart-wrap .cart:hover .text-our button {
-  background: #fddcc4;
-  border-color: #fddcc4;
-  transition: 0.7s;
-}
 .our-blok .carts .cart-wrap .cart .img-cart {
   max-width: 270px;
   max-height: 270px;
@@ -468,10 +525,6 @@ h2 {
   letter-spacing: 0.06em;
   color: #292929;
 }
-.our-blok .carts .cart-wrap .cart .text-our button:hover {
-  cursor: pointer;
-  background: #fddcc4;
-}
 .our-blok .slid {
   display: flex;
   position: absolute;
@@ -480,12 +533,6 @@ h2 {
 }
 .our-blok .slid svg {
   transition: 0.7s;
-}
-.our-blok .slid svg:hover {
-  cursor: pointer;
-  border-radius: 100%;
-  background: #fddcc4;
-  stroke: #fddcc4;
 }
 .our-blok .but-get {
   display: flex;
@@ -509,11 +556,6 @@ h2 {
   letter-spacing: 0.06em;
   color: #292929;
   text-decoration: none;
-}
-.our-blok .but-get .but:hover {
-  cursor: pointer;
-  background: #fddcc4;
-  transition: 0.7s;
 }
 .our-blok .but-get .but p {
   margin: 0px;
@@ -551,13 +593,6 @@ h2 {
 .help .help-blok .help-icon div {
   text-align: center;
   margin: 0px 0px -69px 0px;
-}
-.help .help-blok .help-icon div:hover {
-  cursor: pointer;
-}
-.help .help-blok .help-icon div:hover svg {
-  fill: rgb(226, 99, 99);
-  transition: 0.7s;
 }
 .help .help-blok .help-icon div p {
   font-family: "Georgia Regular";
@@ -616,11 +651,6 @@ h2 {
   height: 23px;
   background: #f1cdb3;
   margin: 0px 0px 0px 0px;
-}
-.contacts1 .contacts-blok .right .num-cart:hover {
-  cursor: pointer;
-  background: #fddcc4;
-  transition: 0.7s;
 }
 .contacts1 .contacts-blok .right .num-cart .num {
   display: flex;
@@ -701,17 +731,6 @@ h2 {
   letter-spacing: 0.06em;
   color: #f1cdb3;
   margin: 0px;
-}
-.footer .blok1 .email:hover, .footer .blok1 .tel:hover {
-  cursor: pointer;
-}
-.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
-  color: #fafafa;
-  transition: 0.7s;
-}
-.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
-  fill: #fafafa;
-  transition: 0.7s;
 }
 .footer .blok2 {
   display: flex;

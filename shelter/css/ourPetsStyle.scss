@@ -38,6 +38,141 @@ $footer-gradient-background: #211f20;
   text-align: center;
   color: $color-dark-l;
 }
+@media (any-hover: hover) and (pointer:fine) {
+
+  .wrapModal{
+    .modal {
+      .exit {
+        .ex {
+          &:hover {
+            cursor: pointer;
+            fill: $color-primary-light;
+          
+            .rect {
+              stroke: $color-primary-light; ;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    a {
+      &:hover {
+        .logo {
+          .top {
+            p {
+              color: $color-dark-3xl;
+            }
+          }
+          .bottom {
+            p {
+              color: $color-dark-3xl;
+            }
+          }
+        }
+      }
+    }
+  
+    nav {
+      .menu {
+        .li {
+          a{
+            &:hover {
+              cursor: pointer;
+              color: $color-dark-3xl;
+              transition: 0.7s;
+            }
+          }
+        }
+      } 
+    }
+  }
+
+  .our-pets {
+    .our-blok {
+      .carts {
+        .cart-wrap {
+          .cart {
+            &:hover  {
+              box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+              background: $color-light-xl;
+              cursor: pointer;
+              .text-our button{
+                background: $color-primary-light;
+                border-color: $color-primary-light;
+                transition: 0.7s;
+              }
+            }
+        
+            .text-our {
+              button {
+                &:hover {
+                  cursor: pointer;
+                  background: $color-primary-light;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      .slider {
+        .but { 
+          &:hover {
+            cursor:pointer;
+            border-radius: 100%;
+            background: $color-primary-light;
+            stroke: $color-primary-light;
+            transition: 0.7s;
+  
+            svg{
+              stroke: $color-primary-light;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .blok1{
+      .email, .tel {
+        &:hover {
+          cursor: pointer;
+          p {
+            color: $color-light-s;
+            transition: 0.7s;
+          }
+          svg {
+            fill: $color-light-s;
+            transition: 0.7s;
+          }
+        }
+      }
+    }
+  
+    .blok2 {
+  
+  
+  
+      .location {
+        &:hover {
+          cursor: pointer;
+          p {
+            color: $color-light-s;
+            transition: 0.7s;
+          }
+          svg {
+            fill: $color-light-s;
+            transition: 0.7s;
+          }
+        }
+      }
+    }
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -81,14 +216,14 @@ body {
         transition: all 0.8s;
         fill: rgba(0, 0, 0, 0);
 
-        &:hover {
-          cursor: pointer;
-          fill: $color-primary-light;
+        // &:hover {
+        //   cursor: pointer;
+        //   fill: $color-primary-light;
         
-          .rect {
-            stroke: $color-primary-light; ;
-          }
-        }
+        //   .rect {
+        //     stroke: $color-primary-light; ;
+        //   }
+        // }
       }
     }
 
@@ -104,7 +239,6 @@ body {
         align-items: center;
         border-radius: 9px 0 0 9px;
         
-
         img{
           width: 500px;
           border-radius: 10px;
@@ -211,22 +345,21 @@ h1 {
   a {
     text-decoration: none;
 
-    &:hover {
-      .logo {
-        .top {
-          p {
-            color: $color-dark-3xl;
+    // &:hover {
+    //   .logo {
+    //     .top {
+    //       p {
+    //         color: $color-dark-3xl;
 
-          }
-        }
-        .bottom {
-          p {
-            color: $color-dark-3xl;
-          }
-        }
-      }
-      
-    }
+    //       }
+    //     }
+    //     .bottom {
+    //       p {
+    //         color: $color-dark-3xl;
+    //       }
+    //     }
+    //   }
+    // }
 
     .logo {
       display: flex;
@@ -294,19 +427,13 @@ h1 {
           color: $color-dark-l;
           text-decoration: none;
   
-          &:hover {
-            cursor: pointer;
-            color: $color-dark-3xl;
-            transition: 0.7s;
-          }
-  
-          // &:active {
-          //   border-bottom: solid 3px $color-primary;
-          //   padding: 6px 0px;
-          //   transition: 0.5s;
+          // &:hover {
+          //   cursor: pointer;
+          //   color: $color-dark-3xl;
+          //   transition: 0.7s;
           // }
-  
         }
+
         a.dis {
           pointer-events: none;
           border-bottom: solid 3px $color-primary;
@@ -316,8 +443,6 @@ h1 {
       }
     } 
   }
-
-  
 }
 
 .our-pets {
@@ -368,17 +493,16 @@ h1 {
           gap: 30px;
           background: $color-light-s;
   
-          &:hover  {
-            box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-            background: $color-light-xl;
-            cursor: pointer;
-            .text-our button{
-              background: $color-primary-light;
-              border-color: $color-primary-light;
-              transition: 0.7s;
-            }
-            
-          }
+          // &:hover  {
+          //   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+          //   background: $color-light-xl;
+          //   cursor: pointer;
+          //   .text-our button{
+          //     background: $color-primary-light;
+          //     border-color: $color-primary-light;
+          //     transition: 0.7s;
+          //   }
+          // }
         
           .img-cart {
             max-width: 270px;
@@ -417,10 +541,10 @@ h1 {
               letter-spacing: 0.06em;
               color: $color-dark-3xl;
   
-              &:hover {
-                cursor: pointer;
-                background: $color-primary-light;
-              }
+              // &:hover {
+              //   cursor: pointer;
+              //   background: $color-primary-light;
+              // }
             }
           }
         }
@@ -474,17 +598,17 @@ h1 {
           margin: -3px 0px 0px 0px;
         }
         
-        &:hover {
-          cursor:pointer;
-          border-radius: 100%;
-          background: $color-primary-light;
-          stroke: $color-primary-light;
-          transition: 0.7s;
+        // &:hover {
+        //   cursor:pointer;
+        //   border-radius: 100%;
+        //   background: $color-primary-light;
+        //   stroke: $color-primary-light;
+        //   transition: 0.7s;
 
-          svg{
-            stroke: $color-primary-light;
-          }
-        }
+        //   svg{
+        //     stroke: $color-primary-light;
+        //   }
+        // }
       }
       .inactive {
         pointer-events: none;
@@ -506,8 +630,8 @@ h1 {
   display: flex;
   justify-content: center;
   background: url("../assets/img/noise_transparent@2x.png"),  radial-gradient(279.89% 3373.65% at 0% 0%, rgb(81, 61, 47) 0%, rgb(20, 20, 28) 40%);
-
 }
+
 .footer {
   display: flex;
   align-items: center;
@@ -560,17 +684,17 @@ h1 {
         }
 
       }
-      &:hover {
-        cursor: pointer;
-        p {
-          color: $color-light-s;
-          transition: 0.7s;
-        }
-        svg {
-          fill: $color-light-s;
-          transition: 0.7s;
-        }
-      }
+      // &:hover {
+      //   cursor: pointer;
+      //   p {
+      //     color: $color-light-s;
+      //     transition: 0.7s;
+      //   }
+      //   svg {
+      //     fill: $color-light-s;
+      //     transition: 0.7s;
+      //   }
+      // }
     }
   }
 

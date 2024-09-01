@@ -39,6 +39,195 @@ $footer-gradient-background: #211f20;
   color: $color-dark-l;
 }
 
+@media (any-hover: hover) and (pointer:fine) {
+
+  .wrapModal{
+    .modal {
+      .exit {
+        .ex {
+          transition: all 0.8s;
+          &:hover {
+            cursor: pointer;
+            fill: $color-primary-light;
+          
+            .rect {
+              stroke: $color-primary-light; ;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    a {
+      &:hover {
+        .logo {
+          .top {
+            p {
+              color: $color-primary-light;
+  
+            }
+          }
+          .bottom {
+            p {
+              color: $color-light-s;
+            }
+          }
+        }
+      }
+    }
+  
+    nav {
+      .menu {
+        .li {
+          a{
+            &:hover {
+              cursor: pointer;
+              color: $color-light-s;
+              transition: 0.7s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .background {
+    .one-section {
+      .left {
+        .wrap {
+          .button {
+            &:hover {
+              cursor: pointer;
+              background: $color-primary-light;
+              transition: 0.7s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .our-blok {
+    .carts {
+      .cart-wrap {
+        .cart {
+          &:hover  {
+            background: $color-light-xl;
+            transition: 0.7s;
+            cursor: pointer;
+            box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  
+            .text-our button {
+              background: $color-primary-light;
+              border-color: $color-primary-light;
+              transition: 0.7s;
+            }
+          }
+        
+          .text-our {
+            button {
+              &:hover {
+                cursor: pointer;
+                background: $color-primary-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .slid {
+      svg {
+        transition: 0.7s;
+  
+        &:hover {
+          cursor:pointer;
+          border-radius: 100%;
+          background: $color-primary-light;
+          stroke: $color-primary-light;
+        }
+      }
+    }
+  
+    .but-get {
+      .but {
+        &:hover {
+          cursor:pointer;
+          background: $color-primary-light;
+          transition: 0.7s;
+        }
+      }
+    }
+  }
+
+  .help {
+    .help-blok {
+      .help-icon {
+        div {
+          &:hover {
+            cursor:pointer;
+            svg {
+              fill: rgb(226, 99, 99);
+              transition: 0.7s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contacts1 {
+    .contacts-blok {
+      .right {
+        .num-cart {
+          &:hover {
+              cursor:pointer;
+              background: $color-primary-light;
+              transition: 0.7s;
+            }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .blok1 {
+      .email, .tel {
+        &:hover {
+          cursor: pointer;
+          p {
+            color: $color-light-s;
+            transition: 0.7s;
+          }
+          svg {
+            fill: $color-light-s;
+            transition: 0.7s;
+          }
+        }
+      }
+    }
+  
+    .blok2 {
+      .location {
+        &:hover {
+          cursor: pointer;
+          p {
+            color: $color-light-s;
+            transition: 0.7s;
+          }
+          svg {
+            fill: $color-light-s;
+            transition: 0.7s;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 html {
   scroll-behavior: smooth;
 
@@ -81,14 +270,14 @@ body {
         transition: all 0.8s;
         fill: rgba(0, 0, 0, 0);
 
-        &:hover {
-          cursor: pointer;
-          fill: $color-primary-light;
+        // &:hover {
+        //   cursor: pointer;
+        //   fill: $color-primary-light;
         
-          .rect {
-            stroke: $color-primary-light; ;
-          }
-        }
+        //   .rect {
+        //     stroke: $color-primary-light; ;
+        //   }
+        // }
       }
     }
 
@@ -212,22 +401,20 @@ h2 {
     z-index: 10;
     text-decoration: none;
 
-    &:hover {
-      .logo {
-        .top {
-          p {
-            color: $color-primary-light;
-
-          }
-        }
-        .bottom {
-          p {
-            color: $color-light-s;
-          }
-        }
-      }
-      
-    }
+    // &:hover {
+    //   .logo {
+    //     .top {
+    //       p {
+    //         color: $color-primary-light;
+    //       }
+    //     }
+    //     .bottom {
+    //       p {
+    //         color: $color-light-s;
+    //       }
+    //     }
+    //   }
+    // }
 
     .logo {
       display: flex;
@@ -295,18 +482,11 @@ h2 {
           color: $color-dark-s;
           text-decoration: none;
   
-          &:hover {
-            cursor: pointer;
-            color: $color-light-s;
-            transition: 0.7s;
-          }
-  
-          // &:active {
-          //   border-bottom: solid 3px $color-primary;
-          //   padding: 6px 0px;
-          //   transition: 0.5s;
+          // &:hover {
+          //   cursor: pointer;
+          //   color: $color-light-s;
+          //   transition: 0.7s;
           // }
-  
         }
         a.dis {
           pointer-events: none;
@@ -390,11 +570,11 @@ h2 {
           border: black; 
           text-decoration: none;
           
-          &:hover {
-            cursor: pointer;
-            background: $color-primary-light;
-            transition: 0.7s;
-          }
+          // &:hover {
+          //   cursor: pointer;
+          //   background: $color-primary-light;
+          //   transition: 0.7s;
+          // }
         }
       }
     }
@@ -521,19 +701,19 @@ h2 {
         gap: 30px;
         background: $color-light-s;
         
-        &:hover  {
-          background: $color-light-xl;
-          transition: 0.7s;
-          cursor: pointer;
-          box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+        // &:hover  {
+        //   background: $color-light-xl;
+        //   transition: 0.7s;
+        //   cursor: pointer;
+        //   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 
 
-          .text-our button {
-            background: $color-primary-light;
-            border-color: $color-primary-light;
-            transition: 0.7s;
-          }
-        }
+        //   .text-our button {
+        //     background: $color-primary-light;
+        //     border-color: $color-primary-light;
+        //     transition: 0.7s;
+        //   }
+        // }
       
         .img-cart {
           max-width: 270px;
@@ -572,10 +752,10 @@ h2 {
             letter-spacing: 0.06em;
             color: $color-dark-3xl;
 
-            &:hover {
-              cursor: pointer;
-              background: $color-primary-light;
-            }
+            // &:hover {
+            //   cursor: pointer;
+            //   background: $color-primary-light;
+            // }
           }
         }
       }
@@ -591,12 +771,12 @@ h2 {
     svg {
       transition: 0.7s;
 
-      &:hover {
-        cursor:pointer;
-        border-radius: 100%;
-        background: $color-primary-light;
-        stroke: $color-primary-light;
-      }
+      // &:hover {
+      //   cursor:pointer;
+      //   border-radius: 100%;
+      //   background: $color-primary-light;
+      //   stroke: $color-primary-light;
+      // }
     }
   }
 
@@ -623,11 +803,11 @@ h2 {
       color: $color-dark-3xl;
       text-decoration: none;
 
-      &:hover {
-        cursor:pointer;
-        background: $color-primary-light;
-        transition: 0.7s;
-      }
+      // &:hover {
+      //   cursor:pointer;
+      //   background: $color-primary-light;
+      //   transition: 0.7s;
+      // }
 
       p{
         margin: 0px;
@@ -671,13 +851,13 @@ h2 {
       div {
         text-align: center;
         margin: 0px 0px -69px 0px;
-        &:hover {
-          cursor:pointer;
-          svg {
-            fill: rgb(226, 99, 99);
-            transition: 0.7s;
-          }
-        }
+        // &:hover {
+        //   cursor:pointer;
+        //   svg {
+        //     fill: rgb(226, 99, 99);
+        //     transition: 0.7s;
+        //   }
+        // }
         
         p {
           font-family: "Georgia Regular";
@@ -746,11 +926,11 @@ h2 {
         height: 23px;
         background: $color-primary;
         margin: 0px 0px 0px 0px;
-        &:hover {
-            cursor:pointer;
-            background: $color-primary-light;
-            transition: 0.7s;
-          }
+        // &:hover {
+        //     cursor:pointer;
+        //     background: $color-primary-light;
+        //     transition: 0.7s;
+        //   }
   
         .num {
           display: flex;
@@ -790,8 +970,8 @@ h2 {
   display: flex;
   justify-content: center;
   background: url("../assets/img/noise_transparent@2x.png"),  radial-gradient(279.89% 3373.65% at 0% 0%, rgb(81, 61, 47) 0%, rgb(20, 20, 28) 40%);
-
 }
+
 .footer {
   display: flex;
   align-items: center;
@@ -844,17 +1024,17 @@ h2 {
         }
 
       }
-      &:hover {
-        cursor: pointer;
-        p {
-          color: $color-light-s;
-          transition: 0.7s;
-        }
-        svg {
-          fill: $color-light-s;
-          transition: 0.7s;
-        }
-      }
+      // &:hover {
+      //   cursor: pointer;
+      //   p {
+      //     color: $color-light-s;
+      //     transition: 0.7s;
+      //   }
+      //   svg {
+      //     fill: $color-light-s;
+      //     transition: 0.7s;
+      //   }
+      // }
     }
   }
 
@@ -910,7 +1090,6 @@ h2 {
   }
 }
 
-
 @media (max-width: 1279px) {
 
   .wrapModal{
@@ -963,6 +1142,7 @@ h2 {
         }
       }
     }
+
     .slid {
       gap: calc(100vw - 178px);
     }
@@ -1007,6 +1187,7 @@ h2 {
     }
   }
 }
+
 @media(max-width:1090px) {
 
   .wrapModal{
@@ -1062,7 +1243,6 @@ h2 {
   }
     }
   }
-  
 }
 
 @media (max-width: 951px) {
@@ -1476,7 +1656,6 @@ h2 {
     gap: 61px;
     margin: 30.5px 0px 0px 0px;
     
-  
     .img-fot {
       margin: -38px 0px 0px 0px;
   }
@@ -1790,7 +1969,6 @@ h2 {
   }
 }
 
-
 @media(max-width:400px) {
 
   .wrapModal{
@@ -1864,7 +2042,6 @@ h2 {
       margin: -6px 0px 0px 0px;
       gap: 25px;
       
-  
       .about-h2 {
         height: 100%;
         
@@ -1913,7 +2090,6 @@ h2 {
   
     .slid {
       top: 85%;
-      
     }
   
     .but-get {
@@ -2154,7 +2330,6 @@ h2 {
       gap: 23px;
       height: 494px;
       
-  
       .about-h2 {
         height: 100%;
         margin: 5px 0px -6px 0px;
@@ -2172,7 +2347,6 @@ h2 {
       .one-text {
         margin: 7px 0px 0px 0px;
       }
-
     }
   }
 
@@ -2320,21 +2494,3 @@ h2 {
   }
   }
 }
-
-
-// Убрать hover эффекты при использовании телефона
-
-// @media (any-hover: hover) and (pointer:fine) {
-  //   .slid{
-  //     svg {
-  //       transition: 0.7s;
-  
-  //       &:hover {
-  //         cursor:pointer;
-  //         border-radius: 100%;
-  //         background: $color-primary-light;
-  //         stroke: $color-primary-light;
-  //       }
-  //     }
-  //   }
-  // }

@@ -387,7 +387,8 @@ let butsNext = document.body.querySelectorAll('.out');
 nextLast.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
-  num = 5;
+  num = cal-1;
+  console.log(car);
   carts(allCarts[num]);
   figure.textContent = cal;
   butsNext.forEach(el=>el.classList.add('inactive'));
@@ -425,6 +426,7 @@ last.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
   --num;
+  console.log(num)
   carts(allCarts[num]);
   figure.textContent = num + 1;
   if(num < cal-1 ) {
@@ -925,3 +927,35 @@ document.addEventListener('DOMContentLoaded', function () {
 // }
 
 // // console.log(co(6, 8))
+
+
+
+
+
+
+
+
+
+
+function group(array, keySelector, valueSelector) {
+
+}
+
+console.log(group([
+        { country: 'Belarus', city: 'Brest' },
+        { country: 'Russia', city: 'Omsk' },
+        { country: 'Russia', city: 'Samara' },
+        { country: 'Belarus', city: 'Grodno' },
+        { country: 'Belarus', city: 'Minsk' },
+        { country: 'Poland', city: 'Lodz' }
+       ],
+       item => item.country,
+        item => item.city))
+
+
+
+
+      
+
+
+      

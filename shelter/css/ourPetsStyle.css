@@ -14,6 +14,72 @@
   font-family: "Arial Italic";
   src: url(../assets/fonts/arial/arial-italic.ttf);
 }
+@media (any-hover: hover) and (pointer: fine) {
+  .wrapModal .modal .exit .ex:hover {
+    cursor: pointer;
+    fill: #fddcc4;
+  }
+  .wrapModal .modal .exit .ex:hover .rect {
+    stroke: #fddcc4;
+  }
+  .header a:hover .logo .top p {
+    color: #292929;
+  }
+  .header a:hover .logo .bottom p {
+    color: #292929;
+  }
+  .header nav .menu .li a:hover {
+    cursor: pointer;
+    color: #292929;
+    transition: 0.7s;
+  }
+  .our-pets .our-blok .carts .cart-wrap .cart:hover {
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: #fff;
+    cursor: pointer;
+  }
+  .our-pets .our-blok .carts .cart-wrap .cart:hover .text-our button {
+    background: #fddcc4;
+    border-color: #fddcc4;
+    transition: 0.7s;
+  }
+  .our-pets .our-blok .carts .cart-wrap .cart .text-our button:hover {
+    cursor: pointer;
+    background: #fddcc4;
+  }
+  .our-pets .our-blok .slider .but:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    background: #fddcc4;
+    stroke: #fddcc4;
+    transition: 0.7s;
+  }
+  .our-pets .our-blok .slider .but:hover svg {
+    stroke: #fddcc4;
+  }
+  .footer .blok1 .email:hover, .footer .blok1 .tel:hover {
+    cursor: pointer;
+  }
+  .footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
+    fill: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok2 .location:hover {
+    cursor: pointer;
+  }
+  .footer .blok2 .location:hover p {
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok2 .location:hover svg {
+    fill: #fafafa;
+    transition: 0.7s;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -55,13 +121,6 @@ body {
 .wrapModal .modal .exit .ex {
   transition: all 0.8s;
   fill: rgba(0, 0, 0, 0);
-}
-.wrapModal .modal .exit .ex:hover {
-  cursor: pointer;
-  fill: #fddcc4;
-}
-.wrapModal .modal .exit .ex:hover .rect {
-  stroke: #fddcc4;
 }
 .wrapModal .modal .modalCart {
   display: flex;
@@ -168,12 +227,6 @@ h1 {
 .header a {
   text-decoration: none;
 }
-.header a:hover .logo .top p {
-  color: #292929;
-}
-.header a:hover .logo .bottom p {
-  color: #292929;
-}
 .header a .logo {
   display: flex;
   flex-direction: column;
@@ -230,11 +283,6 @@ h1 {
   color: #545454;
   text-decoration: none;
 }
-.header nav .menu .li a:hover {
-  cursor: pointer;
-  color: #292929;
-  transition: 0.7s;
-}
 .header nav .menu .li a.dis {
   pointer-events: none;
   border-bottom: solid 3px #f1cdb3;
@@ -288,16 +336,6 @@ h1 {
   gap: 30px;
   background: #fafafa;
 }
-.our-pets .our-blok .carts .cart-wrap .cart:hover {
-  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-  background: #fff;
-  cursor: pointer;
-}
-.our-pets .our-blok .carts .cart-wrap .cart:hover .text-our button {
-  background: #fddcc4;
-  border-color: #fddcc4;
-  transition: 0.7s;
-}
 .our-pets .our-blok .carts .cart-wrap .cart .img-cart {
   max-width: 270px;
   max-height: 270px;
@@ -332,10 +370,6 @@ h1 {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
-}
-.our-pets .our-blok .carts .cart-wrap .cart .text-our button:hover {
-  cursor: pointer;
-  background: #fddcc4;
 }
 .our-pets .our-blok .slider {
   display: flex;
@@ -379,16 +413,6 @@ h1 {
   text-align: center;
   color: #292929;
   margin: -3px 0px 0px 0px;
-}
-.our-pets .our-blok .slider .but:hover {
-  cursor: pointer;
-  border-radius: 100%;
-  background: #fddcc4;
-  stroke: #fddcc4;
-  transition: 0.7s;
-}
-.our-pets .our-blok .slider .but:hover svg {
-  stroke: #fddcc4;
 }
 .our-pets .our-blok .slider .inactive {
   pointer-events: none;
@@ -452,17 +476,6 @@ h1 {
   letter-spacing: 0.06em;
   color: #f1cdb3;
   margin: 0px;
-}
-.footer .blok1 .email:hover, .footer .blok1 .tel:hover {
-  cursor: pointer;
-}
-.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
-  color: #fafafa;
-  transition: 0.7s;
-}
-.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
-  fill: #fafafa;
-  transition: 0.7s;
 }
 .footer .blok2 {
   display: flex;
