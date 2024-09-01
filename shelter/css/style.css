@@ -14,6 +14,97 @@
   font-family: "Arial Italic";
   src: url(../assets/fonts/arial/arial-italic.ttf);
 }
+@media (any-hover: hover) and (pointer: fine) {
+  .wrapModal .modal .exit .ex {
+    transition: all 0.8s;
+  }
+  .wrapModal .modal .exit .ex:hover {
+    cursor: pointer;
+    fill: #fddcc4;
+  }
+  .wrapModal .modal .exit .ex:hover .rect {
+    stroke: #fddcc4;
+  }
+  .header a:hover .logo .top p {
+    color: #fddcc4;
+  }
+  .header a:hover .logo .bottom p {
+    color: #fafafa;
+  }
+  .header nav .menu .li a:hover {
+    cursor: pointer;
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .background .one-section .left .wrap .button:hover {
+    cursor: pointer;
+    background: #fddcc4;
+    transition: 0.7s;
+  }
+  .our-blok .carts .cart-wrap .cart:hover {
+    background: #fff;
+    transition: 0.7s;
+    cursor: pointer;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+  .our-blok .carts .cart-wrap .cart:hover .text-our button {
+    background: #fddcc4;
+    border-color: #fddcc4;
+    transition: 0.7s;
+  }
+  .our-blok .carts .cart-wrap .cart .text-our button:hover {
+    cursor: pointer;
+    background: #fddcc4;
+  }
+  .our-blok .slid svg {
+    transition: 0.7s;
+  }
+  .our-blok .slid svg:hover {
+    cursor: pointer;
+    border-radius: 100%;
+    background: #fddcc4;
+    stroke: #fddcc4;
+  }
+  .our-blok .but-get .but:hover {
+    cursor: pointer;
+    background: #fddcc4;
+    transition: 0.7s;
+  }
+  .help .help-blok .help-icon div:hover {
+    cursor: pointer;
+  }
+  .help .help-blok .help-icon div:hover svg {
+    fill: rgb(226, 99, 99);
+    transition: 0.7s;
+  }
+  .contacts1 .contacts-blok .right .num-cart:hover {
+    cursor: pointer;
+    background: #fddcc4;
+    transition: 0.7s;
+  }
+  .footer .blok1 .email:hover, .footer .blok1 .tel:hover {
+    cursor: pointer;
+  }
+  .footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
+    fill: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok2 .location:hover {
+    cursor: pointer;
+  }
+  .footer .blok2 .location:hover p {
+    color: #fafafa;
+    transition: 0.7s;
+  }
+  .footer .blok2 .location:hover svg {
+    fill: #fafafa;
+    transition: 0.7s;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -23,6 +114,117 @@ body {
   height: 100vh;
   box-sizing: border-box;
   margin: 0px auto;
+}
+
+.wraper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.wrapModal {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 10000px;
+  background: rgba(41, 41, 41, 0.6);
+  top: 0px;
+}
+.wrapModal .modal {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  padding: 0px 10px 0px 0px;
+  margin: 1650px auto 0px auto;
+}
+.wrapModal .modal .exit {
+  display: flex;
+  width: 944px;
+  justify-content: end;
+}
+.wrapModal .modal .exit .ex {
+  transition: all 0.8s;
+  fill: rgba(0, 0, 0, 0);
+}
+.wrapModal .modal .modalCart {
+  display: flex;
+  width: 900px;
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background: #fafafa;
+  border-radius: 10px;
+}
+.wrapModal .modal .modalCart .picture {
+  display: flex;
+  align-items: center;
+  border-radius: 9px 0 0 9px;
+}
+.wrapModal .modal .modalCart .picture img {
+  width: 500px;
+  border-radius: 10px;
+}
+.wrapModal .modal .modalCart .information {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 351px;
+  top: 50px;
+  margin: 50px 14px 0px 32px;
+  gap: 40px;
+}
+.wrapModal .modal .modalCart .information .nameType {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wrapModal .modal .modalCart .information .nameType .name h2 {
+  text-align: start;
+  margin: 0px;
+  color: #000;
+}
+.wrapModal .modal .modalCart .information .nameType .type p {
+  margin: 0px;
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.wrapModal .modal .modalCart .description p {
+  margin: 0px;
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 113%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.wrapModal .modal .modalCart .dopInfo {
+  display: flex;
+}
+.wrapModal .modal .modalCart .dopInfo ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0px 0px 0px 15px;
+  padding: 0px;
+}
+.wrapModal .modal .modalCart .dopInfo ul li {
+  font-family: "Georgia Regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.wrapModal .modal .modalCart .dopInfo ul li span {
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.09em;
+}
+.wrapModal .modal .modalCart .dopInfo ul li::marker {
+  color: #f1cdb3;
 }
 
 .header, .bloks, .footer {
@@ -45,24 +247,17 @@ h2 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 10;
   padding: 30px 0px 0px 0px;
 }
 .header a {
+  z-index: 10;
   text-decoration: none;
-}
-.header a:hover .logo .top p {
-  color: #fddcc4;
-}
-.header a:hover .logo .bottom p {
-  color: #fafafa;
 }
 .header a .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  width: 186px;
   height: 60px;
 }
 .header a .logo .top .textop {
@@ -85,6 +280,7 @@ h2 {
 .header nav {
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 .header nav .burg {
   display: none;
@@ -112,11 +308,6 @@ h2 {
   line-height: 160%;
   color: #cdcdcd;
   text-decoration: none;
-}
-.header nav .menu .li a:hover {
-  cursor: pointer;
-  color: #fafafa;
-  transition: 0.7s;
 }
 .header nav .menu .li a.dis {
   pointer-events: none;
@@ -194,11 +385,6 @@ h2 {
   border: black;
   text-decoration: none;
 }
-.background .one-section .left .wrap .button:hover {
-  cursor: pointer;
-  background: #fddcc4;
-  transition: 0.7s;
-}
 .background .one-section .right {
   display: flex;
   align-items: end;
@@ -267,9 +453,6 @@ h2 {
   margin: 77px 0px 100px 0px;
   position: relative;
 }
-.our-blok .our-h2 {
-  max-width: 400px;
-}
 .our-blok .our-h2 h2 {
   margin: 5px 0px 0px 0px;
 }
@@ -283,6 +466,18 @@ h2 {
 .our-blok .carts .cart-wrap {
   display: flex;
   gap: 90px;
+  width: 990px;
+  overflow: hidden;
+}
+.our-blok .carts .cart-wrap .tran {
+  transform: translateX(10px);
+  transition: all 1s, opacity 0.5s ease-in-out;
+  opacity: 0.5;
+}
+.our-blok .carts .cart-wrap .ent {
+  transform: translateX(-10px);
+  transition: all 1s, opacity 0.5s ease-in-out;
+  opacity: 0.5;
 }
 .our-blok .carts .cart-wrap .cart {
   display: flex;
@@ -294,17 +489,6 @@ h2 {
   height: 435px;
   gap: 30px;
   background: #fafafa;
-}
-.our-blok .carts .cart-wrap .cart:hover {
-  background: #fff;
-  transition: 0.7s;
-  cursor: pointer;
-  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-}
-.our-blok .carts .cart-wrap .cart:hover .text-our button {
-  background: #fddcc4;
-  border-color: #fddcc4;
-  transition: 0.7s;
 }
 .our-blok .carts .cart-wrap .cart .img-cart {
   max-width: 270px;
@@ -341,10 +525,6 @@ h2 {
   letter-spacing: 0.06em;
   color: #292929;
 }
-.our-blok .carts .cart-wrap .cart .text-our button:hover {
-  cursor: pointer;
-  background: #fddcc4;
-}
 .our-blok .slid {
   display: flex;
   position: absolute;
@@ -353,12 +533,6 @@ h2 {
 }
 .our-blok .slid svg {
   transition: 0.7s;
-}
-.our-blok .slid svg:hover {
-  cursor: pointer;
-  border-radius: 100%;
-  background: #fddcc4;
-  stroke: #fddcc4;
 }
 .our-blok .but-get {
   display: flex;
@@ -382,11 +556,6 @@ h2 {
   letter-spacing: 0.06em;
   color: #292929;
   text-decoration: none;
-}
-.our-blok .but-get .but:hover {
-  cursor: pointer;
-  background: #fddcc4;
-  transition: 0.7s;
 }
 .our-blok .but-get .but p {
   margin: 0px;
@@ -424,13 +593,6 @@ h2 {
 .help .help-blok .help-icon div {
   text-align: center;
   margin: 0px 0px -69px 0px;
-}
-.help .help-blok .help-icon div:hover {
-  cursor: pointer;
-}
-.help .help-blok .help-icon div:hover svg {
-  fill: rgb(226, 99, 99);
-  transition: 0.7s;
 }
 .help .help-blok .help-icon div p {
   font-family: "Georgia Regular";
@@ -484,21 +646,16 @@ h2 {
   display: flex;
   flex-direction: row;
   border-radius: 9px;
-  padding: 9px 15px 11px 15px;
-  width: 319px;
+  padding: 9px 12px 11px 15px;
+  width: 321px;
   height: 23px;
   background: #f1cdb3;
   margin: 0px 0px 0px 0px;
 }
-.contacts1 .contacts-blok .right .num-cart:hover {
-  cursor: pointer;
-  background: #fddcc4;
-  transition: 0.7s;
-}
 .contacts1 .contacts-blok .right .num-cart .num {
   display: flex;
   align-items: center;
-  width: 319px;
+  width: 325px;
   gap: 14px;
 }
 .contacts1 .contacts-blok .right .num-cart .num a {
@@ -575,17 +732,6 @@ h2 {
   color: #f1cdb3;
   margin: 0px;
 }
-.footer .blok1 .email:hover, .footer .blok1 .tel:hover {
-  cursor: pointer;
-}
-.footer .blok1 .email:hover p, .footer .blok1 .tel:hover p {
-  color: #fafafa;
-  transition: 0.7s;
-}
-.footer .blok1 .email:hover svg, .footer .blok1 .tel:hover svg {
-  fill: #fafafa;
-  transition: 0.7s;
-}
 .footer .blok2 {
   display: flex;
   flex-direction: column;
@@ -633,6 +779,9 @@ h2 {
 }
 
 @media (max-width: 1279px) {
+  .wrapModal .modal {
+    margin: 130vw auto 0px auto;
+  }
   .header, .bloks, .footer {
     max-width: 100%;
     margin: 0px 30px;
@@ -656,15 +805,16 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     gap: 6vw;
-    width: calc(100vw - 270px);
+    width: calc(100vw - 242px);
+    margin: 0px 0px 0px 4vw;
   }
   .our-blok .carts .cart-wrap .cart {
-    width: 100%;
+    width: 21vw;
     height: 100%;
     padding-bottom: 3%;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
-    width: 100%;
+    width: 21vw;
   }
   .our-blok .slid {
     gap: calc(100vw - 178px);
@@ -697,7 +847,45 @@ h2 {
     width: 100%;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 1090px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+  }
+  .wrapModal .modal .exit {
+    width: 86vw;
+  }
+  .wrapModal .modal .modalCart {
+    width: 82vw;
+  }
+  .wrapModal .modal .modalCart .picture img {
+    width: 45vw;
+  }
+  .wrapModal .modal .modalCart .information {
+    width: 351px;
+    height: 362px;
+    top: 50px;
+    margin: 3vw 5px 0px 2vw;
+    gap: 2.7vw;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    gap: 7px;
+  }
+  .wrapModal .modal .modalCart .description p {
+    font-size: 14px;
+    line-height: 108%;
+    letter-spacing: 0.06em;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul {
+    gap: 7px;
+  }
+  .our-blok .carts .cart-wrap {
+    margin: 0px 0px 0px 2vw;
+  }
+}
+@media (max-width: 951px) {
+  .wrapModal .modal {
+    margin: 140vw auto 0px auto;
+  }
   .background .one-section .left .wrap .title {
     max-height: 171px;
   }
@@ -713,9 +901,12 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     overflow: hidden;
-    gap: 40px;
-    max-width: 708px;
-    margin: 0px 0px 0px 10px;
+    gap: 7vw;
+    width: 610px;
+    margin: 0px 0px 0px 0px;
+  }
+  .our-blok .carts .cart-wrap .cart {
+    width: 270px;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
     width: 270px;
@@ -770,6 +961,9 @@ h2 {
   }
 }
 @media (max-width: 855px) {
+  .wrapModal .modal {
+    margin: 290vw auto 0px auto;
+  }
   .background .one-section {
     flex-direction: column;
     max-height: 1135px;
@@ -807,18 +1001,21 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     overflow: hidden;
-    gap: 3.1vw;
-    max-width: 708px;
-    margin: 0px 0px 0px 3vw;
+    gap: 5 vw;
+    width: 610px;
+    margin: 0px 0px 0px 0px;
+  }
+  .our-blok .carts .cart-wrap .cart {
+    flex: 0 0 45%;
   }
   .our-blok .carts .cart-wrap .cart .img-cart {
-    width: 31vw;
+    width: 100%;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
     width: 100%;
   }
   .our-blok .slid {
-    gap: calc(100vw - 196px);
+    gap: calc(100vw - 150px);
   }
   .about-bloks {
     height: 1048px;
@@ -863,6 +1060,38 @@ h2 {
   }
 }
 @media (max-width: 768px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 2423px 0px 0px 68px;
+  }
+  .wrapModal .modal .exit {
+    width: 87.8vw;
+  }
+  .wrapModal .modal .modalCart {
+    width: 82vw;
+  }
+  .wrapModal .modal .modalCart .picture {
+    align-items: start;
+  }
+  .wrapModal .modal .modalCart .picture img {
+    width: 45.6vw;
+  }
+  .wrapModal .modal .modalCart .information {
+    width: 351px;
+    top: 50px;
+    height: 100%;
+    margin: 1.4vw 5px 0px 1.5vw;
+    gap: 2.7vw;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    gap: 9px;
+  }
+  .wrapModal .modal .modalCart .description p {
+    font-size: 13px;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul {
+    gap: 5.4px;
+  }
   .header {
     width: 708px;
   }
@@ -965,6 +1194,24 @@ h2 {
   }
 }
 @media (max-width: 767.5px) {
+  .dark {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+    position: absolute;
+    z-index: 15;
+    transition: all 4s;
+  }
+  .wrapModal .modal .modalCart .picture {
+    align-items: center;
+  }
+  .wrapModal .modal .modalCart .picture img {
+    width: 40.6vw;
+  }
+  .wrapModal .modal .modalCart .information {
+    gap: 2vw;
+    padding: 0px 0px 3.6% 0px;
+  }
   .header, .bloks, .footer {
     width: calc(100vw - 40px);
     margin: 0px 20px;
@@ -974,9 +1221,46 @@ h2 {
   }
   .header nav .burg {
     display: flex;
+    z-index: 25;
+    transition: all 0.7s;
+  }
+  .header nav .openBurg {
+    transform: rotate(90deg) translate(0px, 1px);
+    transition: all 0.7s;
   }
   .header nav .menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 40px;
+    top: 0px;
+    right: -2000px;
+    height: 823px;
+    width: 320px;
+    background: #292929;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s;
+    z-index: 20;
+  }
+  .header nav .menu .li a {
+    font-family: "Arial Regular";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: #fafafa;
+  }
+  .header nav .openMenu {
+    padding: 0px;
+    transform: translate(-1980px, 4px);
+    transition: all 1.5s;
+  }
+  .header nav .openMenu .li a {
+    font-family: "Arial Regular";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: #fafafa;
   }
   .background .one-section {
     margin: 0px 20px 0px 20px;
@@ -999,12 +1283,15 @@ h2 {
   }
   .our-blok .carts .cart-wrap {
     overflow: hidden;
-    gap: 7vw;
+    gap: 6vw;
     max-width: 470px;
-    margin: 0px 0px 0px 3vw;
+    margin: 0px 0px 0px 0px;
   }
   .our-blok .carts .cart-wrap .cart .img-cart {
-    width: 27vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .our-blok .carts .cart-wrap .cart .img-cart img {
     width: 100%;
@@ -1034,9 +1321,54 @@ h2 {
     margin: 42px 0px 0px 0px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 651px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 2300px auto 0px auto;
+  }
+  .wrapModal .modal .exit {
+    width: 85vw;
+  }
+  .wrapModal .modal .modalCart {
+    width: 75.1vw;
+  }
+  .wrapModal .modal .modalCart .picture {
+    display: none;
+  }
+  .wrapModal .modal .modalCart .information {
+    width: 90vw;
+    height: 100%;
+    margin: 2.8vw 5px 0px 3vw;
+    gap: 7vw;
+    align-items: center;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    gap: 8px;
+    align-items: center;
+    margin: 1px 0px -1px 3px;
+  }
+  .wrapModal .modal .modalCart .information .nameType .name h2 {
+    font-size: 35px;
+  }
+  .wrapModal .modal .modalCart .information .nameType .type p {
+    text-align: center;
+  }
+  .wrapModal .modal .modalCart .description p {
+    max-width: 220px;
+    font-size: 13px;
+    text-align: justify;
+    letter-spacing: 0.057em;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul {
+    gap: 6px;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul li span {
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    font-size: 16.6px;
+  }
   .our-blok .carts {
-    max-width: calc(100vw - 200px);
+    max-width: calc(100vw - 120px);
   }
   .our-blok .carts .cart-wrap {
     gap: 40px;
@@ -1074,6 +1406,10 @@ h2 {
   }
 }
 @media (max-width: 400px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 2000px auto 0px auto;
+  }
   .header, .bloks, .footer {
     max-width: 400px;
   }
@@ -1140,7 +1476,7 @@ h2 {
     padding-bottom: 0px;
   }
   .our-blok .our-h2 {
-    width: 300px;
+    width: 305px;
   }
   .our-blok .our-h2 h2 {
     margin: 8px 0px 0px 0px;
@@ -1264,6 +1600,20 @@ h2 {
   }
 }
 @media (max-width: 330px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 1900px auto 0px auto;
+  }
+  .wrapModal .modal .modalCart .information .nameType {
+    margin: 1px 0px -1px 3px;
+  }
+  .wrapModal .modal .modalCart .dopInfo {
+    align-self: flex-start;
+    margin: 0.5px 0px 0px 3px;
+  }
+  .wrapModal .modal .modalCart .dopInfo ul li {
+    letter-spacing: 0.04em;
+  }
   .our-pets {
     height: 821px;
   }
@@ -1275,6 +1625,10 @@ h2 {
   }
 }
 @media (max-width: 320px) {
+  .wrapModal .modal {
+    width: 83.5vw;
+    margin: 1901px 0px 0px 22px;
+  }
   h2 {
     font-size: 25px;
   }
