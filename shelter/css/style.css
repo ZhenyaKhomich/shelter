@@ -124,10 +124,10 @@ body {
 
 .wrapModal {
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100vw;
-  height: 10000px;
+  height: 100vh;
   background: rgba(41, 41, 41, 0.6);
   top: 0px;
 }
@@ -136,7 +136,7 @@ body {
   flex-direction: column;
   width: 900px;
   padding: 0px 10px 0px 0px;
-  margin: 1650px auto 0px auto;
+  margin: auto;
 }
 .wrapModal .modal .exit {
   display: flex;
@@ -780,7 +780,7 @@ h2 {
 
 @media (max-width: 1279px) {
   .wrapModal .modal {
-    margin: 130vw auto 0px auto;
+    margin: auto;
   }
   .header, .bloks, .footer {
     max-width: 100%;
@@ -884,7 +884,7 @@ h2 {
 }
 @media (max-width: 951px) {
   .wrapModal .modal {
-    margin: 140vw auto 0px auto;
+    margin: auto;
   }
   .background .one-section .left .wrap .title {
     max-height: 171px;
@@ -962,7 +962,7 @@ h2 {
 }
 @media (max-width: 855px) {
   .wrapModal .modal {
-    margin: 290vw auto 0px auto;
+    margin: auto;
   }
   .background .one-section {
     flex-direction: column;
@@ -1062,7 +1062,7 @@ h2 {
 @media (max-width: 768px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 2423px 0px 0px 68px;
+    margin: auto 0px auto 68px;
   }
   .wrapModal .modal .exit {
     width: 87.8vw;
@@ -1324,7 +1324,7 @@ h2 {
 @media (max-width: 651px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 2300px auto 0px auto;
+    margin: auto;
   }
   .wrapModal .modal .exit {
     width: 85vw;
@@ -1408,7 +1408,7 @@ h2 {
 @media (max-width: 400px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 2000px auto 0px auto;
+    margin: auto;
   }
   .header, .bloks, .footer {
     max-width: 400px;
@@ -1432,7 +1432,7 @@ h2 {
     align-items: center;
   }
   .background .one-section .left .wrap .title h1 {
-    font-size: calc(17.5vw - 29px);
+    font-size: 25px;
     text-align: center;
     letter-spacing: 0.06em;
   }
@@ -1602,7 +1602,7 @@ h2 {
 @media (max-width: 330px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 1900px auto 0px auto;
+    margin: auto;
   }
   .wrapModal .modal .modalCart .information .nameType {
     margin: 1px 0px -1px 3px;
@@ -1627,7 +1627,7 @@ h2 {
 @media (max-width: 320px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 1901px 0px 0px 22px;
+    margin: auto;
   }
   h2 {
     font-size: 25px;

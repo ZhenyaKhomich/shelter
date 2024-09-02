@@ -154,9 +154,6 @@ $footer-gradient-background: #211f20;
     }
   
     .blok2 {
-  
-  
-  
       .location {
         &:hover {
           cursor: pointer;
@@ -192,10 +189,10 @@ body {
 
 .wrapModal{
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100vw;
-  height: 10000px;
+  height: 100vh;
   background: rgba(41, 41, 41, 0.6);
   top: 0px;
 
@@ -203,8 +200,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 900px;
-    padding: 0px 10px 0px 0px;
-    margin: 35vh auto 0px auto;
+    // padding: 0px 10px 0px 0px;
+    margin: auto;
     
 
     .exit {
@@ -690,7 +687,7 @@ h1 {
 
   .wrapModal{
     .modal {
-      margin: 35vh auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -805,7 +802,7 @@ h1 {
 
   .wrapModal{
     .modal {
-      margin: 35vh auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -874,7 +871,7 @@ h1 {
 
   .wrapModal{
     .modal {
-      margin: 35vh auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -912,7 +909,7 @@ h1 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 35vh 0px 0px 68px;
+      margin: auto;
       .exit {
         width: 87.8vw
       }
@@ -1163,7 +1160,7 @@ h1 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 45vh auto 0px auto;
+      margin: auto;
       .exit {
         width: 85vw
       }
@@ -1292,7 +1289,7 @@ h1 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 45vh auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -1393,7 +1390,7 @@ h1 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 45vh auto 0px auto;
+      margin: auto;
 
       .modalCart {
         .information {
@@ -1421,7 +1418,7 @@ h1 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 45vh 0px 0px 22px;
+      margin: auto;
     }
   }
 

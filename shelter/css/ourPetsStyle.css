@@ -99,10 +99,10 @@ body {
 
 .wrapModal {
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100vw;
-  height: 10000px;
+  height: 100vh;
   background: rgba(41, 41, 41, 0.6);
   top: 0px;
 }
@@ -110,8 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 900px;
-  padding: 0px 10px 0px 0px;
-  margin: 35vh auto 0px auto;
+  margin: auto;
 }
 .wrapModal .modal .exit {
   display: flex;
@@ -531,7 +530,7 @@ h1 {
 
 @media (max-width: 1279px) {
   .wrapModal .modal {
-    margin: 35vh auto 0px auto;
+    margin: auto;
   }
   .header, .bloks, .footer {
     max-width: calc(100vw - 60px);
@@ -616,7 +615,7 @@ h1 {
 }
 @media (max-width: 950px) {
   .wrapModal .modal {
-    margin: 35vh auto 0px auto;
+    margin: auto;
   }
   .our-pets .our-blok {
     gap: 3wv;
@@ -671,7 +670,7 @@ h1 {
 }
 @media (max-width: 855px) {
   .wrapModal .modal {
-    margin: 35vh auto 0px auto;
+    margin: auto;
   }
   .our-pets .our-blok .carts {
     width: 100vw;
@@ -694,7 +693,7 @@ h1 {
 @media (max-width: 768px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 35vh 0px 0px 68px;
+    margin: auto;
   }
   .wrapModal .modal .exit {
     width: 87.8vw;
@@ -886,7 +885,7 @@ h1 {
 @media (max-width: 650px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 45vh auto 0px auto;
+    margin: auto;
   }
   .wrapModal .modal .exit {
     width: 85vw;
@@ -980,7 +979,7 @@ h1 {
 @media (max-width: 400px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 45vh auto 0px auto;
+    margin: auto;
   }
   .header, .bloks, .footer {
     max-width: 400px;
@@ -1053,7 +1052,7 @@ h1 {
 @media (max-width: 330px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 45vh auto 0px auto;
+    margin: auto;
   }
   .wrapModal .modal .modalCart .information .nameType {
     margin: 1px 0px -1px 3px;
@@ -1069,7 +1068,7 @@ h1 {
 @media (max-width: 320px) {
   .wrapModal .modal {
     width: 83.5vw;
-    margin: 45vh 0px 0px 22px;
+    margin: auto;
   }
   h1 {
     font-size: 25px;
