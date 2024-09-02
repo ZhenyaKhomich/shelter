@@ -245,10 +245,10 @@ body {
 
 .wrapModal{
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100vw;
-  height: 10000px;
+  height: 100vh;
   background: rgba(41, 41, 41, 0.6);
   top: 0px;
 
@@ -257,7 +257,7 @@ body {
     flex-direction: column;
     width: 900px;
     padding: 0px 10px 0px 0px;
-    margin: 1650px auto 0px auto;
+    margin: auto;
     
 
     .exit {
@@ -1002,7 +1002,7 @@ h2 {
 
   .wrapModal{
     .modal {
-      margin: 130vw auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -1157,7 +1157,7 @@ h2 {
 
   .wrapModal{
     .modal {
-      margin: 140vw auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -1270,7 +1270,7 @@ h2 {
   
   .wrapModal{
     .modal {
-      margin: 290vw auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -1398,7 +1398,7 @@ h2 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 2423px 0px 0px 68px;
+      margin: auto 0px auto 68px;
       .exit {
         width: 87.8vw
       }
@@ -1747,7 +1747,7 @@ h2 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 2300px auto 0px auto;
+      margin: auto;
       .exit {
         width: 85vw
       }
@@ -1871,7 +1871,7 @@ h2 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 2000px auto 0px auto;
+      margin: auto;
     }
   }
 
@@ -1905,7 +1905,7 @@ h2 {
             align-items: center;
   
             h1 {
-              font-size: calc(17.5vw - 29px);
+              font-size: 25px;
               text-align: center;
               letter-spacing: 0.06em;
             }
@@ -2133,7 +2133,7 @@ h2 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 1900px auto 0px auto;
+      margin: auto;
 
       .modalCart {
         .information {
@@ -2175,7 +2175,7 @@ h2 {
   .wrapModal{
     .modal {
       width: 83.5vw;
-      margin: 1901px 0px 0px 22px;
+      margin: auto;
     }
   }
 

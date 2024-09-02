@@ -1,7 +1,7 @@
 const pets = [
   {
     name: "Katrine",
-    img: "assets/img/pets-katrine.png",
+    img: "../assets/img/pets-katrine.png",
     type: "Cat",
     breed: "British Shorthair",
     description: "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
@@ -12,7 +12,7 @@ const pets = [
   },
   {
     name: "Jennifer",
-    img: "assets/img/pets-jennifer.png",
+    img: "../assets/img/pets-jennifer.png",
     type: "Dog",
     breed: "Labrador",
     description: "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
@@ -23,7 +23,7 @@ const pets = [
   },
   {
     name: "Woody",
-    img: "assets/img/pets-woody.png",
+    img: "../assets/img/pets-woody.png",
     type: "Dog",
     breed: "Golden Retriever",
     description: "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
@@ -34,7 +34,7 @@ const pets = [
   },
   {
     name: "Sophia",
-    img: "assets/img/pets-sopia.png",
+    img: "../assets/img/pets-sopia.png",
     type: "Dog",
     breed: "Shih tzu",
     description: "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
@@ -45,7 +45,7 @@ const pets = [
   },
   {
     name: "Timmy",
-    img: "assets/img/pets-timmy.png",
+    img: "../assets/img/pets-timmy.png",
     type: "Cat",
     breed: "British Shorthair",
     description: "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
@@ -56,7 +56,7 @@ const pets = [
   },
   {
     name: "Charly",
-    img: "assets/img/pets-charly.png",
+    img: "../assets/img/pets-charly.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description: "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
@@ -67,7 +67,7 @@ const pets = [
   },
   {
     name: "Scarlett",
-    img: "assets/img/pets-scarlet.png",
+    img: "../assets/img/pets-scarlet.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description: "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
@@ -78,7 +78,7 @@ const pets = [
   },
   {
     name: "Freddie",
-    img: "assets/img/pets-freddie.png",
+    img: "../assets/img/pets-freddie.png",
     type: "Cat",
     breed: "British Shorthair",
     description: "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
@@ -123,12 +123,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }  
     })
 
-    document.body.addEventListener('click', function() {
+    document.body.addEventListener('click', function(event) {
         
-        if(event.target.classList == 'li') {
+      if(event.target.closest('.menu')) {
         burg.classList.remove('openBurg');
         menu.classList.remove('openMenu');
         dar.classList.remove('dark');
+        document.body.style.overflow = 'visible';
         }  
     })
 })
@@ -230,15 +231,15 @@ function initCarts (pets) {
       let last = allCarts[j-1][allCarts[j-1].length-1];
       let last2 = allCarts[j-1][allCarts[j-1].length-2];
 
-       onePageCarts.push(last);
-       onePageCarts.push(last2);
+        onePageCarts.push(last);
+        onePageCarts.push(last2);
 
     } else if (allCarts.length == 2 || allCarts.length == 5) {
       let last = allCarts[j-1][allCarts[j-1].length-1];
       let last2 = allCarts[j-1][allCarts[j-1].length-2];
       let last3 = allCarts[j-1][allCarts[j-2].length-3];
       let last4 = allCarts[j-1][allCarts[j-2].length-4];
-     
+    
       onePageCarts.push(last2);
       onePageCarts.push(last3);
       onePageCarts.push(last);
@@ -309,7 +310,6 @@ nextLast.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
   num = cal-1;
-  console.log(car);
   carts(allCarts[num]);
   figure.textContent = cal;
   butsNext.forEach(el=>el.classList.add('inactive'));
@@ -320,7 +320,6 @@ next.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
   ++num;
-  console.log(allCarts);
   carts(allCarts[num]);
   figure.textContent = num + 1;
   if(num >= cal-1 ) {
@@ -344,7 +343,6 @@ last.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
   cart.forEach(el=>el.remove());
   --num;
-  console.log(num)
   carts(allCarts[num]);
   figure.textContent = num + 1;
   if(num < cal-1 ) {
@@ -364,9 +362,14 @@ return k[0];
 }
 
 function colCarts(car, cal) {
+
+  for(let i = 0; i < allCarts.length; i++) {
+    allCarts = allCarts.filter(el => el.length > 0);
+    allCarts[i] = allCarts[i].filter(el => el != undefined);
+  }
+
   for(let i = 0; i < cal; i++) {
     if(allCarts[i].length > car) { 
-
       if(allCarts[i].length == car) {
         continue;
       } else {
@@ -386,16 +389,19 @@ function colCarts(car, cal) {
           if(allCarts[i].length === 0) {
             allCarts = allCarts.filter(el => el.length > 0);
           } 
-          
           allCarts[i].push(allCarts[i+1].shift());
         }
-
         if(allCarts[allCarts.length - 1].length === 0 ) {
           allCarts = allCarts.filter(el => el.length > 0);
         }
       }
     }
   }
+
+  if(cal === 6 && allCarts.length != 6) {
+    colCarts(8, 6);
+  }
+
   aaa(allCarts);
   allCarts = aaa(allCarts);
   let cart = document.body.querySelectorAll('.cart');
@@ -409,26 +415,31 @@ function colCarts(car, cal) {
 
 window.addEventListener('resize', () => {
  size = window.innerWidth;
- console.log(size);
- if( size > 768 ) {
+ if( size > 768  && size <= 1000) {
   car = 8;
   cal = 6;
   colCarts(car, cal);
+  del();
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
  } else if(size <= 768 && size >= 600){
   car = 6;
   cal = 8;
   colCarts(car, cal);
+  del();
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
  } else if (size <= 600 && size >=320) {
   car = 3;
   cal = 16;
   colCarts(car, cal);
+  del();
   butsNext.forEach(el=>el.classList.remove('inactive'));
   butsLast.forEach(el=>el.classList.add('inactive'));
- }  
+ } else if (size < 320) {
+  let wrapModal = document.body.querySelector('.wrapModal')
+  wrapModal.style.display = 'none';
+ } 
 })
 
 //  модальное окно
@@ -436,6 +447,8 @@ window.addEventListener('resize', () => {
 function modalWindow(arr) {
   let wrapModal = document.body.querySelector('.wrapModal')
   
+
+
   let modal = document.createElement('div');
   modal.classList.add('modal');
 
@@ -549,8 +562,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let wrapModal = document.body.querySelector('.wrapModal');
   let carts = document.querySelectorAll('.cart');
   let slid = document.querySelector('.slider');
+  let modal = document.body.querySelector('.modal');
 
   wrapModal.style.display = 'none';
+  
 
   carts.forEach((cart, index) => { 
   cart.addEventListener('click', function (event) {
@@ -561,10 +576,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('resize', function () {
+      let wrapMod = document.body.querySelector('.wrapModal');
+      wrapMod.innerHTML = '';
       let carts = document.querySelectorAll('.cart');
       carts.forEach((cart, index) => { 
         cart.addEventListener('click', function (event) {
           if(event.target.closest('.cart')) {
+            let wrapMod = document.body.querySelector('.wrapModal');
+            wrapMod.innerHTML = '';
             modalWindow(allCarts[num][index]);
             wrapModal.style.display = '';
             document.body.style.overflow = 'hidden'; 
@@ -576,6 +595,8 @@ document.addEventListener('DOMContentLoaded', function () {
           wrapMod.addEventListener('click', function (event) {
             if(!event.target.closest('.modalCart')) {
               modal.remove();
+              let wrapMod = document.body.querySelector('.wrapModal');
+              wrapMod.innerHTML = '';
               wrapModal.style.display = 'none';
               document.body.style.overflow = ''; 
             } 
@@ -583,6 +604,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
           exit.addEventListener('click', function () {
             modal.remove();
+            let wrapMod = document.body.querySelector('.wrapModal');
+            wrapMod.innerHTML = '';
             wrapModal.style.display = 'none';
             document.body.style.overflow = ''; 
           })
@@ -595,6 +618,8 @@ document.addEventListener('DOMContentLoaded', function () {
       carts.forEach((cart, index) => { 
         cart.addEventListener('click', function (event) {
           if(event.target.closest('.cart')) {
+            let wrapMod = document.body.querySelector('.wrapModal');
+              wrapMod.innerHTML = '';
                 modalWindow(allCarts[num][index]);
                 wrapModal.style.display = '';
                 document.body.style.overflow = 'hidden'; 
@@ -606,6 +631,8 @@ document.addEventListener('DOMContentLoaded', function () {
           wrapMod.addEventListener('click', function (event) {
             if(!event.target.closest('.modalCart')) {
               modal.remove();
+              let wrapMod = document.body.querySelector('.wrapModal');
+              wrapMod.innerHTML = '';
               wrapModal.style.display = 'none';
               document.body.style.overflow = ''; 
             } 
@@ -613,12 +640,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
           exit.addEventListener('click', function () {
             modal.remove();
+            let wrapMod = document.body.querySelector('.wrapModal');
+              wrapMod.innerHTML = '';
             wrapModal.style.display = 'none';
             document.body.style.overflow = ''; 
           })
-
         })
-    })
+      })
     })
 
     let wrapMod = document.body.querySelector('.wrapModal');
@@ -628,6 +656,8 @@ document.addEventListener('DOMContentLoaded', function () {
     wrapMod.addEventListener('click', function (event) {
       if(!event.target.closest('.modalCart')) {
         modal.remove();
+        let wrapMod = document.body.querySelector('.wrapModal');
+              wrapMod.innerHTML = '';
         wrapModal.style.display = 'none';
         document.body.style.overflow = ''; 
       } 
@@ -635,9 +665,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     exit.addEventListener('click', function () {
       modal.remove();
+      let wrapMod = document.body.querySelector('.wrapModal');
+              wrapMod.innerHTML = '';
       wrapModal.style.display = 'none';
       document.body.style.overflow = ''; 
     })
   })
 })
 })
+
+
+
+function del() {
+  let wrapModal = document.body.querySelector('.wrapModal');
+  let modals = wrapModal.querySelectorAll('.modal');
+    modals.forEach(modal => {
+    modal.remove();
+});
+  wrapModal.style.display = 'none';
+}
+
+del();
+
+
+
+console.log('Если вдруг возникли какие-то вопросы, напишите мне, обсудим их. Заранее спасибо.');
