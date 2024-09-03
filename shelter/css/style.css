@@ -1235,13 +1235,14 @@ h2 {
     gap: 40px;
     top: 0px;
     right: -2000px;
-    height: 823px;
+    height: 100vh;
     width: 320px;
     background: #292929;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     transition: all 2s;
     z-index: 20;
+    padding: 200px 0px 0px 0px;
   }
   .header nav .menu .li a {
     font-family: "Arial Regular";
@@ -1249,6 +1250,9 @@ h2 {
     font-size: 32px;
     line-height: 160%;
     color: #fafafa;
+  }
+  .header nav .menu .stu {
+    margin: 40.5vh 0px 0px 0px;
   }
   .header nav .openMenu {
     padding: 0px;
