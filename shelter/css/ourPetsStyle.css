@@ -813,7 +813,7 @@ h1 {
     gap: 40px;
     top: 0px;
     right: -2000px;
-    height: 823px;
+    height: 100vh;
     width: 320px;
     background: #292929;
     justify-content: center;
@@ -830,6 +830,9 @@ h1 {
   }
   .header nav .menu .li a.dis {
     color: #fafafa;
+  }
+  .header nav .menu .stu {
+    margin: 33.5vh 0px 0px 0px;
   }
   .header nav .openMenu {
     padding: 0px;
