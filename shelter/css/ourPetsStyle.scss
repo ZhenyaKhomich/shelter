@@ -1068,14 +1068,13 @@ h1 {
         gap:40px;
         top: 0px;
         right: -2000px;
-        height: 823px;
+        height: 100vh;
         width: 320px;
         background: $color-dark-3xl;
         justify-content: center;
         align-items: center;
         transition: all 2s;
         z-index: 20;
-
         .li {
           a {
             font-family: "Arial Regular";
@@ -1087,6 +1086,9 @@ h1 {
           a.dis {
             color: $color-light-s;
           }
+        }
+        .stu {
+          margin: 33.5vh 0px 0px 0px;
         }
       }
 
