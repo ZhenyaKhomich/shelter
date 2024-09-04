@@ -296,7 +296,7 @@ function initCarts (pets) {
   }
 return allCarts;
 }
-
+let slider = document.body.querySelector('.slider');
 let prevLast = document.body.querySelector('.svg1');
 let last = document.body.querySelector('.svg2');
 let next = document.body.querySelector('.svg4');
@@ -305,6 +305,9 @@ let butsLast = document.body.querySelectorAll('.in');
 let butsNext = document.body.querySelectorAll('.out');
 
 //  кнопки пагинации
+slider.addEventListener('mousedown', function(event) {
+  event.preventDefault();
+  })
 
 nextLast.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
@@ -328,6 +331,8 @@ next.addEventListener('click', function() {
     butsLast.forEach(el=>el.classList.remove('inactive'));
   } 
 })
+
+
 
 prevLast.addEventListener('click', function() {
   let cart = document.body.querySelectorAll('.cart');
