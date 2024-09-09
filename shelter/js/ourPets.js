@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.addEventListener('click', function(event) {
         
-      if(event.target.closest('.menu')) {
+      if(event.target.closest('.li')) {
         burg.classList.remove('openBurg');
         menu.classList.remove('openMenu');
         dar.classList.remove('dark');
