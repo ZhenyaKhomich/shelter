@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <title>Audio-player</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="wrapImg">
+      <img src="assets/img/tsoy1.jpg" alt="image">
+    </div>
+    <div class="player">
+      <div class="playerImg">
+        <img src="assets/img/tsoy1.jpg" alt="image">
+      </div>
+      <div class="controls">
+        <div class="lineProgress">
+          <span class="timeNow">0:00</span>
+          <input type="range" class="timeProgress" value="0" max="100">
+          <span class="timeAll">3:53</span>
+        </div>
+        <div class="buttons">
+          <div class="prev">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="60pt" height="60pt"
+              viewBox="0 0 114.000000 114.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,114.000000) scale(0.100000,-0.100000)" fill="red" stroke="black">
+                <path d="M411 1125 c-79 -22 -168 -73 -232 -133 -331 -306 -176 -864 266 -957
+                  88 -18 142 -18 228 0 199 42 369 205 422 405 19 72 19 211 0 284 -46 176 -177
+                  320 -350 386 -78 30 -253 38 -334 15z m274 -17 c70 -15 178 -73 239 -129 185
+                  -169 224 -475 88 -685 -192 -294 -589 -340 -833 -95 -116 117 -166 249 -156
+                  416 6 111 31 187 93 277 126 185 337 265 569 216z" />
+                <path d="M370 729 c-146 -87 -264 -162 -262 -166 2 -4 121 -74 265 -155 l262
+                  -146 5 73 5 74 115 -66 c63 -36 121 -67 128 -70 9 -4 12 61 12 306 0 171 -2
+                  311 -5 311 -2 0 -59 -33 -127 -74 l-123 -75 -5 73 -5 73 -265 -158z" />
+              </g>
+            </svg>
+          </div>
+          <div class="play">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="60pt" height="60pt"
+              viewBox="0 0 118.000000 113.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,113.000000) scale(0.100000,-0.100000)" fill="red" stroke="none">
+                <path d="M446 1115 c-183 -51 -339 -204 -390 -385 -38 -135 -25 -282 35 -407
+                  45 -92 160 -208 249 -251 71 -35 180 -62 250 -62 131 0 276 59 375 152 122
+                  114 178 239 179 403 0 166 -50 291 -165 406 -73 73 -172 128 -267 148 -71 15
+                  -205 12 -266 -4z m307 -27 c87 -27 168 -79 235 -153 84 -92 129 -197 138 -325
+                  22 -296 -199 -554 -496 -576 -294 -23 -552 199 -577 497 -24 281 188 543 465
+                  577 87 11 151 6 235 -20z" />
+                <path d="M404 570 c0 -171 3 -310 7 -310 20 0 529 304 522 311 -7 7 -523 309
+                  -527 309 -1 0 -1 -140 -2 -310z" />
+              </g>
+            </svg>
+          </div>
+          <!-- <div class="pause">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="60pt" height="60pt"
+              viewBox="0 0 120.000000 115.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,115.000000) scale(0.100000,-0.100000)" fill="red" stroke="none">
+                <path d="M513 1105 c-189 -41 -348 -185 -414 -375 -17 -50 -22 -88 -23 -165 0
+                  -166 50 -291 164 -405 145 -145 360 -198 557 -135 240 76 388 283 387 540 -1
+                  165 -55 288 -179 404 -134 124 -314 175 -492 136z m291 -34 c250 -88 402 -346
+                  357 -607 -36 -206 -207 -389 -406 -434 -28 -7 -88 -12 -135 -12 -138 0 -254
+                  48 -357 145 -319 301 -168 834 262 927 64 14 213 4 279 -19z" />
+                <path d="M400 560 l0 -260 100 0 100 0 0 260 0 260 -100 0 -100 0 0 -260z" />
+                <path d="M660 560 l0 -260 100 0 100 0 0 260 0 260 -100 0 -100 0 0 -260z" />
+              </g>
+            </svg>
+          </div> -->
+          <div class="next">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="60pt" height="60pt"
+              viewBox="0 0 113.000000 114.000000" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(0.000000,114.000000) scale(0.100000,-0.100000)" fill="red" stroke="none">
+                <path d="M431 1124 c-187 -50 -347 -212 -396 -401 -19 -73 -19 -212 0 -283 49
+                  -185 199 -340 382 -395 301 -91 626 101 699 411 33 140 3 311 -75 433 -69 107
+                  -202 203 -326 236 -73 19 -212 18 -284 -1z m289 -21 c179 -49 326 -200 375
+                  -383 19 -71 19 -200 0 -273 -37 -141 -145 -278 -272 -345 -199 -104 -449 -71
+                  -611 81 -117 110 -173 236 -173 392 -1 109 13 168 59 260 111 223 374 336 622
+                  268z" />
+                <path d="M230 579 c0 -245 3 -310 13 -306 6 3 64 34 127 70 l115 66 5 -74 5
+                  -73 262 146 c144 81 263 150 265 155 2 4 -116 79 -262 166 l-265 158 -5 -73
+                  -5 -73 -123 75 c-68 41 -125 74 -127 74 -3 0 -5 -140 -5 -311z" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="titAudio">
+          <audio src=""></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

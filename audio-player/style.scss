@@ -1,0 +1,106 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  
+ 
+
+  .wrapImg {
+    img {
+      width: 100vw;
+      height: 100vh;
+      filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .wrapImg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 109, 109, 0.1); 
+    z-index: 2;
+}
+
+  .player {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    border: 2px solid rgb(255, 255, 255);
+    z-index: 4;
+    border-radius: 10%;
+    overflow: hidden;
+    animation: star 2s infinite;
+
+
+    @keyframes star { 
+
+      0% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+      }
+
+      50% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+
+      100% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0);
+      }
+    }
+
+    .playerImg {
+      img {
+        width: 100%;
+        height: 220px;
+      }
+    }
+
+    .controls {
+      .lineProgress {
+        display: flex;
+        gap: 10px;
+        
+
+        .timeNow {
+          color: white;
+        }
+
+        .timeProgress {
+          width: 190px;
+          cursor: pointer;
+        }
+
+        .timeAll {
+          color: white;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 10px 0 0 0;
+      }
+
+    }
+
+
+  }
+}
