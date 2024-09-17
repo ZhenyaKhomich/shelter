@@ -1,14 +1,13 @@
-let play = document.querySelector('.play');
-let pause = document.querySelector('.pause');
-let audio = document.querySelector('audio');
-let onOff = false;
+const play = document.querySelector('.play');
+const pause = document.querySelector('.pause');
+const audio = document.querySelector('audio');
 const timeProgress = document.querySelector('.timeProgress');
 const timeNow = document.querySelector('.timeNow');
-
+const timeAll = document.querySelector('.timeAll');
+let onOff = false;
 pause.hidden = 'true';
 
 play.addEventListener('click', function () {
-
   if(!onOff) {
     audio.play();
     pause.hidden = '';
@@ -18,7 +17,6 @@ play.addEventListener('click', function () {
 })
 
 pause.addEventListener('click', function () {
-
   if(onOff) {
     audio.pause();
     onOff = false;
@@ -27,18 +25,34 @@ pause.addEventListener('click', function () {
   }
 })
 
+function timeNo(seconds) {
+  if(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return minutes + ':' + (secs < 10 ? '0' : '') + secs;
+  } else {
+    audio.addEventListener('loadedmetadata', function () {
+      timeAll.textContent = timeNo(audio.duration);
+    });
+  }
+}
+
 audio.addEventListener('timeupdate', function () {
   const currentTime = audio.currentTime;
   const duration = audio.duration;
 
-console.log(duration);
-console.log(currentTime);
-  
   timeProgress.value = (currentTime / duration) * 100;
 
-  timeNow.textContent = formatTime(currentTime);
+  timeNow.textContent = timeNo(currentTime);
+  timeAll.textContent = timeNo(duration);
 });
-console.log(timeNow.textContent);
 
+window.addEventListener('DOMContentLoaded', function() {
+timeAll.textContent = timeNo(audio.duration);
+});
 
-
+timeProgress.addEventListener('input', function () {
+  const duration = audio.duration;
+  const value = timeProgress.value;
+  audio.currentTime = (value / 100) * duration;
+});
