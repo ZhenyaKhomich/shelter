@@ -11,43 +11,38 @@ data = [
     img: 'assets/img/tsoy2.jpg',
   },
   {
-    name: 'Виктор Цой -',
-    src: 'assets/music/sosny.mp3',
+    name: 'Виктор Цой - Печаль',
+    src: 'assets/music/pechal.mp3',
     img: 'assets/img/tsoy3.jpg',
   },
   {
-    name: 'Виктор Цой -',
-    src: 'assets/music/sosny-no-morskom-beregu.mp3',
+    name: 'Виктор Цой - Кончится лето',
+    src: 'assets/music/konchitsja-leto.mp3',
     img: 'assets/img/tsoy4.jpg',
   },
   {
-    name: 'Виктор Цой -',
-    src: 'assets/music/Gruppa_krovi.mp3"',
-    img: 'assets/img/tsoy5.jpg',
-  },
-  {
-    name: 'Виктор Цой -',
-    src: 'assets/music/Gruppa_krovi.mp3"',
+    name: 'Виктор Цой - Звезда по имени солнце',
+    src: 'assets/music/solnce.mp3',
     img: 'assets/img/tsoy6.jpg',
   },
   {
-    name: 'Виктор Цой -',
-    src: 'assets/music/Gruppa_krovi.mp3"',
+    name: 'Виктор Цой - Следи за собой',
+    src: 'assets/music/sledi-za-sobojj.mp3',
     img: 'assets/img/tsoy7.jpg',
   },
   {
-    name: 'Виктор Цой -',
-    src: 'assets/music/Gruppa_krovi.mp3"',
+    name: 'Виктор Цой - Мама мы все тяжело больны',
+    src: 'assets/music/mama-my-vse-soshli-s-uma.mp3',
     img: 'assets/img/tsoy8.png',
   },
   {
-    name: 'Виктор Цой -',
-    src: 'assets/music/Gruppa_krovi.mp3"',
+    name: 'Виктор Цой - Видели ночь',
+    src: 'assets/music/videli-noch.mp3',
     img: 'assets/img/tsoy9.jpeg',
   },
   {
-    name: 'Виктор Цой -',
-    src: 'assets/music/Gruppa_krovi.mp3"',
+    name: 'Виктор Цой - Восьмиклассница',
+    src: 'assets/music/vosmiklassnica.mp3',
     img: 'assets/img/tsoy10.jpg',
   },
 ];
@@ -100,8 +95,11 @@ pause.addEventListener('click', function () {
 })
 
 next.addEventListener('click', function () {
+  onOff = false;
+  pause.hidden = 'true';
+  play.hidden = '';
   ++count;
-  if(count == 10) {
+  if(count == 9) {
     count = 0;
   }
   
@@ -113,7 +111,25 @@ next.addEventListener('click', function () {
 
   let music = document.querySelector('audio');
  music.src = data[count].src;
+})
 
+prev.addEventListener('click', function () {
+  onOff = false;
+  pause.hidden = 'true';
+  play.hidden = '';
+  
+  if(count == 0) {
+    count = 9;
+  }
+  --count;
+  let imgs = document.querySelectorAll('img');
+  imgs.forEach((el) => el.src = data[count].img);
+
+  let title = document.querySelector('.title');
+  title.innerHTML = data[count].name;
+
+  let music = document.querySelector('audio');
+ music.src = data[count].src;
 })
 
 
@@ -129,7 +145,7 @@ function timeNo(seconds) {
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return minutes + ':' + (secs < 10 ? '0' : '') + secs;
-  } if(seconds == 0) {
+  } if(seconds >= 0) {
     return '0:00'
   }else {
     audio.addEventListener('loadedmetadata', function () {
@@ -139,13 +155,22 @@ function timeNo(seconds) {
 }
 
 audio.addEventListener('timeupdate', function () {
-  const currentTime = audio.currentTime;
+  let currentTime = audio.currentTime;
   const duration = audio.duration;
   timeProgress.value = (currentTime / duration) * 100;
   if(currentTime == 0) {
     timeProgress.value = 0;
   };
-  timeNow.textContent = timeNo(currentTime);
+    timeNow.textContent = timeNo(currentTime);
+  if(currentTime == duration) {
+    timeProgress.value = 0;
+    onOff = false;
+    pause.hidden = 'true';
+    play.hidden = '';
+    currentTime = 0;
+    console.log(currentTime)
+    timeNow.textContent = timeNo(currentTime);
+  } 
 });
 
 window.addEventListener('DOMContentLoaded', function() {
