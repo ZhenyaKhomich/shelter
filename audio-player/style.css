@@ -1,3 +1,93 @@
+@media (hover: hover) {
+  .wrap .player .playerImg .auto .autoplayno svg:hover {
+    animation: au 2s infinite;
+    cursor: pointer;
+    fill: rgb(255, 255, 255);
+  }
+  .wrap .player .playerImg .auto .autoplay1 svg:hover {
+    animation: au 2s infinite;
+    cursor: pointer;
+    fill: rgb(255, 255, 255);
+  }
+  .wrap .player .playerImg .auto .autoplay svg:hover {
+    animation: au 2s infinite;
+    cursor: pointer;
+    fill: rgb(255, 255, 255);
+  }
+  @keyframes au {
+    0% {
+      scale: 0.9;
+      box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.5), 0 0 0 7px rgba(249, 224, 0, 0.5);
+    }
+    50% {
+      scale: 1;
+      box-shadow: inset 0 0 0 10px rgb(0, 0, 0), 0 0 0 2px rgba(249, 224, 0, 0.3);
+    }
+    100% {
+      scale: 0.9;
+      box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.5), 0 0 0 7px rgba(249, 224, 0, 0.5);
+    }
+  }
+  .wrap .player .controls .lineProgress .timeProgress::-webkit-slider-thumb:hover {
+    box-shadow: inset 0 0 0 8px green;
+  }
+  .wrap .player .controls .buttons div svg:hover {
+    cursor: pointer;
+    fill: green;
+    animation: ar 2s infinite;
+  }
+  @keyframes ar {
+    0% {
+      scale: 1.1;
+      box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      scale: 1.1;
+      box-shadow: inset 0 0 0 11px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      scale: 1.1;
+      box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.5);
+    }
+  }
+  .wrap .footer .rs svg:hover {
+    animation: foo 2s infinite;
+  }
+  .wrap .footer .rs svg:hover .letter {
+    fill: rgb(49, 179, 6);
+  }
+  @keyframes foo {
+    0% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    50% {
+      scale: 1;
+      box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    100% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+  }
+  .wrap .footer .git svg:hover {
+    animation: foo 2s infinite;
+  }
+  @keyframes foo {
+    0% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    50% {
+      scale: 1;
+      box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    100% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+  }
+}
 body {
   height: 100vh;
   overflow: hidden;
@@ -59,6 +149,46 @@ body {
   width: 100%;
   height: 220px;
 }
+.wrap .player .playerImg .auto {
+  position: absolute;
+  right: 10px;
+  top: 48%;
+}
+.wrap .player .playerImg .auto .autoplayno svg {
+  width: 20px;
+  height: 20px;
+  animation: aut 2s infinite;
+  border-radius: 30%;
+  fill: red;
+}
+.wrap .player .playerImg .auto .autoplay1 svg {
+  width: 20px;
+  height: 20px;
+  animation: aut 2s infinite;
+  border-radius: 30%;
+  fill: green;
+}
+.wrap .player .playerImg .auto .autoplay svg {
+  width: 20px;
+  height: 20px;
+  animation: aut 2s infinite;
+  border-radius: 30%;
+  fill: green;
+}
+@keyframes aut {
+  0% {
+    scale: 0.9;
+    box-shadow: inset 0 0 0 3px rgba(255, 253, 253, 0.5), 0 0 0 7px rgba(186, 33, 33, 0.5);
+  }
+  50% {
+    scale: 1;
+    box-shadow: inset 0 0 0 10px rgb(253, 252, 252), 0 0 0 2px rgba(186, 33, 33, 0.3);
+  }
+  100% {
+    scale: 0.9;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.5), 0 0 0 7px rgba(186, 33, 33, 0.5);
+  }
+}
 .wrap .player .controls .lineProgress {
   display: flex;
   gap: 10px;
@@ -77,9 +207,6 @@ body {
   border-radius: 20px;
   cursor: pointer;
   box-shadow: inset 0 0 0 8px rgb(186, 33, 33);
-}
-.wrap .player .controls .lineProgress .timeProgress::-webkit-slider-thumb:hover {
-  box-shadow: inset 0 0 0 8px green;
 }
 .wrap .player .controls .lineProgress .timeAll {
   color: white;
@@ -113,25 +240,6 @@ body {
     box-shadow: inset 0 0 0 3px rgba(186, 33, 33, 0.5);
   }
 }
-.wrap .player .controls .buttons div svg:hover {
-  cursor: pointer;
-  fill: green;
-  animation: ar 2s infinite;
-}
-@keyframes ar {
-  0% {
-    scale: 1.1;
-    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.1);
-  }
-  50% {
-    scale: 1.1;
-    box-shadow: inset 0 0 0 11px rgba(255, 255, 255, 0.5);
-  }
-  100% {
-    scale: 1.1;
-    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.5);
-  }
-}
 .wrap .player .controls .buttons div svg:active {
   fill: yellow;
 }
@@ -147,11 +255,14 @@ body {
   position: absolute;
   color: white;
   text-shadow: 1px 1px 3px black;
-  display: flex;
-  width: 70vw;
+  display: inline-block;
+  white-space: nowrap;
   font-size: 25px;
   font-weight: 500;
   animation: title 15s infinite;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @keyframes title {
   0% {
@@ -160,9 +271,11 @@ body {
   }
   70% {
     color: white;
+    opacity: 0.7;
   }
   100% {
-    transform: translate(-445px);
+    transform: translate(-300px);
+    opacity: 0;
   }
 }
 .wrap .footer {
@@ -181,30 +294,13 @@ body {
   border-radius: 50%;
   animation: foot 2s infinite;
 }
-.wrap .footer .rs svg:hover {
-  animation: foo 2s infinite;
-}
-.wrap .footer .rs svg:hover .letter {
-  fill: rgb(49, 179, 6);
-}
-@keyframes foo {
-  0% {
-    scale: 0.9;
-    box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-  }
-  50% {
-    scale: 1;
-    box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
-  }
-  100% {
-    scale: 0.9;
-    box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-  }
-}
 .wrap .footer .year {
   color: white;
   text-shadow: 1px 1px 5px black;
   font-size: 25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .wrap .footer .git svg {
   width: 50px;
@@ -212,23 +308,6 @@ body {
   box-shadow: inset 0 0 100px white;
   border-radius: 50%;
   animation: foot 2s infinite;
-}
-.wrap .footer .git svg:hover {
-  animation: foo 2s infinite;
-}
-@keyframes foo {
-  0% {
-    scale: 0.9;
-    box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-  }
-  50% {
-    scale: 1;
-    box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
-  }
-  100% {
-    scale: 0.9;
-    box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-  }
 }
 @keyframes foot {
   0% {

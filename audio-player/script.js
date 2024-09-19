@@ -56,11 +56,19 @@ const audio = document.querySelector('audio');
 const timeProgress = document.querySelector('.timeProgress');
 const timeNow = document.querySelector('.timeNow');
 const timeAll = document.querySelector('.timeAll');
+const autoplay = document.querySelector('.autoplay');
+const autoplay1 = document.querySelector('.autoplay1');
+const autoplayno = document.querySelector('.autoplayno');
 let onOff = false;
+let butauto = 0;
 let count = 0;
 pause.hidden = 'true';
 
 window.addEventListener('DOMContentLoaded', function () {
+  
+  autoplay1.hidden = 'true';
+  autoplay.hidden = 'true';
+
   let imgs = document.querySelectorAll('img');
   imgs.forEach((el) => el.src = data[count].img);
 
@@ -71,9 +79,24 @@ window.addEventListener('DOMContentLoaded', function () {
   music.src = data[count].src;
 
   console.log(timeProgress.value);
+})
 
+autoplayno.addEventListener('click', function () {
+  autoplayno.hidden = 'true';
+  autoplay1.hidden = '';
+  butauto = 1;
+})
 
+autoplay1.addEventListener('click', function () {
+  autoplay1.hidden = 'true';
+  autoplay.hidden = '';
+  butauto = 2;
+})
 
+autoplay.addEventListener('click', function () {
+  autoplay.hidden = 'true';
+  autoplayno.hidden = '';
+  butauto = 0;
 })
 
 play.addEventListener('click', function () {
@@ -110,7 +133,7 @@ next.addEventListener('click', function () {
   title.innerHTML = data[count].name;
 
   let music = document.querySelector('audio');
- music.src = data[count].src;
+  music.src = data[count].src;
 })
 
 prev.addEventListener('click', function () {
@@ -129,16 +152,8 @@ prev.addEventListener('click', function () {
   title.innerHTML = data[count].name;
 
   let music = document.querySelector('audio');
- music.src = data[count].src;
+  music.src = data[count].src;
 })
-
-
-
-
-
-
-
-
 
 function timeNo(seconds) {
   if(seconds) {
@@ -162,16 +177,44 @@ audio.addEventListener('timeupdate', function () {
     timeProgress.value = 0;
   };
     timeNow.textContent = timeNo(currentTime);
-  if(currentTime == duration) {
-    timeProgress.value = 0;
-    onOff = false;
-    pause.hidden = 'true';
-    play.hidden = '';
-    currentTime = 0;
-    console.log(currentTime)
-    timeNow.textContent = timeNo(currentTime);
-  } 
 });
+
+audio.addEventListener('ended', function () {
+  let currentTime = audio.currentTime;
+  timeProgress.value = 0;
+  onOff = false;
+  pause.hidden = 'true';
+  play.hidden = '';
+  currentTime = 0;
+  timeNow.textContent = timeNo(currentTime);
+  
+  if (butauto === 1) { 
+    currentTime = 0; 
+    pause.hidden = '';
+    play.hidden = 'true';
+    audio.play();
+    onOff = true; 
+  } else if (butauto === 2) {
+    ++count;
+    if(count == 9) {
+      count = 0;
+    }
+    
+    let imgs = document.querySelectorAll('img');
+    imgs.forEach((el) => el.src = data[count].img);
+
+    let title = document.querySelector('.title');
+    title.innerHTML = data[count].name;
+
+    let music = document.querySelector('audio');
+    music.src = data[count].src;
+    currentTime = 0; 
+    pause.hidden = '';
+    play.hidden = 'true';
+    audio.play();
+    onOff = true; 
+  }
+})
 
 window.addEventListener('DOMContentLoaded', function() {
 timeAll.textContent = timeNo(audio.duration);
@@ -182,3 +225,6 @@ timeProgress.addEventListener('input', function () {
   const value = timeProgress.value;
   audio.currentTime = (value / 100) * duration;
 });
+
+
+console.log('Кнопка-знак в правом нижнем углу картинки плеера имеет 3 положения: 1 - круговые стрелочки красного цвета перечеркнутые линией значат что песня играет и после окончания останавливается. 2 - круглые стрелочки зеленого цвета с 1 внутри значат что песня после окончания будет повторно воспоизводиться. 3. - круглые зеленые стрелочки значат что плейлист автоматически воспроизводится по кругу')
