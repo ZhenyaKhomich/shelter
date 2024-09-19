@@ -322,4 +322,13 @@ body {
     scale: 0.9;
     box-shadow: 0 0 0 1px rgba(186, 33, 33, 0.2), inset 0 0 100px white;
   }
+}
+
+@media (max-width: 330px) {
+  body {
+    height: 100dvh;
+  }
+  .wrap .wrapImg img {
+    height: 100dvh;
+  }
 }/*# sourceMappingURL=style.css.map */

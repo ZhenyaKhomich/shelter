@@ -361,7 +361,6 @@ body {
               transform: translate(-300px);
               opacity: 0;
             }
-            
           }
         }
       }
@@ -422,4 +421,15 @@ body {
   }
 }
 
-
+@media(max-width: 330px) {
+  body {
+    height: 100dvh;
+  }
+  .wrap {
+    .wrapImg {
+      img {
+        height: 100dvh;
+      }
+    }
+  }
+}
