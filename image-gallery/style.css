@@ -1,0 +1,171 @@
+@media (hover: hover) {
+  .container .footer .rs svg:hover {
+    animation: foo 2s infinite;
+  }
+  .container .footer .rs svg:hover .letter {
+    fill: rgb(49, 179, 6);
+  }
+  @keyframes foo {
+    0% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    50% {
+      scale: 1;
+      box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    100% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+  }
+  .container .footer .git svg:hover {
+    animation: foo 2s infinite;
+  }
+  @keyframes foo {
+    0% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    50% {
+      scale: 1;
+      box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+    100% {
+      scale: 0.9;
+      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
+    }
+  }
+}
+body {
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url(/assets/fone.png);
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+.container .header {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96vw;
+  height: 100px;
+  margin: 20px auto;
+}
+.container .header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.container .header .logo .fotic {
+  width: 90px;
+  height: 80px;
+}
+.container .header .logo .imgLogo {
+  width: 600px;
+  height: 100px;
+}
+.container .header .inputArea {
+  position: relative;
+}
+.container .header .inputArea .searchArea {
+  padding: 0 0 0 10px;
+  width: 400px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 25px;
+}
+.container .header .inputArea button {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  border: none;
+  background-color: white;
+  width: 55px;
+  height: 45px;
+  border-radius: 10px;
+}
+.container .header .inputArea button:hover {
+  cursor: pointer;
+}
+.container .header .inputArea button .lupa {
+  width: 45px;
+  height: 45px;
+}
+.container .main {
+  max-width: 1280px;
+  display: flex;
+}
+.container .main .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 10px;
+  align-items: center;
+}
+.container .main .images .newImg {
+  width: calc(33% - 10px);
+  margin: 0 0 10px 0;
+  vertical-align: text-top;
+}
+.container .footer {
+  max-width: 1280px;
+  display: flex;
+  width: 96vw;
+  align-items: center;
+  z-index: 10;
+  bottom: 5px;
+  justify-content: space-between;
+  margin: 0 0 5px 0;
+}
+.container .footer .rs svg {
+  width: 50px;
+  fill: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 100px white;
+  border-radius: 50%;
+  animation: foot 2s infinite;
+}
+.container .footer .year {
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 5px black;
+  font-size: 25px;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.container .footer .git svg {
+  width: 50px;
+  fill: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 100px white;
+  border-radius: 50%;
+  animation: foot 2s infinite;
+}
+@keyframes foot {
+  0% {
+    scale: 0.9;
+    box-shadow: 0 0 0 1px rgba(123, 123, 123, 0.1), inset 0 0 100px white;
+  }
+  50% {
+    scale: 1;
+    box-shadow: 0 0 0 7px rgba(123, 123, 123, 0.5), inset 0 0 100px white;
+  }
+  100% {
+    scale: 0.9;
+    box-shadow: 0 0 0 1px rgba(123, 123, 123, 0.2), inset 0 0 100px white;
+  }
+}
+
+#d {
+  height: 400px;
+}/*# sourceMappingURL=style.css.map */
