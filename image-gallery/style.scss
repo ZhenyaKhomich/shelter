@@ -104,16 +104,27 @@ body {
 
       .krest {
         position: absolute;
-        width: 60px;
+        width: 50px;
         right: 20px;
-        top: 10px
+        top: 10px;
+
+        &:hover {
+          cursor: pointer;
+          transform: rotate(180deg) scale(1.1);
+          transition: all 1s;
+        }
       }
+     
+        .modalImg {
+          border: 4px solid rgb(140, 140, 140);
+        }
+       
     }
     
-    .img {
-      height: 300px;
-      width: 200px;
-    }
+    // .img {
+    //   height: 300px;
+    //   width: 200px;
+    // }
 
   }
 
@@ -207,17 +218,35 @@ body {
       justify-content: center;
       gap: 20px 30px;
       align-items: center;
-      
+
+      .divError {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .textError {
+          font-size: 35px;
+          color: rgb(255, 1, 1);
+          font-weight: bold;
+          background-color: rgb(161, 161, 161);
+          width: 100%;
+          padding: 20px;
+          border-radius: 20px;
+        }
+      }
+
       img {
         border: 4px solid rgb(140, 140, 140);
+        border-radius: 10px;
         &:hover {
           cursor: pointer;
           transform: scale(1.1);
         }
       }
     }
-
   }
+
   .footer {
     max-width: 1280px;
     display: flex;
@@ -274,7 +303,3 @@ body {
     }
   }
 
-
-#d  {
-  height: 400px;
-}
