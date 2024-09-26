@@ -353,11 +353,13 @@ body {
 
       .imgLogo {
           width: 600px;
+          height: 70px;
       }
     }
 
     .inputArea {
-      margin-bottom: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       .searchArea {
         width: 460px;
       }
@@ -367,6 +369,7 @@ body {
 
 @media (max-width: 730px) {
   .header {
+    margin: 2vw auto;
     .logo {
       .fotic {
           width: 12vw;
