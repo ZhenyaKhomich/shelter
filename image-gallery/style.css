@@ -283,15 +283,20 @@ body {
   }
   .header .logo .imgLogo {
     width: 600px;
+    height: 70px;
   }
   .header .inputArea {
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .header .inputArea .searchArea {
     width: 460px;
   }
 }
 @media (max-width: 730px) {
+  .header {
+    margin: 2vw auto;
+  }
   .header .logo .fotic {
     width: 12vw;
     height: 11vw;
