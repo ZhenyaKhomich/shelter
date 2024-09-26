@@ -1,4 +1,5 @@
 const formSearch = document.querySelector(".formSearch");
+const body = document.querySelector("body");
 const searchArea = document.querySelector(".searchArea");
 const butSearch = document.querySelector(".butSearch");
 const butRemoveSearch = document.querySelector(".krestLup");
@@ -8,7 +9,6 @@ const modal = document.querySelector('.modal');
 const images = document.querySelector(".images");
 const imgs = document.querySelectorAll(".imgGen");
 const closeModal = document.querySelector(".krest");
-
 
 
 let ask = '';
@@ -30,8 +30,6 @@ window.addEventListener('DOMContentLoaded', function() {
 images.addEventListener('click', function () {
 
   if(event.target.classList == 'imgGen') {
-
-    
     let currentImg = event.target;
     let src = currentImg.src;
 
@@ -39,11 +37,10 @@ images.addEventListener('click', function () {
     img.classList.add('modalImg');
     img.src = src;
     img.alt = 'image';
-    img.setAttribute('width', 'auto');
-    img.setAttribute('height', 'auto');
     modal.prepend(img);
     wrap.style.display = '';
     wrapModal.style.display = '';
+    body.style.owerflow = 'hidden';
   }
 })
 
@@ -57,12 +54,11 @@ img.remove();
   
     wrap.style.display = 'none';
     wrapModal.style.display = 'none';
+    
   }
 })
 
 closeModal.addEventListener('click', function () {
-  // const img = wrapModal.querySelector('.imgGen')
-  
   wrap.style.display = 'none';
   wrapModal.style.display = 'none';
 })
@@ -76,6 +72,9 @@ formSearch.addEventListener('submit', function () {
       let divError = images.querySelector('.divError')
       divError.remove();
     } 
+    const imagesCont = document.querySelector('.images');
+    let photos = imagesCont.querySelectorAll('.imgGen');
+    photos.forEach((el) => el.remove());
     
     let divError = document.createElement('div');
     divError.classList.add('divError');
@@ -95,8 +94,6 @@ formSearch.addEventListener('keypress', function () {
 
 butRemoveSearch.addEventListener('click', function () {
   searchArea.value = '';
-  
-  console.log(1);
 })
 
   function searchPhoto (ask) {
@@ -104,10 +101,15 @@ butRemoveSearch.addEventListener('click', function () {
     .then((response) => response.json())
     .then((a)=> {
       if(a.total == 0) {
+        
+        const imagesCont = document.querySelector('.images');
+        let photos = imagesCont.querySelectorAll('.imgGen');
+        photos.forEach((el) => el.remove());
+
         if(images.contains(images.querySelector('.divError'))) {
           let divError = images.querySelector('.divError')
           divError.remove();
-      } 
+        } 
         let divError = document.createElement('div');
         divError.classList.add('divError');
         let error = document.createElement('p');
@@ -115,24 +117,31 @@ butRemoveSearch.addEventListener('click', function () {
         error.innerHTML = `The word "${ask}" was not found.<br>Please enter another word!`
         divError.append(error);
         images.append(divError);
-      } 
-      createPhoto(a.results)
+        console.log(111111);
+      } else {
+        createPhoto(a.results)
+      }
     },
-    (error) => {
-      if(images.contains(images.querySelector('.divError'))) {
-      let divError = images.querySelector('.divError')
-      divError.remove();
-  } 
-    let divError = document.createElement('div');
-    divError.classList.add('divError');
-    let err = document.createElement('p');
-    err.classList.add('textError')
-    err.innerHTML = `Превышен лимит запросов на сервер. Пожалуйста, попробуйте проверить работу позже (в демо-версии разрешено делать 50 запросов в час) Если у вас возникнут какие-либо вопросы, вы всегда можете написать мне в discord! Спасибо!<br>"${error}"`
-    divError.append(err);
-    images.append(divError);}
-    
+      (error) => {
+        if(images.contains(images.querySelector('.divError'))) {
+        let divError = images.querySelector('.divError')
+        divError.remove();
+        } 
+
+        const imagesCont = document.querySelector('.images');
+        let photos = imagesCont.querySelectorAll('.imgGen');
+        photos.forEach((el) => el.remove());
+
+
+        let divError = document.createElement('div');
+        divError.classList.add('divError');
+        let err = document.createElement('p');
+        err.classList.add('textError')
+        err.innerHTML = `Превышен лимит запросов на сервер. Пожалуйста, попробуйте проверить работу позже (в демо-версии разрешено делать 50 запросов в час) Если у вас возникнут какие-либо вопросы, вы всегда можете написать мне в discord! Спасибо!<br>"${error}"`
+        divError.append(err);
+        images.append(divError);
+      }
     )
-    
   }
 
   function createPhoto (obj) {
@@ -141,10 +150,11 @@ butRemoveSearch.addEventListener('click', function () {
       let divError = images.querySelector('.divError')
       divError.remove();
     } 
-    
+
     const imagesCont = document.querySelector('.images');
     let photos = imagesCont.querySelectorAll('.imgGen');
     photos.forEach((el) => el.remove());
+
 
     obj.forEach((el) => {
       let img = document.createElement('img');
@@ -152,15 +162,7 @@ butRemoveSearch.addEventListener('click', function () {
       img.classList.add('imgGen');
       img.alt = 'picture';
       img.setAttribute('title', 'Click on me');
-      // img.height = 220;
-      // img.width = 220;
       imagesCont.prepend(img);
     })
     ask = '';
   }
-
-
-
-
-  // если ввести  слово не нашлось, потом ищешь слово, то под картинками остается модальное окно - убрать
-  // убрать прокрутку когда модалка картинок 
