@@ -117,8 +117,8 @@ body {
      
         .modalImg {
           border: 4px solid rgb(140, 140, 140);
+          border-radius: 10px;
         }
-       
     }
     
     // .img {
@@ -143,7 +143,7 @@ body {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap:30px;
+      gap:10px;
 
       .fotic {
           width: 90px;
@@ -158,6 +158,9 @@ body {
 
     .inputArea {
       position: relative;
+      box-shadow: 0 0 10px 3px rgb(0, 0, 0);
+      border-radius: 15px;
+
       .searchArea {
         padding: 0 0 0 10px;
         width: 400px;
@@ -185,9 +188,11 @@ body {
 
           &:hover {
             transform: scale(1.1);
+            transition: all 0.4s;
           }
         }
       }
+
       .krestLup {
         position: absolute;
         width: 43px;
@@ -204,13 +209,16 @@ body {
           transition: all 1s;
         }
       }
-
     }
   }
 
   .main {
     max-width: 1280px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96vw;
+    margin: 0 auto;
   
     .images {
       display: flex;
@@ -227,9 +235,13 @@ body {
 
         .textError {
           font-size: 35px;
-          color: rgb(255, 1, 1);
+          color: rgb(0, 0, 0);
           font-weight: bold;
-          background-color: rgb(161, 161, 161);
+          background: url(assets/err.jpg);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          text-shadow: 0 0 6px white;
+          // background-color: rgb(161, 161, 161);
           width: 100%;
           padding: 20px;
           border-radius: 20px;
@@ -239,6 +251,11 @@ body {
       img {
         border: 4px solid rgb(140, 140, 140);
         border-radius: 10px;
+        box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+        transition: all 0.5s;
+        width: 220px;
+        height: 220px;
+
         &:hover {
           cursor: pointer;
           transform: scale(1.1);
@@ -303,3 +320,128 @@ body {
     }
   }
 
+@media (max-width: 1170px) {
+  .header {
+    .logo {
+      .fotic {
+          width: 80px;
+          height: 70px;
+      }
+
+      .imgLogo {
+          width: 49vw;
+      }
+    }
+
+    .inputArea {
+      
+      .searchArea {
+        width: 34vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    
+    .logo {
+      .fotic {
+          width: 90px;
+          height: 80px;
+      }
+
+      .imgLogo {
+          width: 600px;
+      }
+    }
+
+    .inputArea {
+      margin-bottom: 15px;
+      .searchArea {
+        width: 460px;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .header {
+    .logo {
+      .fotic {
+          width: 12vw;
+          height: 11vw;
+      }
+
+      .imgLogo {
+          width: 75vw;
+      }
+    }
+
+    .inputArea {
+      .searchArea {
+        width: 80vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) {
+
+  .container {
+    min-height: 100svh;
+  }
+
+  .header {
+    .inputArea {
+      .searchArea {
+        height: 40px;
+      }
+
+      button {
+        top: 3px;
+        right: 3px;
+        width: 45px;
+        height: 35px;
+
+        .lupa {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      .krestLup {
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        right: 47px;
+        top: 3.3px;
+      }
+    }
+  }
+
+  .main {
+    .images {
+      gap: 15px 20px;
+
+      img {
+        width: 40vw;
+        height: 40vw;
+      }
+    
+      .divError {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .textError {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function() {
   wrapModal.style.display = 'none';
 
   function searchPhotoLoad () {
-    let k = fetch (`https://api.unsplash.com/photos/random?count=6&client_id=n_tIVduhSi3wQx58WdnfrXOF1zw-0wOzcoYCIQDSN58`) 
+    let k = fetch (`https://api.unsplash.com/photos/random?count=10&client_id=n_tIVduhSi3wQx58WdnfrXOF1zw-0wOzcoYCIQDSN58`) 
     .then((response) => response.json())
     .then((photos)=> createPhoto(photos));
   }
@@ -28,8 +28,10 @@ window.addEventListener('DOMContentLoaded', function() {
 })
 
 images.addEventListener('click', function () {
- 
+
   if(event.target.classList == 'imgGen') {
+
+    
     let currentImg = event.target;
     let src = currentImg.src;
 
@@ -134,7 +136,12 @@ butRemoveSearch.addEventListener('click', function () {
   }
 
   function createPhoto (obj) {
- 
+
+    if(images.contains(images.querySelector('.divError'))) {
+      let divError = images.querySelector('.divError')
+      divError.remove();
+    } 
+    
     const imagesCont = document.querySelector('.images');
     let photos = imagesCont.querySelectorAll('.imgGen');
     photos.forEach((el) => el.remove());
@@ -144,10 +151,16 @@ butRemoveSearch.addEventListener('click', function () {
       img.src = el.urls.small
       img.classList.add('imgGen');
       img.alt = 'picture';
-      img.setAttribute('title', 'Click to me');
-      img.height = 340;
-      img.width = 340;
+      img.setAttribute('title', 'Click on me');
+      // img.height = 220;
+      // img.width = 220;
       imagesCont.prepend(img);
     })
     ask = '';
   }
+
+
+
+
+  // если ввести  слово не нашлось, потом ищешь слово, то под картинками остается модальное окно - убрать
+  // убрать прокрутку когда модалка картинок 
