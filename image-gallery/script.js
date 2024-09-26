@@ -1,5 +1,4 @@
 const formSearch = document.querySelector(".formSearch");
-const body = document.querySelector("body");
 const searchArea = document.querySelector(".searchArea");
 const butSearch = document.querySelector(".butSearch");
 const butRemoveSearch = document.querySelector(".krestLup");
@@ -40,7 +39,7 @@ images.addEventListener('click', function () {
     modal.prepend(img);
     wrap.style.display = '';
     wrapModal.style.display = '';
-    body.style.owerflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   }
 })
 
@@ -54,13 +53,14 @@ img.remove();
   
     wrap.style.display = 'none';
     wrapModal.style.display = 'none';
-    
+    document.body.style.overflow = '';
   }
 })
 
 closeModal.addEventListener('click', function () {
   wrap.style.display = 'none';
   wrapModal.style.display = 'none';
+  document.body.style.overflow = '';
 })
 
 
