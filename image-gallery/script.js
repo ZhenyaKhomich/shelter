@@ -13,7 +13,6 @@ const closeModal = document.querySelector(".krest");
 let ask = '';
 
 window.addEventListener('DOMContentLoaded', function() {
-  console.log(wrap);
   wrap.style.display = 'none';
   wrapModal.style.display = 'none';
 
