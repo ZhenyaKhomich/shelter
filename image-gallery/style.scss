@@ -1,5 +1,14 @@
 @media(hover:hover) {
 
+  .modal {
+    .krest {
+      &:hover {
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: all 1s;
+      }
+    }
+  }
   .header {
     .inputArea {
       button {
