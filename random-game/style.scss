@@ -50,10 +50,6 @@
   }
 }
 
-body {
-  
-}
-
 body{
   height: 100vh;
   background: url(assets/image/fone3.jpg);
@@ -71,22 +67,101 @@ body{
   height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
+
+  .darkModal {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(123, 123, 123, 0.5);
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .wrapModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(assets/image/mod.jpg);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    border: 1px solid red;
+    box-shadow: 0 0 10px 2px red;
+    border-radius: 20px;
+    width: 300px;
+    min-height: 410px;
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+    
+    .modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      
+
+      .smile {
+        width: 200px;
+        height: 220px;
+      }
+      .text {
+        color: white;
+        font-size: 35px;
+        text-align: center;
+        font-weight: 700;
+      }
+      .butAgain, .butEnd {
+        background-color: rgb(206, 208, 208);
+        width: 150px;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        box-shadow: 0 0 10px 2px red;
+      }
+    }
+  }
+
+  
   
 
   .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+
     .logo {
       height: 100px;
       width: 600px;
     }
-    .log {
-      width: 100px;
-      border-radius: 50px;
-      background-color: aqua;
-    }
-
   }
   .main {
+    .wrapMain {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1280px;
+      img {
+        width: 100px;
+        border-radius: 10px;
+        border: 2px solid rgb(237, 86, 86);
+        box-shadow: 0 0 5px 5px rgb(148, 146, 146);
 
+        &:hover {
+          cursor: pointer;
+          border: 2px solid rgb(151, 251, 57);
+          transform: scale(1.1);
+          transition: all 0.7s;
+        }
+      }
+    }
   }
 
   .footer {
@@ -94,7 +169,7 @@ body{
     display: flex;
     width: 96vw;
     align-items: center;
-    z-index: 10;
+    z-index: 1;
     bottom: 5px;
     justify-content: space-between;
     margin: 15px 0 5px 0;
@@ -144,3 +219,5 @@ body{
     }
   }
 }
+
+
