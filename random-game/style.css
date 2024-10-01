@@ -113,10 +113,93 @@ body {
   align-items: center;
   justify-content: center;
   width: 90vw;
+  position: relative;
 }
 .container .header .logo {
   height: 100px;
   width: 600px;
+}
+.container .header .userName {
+  position: absolute;
+  right: 60px;
+}
+.container .header .userName input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 300px;
+  height: 40px;
+  text-align: start;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 0 0 10px 2px red;
+  padding: 0 0 0 10px;
+}
+.container .header .userName .no {
+  width: 40px;
+  position: absolute;
+  top: 4px;
+  right: 50px;
+  width: 35px;
+  background-color: white;
+  border-radius: 5px;
+}
+.container .header .userName .submitName {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: 4px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+}
+.container .header .userName .submitName .yes {
+  width: 35px;
+  background-color: white;
+  border-radius: 5px;
+}
+.container .main {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .results {
+  display: flex;
+  gap: 5vw;
+  margin-top: 0px;
+}
+.container .main .results .score, .container .main .results .step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(206, 208, 208);
+  width: 150px;
+  height: 40px;
+  text-align: start;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  box-shadow: 0 0 10px 2px red;
+}
+.container .main .results .butRestart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(206, 208, 208);
+  width: 150px;
+  height: 40px;
+  text-align: start;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  box-shadow: 0 0 10px 2px red;
+  gap: 5px;
+}
+.container .main .results .butRestart .imgRestart {
+  width: 35px;
 }
 .container .main .wrapMain {
   display: flex;
@@ -124,10 +207,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  max-width: 1280px;
+  width: 70vw;
+  margin-top: 40px;
 }
 .container .main .wrapMain img {
-  width: 100px;
+  width: 127px;
+  height: 127px;
   border-radius: 10px;
   border: 2px solid rgb(237, 86, 86);
   box-shadow: 0 0 5px 5px rgb(148, 146, 146);

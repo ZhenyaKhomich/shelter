@@ -134,22 +134,119 @@ body{
     align-items: center;
     justify-content: center;
     width: 90vw;
+    position: relative;
 
     .logo {
       height: 100px;
       width: 600px;
     }
+
+    .userName {
+      position: absolute;
+      right: 60px;
+      input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 300px;
+        height: 40px;
+        text-align: start;
+        border-radius: 20px;
+        font-size: 20px;
+        box-shadow: 0 0 10px 2px red;
+        padding: 0 0 0 10px;
+        
+      }
+
+      .no {
+        width: 40px;
+        position: absolute;
+        top: 4px;
+        right: 50px;
+        width: 35px;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .submitName {
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        top: 4px;
+        right: 20px;
+        border: none;
+        border-radius: 50%;
+        
+        .yes {
+          width: 35px;
+          background-color: white;
+          border-radius: 5px;
+        }
+      }
+    }
   }
   .main {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    .results {
+      display: flex;
+      gap: 5vw;
+      margin-top: 0px;
+
+      .score, .step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(206, 208, 208);
+        width: 150px;
+        height: 40px;
+        text-align: start;
+        border-radius: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        box-shadow: 0 0 10px 2px red;
+      }
+
+      .butRestart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(206, 208, 208);
+        width: 150px;
+        height: 40px;
+        text-align: start;
+        border-radius: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        box-shadow: 0 0 10px 2px red;
+        gap:5px;
+
+        .imgRestart {
+          width: 35px;
+        }
+      }
+
+      
+    }
+
     .wrapMain {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 20px;
-      max-width: 1280px;
+      width: 70vw;
+      margin-top: 40px;
+
       img {
-        width: 100px;
+        width: 127px;
+        height: 127px;
         border-radius: 10px;
         border: 2px solid rgb(237, 86, 86);
         box-shadow: 0 0 5px 5px rgb(148, 146, 146);
