@@ -216,12 +216,12 @@ body {
   border-radius: 10px;
   border: 2px solid rgb(237, 86, 86);
   box-shadow: 0 0 5px 5px rgb(148, 146, 146);
+  transition: all 1s;
 }
 .container .main .wrapMain img:hover {
   cursor: pointer;
   border: 2px solid rgb(151, 251, 57);
   transform: scale(1.1);
-  transition: all 0.7s;
 }
 .container .footer {
   max-width: 1280px;
