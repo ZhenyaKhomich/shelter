@@ -69,6 +69,49 @@ body{
   margin: 0 auto;
   position: relative;
 
+  .storyList {
+    background: url(assets/image/fone1.jpg);
+    background-position: 0;
+    background-repeat: no-repeat;
+    display: flex;
+    text-align: center;
+    background-color: white;
+    min-width: 100px;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+    box-shadow: 0 0 10px 2px red;
+    
+    summary {
+      font-size: 20px;
+      font-weight: 700;
+      user-select: none;
+    }
+
+
+    .story {
+      border: 1px solid red;
+      text-align: center;
+      min-width: 120px;
+      border-radius: 5px;
+      margin-bottom: 5px; 
+
+      .thead {
+        background-color: rgb(172, 172, 172);
+        font-weight: bold;
+      }
+      
+      tr {
+        td {
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+
   .darkModal {
     position: absolute;
     z-index: 2;
@@ -114,6 +157,11 @@ body{
         text-align: center;
         font-weight: 700;
       }
+
+      .res {
+        color: white;
+        font-size: 25px;
+      }
       .butAgain, .butEnd {
         background-color: rgb(206, 208, 208);
         width: 150px;
@@ -122,6 +170,85 @@ body{
         font-size: 20px;
         font-weight: 700;
         box-shadow: 0 0 10px 2px red;
+      }
+    }
+  }
+
+  .userNameModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(assets/image/mod.jpg);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 100% 100%;
+    border: 1px solid red;
+    box-shadow: 0 0 10px 2px red;
+    border-radius: 20px;
+    width: 350px;
+    min-height: 410px;
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+
+    .welcome {
+      margin-top: 40px;
+      width: 300px;
+      height: 240px;
+      filter: drop-shadow( 2px 2px 5px white);
+    }
+    .userName {
+      position: absolute;
+      bottom: 80px;
+      right: 70px;
+
+      input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 210px;
+        height: 40px;
+        text-align: start;
+        border-radius: 20px;
+        font-size: 20px;
+        box-shadow: 0 0 10px 2px red;
+        padding: 0 0 0 10px;
+      }
+
+      .removeText {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 60px;
+        left: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+
+        .no {
+          width: 40px;
+          top: 4px;
+          right: 0px;
+          width: 35px;
+          margin: -3px 0 0 -8px;
+        }
+      }
+
+      .submitName {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 60px;
+        right: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+        
+        .yes {
+          width: 35px;
+          margin: -3px 0 0 -8px;
+        }
       }
     }
   }
@@ -139,51 +266,6 @@ body{
     .logo {
       height: 100px;
       width: 600px;
-    }
-
-    .userName {
-      position: absolute;
-      right: 60px;
-      input {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        width: 300px;
-        height: 40px;
-        text-align: start;
-        border-radius: 20px;
-        font-size: 20px;
-        box-shadow: 0 0 10px 2px red;
-        padding: 0 0 0 10px;
-        
-      }
-
-      .no {
-        width: 40px;
-        position: absolute;
-        top: 4px;
-        right: 50px;
-        width: 35px;
-        background-color: white;
-        border-radius: 5px;
-      }
-
-      .submitName {
-        position: absolute;
-        width: 30px;
-        height: 20px;
-        top: 4px;
-        right: 20px;
-        border: none;
-        border-radius: 50%;
-        
-        .yes {
-          width: 35px;
-          background-color: white;
-          border-radius: 5px;
-        }
-      }
     }
   }
   .main {
@@ -230,6 +312,11 @@ body{
         .imgRestart {
           width: 35px;
         }
+
+        .imgPlay {
+          width: 40px;
+            padding: 0 10px 0 0;
+        }
       } 
     }
 
@@ -248,7 +335,7 @@ body{
         border-radius: 10px;
         border: 2px solid rgb(237, 86, 86);
         box-shadow: 0 0 5px 5px rgb(148, 146, 146);
-        transition: all 1s;
+        transition: all 0.5s;
 
         &:hover {
           cursor: pointer;
