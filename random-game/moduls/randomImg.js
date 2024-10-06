@@ -93,7 +93,6 @@ export function randomArrays (arr) {
 
   let arrImg = arrayImg.concat(firstArray, secondArray);
   return arrImg;
-  // createImg(arrImg);
 }
 
 export function createImg (arr) {
@@ -101,6 +100,7 @@ export function createImg (arr) {
   for(let i = 0; i < 18; i++) {
     let img = document.createElement('img');
     img.classList.add('cartFone');
+    img.classList.add('disabl');
     img.alt = 'image';
     img.src = `${arr[i].img}`;
     img.setAttribute('num', `${i}`);
