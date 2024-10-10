@@ -10,7 +10,7 @@ let result = [
     }
 ]
 
-export function winLose (i, score) {
+export function winLose (i, score, stepCount) {
     const wrapModal = document.querySelector('.wrapModal');
 
     let modal = document.createElement('div');
@@ -24,21 +24,27 @@ export function winLose (i, score) {
     text.classList.add('text');
     text.innerHTML = result[i].text;
 
+    let moves = document.createElement('div');
+    moves.classList.add('res');
+    moves.innerHTML = `Your moves: ${15 - stepCount}`;
+
     let res = document.createElement('div');
     res.classList.add('res');
     res.innerHTML = `Your score: ${score}`;
 
     let butAgain = document.createElement('div');
     butAgain.classList.add('butAgain');
-    butAgain.innerHTML = 'Try Again';
+    butAgain.innerHTML = 'Restart';
 
     let butEnd = document.createElement('div');
-    butEnd.classList.add('butAgain');
-    butEnd.innerHTML = 'Finish';
+    butEnd.classList.add('butEnd');
+    butEnd.innerHTML = 'New game';
     
+
 
     modal.append(img);
     modal.append(text);
+    modal.append(moves);
     modal.append(res);
     modal.append(butAgain);
     modal.append(butEnd);

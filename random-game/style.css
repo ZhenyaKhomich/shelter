@@ -1,42 +1,3 @@
-@media (hover: hover) {
-  .footer .rs svg:hover {
-    animation: foo 2s infinite;
-  }
-  .footer .rs svg:hover .letter {
-    fill: rgb(49, 179, 6);
-  }
-  @keyframes foo {
-    0% {
-      scale: 0.9;
-      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-    }
-    50% {
-      scale: 1;
-      box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
-    }
-    100% {
-      scale: 0.9;
-      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-    }
-  }
-  .footer .git svg:hover {
-    animation: foo 2s infinite;
-  }
-  @keyframes foo {
-    0% {
-      scale: 0.9;
-      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-    }
-    50% {
-      scale: 1;
-      box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
-    }
-    100% {
-      scale: 0.9;
-      box-shadow: 0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-    }
-  }
-}
 body {
   height: 100vh;
   background: url(assets/image/fone3.jpg);
@@ -55,6 +16,9 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .container .storyList {
   background: url(assets/image/fone1.jpg);
@@ -63,11 +27,11 @@ body {
   display: flex;
   text-align: center;
   background-color: white;
-  min-width: 100px;
+  min-width: 60px;
   border-radius: 10px;
-  padding: 0 5px 0 5px;
+  padding: 0 7px 0 5px;
   position: absolute;
-  right: 20px;
+  left: 20px;
   top: 20px;
   z-index: 1;
   box-shadow: 0 0 10px 2px red;
@@ -78,6 +42,13 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+.container .storyList summary:hover {
+  cursor: pointer;
+  min-width: 60px;
+  border-radius: 10px;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 5px rgb(55, 253, 0);
 }
 .container .storyList .story {
   border: 1px solid red;
@@ -91,7 +62,38 @@ body {
   font-weight: bold;
 }
 .container .storyList .story tr td {
+  padding: 1px 3px;
   border: 1px solid red;
+}
+.container .user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  text-align: center;
+  z-index: 1;
+}
+.container .user img {
+  width: 45px;
+  filter: drop-shadow(0 0 5px rgb(255, 0, 0));
+}
+.container .user img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 5px rgb(102, 255, 0));
+}
+.container .user .use {
+  max-width: 90px;
+  color: beige;
+  word-wrap: break-word;
+  letter-spacing: 1px;
+  font-size: 15px;
+  overflow: hidden;
+  padding: 5px 0 0 0;
+  text-shadow: 0 0 5px black;
 }
 .container .darkModal {
   position: absolute;
@@ -149,6 +151,11 @@ body {
   font-weight: 700;
   box-shadow: 0 0 10px 2px red;
 }
+.container .wrapModal .modal .butAgain:hover, .container .wrapModal .modal .butEnd:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+}
 .container .userNameModal {
   display: flex;
   flex-direction: column;
@@ -190,6 +197,9 @@ body {
   box-shadow: 0 0 10px 2px red;
   padding: 0 0 0 10px;
 }
+.container .userNameModal .userName .noInput {
+  box-shadow: 0 0 10px 2px rgb(81, 254, 1);
+}
 .container .userNameModal .userName .removeText {
   position: absolute;
   width: 30px;
@@ -207,6 +217,11 @@ body {
   width: 35px;
   margin: -3px 0 0 -8px;
 }
+.container .userNameModal .userName .removeText .no:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 7px rgb(249, 3, 3));
+}
 .container .userNameModal .userName .submitName {
   position: absolute;
   width: 30px;
@@ -220,6 +235,11 @@ body {
 .container .userNameModal .userName .submitName .yes {
   width: 35px;
   margin: -3px 0 0 -8px;
+}
+.container .userNameModal .userName .submitName .yes:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 7px rgb(65, 249, 3));
 }
 .container .header {
   display: flex;
@@ -253,11 +273,11 @@ body {
   height: 40px;
   text-align: start;
   border-radius: 20px;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 700;
   box-shadow: 0 0 10px 2px red;
 }
-.container .main .results .butRestart, .container .main .results .butPlay, .container .main .results .butStop {
+.container .main .results .butRestart {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,22 +287,48 @@ body {
   font-family: "Times New Roman", Times, serif;
   text-align: start;
   border-radius: 20px;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 700;
   box-shadow: 0 0 10px 2px red;
   gap: 5px;
   border: none;
 }
-.container .main .results .butRestart .imgRestart, .container .main .results .butPlay .imgRestart, .container .main .results .butStop .imgRestart {
+.container .main .results .butRestart .imgRestart {
   width: 35px;
 }
-.container .main .results .butRestart .imgPlay, .container .main .results .butRestart .imgStop, .container .main .results .butPlay .imgPlay, .container .main .results .butPlay .imgStop, .container .main .results .butStop .imgPlay, .container .main .results .butStop .imgStop {
+.container .main .results .resActive:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+}
+.container .main .results .butPlay, .container .main .results .butStop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(206, 208, 208);
+  width: 150px;
+  height: 40px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: start;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 0 10px 2px red;
+  gap: 5px;
+  border: none;
+}
+.container .main .results .butPlay:hover, .container .main .results .butStop:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+}
+.container .main .results .butPlay .imgPlay, .container .main .results .butPlay .imgStop, .container .main .results .butStop .imgPlay, .container .main .results .butStop .imgStop {
   width: 40px;
   padding: 0 10px 0 0;
 }
-.container .main .results .butRestart .imgStop, .container .main .results .butPlay .imgStop, .container .main .results .butStop .imgStop {
+.container .main .results .butPlay .imgStop, .container .main .results .butStop .imgStop {
   width: 35px;
-  padding: 0 10px 0 0;
+  padding: 0 0px 0 0;
 }
 .container .main .results .disabl {
   box-shadow: 0 0 10px 2px rgb(219, 213, 213);
@@ -314,7 +360,7 @@ body {
   border: 2px solid rgb(151, 251, 57);
   transform: scale(1.1);
 }
-.container .main .wrapMain .disabl {
+.container .main .wrapMain .disabl-cart {
   width: 127px;
   height: 127px;
   border-radius: 10px;
@@ -323,7 +369,7 @@ body {
   transition: all 0.5s;
   color: rgb(173, 170, 170);
 }
-.container .main .wrapMain .disabl:hover {
+.container .main .wrapMain .disabl-cart:hover {
   cursor: not-allowed;
   border: 2px solid rgb(250, 6, 6);
 }
@@ -344,6 +390,12 @@ body {
   border-radius: 50%;
   animation: foot 2s infinite;
 }
+.container .footer .rs svg:hover {
+  animation: foo 2s infinite;
+}
+.container .footer .rs svg:hover .letter {
+  fill: rgb(72, 150, 55);
+}
 .container .footer .year {
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 5px black;
@@ -360,10 +412,13 @@ body {
   border-radius: 50%;
   animation: foot 2s infinite;
 }
+.container .footer .git svg:hover {
+  animation: foo 2s infinite;
+}
 @keyframes foot {
   0% {
     scale: 0.9;
-    box-shadow: 0 0 0 1px rgba(123, 123, 123, 0.1), inset 0 0 100px white;
+    box-shadow: 0 0 0 1px rgb(235, 7, 7), inset 0 0 100px white;
   }
   50% {
     scale: 1;
@@ -371,6 +426,20 @@ body {
   }
   100% {
     scale: 0.9;
-    box-shadow: 0 0 0 1px rgba(123, 123, 123, 0.2), inset 0 0 100px white;
+    box-shadow: 0 0 0 1px rgba(191, 4, 4, 0.2), inset 0 0 100px white;
+  }
+}
+@keyframes foo {
+  0% {
+    scale: 0.9;
+    box-shadow: 0 0 0 1px rgb(136, 139, 136), inset 0 0 100px rgb(72, 150, 55);
+  }
+  50% {
+    scale: 1;
+    box-shadow: 0 0 0 7px green, inset 0 0 100px rgb(72, 150, 55);
+  }
+  100% {
+    scale: 0.9;
+    box-shadow: 0 0 0 1px rgb(136, 136, 136), inset 0 0 100px rgb(72, 150, 55);
   }
 }/*# sourceMappingURL=style.css.map */
