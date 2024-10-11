@@ -1,58 +1,136 @@
-// @media(hover:hover) {
-//   .footer {
-//     .rs {
-//       svg {
-//         &:hover {
-//           animation: foooo 2s infinite;
-//           .letter {
-//             fill:rgb(49, 179, 6)
-//           }
-//         }
-//       }
-//     }
-//     .git {
-//       svg {
-//         &:hover {
-//           animation: foooo 2s infinite;
-//           @keyframes foo {
-//             0% {
-//               scale: (0.9);
-//               box-shadow:  0 0 0 1px green, inset 0 0 100px rgb(22, 22, 22);
-      
-//             }
-//             50% {
-//               scale: (1);
-//               box-shadow:  0 0 0 7px green, inset 0 0 100px rgb(34, 34, 34);
-//             }
-//             100% {
-//               scale: (0.9);
-//               box-shadow:  0 0 0 1px green, inset 0 0 100px rgb(0, 0, 0);
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @keyframes foooo {
-//   0% {
-//     scale: (0.9);
-//     box-shadow:  0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-
-//   }
-//   50% {
-//     scale: (1);
-//     box-shadow:  0 0 0 7px green, inset 0 0 100px rgb(49, 179, 6);
-//   }
-//   100% {
-//     scale: (0.9);
-//     box-shadow:  0 0 0 1px green, inset 0 0 100px rgb(49, 179, 6);
-//   }
-// }
+@media(hover:hover) {
+  .container {
+    .storyList {
+      summary {
+        &:hover {
+          cursor: pointer;
+          min-width: 60px;
+          border-radius: 10px;
+          transform: scale(1.05);
+          box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+        }
+      }
+    }
+    .user {
+      img {
+        &:hover {
+          cursor: pointer;
+          filter: drop-shadow(0 0  5px rgb(102, 255, 0));
+        }
+      }
+    }
+  
+    .wrapModal {
+      .modal {
+        .butAgain, .butEnd {
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+          }
+        }
+      }
+    }
+  
+    .userNameModal {
+      .userName {
+        .removeText {
+          .no {
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.05);
+              filter: drop-shadow(0 0  7px rgb(249, 3, 3)) ;
+            }
+          }
+        }
+  
+        .submitName {
+          .yes {
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.05);
+              filter: drop-shadow(0 0  7px rgb(65, 249, 3)) ;
+            }
+          }
+        }
+      }
+    }
+  
+    .main {
+      .results {
+        .resActive {
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+          }
+        }
+  
+        .butPlay {
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+          }
+        } 
+  
+        .butStop {
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px 5px rgb(55, 253, 0);
+          }
+        }
+  
+        .disabl {
+          &:hover {
+            cursor:not-allowed;
+          }
+        }
+      }
+  
+      .wrapMain {
+        .cartFone {
+          &:hover {
+            cursor: pointer;
+            border: 2px solid rgb(151, 251, 57);
+            transform: scale(1.1);
+          }
+        }
+  
+        .disabl-cart {
+          &:hover {
+            cursor:not-allowed;
+            border: 2px solid rgb(250, 6, 6);
+          }
+        }
+      }
+    }
+  
+    .footer {
+      .rs {
+        svg {
+          &:hover {
+            .letter {
+              fill: rgb(72, 150, 55);
+            }
+            animation: foo 2s infinite;
+          }
+        }
+      }
+  
+      .git {
+        svg {
+          &:hover {
+            animation: foo 2s infinite;
+          }
+        }
+      }
+    }
+  }
+}
 
 body{
-  height: 100vh;
   background: url(assets/image/fone3.jpg);
   background-repeat: no-repeat;
   background-position: 0;
@@ -65,14 +143,12 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100svh;
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
   user-select: none;
 
-  
-  
   .storyList {
     background: url(assets/image/fone1.jpg);
     background-position: 0;
@@ -89,20 +165,10 @@ body{
     z-index: 1;
     box-shadow: 0 0 10px 2px red;
 
-    
-    
     summary {
       font-size: 20px;
       font-weight: 700;
       user-select: none;
-
-      &:hover {
-        cursor: pointer;
-        min-width: 60px;
-        border-radius: 10px;
-        transform: scale(1.05);
-        box-shadow: 0 0 10px 5px rgb(55, 253, 0);
-      }
     }
 
     .story {
@@ -112,7 +178,6 @@ body{
       border-radius: 5px;
       margin-bottom: 5px; 
       
-
       .thead {
         background-color: rgb(172, 172, 172);
         font-weight: bold;
@@ -135,18 +200,13 @@ body{
     max-width: 100px;
     position: absolute;
     right: 15px;
-    top: 10px;
+    top: 16px;
     text-align: center;
     z-index: 1;
 
     img {
       width: 45px;
       filter: drop-shadow(0 0  5px rgb(255, 0, 0));
-
-      &:hover {
-        cursor: pointer;
-        filter: drop-shadow(0 0  5px rgb(102, 255, 0));
-      }
     }
 
     .use {
@@ -160,8 +220,6 @@ body{
       text-shadow: 0 0 5px black;
     }
   }
-
-  
 
   .darkModal {
     position: absolute;
@@ -197,7 +255,6 @@ body{
       padding-bottom: 20px;
       padding-top: 20px;
       
-
       .smile {
         width: 200px;
         height: 220px;
@@ -222,12 +279,6 @@ body{
         font-size: 20px;
         font-weight: 700;
         box-shadow: 0 0 10px 2px red;
-
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.05);
-          box-shadow: 0 0 10px 5px rgb(55, 253, 0);
-        }
       }
     }
   }
@@ -255,6 +306,7 @@ body{
       height: 240px;
       filter: drop-shadow( 2px 2px 5px white);
     }
+
     .userName {
       position: absolute;
       bottom: 80px;
@@ -294,12 +346,6 @@ body{
           right: 0px;
           width: 35px;
           margin: -3px 0 0 -8px;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.05);
-            filter: drop-shadow(0 0  7px rgb(249, 3, 3)) ;
-          }
         }
       }
 
@@ -316,19 +362,10 @@ body{
         .yes {
           width: 35px;
           margin: -3px 0 0 -8px;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.05);
-            filter: drop-shadow(0 0  7px rgb(65, 249, 3)) ;
-          }
         }
       }
     }
   }
-
-  
-  
 
   .header {
     display: flex;
@@ -336,32 +373,35 @@ body{
     justify-content: center;
     width: 90vw;
     position: relative;
+    padding: 10px 0 0 0;
 
     .logo {
       height: 100px;
       width: 600px;
     }
   }
+
   .main {
+    display: flex;
     max-width: 1280px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     
-
     .results {
       display: flex;
       gap: 5vw;
-      margin-top: 0px;
+      margin-top: 20px;
 
       .score, .step {
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(206, 208, 208);
-        width: 150px;
-        height: 40px;
+        width: 120px;
+        height: 30px;
         text-align: start;
         border-radius: 20px;
         font-size: 23px;
@@ -374,76 +414,70 @@ body{
         align-items: center;
         justify-content: center;
         background-color: rgb(206, 208, 208);
-        width: 150px;
-        height: 40px;
+        width: 120px;
+        height: 30px;
         font-family: 'Times New Roman', Times, serif;
         text-align: start;
         border-radius: 20px;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
         box-shadow: 0 0 10px 2px red;
         gap:5px;
         border: none;
 
         .imgRestart {
-          width: 35px;
+          width: 25px;
         }
       }
 
-      .resActive {
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.05);
-          box-shadow: 0 0 10px 5px rgb(55, 253, 0);
-        }
-      }
-
-      
-       
-
-      .butPlay, .butStop {
+      .butPlay {
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(206, 208, 208);
-        width: 150px;
-        height: 40px;
+        width: 120px;
+        height: 30px;
         font-family: 'Times New Roman', Times, serif;
         text-align: start;
         border-radius: 20px;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
         box-shadow: 0 0 10px 2px red;
         gap:5px;
         border: none;
 
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.05);
-          box-shadow: 0 0 10px 5px rgb(55, 253, 0);
-        }
-
-       
-
-        .imgPlay, .imgStop {
-          width: 40px;
+        .imgPlay {
+          width: 30px;
           padding: 0 10px 0 0;
         }
+      } 
+
+      .butStop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(206, 208, 208);
+        width: 120px;
+        height: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: start;
+        border-radius: 20px;
+        font-size: 17px;
+        font-weight: 700;
+        box-shadow: 0 0 10px 2px red;
+        gap:5px;
+        border: none;
 
         .imgStop {
-          width: 35px;
+          width: 25px;
           padding: 0 0px 0 0;
         } 
-      } 
+      }
 
       .disabl {
         box-shadow: 0 0 10px 2px rgb(219, 213, 213);
         background: url(assets/image/fone3.jpg);
         color: rgb(173, 170, 170);
-
-        &:hover {
-          cursor:not-allowed;
-        }
       }
     }
 
@@ -453,37 +487,26 @@ body{
       align-items: center;
       justify-content: center;
       gap: 20px;
-      width: 70vw;
-      margin-top: 40px;
+      max-width: 990px;
+      margin-top: 2.8vw;
 
       .cartFone {
-        width: 127px;
-        height: 127px;
+        width: 122px;
+        height: 122px;
         border-radius: 10px;
         border: 2px solid rgb(237, 86, 86);
         box-shadow: 0 0 5px 5px rgb(148, 146, 146);
         transition: all 0.5s;
-
-        &:hover {
-          cursor: pointer;
-          border: 2px solid rgb(151, 251, 57);
-          transform: scale(1.1);
-        }
       }
 
       .disabl-cart {
-        width: 127px;
-        height: 127px;
+        width: 122px;
+        height: 122px;
         border-radius: 10px;
         border: 2px solid rgb(140, 142, 143);
         box-shadow: 0 0 5px 5px rgb(35, 33, 33);
         transition: all 0.5s;
         color: rgb(173, 170, 170);
-
-        &:hover {
-          cursor:not-allowed;
-          border: 2px solid rgb(250, 6, 6);
-        }
       }
     }
   }
@@ -505,13 +528,6 @@ body{
         box-shadow: inset 0 0 100px white;
         border-radius: 50%;
         animation: foot 2s infinite;
-
-        &:hover {
-          .letter {
-            fill: rgb(72, 150, 55);
-          }
-          animation: foo 2s infinite;
-        }
       }
     }
 
@@ -530,10 +546,6 @@ body{
         box-shadow: inset 0 0 100px white;
         border-radius: 50%;
         animation: foot 2s infinite;
-
-        &:hover {
-          animation: foo 2s infinite;
-        }
       }
     }
 
@@ -557,7 +569,6 @@ body{
       0% {
         scale: (0.9);
         box-shadow:  0 0 0 1px rgb(136, 139, 136), inset 0 0 100px rgb(72, 150, 55);
-
       }
       50% {
         scale: (1);
@@ -568,10 +579,404 @@ body{
         box-shadow:  0 0 0 1px rgb(136, 136, 136), inset 0 0 100px rgb(72, 150, 55);
       }
     }
+  }
+}
 
+@media(max-width: 950px) {
+  .container {
+    .header {
+      width: 70vw;
+    }
+
+    .main {
+      min-height: 55vw;
+      .wrapMain {
+        max-width: 85vw;
+        gap: 4vw 2vw;
+        margin-top: 2.8vw;
+  
+        .cartFone {
+          width: 12vw;
+          height: 12vw;
+        }
+  
+        .disabl-cart {
+          width: 12vw;
+          height: 12vw;
+        }
+      }
+    }
   }
 }
 
 
+@media(max-width: 700px) {
+  .container {
+    .header {
+      width: 60vw;
+      .logo {
+        height: 14vw;
+        width: 600px;
+      }
+    }
+  
+    .main {
+      min-height: 65vw;
+      .wrapMain {
+        max-width: 77vw;
+        gap: 2vw 2vw;
+        margin-top: 2.8vw;
+  
+        .cartFone {
+          width: 13vw;
+          height: 13vw;
+        }
+  
+        .disabl-cart {
+          width: 13vw;
+          height: 13vw;
+        }
+      }
+    }
+  }
+}
 
+@media(max-width: 620px) {
+  .container {
+    .storyList {
+      min-width: 60px;
+
+      summary {
+        font-size: 3vw;
+      }
+    }
+  
+    .user {
+      max-width: 10vw;
+  
+      img {
+        width: 7vw;
+      }
+  
+      .use {
+        max-width: 10vw;
+        letter-spacing: 0.2px;
+        font-size: 2.5vw;
+      }
+    }
+  
+    .wrapModal {
+      width: 55vw;
+      min-height: 300px;
+      top: 20%;
+      
+      .modal {
+        padding: 10px 0 20px 0;
+        .smile {
+          width: 30vw;
+          height: 33vw;
+        }
+        .text {
+          font-size: 7vw;
+        }
+  
+        .res {
+          font-size: 5vw;
+        }
+  
+        .butAgain, .butEnd {
+          width: 27vw;
+          font-size: 4vw;
+          line-height: 2;
+        }
+      }
+    }
+  
+    .userNameModal {
+      width: 280px;
+      min-height: 360px;
+      top: 20%;
+  
+      .welcome {
+        margin-top: 20px;
+        width: 250px;
+        height: 200px;
+      }
+  
+      .userName {
+        bottom: 80px;
+        right: 31px;
+        
+        input {
+          width: 200px;
+        }
+      }
+    }
+  
+    .header {
+      width: 60vw;
+      padding: 10px 0 0 0;
+  
+      .logo {
+        height: 14vw;
+        width: 600px;
+      }
+    }
+  
+    .main {
+      min-height: 65vw;
+      
+      .results {
+        gap: 3vw;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+  
+        .score, .step {
+          width: 16vw;
+          height: 4vw;
+          font-size: 3vw;
+        }
+  
+        .butRestart {
+          width: 16vw;
+          height: 4vw;
+          font-size: 2.5vw;
+          gap:5px;
+  
+          .imgRestart {
+            width: 3vw;
+          }
+        }
+  
+        .butPlay {
+          width: 16vw;
+          height: 4vw;
+          border-radius: 20px;
+          font-size: 2.5vw;
+          gap:2px;
+  
+          .imgPlay {
+            width: 3.6vw;
+            padding: 0 10px 0 0;
+          }
+        } 
+  
+        .butStop {
+          width: 16vw;
+          height: 4vw;
+          border-radius: 20px;
+          font-size: 2.1vw;
+          font-weight: 700;
+          gap:3px;
+  
+          .imgStop {
+            width: 3vw;
+            padding: 0 0px 0 0;
+          } 
+        }
+      }
+  
+      .wrapMain {
+        max-width: 77vw;
+        gap: 2vw 2vw;
+        margin-top: 2.8vw;
+  
+        .cartFone {
+          width: 13vw;
+          height: 13vw;
+        }
+  
+        .disabl-cart {
+          width: 13vw;
+          height: 13vw;
+        }
+      }
+    }
+  
+    .footer {
+      width: 95vw;
+      bottom: 5px;
+      margin: 2vw 0 5px 0;
+  
+      .rs {
+        svg {
+          width: 8vw;
+        }
+      }
+  
+      .year {
+        font-size: 4vw;
+        font-weight: 700;
+      }
+  
+      .git {
+        svg {
+          width: 8vw;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 550px) {
+  .container {
+    .storyList {
+      min-width: 3vw;
+      padding: 1px 5px 1px 4px;
+      left: auto;
+      right: 9px;
+      top: 80px;
+
+      summary {
+        font-size: 2.5vw;
+      }
+    }
+  
+    .main {
+      .results {
+        gap: 3vw 6vw;
+        margin-top: -20px;
+        margin-bottom: 2vw;
+        flex-wrap: wrap;
+        width: 220px;
+        justify-content: center;
+  
+        .score, .step {
+          width: 16vw;
+          height: 4vw;
+          font-size: 3vw;
+        }
+  
+        .butRestart {
+          width: 16vw;
+          height: 4vw;
+          font-size: 2.5vw;
+          gap:5px;
+  
+          .imgRestart {
+            width: 3vw;
+          }
+        }
+  
+        .butPlay {
+          width: 16vw;
+          height: 4vw;
+          border-radius: 20px;
+          font-size: 2.5vw;
+          gap:2px;
+  
+          .imgPlay {
+            width: 3.6vw;
+            padding: 0 10px 0 0;
+          }
+        } 
+  
+        .butStop {
+          width: 16vw;
+          height: 4vw;
+          border-radius: 20px;
+          font-size: 2.1vw;
+          font-weight: 700;
+          gap:3px;
+        }
+      }
+  
+      .wrapMain {
+        max-width: 92vw;
+        gap: 2.5vw;
+        margin-top: 2.8vw;
+  
+        .cartFone {
+          width: 70px;
+          height: 70px;
+        }
+  
+        .disabl-cart {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 450px) {
+  .container {
+    .storyList {
+      min-width: 3vw;
+      padding: 2px 5px 2px 4px;
+      left: auto;
+      right: 9px;
+      top: 70px;
+
+      summary {
+        font-size: 2.7vw;
+      }
+    }
+  
+    .main {
+      .results {
+        gap: 3vw 6vw;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        flex-wrap: wrap;
+        width: 220px;
+        justify-content: center;
+  
+        .score, .step {
+          width: 65px;
+          height: 15px;
+          font-size: 12px;
+        }
+  
+        .butRestart {
+          width: 75px;
+          height: 25px;
+          font-size: 10px;
+          gap:3px;
+  
+          .imgRestart {
+            width: 13px;
+          }
+        }
+  
+        .butPlay {
+          width: 75px;
+          height: 25px;
+          font-size: 10px;
+          gap:1px;
+  
+          .imgPlay {
+            width: 17px;
+            padding: 0 10px 0 0;
+          }
+        } 
+  
+        .butStop {
+          width: 75px;
+          height: 25px;
+          font-size: 9.5px;
+          font-weight: 700;
+          gap:2px;
+        }
+      }
+  
+      .wrapMain {
+        max-width: 68vw;
+        gap: 2.5vw;
+        margin-top: 2.8vw;
+  
+        .cartFone {
+          width: 70px;
+          height: 70px;
+        }
+  
+        .disabl-cart {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
 

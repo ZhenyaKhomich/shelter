@@ -1,4 +1,3 @@
-
 let result = [
     {
         img: "/assets/image/win.png",
@@ -40,8 +39,6 @@ export function winLose (i, score, stepCount) {
     butEnd.classList.add('butEnd');
     butEnd.innerHTML = 'New game';
     
-
-
     modal.append(img);
     modal.append(text);
     modal.append(moves);
