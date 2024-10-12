@@ -1,10 +1,3 @@
-// import {data} from "/moduls/randomImg.js"
-// import {randomArrays} from "/moduls/randomImg.js"
-// import {createImg} from "/moduls/randomImg.js"
-// import {winLose} from "/moduls/modalWindow.js"
-// import {start} from "./moduls/startRestartButtons.js"
-// import {restart} from "/moduls/startRestartButtons.js"
-
 import {data} from './moduls/randomImg.js';
 import {randomArrays} from './moduls/randomImg.js';
 import {createImg} from './moduls/randomImg.js';
@@ -263,8 +256,8 @@ document.addEventListener('DOMContentLoaded', function () {
     restartBut.setAttribute('disabled','true');
     restartBut.classList.add('disabl');
   } else {
-    darkModal.style.display = 'none';  //убрать none
-    userNameModal.style.display = 'none'; //убрать none
+    darkModal.style.display = '';
+    userNameModal.style.display = ''; 
     wrapModal.style.display = 'none';
     stopBut.style.display = 'none';
     restartBut.setAttribute('disabled','true');
