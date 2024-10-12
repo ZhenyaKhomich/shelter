@@ -296,7 +296,6 @@ function stop () {
   playAction = 'false';
   randomImg = randomArrays(data);
 
-
   cartFones.forEach((cartFone) => {
     cartFone.remove();
   })
