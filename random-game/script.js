@@ -14,6 +14,9 @@ const stopBut = document.querySelector('.butStop');
 const userValue = document.querySelector('.input');
 const noBut = document.querySelector('.no');
 const yesBut = document.querySelector('.yes');
+const butM = document.querySelector('.butM');
+const loseM = document.querySelector('.loseM');
+const winM = document.querySelector('.winM');
 let score = document.querySelector('.score');
 let step = document.querySelector('.step');
 let use = document.querySelector('.use');
@@ -79,6 +82,8 @@ rotatingImages();
 
           function att () {
             playAction = true;
+
+            butM.play();
           
             if(playAction) {
               cartFone.style.transform = 'matrix(0.1, 0, 0, 1, 0.1, 0.1)';
@@ -133,13 +138,16 @@ rotatingImages();
                     setTimeout (() => {
                       darkModal.style.display = '';
                       wrapModal.style.display = '';
+                      winM.play();
                       winLose(0, scoreCount, stepCount);
+                      
                       const modalStop = document.querySelector('.butEnd');
                       const modalRestart = document.querySelector('.butAgain');
                       
                       modalStop.addEventListener('click', () => { stop ()
                         const modal = document.querySelector('.modal');
                         modal.remove();
+                        butM.play()
                         darkModal.style.display = 'none';
                         wrapModal.style.display = 'none';
                       });
@@ -147,6 +155,7 @@ rotatingImages();
                       modalRestart.addEventListener('click',() => {restart(cartFones, count=0, firstCart, secondCart, stepCount = 15, scoreCount=0, firstNum, secondNum, score, step, winCount=0)
                         const modal = document.querySelector('.modal');
                         modal.remove();
+                        butM.play()
                         darkModal.style.display = 'none';
                         wrapModal.style.display = 'none';});
                     }, 1000);
@@ -191,6 +200,7 @@ rotatingImages();
                     setTimeout (() => {
                       darkModal.style.display = '';
                       wrapModal.style.display = '';
+                      loseM.play();
                       winLose(1, scoreCount, stepCount);
                       const modalStop = document.querySelector('.butEnd');
                       const modalRestart = document.querySelector('.butAgain');
@@ -198,6 +208,7 @@ rotatingImages();
                       modalStop.addEventListener('click', () => { stop ()
                         const modal = document.querySelector('.modal');
                         modal.remove();
+                        butM.play()
                         darkModal.style.display = 'none';
                         wrapModal.style.display = 'none';
                       });
@@ -205,6 +216,7 @@ rotatingImages();
                       modalRestart.addEventListener('click',() => {restart(cartFones, count=0, firstCart, secondCart, stepCount = 15, scoreCount=0, firstNum, secondNum, score, step, winCount=0)
                         const modal = document.querySelector('.modal');
                         modal.remove();
+                        butM.play()
                         darkModal.style.display = 'none';
                         wrapModal.style.display = 'none';});
                     }, 1000);
@@ -239,7 +251,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if(userName) {
-    console.log('1111')
     darkModal.style.display = 'none';
     userNameModal.style.display = 'none';
     wrapModal.style.display = 'none';
@@ -256,13 +267,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
-play.addEventListener('click', () => {start(cartFones)});
+play.addEventListener('click', () => {
+  start(cartFones)
+  butM.play()
+});
 
-restartBut.addEventListener('click',() => {restart(cartFones, count=0, firstCart, secondCart, stepCount = 15, scoreCount=0, firstNum, secondNum, score, step, winCount=0)});
+restartBut.addEventListener('click',() => {restart(cartFones, count=0, firstCart, secondCart, stepCount = 15, scoreCount=0, firstNum, secondNum, score, step, winCount=0)
+butM.play()
+});
 
 stopBut.addEventListener('click', stop);
 
 function stop () {
+  butM.play()
   count=0;
   firstCart = 0;
   winCount = 0;
@@ -308,15 +325,16 @@ repeat();
 
 noBut.addEventListener('click', function () {
   userValue.classList.remove('noInput');
+  butM.play();
 })
 
 userValue.addEventListener('input', function () {
   if(userValue.value) {
   userValue.classList.add('noInput');
+
   yesBut.addEventListener('click', function () {
     let user = userValue.value;
     localStorage.setItem(`name`, user);
-    
   })
 } else {
   userValue.classList.remove('noInput');
@@ -331,6 +349,7 @@ setInterval(() => {
 userSign.addEventListener('click', function () {
     darkModal.style.display = '';
     userNameModal.style.display = '';
+    butM.play();
 })
 
 function updateTableData(nam, sco) {

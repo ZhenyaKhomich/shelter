@@ -1,9 +1,9 @@
 @media (hover: hover) {
-  .container .storyList summary:hover {
+  .container .storyList:hover {
     cursor: pointer;
-    min-width: 60px;
+    min-width: 40px;
     border-radius: 10px;
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 0 10px 5px rgb(55, 253, 0);
   }
   .container .user img:hover {
@@ -168,7 +168,7 @@ body {
   width: 300px;
   min-height: 410px;
   position: absolute;
-  top: 20%;
+  top: 17%;
   z-index: 2;
 }
 .container .wrapModal .modal {
@@ -666,6 +666,12 @@ body {
   .container .storyList summary {
     font-size: 2.5vw;
   }
+  .container .user .use {
+    max-width: 60px;
+    letter-spacing: 0.6px;
+    font-size: 10px;
+    padding: 1px 0 0 0;
+  }
   .container .main .results {
     gap: 3vw 6vw;
     margin-top: -20px;
@@ -726,7 +732,7 @@ body {
     min-width: 3vw;
     padding: 2px 5px 2px 4px;
     left: auto;
-    right: 9px;
+    right: 11px;
     top: 70px;
   }
   .container .storyList summary {
