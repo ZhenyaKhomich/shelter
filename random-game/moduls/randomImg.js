@@ -69,7 +69,6 @@ export const data = [
   },
 ]
 
-
 export function randomArrays (arr) {
 
   let firstArray = [];
