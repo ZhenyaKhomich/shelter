@@ -258,8 +258,8 @@ document.addEventListener('DOMContentLoaded', function () {
     restartBut.setAttribute('disabled','true');
     restartBut.classList.add('disabl');
   } else {
-    darkModal.style.display = '';
-    userNameModal.style.display = '';
+    darkModal.style.display = 'none';  //убрать none
+    userNameModal.style.display = 'none'; //убрать none
     wrapModal.style.display = 'none';
     stopBut.style.display = 'none';
     restartBut.setAttribute('disabled','true');
