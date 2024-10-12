@@ -1,9 +1,9 @@
-import {data} from "/moduls/randomImg.js"
-import {randomArrays} from "/moduls/randomImg.js"
-import {createImg} from "/moduls/randomImg.js"
+import {data, createImg, randomArrays} from "/moduls/randomImg.js"
+// import {randomArrays} from "/moduls/randomImg.js"
+// import {createImg} from "/moduls/randomImg.js"
 import {winLose} from "/moduls/modalWindow.js"
-import {start} from "/moduls/startRestartButtons.js"
-import {restart} from "/moduls/startRestartButtons.js"
+import {start, restart} from "/moduls/startRestartButtons.js"
+// import {restart} from "/moduls/startRestartButtons.js"
 
 const darkModal = document.querySelector('.darkModal');
 const wrapModal = document.querySelector('.wrapModal');
@@ -128,8 +128,6 @@ rotatingImages();
                       localStorage.setItem(`score${gameCount}`, scoreCount);
                       localStorage.setItem(`name${+gameCount}`, userName)
                       let userScore = localStorage.getItem(`score${gameCount}`);
-                      console.log(userName)
-                      console.log(userName)
                       updateTableData(userName, userScore);
                     },1000)
                     
