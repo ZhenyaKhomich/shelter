@@ -1,9 +1,16 @@
-import {data} from "/moduls/randomImg.js"
-import {randomArrays} from "/moduls/randomImg.js"
-import {createImg} from "/moduls/randomImg.js"
-import {winLose} from "/moduls/modalWindow.js"
-import {start} from "./moduls/startRestartButtons.js"
-import {restart} from "/moduls/startRestartButtons.js"
+// import {data} from "/moduls/randomImg.js"
+// import {randomArrays} from "/moduls/randomImg.js"
+// import {createImg} from "/moduls/randomImg.js"
+// import {winLose} from "/moduls/modalWindow.js"
+// import {start} from "./moduls/startRestartButtons.js"
+// import {restart} from "/moduls/startRestartButtons.js"
+
+import {data} from './moduls/randomImg.js';
+import {randomArrays} from './moduls/randomImg.js';
+import {createImg} from './moduls/randomImg.js';
+import {winLose} from './moduls/modalWindow.js';
+import {start, restart} from './moduls/startRestartButtons.js';
+
 
 const darkModal = document.querySelector('.darkModal');
 const wrapModal = document.querySelector('.wrapModal');
