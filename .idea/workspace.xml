@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="91391a0f-85f7-432b-9451-e5f7ca5cc6f3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +24,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "shelter",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/УЧЕБА/RSSchool/JS stage 0 2024Q2/Мои работы/shelter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -51,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755936061760</updated>
-      <workItem from="1755936062859" duration="332000" />
+      <workItem from="1755936062859" duration="628000" />
     </task>
     <servers />
   </component>
